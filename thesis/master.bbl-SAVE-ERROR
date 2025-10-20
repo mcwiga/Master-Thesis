@@ -1,0 +1,1102 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{abbondandolo2006lectures}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=e8c5f73a5d5ad1b474b7112e41410291}{%
+           family={Abbondandolo},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fa8f84943955f061f53260bd7c421e19}{%
+           family={Majer},
+           familyi={M\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{48f00afdc1d7bd730d56050f6007a00b}
+      \strng{fullhash}{48f00afdc1d7bd730d56050f6007a00b}
+      \strng{bibnamehash}{48f00afdc1d7bd730d56050f6007a00b}
+      \strng{authorbibnamehash}{48f00afdc1d7bd730d56050f6007a00b}
+      \strng{authornamehash}{48f00afdc1d7bd730d56050f6007a00b}
+      \strng{authorfullhash}{48f00afdc1d7bd730d56050f6007a00b}
+      \field{labelalpha}{AM06}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Morse theoretic methods in nonlinear analysis and in symplectic topology}
+      \field{title}{Lectures on the Morse complex for infinite-dimensional manifolds}
+      \field{year}{2006}
+      \field{pages}{1\bibrangedash 74}
+      \range{pages}{74}
+    \endentry
+    \entry{audin}{book}{}
+      \name{author}{2}{}{%
+        {{hash=088f07e7178387e1de67529211dfe3b0}{%
+           family={Audin},
+           familyi={A\bibinitperiod},
+           given={Michèle},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f5e51a8196892e8108db78f21637fb14}{%
+           family={Damian},
+           familyi={D\bibinitperiod},
+           given={Mihai},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a983ff4b48574ef2b702250fd9f68d83}
+      \strng{fullhash}{a983ff4b48574ef2b702250fd9f68d83}
+      \strng{bibnamehash}{a983ff4b48574ef2b702250fd9f68d83}
+      \strng{authorbibnamehash}{a983ff4b48574ef2b702250fd9f68d83}
+      \strng{authornamehash}{a983ff4b48574ef2b702250fd9f68d83}
+      \strng{authorfullhash}{a983ff4b48574ef2b702250fd9f68d83}
+      \field{labelalpha}{AD14}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Morse theory and Floer homology}
+      \field{year}{2014}
+    \endentry
+    \entry{banyaga2013lectures}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f5ac146d170a576c67fc3eb64c00693f}{%
+           family={Banyaga},
+           familyi={B\bibinitperiod},
+           given={Augustin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bfe7b459b231d9a06ea3926f3e52b363}{%
+           family={Hurtubise},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{2175de1352a8286b2346e2676e3d3281}
+      \strng{fullhash}{2175de1352a8286b2346e2676e3d3281}
+      \strng{bibnamehash}{2175de1352a8286b2346e2676e3d3281}
+      \strng{authorbibnamehash}{2175de1352a8286b2346e2676e3d3281}
+      \strng{authornamehash}{2175de1352a8286b2346e2676e3d3281}
+      \strng{authorfullhash}{2175de1352a8286b2346e2676e3d3281}
+      \field{labelalpha}{BH13}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lectures on Morse homology}
+      \field{volume}{29}
+      \field{year}{2013}
+    \endentry
+    \entry{cairns2015differential}{book}{}
+      \name{author}{1}{}{%
+        {{hash=cd9ef3564376cdcd3bd2f05dd3f6cd8a}{%
+           family={Cairns},
+           familyi={C\bibinitperiod},
+           given={Stewart\bibnamedelima Scott},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \strng{fullhash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \strng{bibnamehash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \strng{authorbibnamehash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \strng{authornamehash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \strng{authorfullhash}{cd9ef3564376cdcd3bd2f05dd3f6cd8a}
+      \field{labelalpha}{Cai15}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Differential and Combinatorial Topology: A Symposium in Honor of Marston Morse (PMS-27)}
+      \field{year}{2015}
+    \endentry
+    \entry{de2012differentiable}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f2f26933caddd43ede832db65255c8cb}{%
+           family={De\bibnamedelima Rham},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Georges},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{f2f26933caddd43ede832db65255c8cb}
+      \strng{fullhash}{f2f26933caddd43ede832db65255c8cb}
+      \strng{bibnamehash}{f2f26933caddd43ede832db65255c8cb}
+      \strng{authorbibnamehash}{f2f26933caddd43ede832db65255c8cb}
+      \strng{authornamehash}{f2f26933caddd43ede832db65255c8cb}
+      \strng{authorfullhash}{f2f26933caddd43ede832db65255c8cb}
+      \field{labelalpha}{De 12}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Differentiable manifolds: forms, currents, harmonic forms}
+      \field{volume}{266}
+      \field{year}{2012}
+    \endentry
+    \entry{donaldson1986geometry}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=28a6bd4c63e1d58acf26a92675d403dc}{%
+           family={Donaldson},
+           familyi={D\bibinitperiod},
+           given={Simon\bibnamedelima K},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e0acb7a3f7534e386db7e33245155776}{%
+           family={Kronheimer},
+           familyi={K\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \strng{fullhash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \strng{bibnamehash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \strng{authorbibnamehash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \strng{authornamehash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \strng{authorfullhash}{8d3282c6aa41cb5ad4c33e562157195f}
+      \field{labelalpha}{DK86}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the International Congress of Mathematicians (Berkeley 1986)(AM Gleason, ed.)}
+      \field{title}{The geometry of 4-manifolds}
+      \field{volume}{1}
+      \field{year}{1986}
+      \field{pages}{43\bibrangedash 54}
+      \range{pages}{12}
+    \endentry
+    \entry{freedman2014topology}{book}{}
+      \name{author}{2}{}{%
+        {{hash=075e60b76c9aa285d32bc352e186eeed}{%
+           family={Freedman},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima H},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7fd296cf3bcc29bea9a33cf301a8d6c9}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \strng{fullhash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \strng{bibnamehash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \strng{authorbibnamehash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \strng{authornamehash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \strng{authorfullhash}{daaeb37b845b6992ac2d24a6c1ce92b1}
+      \field{labelalpha}{FQ14}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Topology of 4-Manifolds (PMS-39), Volume 39}
+      \field{volume}{1085}
+      \field{year}{2014}
+    \endentry
+    \entry{fuchs1970infinite}{book}{}
+      \name{author}{1}{}{%
+        {{hash=935ea0cffe6257cf804e84c342dfb396}{%
+           family={Fuchs},
+           familyi={F\bibinitperiod},
+           given={László},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic press}%
+      }
+      \strng{namehash}{935ea0cffe6257cf804e84c342dfb396}
+      \strng{fullhash}{935ea0cffe6257cf804e84c342dfb396}
+      \strng{bibnamehash}{935ea0cffe6257cf804e84c342dfb396}
+      \strng{authorbibnamehash}{935ea0cffe6257cf804e84c342dfb396}
+      \strng{authornamehash}{935ea0cffe6257cf804e84c342dfb396}
+      \strng{authorfullhash}{935ea0cffe6257cf804e84c342dfb396}
+      \field{labelalpha}{Fuc70}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Infinite abelian groups}
+      \field{year}{1970}
+    \endentry
+    \entry{fushidamorse}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=45067e15402c90d808d4b31243ff145d}{%
+           family={Fushida-Hardy},
+           familyi={F\bibinithyphendelim H\bibinitperiod},
+           given={Shintaro},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{45067e15402c90d808d4b31243ff145d}
+      \strng{fullhash}{45067e15402c90d808d4b31243ff145d}
+      \strng{bibnamehash}{45067e15402c90d808d4b31243ff145d}
+      \strng{authorbibnamehash}{45067e15402c90d808d4b31243ff145d}
+      \strng{authornamehash}{45067e15402c90d808d4b31243ff145d}
+      \strng{authorfullhash}{45067e15402c90d808d4b31243ff145d}
+      \field{labelalpha}{Fus}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Morse theory}
+    \endentry
+    \entry{giaquinta1998cartesian}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=0a7f3c84869fff02f7d00646590a4066}{%
+           family={Giaquinta},
+           familyi={G\bibinitperiod},
+           given={Mariano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e38e373717f1bab15d2a90c76c3dcb0f}{%
+           family={Modica},
+           familyi={M\bibinitperiod},
+           given={Guiseppe},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7137b5b66457a978c9d2dab74829de72}{%
+           family={Soucek},
+           familyi={S\bibinitperiod},
+           given={Jiri},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{555fbf86df0032bfe3760ed2c506156c}
+      \strng{fullhash}{555fbf86df0032bfe3760ed2c506156c}
+      \strng{bibnamehash}{555fbf86df0032bfe3760ed2c506156c}
+      \strng{authorbibnamehash}{555fbf86df0032bfe3760ed2c506156c}
+      \strng{authornamehash}{555fbf86df0032bfe3760ed2c506156c}
+      \strng{authorfullhash}{555fbf86df0032bfe3760ed2c506156c}
+      \field{labelalpha}{GMS+98}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cartesian Currents in the Calculus of Variations II: Variational Integrals}
+      \field{volume}{2}
+      \field{year}{1998}
+    \endentry
+    \entry{hamilton1982three}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=926d2cebbebdaec235ec6886686830e2}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Richard\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{77daf88aedc2401427034a51e1c705e3}
+      \strng{fullhash}{77daf88aedc2401427034a51e1c705e3}
+      \strng{bibnamehash}{77daf88aedc2401427034a51e1c705e3}
+      \strng{authorbibnamehash}{77daf88aedc2401427034a51e1c705e3}
+      \strng{authornamehash}{77daf88aedc2401427034a51e1c705e3}
+      \strng{authorfullhash}{77daf88aedc2401427034a51e1c705e3}
+      \field{labelalpha}{Ham+82}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Differential geom}
+      \field{number}{2}
+      \field{title}{Three-manifolds with positive Ricci curvature}
+      \field{volume}{17}
+      \field{year}{1982}
+      \field{pages}{255\bibrangedash 306}
+      \range{pages}{52}
+    \endentry
+    \entry{hatcher2005algebraic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0a94eadf86d8b878d4c37bc5640e53e3}{%
+           family={Hatcher},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{fullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{bibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorbibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authornamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorfullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \field{labelalpha}{Hat05}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algebraic topology}
+      \field{year}{2005}
+    \endentry
+    \entry{huebsch1964bowl}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ad4f9c3b53a4d9431b6d33a102732826}{%
+           family={Huebsch},
+           familyi={H\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=2be450102aefb4176dd218fb50036fcf}{%
+           family={Morse},
+           familyi={M\bibinitperiod},
+           given={Marston},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{8eaa26c449b3aff22bc5006649534607}
+      \strng{fullhash}{8eaa26c449b3aff22bc5006649534607}
+      \strng{bibnamehash}{8eaa26c449b3aff22bc5006649534607}
+      \strng{authorbibnamehash}{8eaa26c449b3aff22bc5006649534607}
+      \strng{authornamehash}{8eaa26c449b3aff22bc5006649534607}
+      \strng{authorfullhash}{8eaa26c449b3aff22bc5006649534607}
+      \field{labelalpha}{HM64}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences of the United States of America}
+      \field{number}{1}
+      \field{title}{The bowl theorem and a model nondegenerate function}
+      \field{volume}{51}
+      \field{year}{1964}
+      \field{pages}{49}
+      \range{pages}{1}
+    \endentry
+    \entry{hutchings2002lecture}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e216f52f26869bc5b263e24f10950665}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e216f52f26869bc5b263e24f10950665}
+      \strng{fullhash}{e216f52f26869bc5b263e24f10950665}
+      \strng{bibnamehash}{e216f52f26869bc5b263e24f10950665}
+      \strng{authorbibnamehash}{e216f52f26869bc5b263e24f10950665}
+      \strng{authornamehash}{e216f52f26869bc5b263e24f10950665}
+      \strng{authorfullhash}{e216f52f26869bc5b263e24f10950665}
+      \field{labelalpha}{Hut02}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture notes on Morse homology (with an eye towards Floer theory and pseudoholomorphic curves)}
+      \field{year}{2002}
+    \endentry
+    \entry{kirby2016foundational}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e31bd2e9a5e83838db26719afcb3ebab}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={Robion\bibnamedelima C},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=868e1e8e837227366dc99ac251a0f2b1}{%
+           family={Siebenmann},
+           familyi={S\bibinitperiod},
+           given={Laurence\bibnamedelima C},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \strng{fullhash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \strng{bibnamehash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \strng{authorbibnamehash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \strng{authornamehash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \strng{authorfullhash}{32ace89b6b033bec6b34b66fa6e6c869}
+      \field{labelalpha}{KS16}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Foundational Essays on Topological Manifolds, Smoothings, and Triangulations. (AM-88), Volume 88}
+      \field{year}{2016}
+    \endentry
+    \entry{kosinski2013differential}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2e1519a6eaaf37ff3b948c1b733e405c}{%
+           family={Kosinski},
+           familyi={K\bibinitperiod},
+           given={Antoni\bibnamedelima A},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \strng{fullhash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \strng{bibnamehash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \strng{authorbibnamehash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \strng{authornamehash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \strng{authorfullhash}{2e1519a6eaaf37ff3b948c1b733e405c}
+      \field{labelalpha}{Kos93}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Differential manifolds}
+      \field{year}{1993}
+    \endentry
+    \entry{laudenbach2013proof}{article}{}
+      \name{author}{1}{}{%
+        {{hash=03d44853844f6a94210fbf65571cd3c5}{%
+           family={Laudenbach},
+           familyi={L\bibinitperiod},
+           given={François},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{03d44853844f6a94210fbf65571cd3c5}
+      \strng{fullhash}{03d44853844f6a94210fbf65571cd3c5}
+      \strng{bibnamehash}{03d44853844f6a94210fbf65571cd3c5}
+      \strng{authorbibnamehash}{03d44853844f6a94210fbf65571cd3c5}
+      \strng{authornamehash}{03d44853844f6a94210fbf65571cd3c5}
+      \strng{authorfullhash}{03d44853844f6a94210fbf65571cd3c5}
+      \field{labelalpha}{Lau13}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comptes Rendus Mathematique}
+      \field{number}{11-12}
+      \field{title}{A proof of Morse's theorem about the cancellation of critical points}
+      \field{volume}{351}
+      \field{year}{2013}
+      \field{pages}{483\bibrangedash 488}
+      \range{pages}{6}
+    \endentry
+    \entry{mazur1959embeddings}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bbbc6e9371aca03f048f5012bdab5885}{%
+           family={Mazur},
+           familyi={M\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbbc6e9371aca03f048f5012bdab5885}
+      \strng{fullhash}{bbbc6e9371aca03f048f5012bdab5885}
+      \strng{bibnamehash}{bbbc6e9371aca03f048f5012bdab5885}
+      \strng{authorbibnamehash}{bbbc6e9371aca03f048f5012bdab5885}
+      \strng{authornamehash}{bbbc6e9371aca03f048f5012bdab5885}
+      \strng{authorfullhash}{bbbc6e9371aca03f048f5012bdab5885}
+      \field{labelalpha}{Maz59}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{number}{2}
+      \field{title}{On embeddings of spheres}
+      \field{volume}{65}
+      \field{year}{1959}
+      \field{pages}{59\bibrangedash 65}
+      \range{pages}{7}
+    \endentry
+    \entry{milnor1956manifolds}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{fullhash}{6ed546ba346b01635423d8131e45906b}
+      \strng{bibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorbibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authornamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorfullhash}{6ed546ba346b01635423d8131e45906b}
+      \field{extraname}{1}
+      \field{labelalpha}{Mil56}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{On manifolds homeomorphic to the 7-sphere}
+      \field{year}{1956}
+      \field{pages}{399\bibrangedash 405}
+      \range{pages}{7}
+    \endentry
+    \entry{hcobord}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton university press}%
+      }
+      \strng{namehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{fullhash}{6ed546ba346b01635423d8131e45906b}
+      \strng{bibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorbibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authornamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorfullhash}{6ed546ba346b01635423d8131e45906b}
+      \field{extraname}{2}
+      \field{labelalpha}{Mil15}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lectures on the h-cobordism theorem}
+      \field{volume}{2258}
+      \field{year}{2015}
+    \endentry
+    \entry{milnor}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton university press}%
+      }
+      \strng{namehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{fullhash}{6ed546ba346b01635423d8131e45906b}
+      \strng{bibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorbibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authornamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorfullhash}{6ed546ba346b01635423d8131e45906b}
+      \field{extraname}{3}
+      \field{labelalpha}{Mil16}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Morse theory.(AM-51)}
+      \field{volume}{51}
+      \field{year}{2016}
+    \endentry
+    \entry{milnor1997topology}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e1894b0812dae64e0481d780407e65c5}{%
+           family={Weaver},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton university press}%
+      }
+      \strng{namehash}{80a0f164eb5f74482ed35968cb1441c9}
+      \strng{fullhash}{80a0f164eb5f74482ed35968cb1441c9}
+      \strng{bibnamehash}{80a0f164eb5f74482ed35968cb1441c9}
+      \strng{authorbibnamehash}{80a0f164eb5f74482ed35968cb1441c9}
+      \strng{authornamehash}{80a0f164eb5f74482ed35968cb1441c9}
+      \strng{authorfullhash}{80a0f164eb5f74482ed35968cb1441c9}
+      \field{labelalpha}{MW97}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Topology from the differentiable viewpoint}
+      \field{year}{1997}
+    \endentry
+    \entry{moise2013geometric}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e9aa03c6b65203ac3b765c75383ef3f1}{%
+           family={Moise},
+           familyi={M\bibinitperiod},
+           given={Edwin\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \strng{fullhash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \strng{bibnamehash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \strng{authorbibnamehash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \strng{authornamehash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \strng{authorfullhash}{e9aa03c6b65203ac3b765c75383ef3f1}
+      \field{labelalpha}{Moi13}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Geometric topology in dimensions 2 and 3}
+      \field{volume}{47}
+      \field{year}{2013}
+    \endentry
+    \entry{morgan2007poincare}{article}{}
+      \name{author}{3}{}{%
+        {{hash=85e50c7efdcbdb453fc86e19b5802615}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=499838dc01d408a03e13cf16deb18308}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9e8f00876dd6a87b70770e6202f4ef61}{%
+           family={Flow},
+           familyi={F\bibinitperiod},
+           given={Ricci},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{24235879d1afc2e8ed11183de4ed7744}
+      \strng{fullhash}{24235879d1afc2e8ed11183de4ed7744}
+      \strng{bibnamehash}{24235879d1afc2e8ed11183de4ed7744}
+      \strng{authorbibnamehash}{24235879d1afc2e8ed11183de4ed7744}
+      \strng{authornamehash}{24235879d1afc2e8ed11183de4ed7744}
+      \strng{authorfullhash}{24235879d1afc2e8ed11183de4ed7744}
+      \field{labelalpha}{MTF07}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Clay Mathematics Monographs}
+      \field{title}{The poincaré conjecture}
+      \field{volume}{3}
+      \field{year}{2007}
+    \endentry
+    \entry{morse1925relations}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2be450102aefb4176dd218fb50036fcf}{%
+           family={Morse},
+           familyi={M\bibinitperiod},
+           given={Marston},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2be450102aefb4176dd218fb50036fcf}
+      \strng{fullhash}{2be450102aefb4176dd218fb50036fcf}
+      \strng{bibnamehash}{2be450102aefb4176dd218fb50036fcf}
+      \strng{authorbibnamehash}{2be450102aefb4176dd218fb50036fcf}
+      \strng{authornamehash}{2be450102aefb4176dd218fb50036fcf}
+      \strng{authorfullhash}{2be450102aefb4176dd218fb50036fcf}
+      \field{labelalpha}{Mor25}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions of the American Mathematical Society}
+      \field{number}{3}
+      \field{title}{Relations between the critical points of a real function of $n$ independent variables}
+      \field{volume}{27}
+      \field{year}{1925}
+      \field{pages}{345\bibrangedash 396}
+      \range{pages}{52}
+    \endentry
+    \entry{Pitcher1958InequalitiesOC}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fb033584a87b9dd9b20d58232f5dd7bd}{%
+           family={Pitcher},
+           familyi={P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \strng{fullhash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \strng{bibnamehash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \strng{authorbibnamehash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \strng{authornamehash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \strng{authorfullhash}{fb033584a87b9dd9b20d58232f5dd7bd}
+      \field{labelalpha}{Pit58}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{title}{Inequalities of critical point theory}
+      \field{volume}{64}
+      \field{year}{1958}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+    \endentry
+    \entry{poincare1895analysis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ec9aac8108836d6b8e69d7ce94ebc275}{%
+           family={Poincaré},
+           familyi={P\bibinitperiod},
+           given={Henri},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Gauthier-Villars Paris, France}%
+      }
+      \strng{namehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{fullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{bibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorbibnamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authornamehash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \strng{authorfullhash}{ec9aac8108836d6b8e69d7ce94ebc275}
+      \field{labelalpha}{Poi95}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analysis situs}
+      \field{year}{1895}
+    \endentry
+    \entry{pontrjagin2007smooth}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=bf86038186aa45b54f508994447efca4}{%
+           family={Pontrjagin},
+           familyi={P\bibinitperiod},
+           given={Lev\bibnamedelima Semenovič},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{bf86038186aa45b54f508994447efca4}
+      \strng{fullhash}{bf86038186aa45b54f508994447efca4}
+      \strng{bibnamehash}{bf86038186aa45b54f508994447efca4}
+      \strng{authorbibnamehash}{bf86038186aa45b54f508994447efca4}
+      \strng{authornamehash}{bf86038186aa45b54f508994447efca4}
+      \strng{authorfullhash}{bf86038186aa45b54f508994447efca4}
+      \field{labelalpha}{Pon07}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Topological Library: Part 1: Cobordisms and Their Applications}
+      \field{title}{Smooth manifolds and their applications in homotopy theory}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 130}
+      \range{pages}{130}
+    \endentry
+    \entry{rotman2010advanced}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8e40f2d7c2b250ccf0e727dc67dd48b0}{%
+           family={Rotman},
+           familyi={R\bibinitperiod},
+           given={Joseph\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Soc.}%
+      }
+      \strng{namehash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \strng{fullhash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \strng{bibnamehash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \strng{authorbibnamehash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \strng{authornamehash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \strng{authorfullhash}{8e40f2d7c2b250ccf0e727dc67dd48b0}
+      \field{labelalpha}{Rot10}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced modern algebra}
+      \field{volume}{114}
+      \field{year}{2010}
+    \endentry
+    \entry{rourke2012introduction}{book}{}
+      \name{author}{2}{}{%
+        {{hash=71ce8396aae7095db29c8b74ae39fd30}{%
+           family={Rourke},
+           familyi={R\bibinitperiod},
+           given={Colin\bibnamedelima P},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=3aaa99fcfa7957a7f29ce3b46bc6ca6e}{%
+           family={Sanderson},
+           familyi={S\bibinitperiod},
+           given={Brian\bibnamedelima Joseph},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \strng{fullhash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \strng{bibnamehash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \strng{authorbibnamehash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \strng{authornamehash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \strng{authorfullhash}{f59b2f4353f5586a1153a4e6ed7d29af}
+      \field{labelalpha}{RS12}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to piecewise-linear topology}
+      \field{year}{2012}
+    \endentry
+    \entry{schultens2014introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a046678514e2899c2cd46c5550e9bd08}{%
+           family={Schultens},
+           familyi={S\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Soc.}%
+      }
+      \strng{namehash}{a046678514e2899c2cd46c5550e9bd08}
+      \strng{fullhash}{a046678514e2899c2cd46c5550e9bd08}
+      \strng{bibnamehash}{a046678514e2899c2cd46c5550e9bd08}
+      \strng{authorbibnamehash}{a046678514e2899c2cd46c5550e9bd08}
+      \strng{authornamehash}{a046678514e2899c2cd46c5550e9bd08}
+      \strng{authorfullhash}{a046678514e2899c2cd46c5550e9bd08}
+      \field{labelalpha}{Sch14}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to 3-manifolds}
+      \field{volume}{151}
+      \field{year}{2014}
+    \endentry
+    \entry{sharko1993functions}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d5b579e066b660de143140433706fa8c}{%
+           family={Sharko},
+           familyi={S\bibinitperiod},
+           given={Vladimir\bibnamedelima Vasilevich},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Soc.}%
+      }
+      \strng{namehash}{d5b579e066b660de143140433706fa8c}
+      \strng{fullhash}{d5b579e066b660de143140433706fa8c}
+      \strng{bibnamehash}{d5b579e066b660de143140433706fa8c}
+      \strng{authorbibnamehash}{d5b579e066b660de143140433706fa8c}
+      \strng{authornamehash}{d5b579e066b660de143140433706fa8c}
+      \strng{authorfullhash}{d5b579e066b660de143140433706fa8c}
+      \field{labelalpha}{Sha93}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{131}
+      \field{title}{Functions on Manifolds: Algebraic and Topological Aspects: Algebraic and Topological Aspects}
+      \field{year}{1993}
+    \endentry
+    \entry{smale1960generalized}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=394b6b61c0209947040512295d62d07d}{%
+           family={Smale},
+           familyi={S\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{28a8faa29c9c98e731df669510c630d6}
+      \strng{fullhash}{28a8faa29c9c98e731df669510c630d6}
+      \strng{bibnamehash}{28a8faa29c9c98e731df669510c630d6}
+      \strng{authorbibnamehash}{28a8faa29c9c98e731df669510c630d6}
+      \strng{authornamehash}{28a8faa29c9c98e731df669510c630d6}
+      \strng{authorfullhash}{28a8faa29c9c98e731df669510c630d6}
+      \field{labelalpha}{Sma+60}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Mathematical Society}
+      \field{number}{5}
+      \field{title}{The generalized Poincaré conjecture in higher dimensions}
+      \field{volume}{66}
+      \field{year}{1960}
+      \field{pages}{373\bibrangedash 375}
+      \range{pages}{3}
+    \endentry
+    \entry{spanier1989algebraic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3574f5197bbc04a0032644afdf20019c}{%
+           family={Spanier},
+           familyi={S\bibinitperiod},
+           given={Edwin\bibnamedelima H},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{fullhash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{bibnamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authorbibnamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authornamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authorfullhash}{3574f5197bbc04a0032644afdf20019c}
+      \field{labelalpha}{Spa89}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algebraic topology}
+      \field{year}{1989}
+    \endentry
+    \entry{thom1954quelques}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6f1f3ecf1d3fa414d9495cc27437887e}{%
+           family={Thom},
+           familyi={T\bibinitperiod},
+           given={René},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \strng{fullhash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \strng{bibnamehash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \strng{authorbibnamehash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \strng{authornamehash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \strng{authorfullhash}{6f1f3ecf1d3fa414d9495cc27437887e}
+      \field{labelalpha}{Tho54}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commentarii Mathematici Helvetici}
+      \field{number}{1}
+      \field{title}{Quelques propriétés globales des variétés différentiables}
+      \field{volume}{28}
+      \field{year}{1954}
+      \field{pages}{17\bibrangedash 86}
+      \range{pages}{70}
+    \endentry
+    \entry{wang2017triviality}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7ff2cdaffb46057f02196b06b3d8a026}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Guozhen},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4ad2979194824da0b2d050a88fbe24cc}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhouli},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{f4f1de610209d7ba22c94b022296657e}
+      \strng{fullhash}{f4f1de610209d7ba22c94b022296657e}
+      \strng{bibnamehash}{f4f1de610209d7ba22c94b022296657e}
+      \strng{authorbibnamehash}{f4f1de610209d7ba22c94b022296657e}
+      \strng{authornamehash}{f4f1de610209d7ba22c94b022296657e}
+      \strng{authorfullhash}{f4f1de610209d7ba22c94b022296657e}
+      \field{labelalpha}{WX17}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{The triviality of the 61-stem in the stable homotopy groups of spheres}
+      \field{year}{2017}
+      \field{pages}{501\bibrangedash 580}
+      \range{pages}{80}
+    \endentry
+    \entry{whitehead1940c1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ec00e88194676a7e38cf7819a582c49}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={John\bibnamedelimb Henry\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{6ec00e88194676a7e38cf7819a582c49}
+      \strng{fullhash}{6ec00e88194676a7e38cf7819a582c49}
+      \strng{bibnamehash}{6ec00e88194676a7e38cf7819a582c49}
+      \strng{authorbibnamehash}{6ec00e88194676a7e38cf7819a582c49}
+      \strng{authornamehash}{6ec00e88194676a7e38cf7819a582c49}
+      \strng{authorfullhash}{6ec00e88194676a7e38cf7819a582c49}
+      \field{labelalpha}{Whi40}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{On C1-complexes}
+      \field{year}{1940}
+      \field{pages}{809\bibrangedash 824}
+      \range{pages}{16}
+    \endentry
+    \entry{whitney1936differentiable}{article}{}
+      \name{author}{1}{}{%
+        {{hash=14cb77dee3837480e61347c808ea6416}{%
+           family={Whitney},
+           familyi={W\bibinitperiod},
+           given={Hassler},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{14cb77dee3837480e61347c808ea6416}
+      \strng{fullhash}{14cb77dee3837480e61347c808ea6416}
+      \strng{bibnamehash}{14cb77dee3837480e61347c808ea6416}
+      \strng{authorbibnamehash}{14cb77dee3837480e61347c808ea6416}
+      \strng{authornamehash}{14cb77dee3837480e61347c808ea6416}
+      \strng{authorfullhash}{14cb77dee3837480e61347c808ea6416}
+      \field{labelalpha}{Whi36}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{title}{Differentiable manifolds}
+      \field{year}{1936}
+      \field{pages}{645\bibrangedash 680}
+      \range{pages}{36}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

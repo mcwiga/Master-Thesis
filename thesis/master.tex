@@ -1,0 +1,51 @@
+\documentclass[working]{tuftebook}
+
+\input{preamble.tex}
+\input{symbols.tex}
+\usepackage{pdfpages}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{positioning}
+
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage{titletoc}
+
+\newcommand\circled[1]{
+    \begin{tikzpicture}[baseline=(char.base)]%
+        \node[circle,draw,inner sep=1pt] (char) {\textsf{#1}};%
+\end{tikzpicture}}
+% minicircle for in figures!
+\newcommand\mc[1]{\footnotesize\circled{#1}}
+
+\usepackage{cmbright}
+\usepackage{bm}
+
+
+\title{Classification of Integral Affine Structures on Compact Surfaces}
+\date{Academic year 2025--2026}
+\begin{document}
+    
+    \renewcommand{\thepage}{\roman{page}}
+    \includepdf[pages=1, fitpaper=true]{./kuleuven-template/covers.pdf}
+    \thispagestyle{empty}
+    \input{copyright.tex}
+    \pagestyle{plain}
+    \setcounter{page}{0}
+    \input{preface.tex}
+    \input{./chapters/summary.tex}
+    \listofsymbols
+    \tableofcontents
+    \cleardoublepage
+    \renewcommand{\thepage}{\arabic{page}}
+    \setcounter{page}{1}
+    \pagestyle{normal}
+    \input{./chapters/chap0.tex}
+    % \input{todo.tex}
+    \input{./chapters/conclusion.tex}
+    % \input{chap-outlook.tex}
+
+
+    \printbibliography
+    \includepdf[pages=2, fitpaper=true]{./kuleuven-template/covers.pdf}
+\end{document}
