@@ -13,65 +13,11 @@
     We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $dev$ as follows. We pick a curve on $M$ $x(t)$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover the it by finitely many coordinate charts $U_i$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
     $$a_0<0<a_1<b_0<a_2<b_1<a_3 \dots <a_n<b_{n-1}<1<b_n$$
 
-    \begin{center}
-        \begin{marginfigure}
-            \vspace{8px}
-            \centering
-            \begin{tikzpicture}
-                \begin{scope}
-                    \begin{scope}
-                        \draw[color=black!50] (0,0) rectangle (7,7) node[color=black,anchor=east, yshift=10pt]{$\mathbb{R}^n$};
-                    \end{scope}
-                    \begin{scope}[transparency group]
-                        \begin{scope}[blend mode=multiply, yshift=10cm, xshift=10pt]
-                            \draw[dashed, color=red!50!white, fill=red!10, opacity=1]
-                            (2,-8) circle (1) node[anchor=east, xshift=-20pt, yshift = 25pt, color=black]{$\varphi_0(U_0)$};
-                            \draw[dashed, color=red!50!white, fill=red!10,opacity=1] (2, -5) circle (1) node[anchor=east, xshift=-20pt, yshift = 25pt, color=black]{$\varphi_1(U_1)$};
-                            \begin{scope}
-                                \clip (2, -5) circle (1);
-                                \draw[dashed, color=red!50!white, fill=blue!25, opacity=1]
-                                (0,-5) circle (1.5);
-                            \end{scope}
-
-                            \begin{scope}
-                                \clip (2, -8) circle (1);
-                                \draw[dashed, color=red!50!white, fill=blue!20,opacity=1] (3.5, -8) circle (1);
-                            \end{scope}
-                            \draw[dashed, color=red!50!white, fill=red!10,opacity=1] (3.5, -8) circle (1) node[anchor=west, xshift=20pt, yshift = 25pt, color=black]{$g_1 \circ \varphi_1(U_1)$};
-
-                        \end{scope}
-                    \end{scope}
-                    \node[] (GluingOneTwoStart) at (2.7,4.2) {};
-                    \node[] (GluingOneTwoEnd) at (3.5,2.6) {};
-                    \path[->]
-                    (GluingOneTwoStart) edge[right] node [midway, right] {$g_{1}$} (GluingOneTwoEnd);
-                \end{scope}
-
-            \end{tikzpicture}
-            \caption{Gluing together charts}
-            \label{fig:placeholder}
-        \end{marginfigure}
-        \begin{figure}[h]
-            \centering
-            \begin{tikzpicture}
-                \begin{scope}[transparency group]
-                    \begin{scope}[blend mode=multiply]
-                        \draw[color=black!50] (0,0) rectangle (8,7) node[color=black,anchor=east, yshift=10pt]{\textbf{M}};
-                        \draw[dashed, color=red!50!white, fill=red!10, opacity=1]
-                        (1,1.8) circle (0.8) node[anchor=east, xshift=-10pt, yshift = 25pt, color=black]{$U_0$};
-                        \draw[dashed, color=red!50!white, fill=red!10,opacity=1] (2, 2.5) circle (0.8) node[anchor=east, xshift=10pt, yshift = 30pt, color=black]{$U_1$};
-                        \draw[-, dotted, thick] (2.8,3.5) arc (140:90:4cm and 3cm);
-                        \draw[dashed, color=red!50!white, fill=red!10,opacity=1] (7, 4.7) circle (0.8) node[anchor=east, xshift=10pt, yshift = 30pt, color=black]{$U_n$};
-                    \end{scope}
-                \end{scope}
-                \draw [cyan, yshift=-1.3cm, thick] plot [smooth, tension=1] coordinates { (1, 3) (3, 4.5) (6, 5) (7, 6)} node[color=black] at (4.5,4.5) {$x(t)$};
-                \node[yshift=-1.3cm, draw, circle, fill=black!50, inner sep=1pt] (start) at (1,3) {} node[right = of start, xshift=-30pt, yshift=-5pt]{$x_0$};
-                \node[yshift=-1.3cm, draw, circle, fill=black!50, inner sep=1pt] (end) at (7,6) {} node[right = of end, xshift=-30pt, yshift=-5pt]{$x$};
-            \end{tikzpicture}
-            \caption{Covering of $x(t)$ by charts}
-            \label{fig:placeholder}
-        \end{figure}
-    \end{center}
+    \begin{figure}[H]
+        \centering
+        \incfig[0.7]{DevMap}
+        \caption{Developing along a curve}
+    \end{figure}
 
     Now we consider where these charts overlap. Since our manifold is equipped with
     a $(G,X)$-structure our transition maps differ by an element of $G$. Let $g_i =
@@ -390,3 +336,205 @@ the following definitions.
     point is at the origin.
 \end{remark}
 
+\begin{definition}[Contragradient Representation]
+    Let $E$ be a $G$-module and $\alpha$ a representation on $E$. We define
+    the contragradient representation on $E^*$ by
+    \begin{center}
+        $\alpha^*: G \mapsto GL(E^*)$\\
+        $g \mapsto \alpha^* g$
+    \end{center}
+    such that $\alpha^*g(f)(x) = f(\alpha(g^{-1})x)$ for all $x \in E$ and $f\in E^*$.
+\end{definition}
+
+\begin{remark}
+    This induces a representation on $\wedge^kE^*$ by \\$(g\cdot \omega)(x_1, \dots , x_n) = \omega(g^{-1}\cdot x_1, \dots, g^{-1}\cdot x_n)$ for $\omega \in \wedge^k E^*$
+        and $x_i \in E$.
+\end{remark}
+
+We will make use of the following lemma when looking at the relationship
+between the holonomy representation and parallel volume forms.
+
+\begin{lemma}
+    Let $F: V \mapsto V$ be a linear map from a vector space $V$ of dimension $n$ to itself
+    and let $\omega \in \wedge^n(V^*)$. Then
+    \begin{center}
+        $F^*\omega = det(A)\omega$
+    \end{center}
+    where $A$ is any matrix representing the linear transformation $F$.
+\end{lemma}
+\begin{proof}
+    As $dim(\wedge^n(V^*)) = 1$ and $F$ is a linear map, it follows that our map corresponds to multiplication
+    by some scalar $\lambda \in \mathbb{R}$. Let $\varphi: V \mapsto \mathbb{R}^n$ be an isomorphism identifying
+    our vector space $V$ with $\mathbb{R}$. Then we have
+    \begin{center}
+        $F^*\varphi^*\det = \lambda\varphi^* \det$\\
+        $\implies (\varphi^{-1})^* F^*\varphi^*\det = \lambda \det$\\
+        $\implies (\varphi^{-1} F \varphi)^*\det = \lambda \det$
+    \end{center}
+    If we let $A = \varphi^{-1} F \varphi$ and $\{e_1, \dots , e_n\}$ the standard basis of $\mathbb{R}^n$
+    then
+    \begin{center}
+        $A^*det(e_1. \dots , e_n) = \lambda det(e_1, \dots , e_n) = \lambda = det(Ae_1, \dots, Ae_n)$
+    \end{center}
+    which gives us that $det(A)= \lambda$ as required. \label{lemma:volume}
+\end{proof}
+
+This leads us to the following elementary but important property of the action
+of the holonomy representation on volume forms.
+
+\begin{corollary}
+    Let $M$ be an affine manifold and $\lambda \in GL(\mathbb{R}^n)$ be the linear part of the holonomy
+    representation. Then $M$ has a parallel volume form with respect to the affine connection if
+    and only if $\det(\lambda(g)) = 1$ for all $g \in G$.
+\end{corollary}
+
+\begin{proof}
+    Suppose $\omega$ is a parallel volume form on $M$. Then the parallel transport of $\omega$ around a loop in $M$
+    leaves $\omega$ unchanged, e.g. the linear holonomy action preserves $\omega$. This gives us that
+    \begin{center}
+        $g\cdot \omega = \omega$\\
+        $\implies \omega(g^{-1}\cdot x_1, \dots, g^{-1}\cdot x_n) = \omega(x_1, \dots, x_n)$\\
+    \end{center}
+    for all $x_i \in M$. But by Lemma \ref{lemma:volume}
+    \begin{center}
+        $\omega(g^{-1}\cdot x_1, \dots, g^{-1}\cdot x_n) = \det(\lambda(g^{-1}))\cdot \omega(x_1, \dots, x_n)$
+    \end{center}
+    and so the volume is preserved if $\det(\lambda(g)) = 1$
+
+    Conversely, suppose that the determinant of the linear holonomy is $1$ for all
+    $g \in G$. If we pick a point $m_0 \in M$ then locally there exists a volume
+    form $\omega_0$ on a chart $U$ of $M$ with respect to the affine connection,
+    corresponding to a constant, top degree form. We now claim that we can uniquely
+    extend such a form. Indeed, as parallel transport provides a linear isomorphism
+    between tangent spaces we can attempt to define a volume form on $M$ by
+    parallel transporting $\omega_0$.
+
+    Pick another point $m \in M$. We claim that the parallel transport of
+    $\omega_0$ along a curve $\gamma$ from $m_0$ to $m$ does not depend on the
+    choice of curve. If $\gamma'$ is another curve then the parallel transport
+    $(P^{\gamma'}_{m_0 \to m})^{-1} \circ P^{\gamma}_{m_0 \to m} = g$ for some $g$
+    in the linear holonomy group. It follows that
+    \begin{center}
+        $g^* \circ \omega_0 = ((P^{\gamma'}_{m_0 \to m})^{-1} \circ P^{\gamma}_{m_0 \to m})^* \circ \omega_0$\\
+        $ = \det(\lambda(g))\cdot \omega_0 = \omega_0$\\
+        $\implies (P^{\gamma}_{m_0 \to m})^* \circ \omega_0 = (P^{\gamma'}_{m_0 \to m})^* \circ \omega_0$
+    \end{center}
+    and so the parallel transport does from $m$ to $m_0$ does not depend on the choice of path. We note
+    that this defines a continuous maps as in each affine chart the parallel transport identifies the tangent
+    spaces via the identity map and on over laps they differ by an element of $GL(\mathbb{R}^n)$ as the derivative
+    of an affine map extracts the linear part.
+\end{proof}
+
+\subsection{Nilpotent Holonomy}
+In this section, we will see that the condition that the holonomy group of an
+affine manifold $M$ be nilpotent will be useful in determining whether the
+affine structure is complete. We will build up some useful results before
+determining some equivalent conditions that force completeness of the affine
+structure.
+
+\begin{definition}[Central Series]
+    Let G be a group. Then a central series for $G$ is a finite collection of normal subgroups
+    such that
+    \begin{center}
+        $1=G_0 \leq G_1 \leq \dots \leq G_s = G$
+    \end{center}
+    and
+    \begin{center}
+        $\dfrac{G_{i+1}}{G_i} \leq Z(\dfrac{G}{G_i})$
+    \end{center}
+    where $Z(\dfrac{G}{G_i})$ denotes the center.
+\end{definition}
+
+\begin{definition}[Nilpotent Group]
+    A group $G$ is said to be nilpotent if it admits a central series.
+\end{definition}
+\begin{remark}
+    The \textit{nilpotent class} of $G$ is the length of the shortest central series
+\end{remark}
+
+For nilpotent groups, we have the following results regarding their group
+cohomology.
+
+\begin{lemma}
+    Let G be a nilpotent group and $E$ a $G$-module. If $H^0(G, E) = 0$ then
+    also $H^i(G, E) = 0$ for all $i \geq 0$.
+\end{lemma}
+\begin{proof}
+    TODO : Add proof? - "HIRSCH, M., Flat manifolds and the cohomology of groups"
+\end{proof}
+
+from this we obtain the following lemma
+\begin{lemma}
+    If $G$ is a nilpotent group and $E$ is a $G$-module, then the following statements are equivalent.
+
+    \begin{enumerate}
+        \item $H^0(G, E) = 0$
+        \item $H^0(G, E^*) = 0$
+        \item $H_0(G, E) = 0$
+        \item $H_0(G, E^*) = 0$
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    TODO - Add proof? See "AFFINE MANIFOLDS WITH NILPOTENT HOLONOMY"
+\end{proof}
+
+In the case that the affine holonomy group is nilpotent, we will be able to
+show that completeness is equivalent to a property called unipotence of the
+linear holonomy. We will now outline some consequences of unipotence.
+
+\begin{definition}[Unipotent]
+    A $G$-module $E$ is called unipotent if $(g-I)^n = 0$ for every $g \in G$
+    where $n = dim(E)$.
+\end{definition}
+\begin{remark}
+    An affine representation is unipotent if its linear part defines a unipotent
+    $G$-module.
+\end{remark}
+
+Although $E$ may not be unipotent itself, we can consider the smallest
+submodule (possibly the zero module) of $E$ which is unipotent. We shall denote
+this submodule by $E_U$.
+
+\begin{remark}
+    The submodule $E_U$ is called the \textit{Fitting submodule} of $E$.
+\end{remark}
+
+Often, it will be useful to quotient out by the unipotent part of a $G$-module.
+The following lemma gives some insight on why this is often a useful idea.
+
+\begin{lemma}
+    Let $E_U$ be the Fitting submodule of $E$. Then
+    \begin{center}
+        $H^0(G, E/E_U) = 0$
+    \end{center}
+\end{lemma}
+
+\begin{proof}
+    Take $E_U$ to be the Fitting submodule and assume $E_U \neq E$ otherwise the result is trivial.
+    As $H^0(G, E/E_U)$ is the set of stationary points of the $G$-module $E/E_U$, asuuming $H^0(G, E/E_U)\neq0$
+    we can take $x + E_U \in E/E_U$ not the identity so that
+    \begin{center}
+        $g\cdot (x + E_U) = x+ E_U$ for all $g \in G$ \\
+        $ \implies (g - 1)\cdot x \in E_U$ for all $x \in E$
+    \end{center}
+    Now we consider the $G$-submodule spanned by $x$ and $E_U$. As $x \notin E_U$ this submodule
+    is strictly bigger than $E_U$. Now we have that
+    \begin{center}
+        $(g-1)^n\cdot (x + e) = (g-1)^{n-1}((g-1)x + (g-1)e)$
+    \end{center}
+    But $(g-1)x \in E_u$ so that $(g-1)x + (g-1)e \in E_U$. But as $E_U \neq E$ it has dimension at most
+    $n-1$ and so $(g-1)^{n-1} = 0$ restricted to $E_U$. Therefore this is a unipotent submodule strictly bigger
+    than $E_U$ which contradicts maximality
+\end{proof}
+
+The following splitting lemma will prove important in our characterization of
+completeness.
+
+\begin{lemma}
+    If $G$ is a nilpotent group and $E$ a $G$-module with Fitting submodule $E_U$, then there exists a
+    unique submodule $F$ such that $E = E_U \oplus F$.
+\end{lemma}
+\begin{proof}
+
+\end{proof}

@@ -30,6 +30,7 @@
 
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathrsfs}
+\usepackage{xfrac}
 \usepackage{cancel}
 
 \newcommand\N{\ensuremath{\mathbb{N}}}
@@ -65,7 +66,6 @@
 
 \declaretheoremstyle[headfont=\bfseries\sffamily, bodyfont=\normalfont, numbered=no, mdframed={ nobreak, rightline=false, topline=false, bottomline=false } ]{thmexplanationbox}
 
-
 \declaretheorem[numberwithin=chapter, style=thmgreenbox, name=Definition]{definition}
 \declaretheorem[sibling=definition, style=thmredbox, name=Corollary]{corollary}
 \declaretheorem[sibling=definition, style=thmredbox, name=Proposition]{prop}
@@ -74,9 +74,6 @@
 \declaretheorem[sibling=definition, style=thmbluebox,  name=Example]{eg}
 \declaretheorem[sibling=definition, style=thmbluebox,  name=Nonexample]{noneg}
 \declaretheorem[sibling=definition, style=thmblueline, name=Remark]{remark}
-
-
-
 
 \declaretheorem[numbered=no, style=thmexplanationbox, name=Proof]{explanation}
 \declaretheorem[numbered=no, style=thmproofbox, name=Proof]{replacementproof}
@@ -95,17 +92,15 @@
 \newtheorem*{property}{Property}
 \newtheorem*{intuition}{Intuition}
 
-
 \declaretheoremstyle[
     headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
     mdframed={
-        linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=RawSienna!5,
-    }
+            linewidth=2pt,
+            rightline=false, topline=false, bottomline=false,
+            linecolor=RawSienna, backgroundcolor=RawSienna!5,
+        }
 ]{todo}
 \declaretheorem[numbered=no, style=todo, name=TODO]{TODO}
-
 
 \usepackage{etoolbox}
 \AtEndEnvironment{vb}{\null\hfill$\diamond$}%
@@ -127,7 +122,6 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 
-
 \makeatletter
 \newif\ifworking
 \@ifclasswith{tuftebook}{working}{\workingtrue}{\workingfalse}
@@ -145,8 +139,6 @@
     \import{./figures/}{#2.pdf_tex}
 }
 
-
-
 \newcommand{\minifig}[2]{%
     \def\svgwidth{#1}%
     \begingroup%
@@ -163,13 +155,11 @@
 
 \author{Michael McGloin}
 
-
-
 \usepackage{multirow}
 \def\block(#1,#2)#3{\multicolumn{#2}{c}{\multirow{#1}{*}{$ #3 $}}}
 
 % \overfullrule=1mm
 
 \newenvironment{myproof}[1][\proofname]{%
-  \proof[\rm \bf #1]%
+    \proof[\rm \bf #1]%
 }{\endproof}
