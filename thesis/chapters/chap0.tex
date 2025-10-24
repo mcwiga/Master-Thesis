@@ -73,6 +73,7 @@ The developing pair satisfy the following equivariance condition.
     \begin{center}
         $dev(\gamma \star \alpha) = hol(\gamma)dev(\alpha)$
     \end{center}
+    \label{lemma:dev-equivariance}
 \end{lemma}
 
 \begin{proof}
@@ -133,7 +134,7 @@ certain factors/conjugations.
 \begin{lemma}
     Let $M$ be a $(G,X)$-manifold with development pair $(dev, hol)$. Suppose that $(dev', hol')$ is
     another development pair for $M$. Then $dev' = g\circ dev$ and $hol' = g\circ hol \circ g^{-1}$
-    for some $g \in G$
+    for some $g \in G$. \label{lemma:equivalent-dev-pair}
 \end{lemma}
 \begin{proof}
     Our development pair was determined once we picked a base point and a chart $(U, \phi)$. Suppose that
@@ -250,12 +251,13 @@ the following definitions.
 \end{definition}
 
 \begin{prop}
-    Let $y\in E$. Then y is a \textit{stationary point} of the action of $\alpha$ if
+    Let $y\in E$. Then y is a \textit{ary point} of the action of $\alpha$ if
     and only if $\mu(g) = y - \lambda(g)y$ for all $g \in G$.
+    \label{prop:ary-point}
 \end{prop}
 
 \begin{proof}
-    Suppose $y \in E$ is a stationary point of $\alpha$. Then $\alpha(g)y = y$ for every $g \in G$.
+    Suppose $y \in E$ is a ary point of $\alpha$. Then $\alpha(g)y = y$ for every $g \in G$.
     This gives that
     \begin{center}
         $(\lambda(g) + \mu(g))y = \lambda(g)y + \mu(g) = y$\\
@@ -263,7 +265,7 @@ the following definitions.
     \end{center}
 
     Conversely, suppose that $\mu(g) = y - \lambda(g)y$. Then $y = \mu(g) +
-        \lambda(g)y = \alpha(g)y$ \label{lemma:stationary}
+        \lambda(g)y = \alpha(g)y$ \label{lemma:ary}
 \end{proof}
 \begin{remark}
     If $\mu$ is a principle crossed homomorphism we will often write $\mu = D_y$
@@ -280,6 +282,7 @@ the following definitions.
     \begin{center}
         $H^1(G,E) \cong \frac{\{\text{crossed homomorphisms for } \lambda\}}{\{\text{principle crossed homomorphisms for } \lambda\}}$
     \end{center}
+    \label{lemma:crossed-coho}
 \end{lemma}
 
 \begin{proof}
@@ -298,10 +301,11 @@ the following definitions.
 \begin{lemma}
     The radiance obstruction vanishes, e.g. $c_{\alpha} = 0$ if and only if
     $\alpha$ is conjugate to its linear part by a translation, if and only if $\alpha$
-    has a stationary point.
+    has a ary point.
+    \label{lemma:radiance-obstruction}
 \end{lemma}
 \begin{proof}
-    By Lemma~\ref{lemma:stationary}, $y \in E$ is stationary if and only if
+    By Lemma~\ref{lemma:ary}, $y \in E$ is ary if and only if
     $\mu(g) = D_y$ is a principle crossed homomorphism for $\lambda$ if and only
     if $c_{\alpha} = [\mu] =0$.
 
@@ -361,6 +365,7 @@ between the holonomy representation and parallel volume forms.
         $F^*\omega = det(A)\omega$
     \end{center}
     where $A$ is any matrix representing the linear transformation $F$.
+    \label{lemma:pullback-form-linearmap}
 \end{lemma}
 \begin{proof}
     As $dim(\wedge^n(V^*)) = 1$ and $F$ is a linear map, it follows that our map corresponds to multiplication
@@ -458,6 +463,7 @@ cohomology.
 \begin{lemma}
     Let G be a nilpotent group and $E$ a $G$-module. If $H^0(G, E) = 0$ then
     also $H^i(G, E) = 0$ for all $i \geq 0$.
+    \label{lemma:nilpotent-group-coho}
 \end{lemma}
 \begin{proof}
     TODO : Add proof? - "HIRSCH, M., Flat manifolds and the cohomology of groups"
@@ -466,7 +472,7 @@ cohomology.
 from this we obtain the following lemma
 \begin{lemma}
     If $G$ is a nilpotent group and $E$ is a $G$-module, then the following statements are equivalent.
-
+    \label{lemma:nilpotent-group-equiv-hom-coho}
     \begin{enumerate}
         \item $H^0(G, E) = 0$
         \item $H^0(G, E^*) = 0$
@@ -512,7 +518,7 @@ The following lemma gives some insight on why this is often a useful idea.
 
 \begin{proof}
     Take $E_U$ to be the Fitting submodule and assume $E_U \neq E$ otherwise the result is trivial.
-    As $H^0(G, E/E_U)$ is the set of stationary points of the $G$-module $E/E_U$, asuuming $H^0(G, E/E_U)\neq0$
+    As $H^0(G, E/E_U)$ is the set of ary points of the $G$-module $E/E_U$, asuuming $H^0(G, E/E_U)\neq0$
     we can take $x + E_U \in E/E_U$ not the identity so that
     \begin{center}
         $g\cdot (x + E_U) = x+ E_U$ for all $g \in G$ \\
@@ -525,7 +531,7 @@ The following lemma gives some insight on why this is often a useful idea.
     \end{center}
     But $(g-1)x \in E_u$ so that $(g-1)x + (g-1)e \in E_U$. But as $E_U \neq E$ it has dimension at most
     $n-1$ and so $(g-1)^{n-1} = 0$ restricted to $E_U$. Therefore this is a unipotent submodule strictly bigger
-    than $E_U$ which contradicts maximality
+    than $E_U$ which contradicts maximality. \label{lemma:fitting-submodule}
 \end{proof}
 
 The following splitting lemma will prove important in our characterization of
@@ -536,5 +542,289 @@ completeness.
     unique submodule $F$ such that $E = E_U \oplus F$.
 \end{lemma}
 \begin{proof}
+    Let $\beta$ be the induced representation on $GL(E/E_U)$. By Lemma \ref{lemma:fitting-submodule}, $H^0(G, E/E_U) = 0$.
+    A submodule $F \subset E$ is complementary to $E_U$ e.g. $E = E_U \oplus F$ if and only if
+    $F=T(E/E_U)$ where $T:E/E_U \mapsto E$ is an equivariant linear map with $P \circ T = 1_{E/E_U}$ with $P$ the
+    canonical projection map.
 
+    Indeed, suppose $F=T(E/E_U)$, with $T$ being $G$-equivariant so that $F$ is a
+    $G$-module. If $T(x+E_U) = e \in E$, then $P(e) = e+E_U = x+E_U \implies x \in
+        E_U$ and so by linearity $e = 0$ and so $F \cap E_U = \{0\}$. Clearly, $E_U
+        \oplus F \subseteq E$. For any $x \in E$, $x-T(x+E_U) \in E_U$. We can thus
+    write $x = (x-T(x+E_U)) + T(x+E_U) \in E_U + F$.
+
+    Conversely, suppose that $F$ is a $G$-submodule and $F \cap E_U = \{0\}$ and $F
+        \oplus E_U = E$. Then its easy to see that $P|_F : F \mapsto E/E_U$ is
+    bijective. It is $G$-equivariant as $P$ is and $F$ is a $G$-submodule. We can
+    thus define $T$ as $T = P^{-1}|_F$.
+
+    Now let $S: E/E_U \mapsto E$ be a linear map satisfying $P \circ S =
+        1_{E/E_U}$. Then any such $T$ as above can be uniquely written as $T = R + S$
+    with $R: E/E_U \mapsto E$. It is $T$-equivariant if and only if
+
+    \begin{center}
+        $R + S = g \circ (R + S)\circ \beta(g)^{-1}$\\
+        \begin{equation}\label{eq:fixed-point}
+            \implies R = g\circ R \circ \beta(g)^{-1} + g\circ S \circ \beta(g)^{-1} - S
+        \end{equation}
+    \end{center}
+    If we can show that there is a unique such $T$, then we have shown that $E$ splits uniquely into $E = E_U \oplus F$.
+    This will follow if we can show there is a unique $R$ satisfying the above.
+
+    To do this we define a representation on $Hom(E/E_U, E)$ by
+    \begin{center}
+        $\gamma : G \mapsto Hom(E/E_U, E)$\\
+        $\gamma(g)(R) = g\circ R \circ \beta(g)^{-1}$
+    \end{center}
+    and we define a crossed homomorphism for $\gamma$ by $\mu(g) = g\circ S \circ \beta(g)^{-1} - S$. This
+    defines a crossed homomorphism  as
+    \begin{center}
+        $\mu(gh) = g \circ h\circ S \circ \beta(h)^{-1}\circ \beta(g)^{-1} -S$\\
+        $ = \gamma(g)\circ h\circ S \circ \beta(h)^{-1} - S$\\
+        $ = \gamma(g)\circ (\mu(h) + S) - S$\\
+        $ = \gamma(g)\circ \mu(h) + g\circ S\circ \beta(g)^{-1} -S$\\
+        $ = \gamma(g)\mu(h) + \mu(g)$
+    \end{center}
+    As $P$ is equivariant and $P \circ S = 1_{E/E_U}$ we get
+    \begin{center}
+        $P \circ \mu(g) =  P \circ g \circ S \circ \beta(g)^{-1} - P \circ S$, so by equivariance\\
+        $ =  \beta(g) \circ P  \circ S \circ \beta(g)^{-1} - 1$\\
+        $ \beta(g) \circ \beta(g)^{-1} - 1 = 0$
+    \end{center}
+    Now we can wewrite (\ref{eq:fixed-point}) as
+    \begin{center}
+        $R = \gamma(g)\circ R + \mu(g)$
+    \end{center}
+    which by Proposition \ref{prop:ary-point} is saying that $R$ is a fixed point of the affine representation
+    induced by $\gamma$ and $\mu$. We wish now to show that this affine representation has a unique fixed point.
+    This is equivalent by Lemma \ref{lemma:nilpotent-group-coho} and Lemma \ref{lemma:nilpotent-group-equiv-hom-coho}
+    to $H^{0}(G, Hom(E/E_U)) = 0$.
+
+    To this end we suppose that $R: E/E_U \mapsto E$ is fixed under all $\gamma(g)$
+    for $g\in G$. Then, letting $d=dim(E_U)$ for any possibly the same collection
+    of $d$ elements $g_1, \dots, g_d \in G$ we have
+    \begin{center}
+        $(I-g_1)\circ \dots \circ (I-g_d)|{E_U} = 0$
+    \end{center}
+    as they act unipotently on $E_U$. It now follows by equivariance that
+    \begin{center}
+        $(I-g_1)\circ \dots \circ (I-g_d) \circ R$\\
+        $= (I-g_1)\circ \dots \circ (R-g_d \circ R)$\\
+        $= (I-g_1)\circ \dots \circ (R-R \circ \beta(g_d))$\\
+        $= (I-g_1)\circ \dots \circ R \circ(1- \beta(g_d))$\\
+        $\implies R \circ (1 - \beta(g_1))\circ \dots \circ (1- \beta(g_d)) = 0$
+    \end{center}
+    so that $R$ vanishes on vectors of the form
+    \begin{center}
+        $(1 - \beta(g_1))\circ \dots \circ (1- \beta(g_d))x$
+    \end{center}
+    for $x \in E/E_U$. Thus if all vectors are in this span, then the only such $R$ fixed under the action of $\gamma$ is the
+    zero map. As $(1 - \beta(g))$ is invertible on $E/E_U$ (it acts without unipotent part), this is equivalent to
+    showing that $E/E_U$ is spanned by vectors of the form $(1 - \beta(g))$. By definition, this is equivalent to
+    $H_0(G, E/E_U)= 0$ which is true by \ref{lemma:fitting-submodule} completing the proof.
+\end{proof}
+
+An important consequence of this theorem is that for indecomposable affine
+representations of a nilpotent group the affine representation is always
+unipotent (\textbf{TODO: should we include this}).
+
+\subsection{Unipotent Representations and Completeness}
+
+The aim of this section is to show that for a compact affine manifold,
+unipotent holonomy group is equivalent to completeness. Of geometrical
+importance to this will be the concept of an \textit{expansion} in the linear
+holonomy.
+
+\begin{definition}[Expansion]
+    Let $T: V \mapsto V$ be a linear map. Then $T$ is said to be an expansion of $V$ if for every eigenvalue
+    $\lambda$ of $T$ we have $|\lambda|>1$.
+\end{definition}
+
+We now wish to prove the following technical lemma which holds in the absence
+of an expansion.
+\begin{lemma}
+    Let $G$ be a nilpotent group and $E$ a $G$-module. Suppose that the linear holonomy group does not
+    contain an expansion of E. Then for each $n \in \mathbb{N}_{>0}$, there is a $C^r$ map $\varphi : E \mapsto \mathbb{R}$
+    which satisfies the following.
+    \begin{enumerate}
+        \item $\varphi > 0$ almost everywhere.
+        \item $\varphi$ is $G$-invariant.
+        \item There exists some $a>0$ such that
+              \begin{center}
+                  $\varphi(e^{tx}) = e^{ta}\varphi(x)$
+              \end{center}
+              for all $t \in \mathbb{R}$ and $x \in E$.
+    \end{enumerate}
+\end{lemma}
+
+Before we can do this we will recall some results from algebraic group theory
+and the representation theory of Lie Algebras
+
+\begin{definition}[Algebraic Group]
+    An \textit{algebraic group} is a matrix group that can be defined using polynomials.
+\end{definition}
+
+If $G$ is an algebraic group, then there is a unique irreducible component
+passing through the identity denoted by $G^{\circ}$.
+
+\begin{remark}
+    This unique irreducible component is called the \textit{identity component} of $G$.
+\end{remark}
+
+\begin{prop}
+    Let $G$ be an algebraic group. Then $G^{\circ}$ is a normal subgroup of finite index in $G$ whose cosets are connected and
+    irreducible components of $G$. \label{prop:identity-comp}
+\end{prop}
+
+\begin{proof}
+    See "Linear Algebraic Groups - Humphreys (7.3)"
+\end{proof}
+
+\textbf{TODO: Flesh these algebraic group proofs out more.}
+\begin{prop}
+    Let $G$ be an algebraic group and $H$ a normal subgroup. Then
+    \begin{center}
+        $\overline{[G, H]} = [\overline{G}, \overline{H}]$
+    \end{center}
+    where $\overline{H}$ denotes the Zariski closure. \label{prop:zariski-closure}
+\end{prop}
+\begin{proof}
+    Proposition (2.4?) Borel-Linear-Algebraic-Groups \url{https://www.math.utah.edu/~ptrapa/math-library/borel/%20Borel-Linear-Algebraic-Groups-1991.pdf}
+\end{proof}
+
+This proposition leads to the following corrolary.
+\begin{corollary}\label{corr:closure-nilpotent}
+    Let $G$ be an algebraic group and $N$ a normal subgroup that is nilpotent. Then $\overline{N}$ is also nilpotent.
+\end{corollary}
+
+\begin{proof}
+    By Proposition \ref{prop:zariski-closure}, a central series for $N$ will pass to a central series of $\overline{N}$.
+\end{proof}
+
+The next result we will state is an important result from representation theory
+of Lie Algebras. It will guarantee us a basis for our representation such that
+the matrices of the representation are upper triangular.
+
+\begin{theorem}
+    Let $V$ be a vector space over an algebraically closed field of characteristic $0$. If $\pi : \mathfrak{g} \mapsto \mathfrak{gl}(V)$
+    is a finite dimensional representation of a solvable Lie algebra, then there is a basis of $V$ such that all linear transformations in
+    $\pi(\mathfrak{g})$ are represented by upper triangular matrices.
+\end{theorem}
+\begin{proof}
+    See the following \url{https://math.mit.edu/classes/18.745/Notes/Lecture_5_Notes.pdf}
+\end{proof}
+
+We now have the required machinary to start our proof.
+
+\begin{lemma}
+    Let $G$ be a nilpotent group and $E$ a $G$-module. Suppose that the linear holonomy group does not
+    contain an expansion of E. Then for each $n \in \mathbb{N}_{>0}$, there is a $C^r$ map $\varphi : E \mapsto \mathbb{R}$
+    which satisfies the following.
+    \begin{enumerate}
+        \item $\varphi > 0$ almost everywhere.
+        \item $\varphi$ is $G$-invariant.
+        \item There exists some $a>0$ such that
+              \begin{center}
+                  $\varphi(e^{tx}) = e^{ta}\varphi(x)$
+              \end{center}
+              for all $t \in \mathbb{R}$ and $x \in E$.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    If we can prove this for a normal subgroup $G_0$ of finite index, then we will be able to construct our map $\varphi$ as follows.
+    Let $g_1G_0, \dots g_kG_0$ be the left cosets of $G_0$ and $\varphi_0$ a map satisfying properties $1$ and $3$ defined on $G_0$ .
+    Now define
+    $$\varphi(x) = \sum^{k}_{i=1} \varphi_0(g_ix)$$
+
+    This will now be $G$-invariant as $G_0$ is a normal subgroup multiplication by
+    an element of $G$ will permute the cosets.
+
+    As we want to eventually apply Lies theorem, we complexify the dual space $E^*$
+    as $F = \mathbb{C}\oplus E^*$. The contragradient representation of $G$ on
+    $E^*$ extends to a representation on $F$ in the obvious way. We will denote
+    this as $\rho : G \mapsto GL(F)$. Now, $\rho(G)$ is a nilpotent subgroup of
+    $GL(F)$ that passes through the identity.
+
+    Let $H$ be the identity component of the algebraic closure of $\rho(G)$. As
+    $\rho(G)$ is nilpotent, by Corollary \ref{corr:closure-nilpotent} so is its
+    Zariski closure and hence its identity component as subgroups of nilpotent
+    groups are nilpotent. $H$ will be a normal subgroup of finite index by
+    Proposition \ref{prop:identity-comp} and so $G_0 = \rho^{-1}(H)$ will also be a
+    normal subgroup of finite index.
+
+    We can now obtain a Lie algebra representation of the Lie algebra of $H$ on $F$
+    by
+    \begin{center}
+        $di: \mathfrak{h} \mapsto \mathfrak{gl}(F)$
+    \end{center}
+    where $i$ is the inclusion map. Importantly, by construction on the underlying vector spaces $\rho(G_0) \subseteq di(\mathfrak{h})$. As $H$ is a nilpotent Lie group, its Lie algebra is nilpotent hence solvable so we can
+    apply Lie's Theorem to obtain a decomposition $F = \oplus^m_{k=1} F_k$ which is $di(h)$-invariant and hence $\rho$-invariant by
+    construction when restricted to $G_0$.
+
+    Again, by Lie's theorem there is a basis $B_k$ of each $F_k$ that represents
+    the operators $di(h)|_{F_k}$ as upper triangular complex matrices
+    \begin{center}
+        $di_k(h) = \lambda_k(h)I + N_k(h)$
+    \end{center}
+    where $di_k$ is the restriction to $F_k$ and $N_k(h)$ is strictly upper triangular nilpotent matrix and $\lambda_k(h)$ are the eigenvalues of $\rho(h)$.
+    The first basis vector in each $B_k$ is killed by the strictly upper triangular matrix so that if $f_k\in F_k$ is the
+    first basis vector in $B_k$
+    \begin{center}
+        $di_k(h)f_k = \lambda_k(h)f_k$
+    \end{center}
+    for all $h \in H$.
+
+    Now we define the following group morphisms
+    \begin{center}
+        $\varphi_k : G_0 \mapsto \mathbb{R}$\\
+        $ \varphi_k(g) = log|\lambda_k(g)|$
+    \end{center}
+    for $k = 1,\dots, m$.
+    \textbf{TODO: Show $\lambda_k$ is a character. Also i think we are exponentiating from Lie algebra to lie group before this?}
+
+    This defines a map into $\mathbb{R}^m$ by
+    \begin{center}
+        $\varphi=(\varphi_1 , \dots , \varphi_m): G_0 \mapsto \mathbb{R}^m$
+    \end{center}
+    If $G_0$ does not contain any expansions of $E$ then the image $\varphi(G_0)$ is disjoint from the set
+    $$
+        P = \{y \in \mathbb{R}^m: y_k>0, k=1,\dots ,m\}.
+    $$
+    As it is a subgroup, it follows that its linear span $span\{\varphi(G_0)\}$ is also disjoint from $P$ as if a point in the image was
+    in the strictly negative orthant, it's inverse would lie in $P$. Therefore there exists a vector in the orthogonal complement
+    of $\varphi(G_0)$ that lies in the closure of $P$. We denote this by $v = (v_1,\dots, v_m)$ and it satisfies
+    \begin{center}
+        $v_k \geq 0$ for all $k$,
+        \[\sum^m_{k=1}v_k = a \geq 0\]
+        \[\sum^m_{k=1}v_k\varphi_k(g) =0 \text{ for all } g\in G_0\]
+    \end{center}
+    If we scake our $v$ by a positive scalar $c>0$ it will satisfy the same properties so that we can arrange that
+    \begin{center}
+        $v_k =0$ or $v_k>2r$ for each k with $r$ coming from the lemma.
+
+        Now for each $k$ we have a vector $f_k\in Hom(\mathbb{C}\otimes E, \mathbb{C})$
+        satisfy $di_k(h)f_k = \lambda_k(h)f_k$. We now include $E$ into
+        $\mathbb{C}\otimes E$ and construct the map
+        \begin{center}
+            $\psi: E \mapsto \mathbb{R}$
+            \[\psi(x) = \prod_{k=1}^{m}|f_k(x)|^{v_k}\]
+        \end{center}
+    \end{center}
+    Now $\psi$ is $C^r$ differentiable by our assumptions (\textbf{TODO: Why is this the case??}). Properties
+    $1)$ and $3)$ are satisfied by our construction of $v_k$. We now show that it is $G_0$-invariant.
+    \[\psi(g^{-1}x) = \prod_{k=1}^{m}|f_k(g^{-1}x)|^{v_k} \]
+    noting this is the contragradient representation and also that $f_k$ is an
+    eigenvector
+    \[\psi(g^{-1}x)  = \prod_{k=1}^{m}|g\circ f_k(x)|^{v_k} = \prod_{k=1}^{m}|\lambda(g)f_k(x)|^{v_k}\]
+    \[= \prod_{k=1}^{m}|\lambda_k(g)|^{v_k}\prod_{k=1}^{m}|f_k(x)|^{v_k}\]
+
+    Now, recalling that $ \varphi_k(g) = log|\lambda_k(g)| \implies
+        e^{\varphi_k(g)}= |\lambda_k(g)|$ so we obtained
+    \[ \prod_{k=1}^{m}|\lambda_k(g)|^{v_k}\prod_{k=1}^{m}|f_k(x)|^{v_k} = e^{\sum_{k=1}^{m}v_k\varphi_k(g)}\psi(x) = \psi(x)\]
+
+    completing the proof.
+
+    Next we move onto a more geomterical proof regarding expansions in the linear
+    holonomy which will lead to some important results
 \end{proof}
