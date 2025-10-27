@@ -96,6 +96,7 @@ Indeed the following proposition makes this statment more clear.
 \end{prop}
 
 \begin{proof}
+    \label{prop:dev-charts}
     We pick $m\in M$ and fix a lift $\tilde{m}\in \tilde{M}$ of $m$. Then, as
     $dev$ is a local diffeomorphism, there is an open set $\tilde{U}$ of $\tilde{m}$
     such that $dev$ is a local diffeomorphism onto $X$.
@@ -542,6 +543,7 @@ completeness.
     unique submodule $F$ such that $E = E_U \oplus F$.
 \end{lemma}
 \begin{proof}
+    \label{lemma:fitting-unique-decomp}
     Let $\beta$ be the induced representation on $GL(E/E_U)$. By Lemma \ref{lemma:fitting-submodule}, $H^0(G, E/E_U) = 0$.
     A submodule $F \subset E$ is complementary to $E_U$ e.g. $E = E_U \oplus F$ if and only if
     $F=T(E/E_U)$ where $T:E/E_U \mapsto E$ is an equivariant linear map with $P \circ T = 1_{E/E_U}$ with $P$ the
@@ -591,7 +593,7 @@ completeness.
         $ =  \beta(g) \circ P  \circ S \circ \beta(g)^{-1} - 1$\\
         $ \beta(g) \circ \beta(g)^{-1} - 1 = 0$
     \end{center}
-    Now we can wewrite (\ref{eq:fixed-point}) as
+    Now we can we write (\ref{eq:fixed-point}) as
     \begin{center}
         $R = \gamma(g)\circ R + \mu(g)$
     \end{center}
@@ -826,5 +828,114 @@ We now have the required machinary to start our proof.
     completing the proof.
 
     Next we move onto a more geomterical proof regarding expansions in the linear
-    holonomy which will lead to some important results
+    holonomy which will lead to some important results. \label{lemma:exists-map}
+\end{proof}
+
+\begin{theorem}
+    Let $M$ be a compact affine manifold. Let $E_0 \subset E$ be a proper linear subspace invariant
+    under the affine holonomy and denote by $\Lambda$ the linear holonomy. If the image of the linear holonomy group $\Lambda_1 \subseteq GL(E/E_0)$ is nilpotent,
+    then some element of $\Lambda_1$ expands $E/E_0$.
+\end{theorem}
+
+\begin{proof}
+    \label{thm:expansion-in-holonomy}
+    Let $q: E \mapsto E/E_0$ be the canonical projection. Denote by $R$ the radiant vector field on $E/E_0$. If $\{y_1,\dots , y_m\}$ are corrdinates
+    on $E/E_0$, then this appears as $R = \sum_i y_i \frac{\partial}{\partial y_{i}}$.
+    Then in each affine chart there is a vector field $X_i$ that is $\pi$-related to $R$. As $M$ is compact, we can cover it in finitely many
+    charts and using a partition of unity subordiante to that covering form the vector field
+    \[X = \sum_{\mu_i}\mu_i X_i\]
+    on M.
+
+    Now suppose that $\Lambda_1$ does not contain any expansions of $E/E_0$. Then
+    by Lemma \ref{lemma:exists-map}, there is a $\Lambda_1$-invariant $C^1$ map
+    $\Psi: E/E_0 \mapsto \mathbb{R}$. As the flow along the radiant vector field at
+    a point $z$ is given by $\phi_t(z) = e^tz$, our map satisfies
+
+    \[d\Psi_z R(Z) = \frac{d}{dt}\psi(e^tz)|_{t=0} = \frac{d}{dt} e^{ta}\psi(z)|_{t=0} = a\Psi(z)\]
+
+    for some $a>0$ and all $z\in E/E_0$.
+
+    Now the composition
+    \[\tilde{f}: \tilde{M} \mapsto E \mapsto E/E_0 \mapsto \mathbb{R}\]
+    is invariant under deck transformations. Indeed, let $\gamma \in \pi_1(M)$ then
+    for $x \in \tilde{M}$
+
+    \[\Psi\circ \pi \circ dev(\gamma \star x) = \Psi\circ \pi \circ hol(\gamma)\circ dev(x)\]
+
+    and this is invariant as $E_0$ is invariant under the holonomy group.
+
+    This implies that $\tilde{f}$ covers a map $f: M \mapsto \mathbb{R}$. As by
+    Proposition \ref{prop:dev-charts}, we can give charts in terms of the
+    development pair, in affine coordiantates we have that $f = \Psi \circ \pi$.
+    Now
+
+    \[df_y X(y) = d(\Psi \circ \pi)_y X(y) = \frac{d}{dt}\Psi \circ \pi (\gamma(t))|_{t=0}\]
+    \[= \frac{d}{dt}\Psi(e^{t}\tilde{y})|_{t=0} = a\Psi(\tilde{y})\]
+
+    where $\tilde{y} = \pi(y)$ and $\gamma(t)$ is an integral curve of $X$ starting
+    at $y$. This gives that
+
+    \[df_y X(y) = af(y)\]
+
+    It follows that if $\alpha: I \mapsto M$ is an integral curve of $X$ starting
+    at $p \in M$ then
+    \[f(\alpha(t)) = \Psi\circ \pi (\alpha(t)) = \Psi(\overline{\alpha(t)}) = \Psi(e^t \tilde{p}) = e^{ta}\Psi(\tilde{p})\]
+    \[= e^{ta}f(\alpha(c))\]
+
+    Now as $\Psi > 0$ almost everywhere, there exists $x_0 \in M$ with $f(x_0)>0$
+    and the integral curve $\alpha_0$ through $x_0$ is defined for all $t$ as M is
+    compact. Then $\lim_{t \to \infty}f(\alpha_0 (t)) = \lim_{t \to \infty}
+        e^{ta}f(\alpha_0(c)) \to \infty$. But as $f$ is a continuous function and $M$
+    is compact it must be bounded and so we reach a contradiction.
+\end{proof}
+
+This proof leads to several important results. The first result follows almost
+immediately.
+
+\begin{corollary}
+    Let $M$ be a compact radiant manifold with nilpotent linear holonomy $\Lambda$. Then $\Lambda$ contains an expansion of $E$.
+\end{corollary}
+\begin{proof}
+    We can take $E_0 = 0$ in Theorem \ref{thm:expansion-in-holonomy} and the result follows immediately.
+\end{proof}
+
+The next corollary follows from considering the Fitting submodule of $E$.
+
+\begin{corollary}
+    Let $M$ be a compact affine manifold with nilpotent affine holonomy group. If $F \neq 0$ then some element of the linear holonomy group
+    expands $F$.
+    \label{corr:F-has-expansion}
+\end{corollary}
+\begin{proof}
+    Recall from Lemma \ref{lemma:fitting-unique-decomp}, that nilpotence of the affine hoilonomy gives a unique decomposition
+    $E = E_U \oplus F$ which is invariant under the action of the holonomy group. If we take $E_0 = 0$ in Theorem \ref{thm:expansion-in-holonomy},
+    then $F \cong E/E_U$ as a module of the linear holonomy group.
+\end{proof}
+
+Perhaps the most important consaequence of this result is the following theorem
+which is integral in providing a classification of completeness.
+
+\begin{theorem}
+    Let $M$ be a compact affine manifold with nilpotent affine holonomy group. Suppose that there is a parallel volume form on $M$.
+    Then the linear holonomy is unipotent.
+\end{theorem}
+
+\begin{proof}
+    Again we will exploit that there is a unique decomposition $E = E_U \oplus F$ by Lemma \ref{lemma:fitting-unique-decomp}. Now let $g$ be
+    any element of the linear holonomy group. As there is a parallel volume form by Lemma \ref{lemma:pullback-form-linearmap}, $det(g)=1$. But by the unique decomposition
+    \[1 = det(g) = det(g|_{E_U})det(g|_F)\]
+    But $g|_{E_U}$ is a unipotent operator and so has determinant 1. This forces
+    $det(g|_F)=1$ so that $F$ cannot contain an expansion. But now Corollary
+    \ref{corr:F-has-expansion} forces $F=0$ and so $E = E_U$.
+\end{proof}
+
+This will be used in conjunction with the following theorem in order to give
+equivalent conditions on the completeness of an affine manifold.
+
+\begin{theorem}
+    Let $M$ be an affine manifold. If $M$ is compact and has unipotent holonomy then $M$ is complete.
+\end{theorem}
+
+\begin{proof}
+    \textbf{TODO: Write up proof of this statement}
 \end{proof}
