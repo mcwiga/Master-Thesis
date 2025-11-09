@@ -9,6 +9,7 @@
         dev: M \mapsto X
     $$
 \end{prop}
+
 \begin{proof}
     We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $dev$ as follows. We pick a curve on $M$ $x(t)$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover the it by finitely many coordinate charts $U_i$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
     $$a_0<0<a_1<b_0<a_2<b_1<a_3 \dots <a_n<b_{n-1}<1<b_n$$
@@ -18,6 +19,12 @@
         \incfig[0.7]{DevMap}
         \caption{Developing along a curve}
     \end{figure}
+
+    \begin{marginfigure}[-7cm]
+        \centering
+        \incfig[1]{DevPartTwo}
+        \caption{We successively glue our charts together using the transition maps}
+    \end{marginfigure}
 
     Now we consider where these charts overlap. Since our manifold is equipped with
     a $(G,X)$-structure our transition maps differ by an element of $G$. Let $g_i =
@@ -252,7 +259,7 @@ the following definitions.
 \end{definition}
 
 \begin{prop}
-    Let $y\in E$. Then y is a \textit{ary point} of the action of $\alpha$ if
+    Let $y\in E$. Then y is a \textit{stationary point} of the action of $\alpha$ if
     and only if $\mu(g) = y - \lambda(g)y$ for all $g \in G$.
     \label{prop:ary-point}
 \end{prop}
@@ -302,7 +309,7 @@ the following definitions.
 \begin{lemma}
     The radiance obstruction vanishes, e.g. $c_{\alpha} = 0$ if and only if
     $\alpha$ is conjugate to its linear part by a translation, if and only if $\alpha$
-    has a ary point.
+    has a stationary point.
     \label{lemma:radiance-obstruction}
 \end{lemma}
 \begin{proof}
@@ -431,6 +438,30 @@ of the holonomy representation on volume forms.
     of an affine map extracts the linear part.
 \end{proof}
 
+\begin{marginfigure}
+    \centering
+    \captionsetup{justification=centering}
+    \begin{tikzpicture}[scale=0.7]
+        % axes
+        \draw[->] (-3.2,0) -- (3.2,0) node[right] {$x$};
+        \draw[->] (0,-3.2) -- (0,3.2) node[above] {$y$};
+        \foreach \i in {-3,-2,-1,1,2,3} {
+                \draw (\i,0.05) -- (\i,-0.05);
+                \draw (0.05,\i) -- (-0.05,\i);
+            }
+
+        % Vector field: (x, y) scaled by 0.15 for visual clarity
+        \foreach \x in {-3,-2.5,...,3}{
+                \foreach \y in {-3,-2.5,...,3}{
+                        \pgfmathsetmacro{\sx}{0.15*\x}
+                        \pgfmathsetmacro{\sy}{0.15*\y}
+                        \draw[->, >=Stealth, blue] (\x,\y) -- ++(\sx,\sy);
+                    }
+            }
+    \end{tikzpicture}
+    \caption{Radiant Vector Field}
+\end{marginfigure}
+
 \subsection{Nilpotent Holonomy}
 In this section, we will see that the condition that the holonomy group of an
 affine manifold $M$ be nilpotent will be useful in determining whether the
@@ -483,7 +514,7 @@ from this we obtain the following lemma
 \end{lemma}
 
 \begin{proof}
-    TODO - Add proof? See "AFFINE MANIFOLDS WITH NILPOTENT HOLONOMY"
+    See \cite{nilpotent-holonomy}
 \end{proof}
 
 In the case that the affine holonomy group is nilpotent, we will be able to
@@ -545,20 +576,12 @@ completeness.
 \begin{proof}
     \label{lemma:fitting-unique-decomp}
     Let $\beta$ be the induced representation on $GL(E/E_U)$. By Lemma \ref{lemma:fitting-submodule}, $H^0(G, E/E_U) = 0$.
-    A submodule $F \subset E$ is complementary to $E_U$ e.g. $E = E_U \oplus F$ if and only if
-    $F=T(E/E_U)$ where $T:E/E_U \mapsto E$ is an equivariant linear map with $P \circ T = 1_{E/E_U}$ with $P$ the
-    canonical projection map.
 
-    Indeed, suppose $F=T(E/E_U)$, with $T$ being $G$-equivariant so that $F$ is a
-    $G$-module. If $T(x+E_U) = e \in E$, then $P(e) = e+E_U = x+E_U \implies x \in
-        E_U$ and so by linearity $e = 0$ and so $F \cap E_U = \{0\}$. Clearly, $E_U
-        \oplus F \subseteq E$. For any $x \in E$, $x-T(x+E_U) \in E_U$. We can thus
-    write $x = (x-T(x+E_U)) + T(x+E_U) \in E_U + F$.
-
-    Conversely, suppose that $F$ is a $G$-submodule and $F \cap E_U = \{0\}$ and $F
-        \oplus E_U = E$. Then its easy to see that $P|_F : F \mapsto E/E_U$ is
-    bijective. It is $G$-equivariant as $P$ is and $F$ is a $G$-submodule. We can
-    thus define $T$ as $T = P^{-1}|_F$.
+    \begin{claim}
+        A submodule $F \subset E$ is complementary to $E_U$ e.g. $E = E_U \oplus F$ if and only if
+        $F=T(E/E_U)$ where $T:E/E_U \mapsto E$ is an equivariant linear map with $P \circ T = 1_{E/E_U}$ with $P$ the
+        canonical projection map.
+    \end{claim}
 
     Now let $S: E/E_U \mapsto E$ be a linear map satisfying $P \circ S =
         1_{E/E_U}$. Then any such $T$ as above can be uniquely written as $T = R + S$
@@ -624,6 +647,26 @@ completeness.
     zero map. As $(1 - \beta(g))$ is invertible on $E/E_U$ (it acts without unipotent part), this is equivalent to
     showing that $E/E_U$ is spanned by vectors of the form $(1 - \beta(g))$. By definition, this is equivalent to
     $H_0(G, E/E_U)= 0$ which is true by \ref{lemma:fitting-submodule} completing the proof.
+\end{proof}
+
+This proves our result once we have cleared up that the stated claim is indeed
+true which we show in the following proposition.
+\begin{prop}
+    A submodule $F \subset E$ is complementary to $E_U$ e.g. $E = E_U \oplus F$ if and only if
+    $F=T(E/E_U)$ where $T:E/E_U \mapsto E$ is an equivariant linear map with $P \circ T = 1_{E/E_U}$ with $P$ the
+    canonical projection map.
+\end{prop}
+\begin{proof}
+    Suppose $F=T(E/E_U)$, with $T$ being $G$-equivariant so that $F$ is a
+    $G$-module. If $T(x+E_U) = e \in E$, then $P(e) = e+E_U = x+E_U \implies x \in
+        E_U$ and so by linearity $e = 0$ and so $F \cap E_U = \{0\}$. Clearly, $E_U
+        \oplus F \subseteq E$. For any $x \in E$, $x-T(x+E_U) \in E_U$. We can thus
+    write $x = (x-T(x+E_U)) + T(x+E_U) \in E_U + F$.
+
+    Conversely, suppose that $F$ is a $G$-submodule and $F \cap E_U = \{0\}$ and $F
+        \oplus E_U = E$. Then its easy to see that $P|_F : F \mapsto E/E_U$ is
+    bijective. It is $G$-equivariant as $P$ is and $F$ is a $G$-submodule. We can
+    thus define $T$ as $T = P^{-1}|_F$.
 \end{proof}
 
 An important consequence of this theorem is that for indecomposable affine
@@ -707,14 +750,32 @@ The next result we will state is an important result from representation theory
 of Lie Algebras. It will guarantee us a basis for our representation such that
 the matrices of the representation are upper triangular.
 
-\begin{theorem}
-    Let $V$ be a vector space over an algebraically closed field of characteristic $0$. If $\pi : \mathfrak{g} \mapsto \mathfrak{gl}(V)$
-    is a finite dimensional representation of a solvable Lie algebra, then there is a basis of $V$ such that all linear transformations in
-    $\pi(\mathfrak{g})$ are represented by upper triangular matrices.
-\end{theorem}
+\begin{definition}[Weight Space]
+    Let $\mathfrak{g}$ be a Lie algebra and $\pi: \mathfrak{g} \mapsto \mathfrak{gl}_V$ be a representation on a vector space $V$. For $\lambda \in \mathfrak{g}^*$
+    we define the weight space of $\mathfrak{g}$ with respect to $\lambda$ to be
+    \begin{center}
+        $V_{\lambda}^{\mathfrak{g}} = \{v \in V | \pi(g)v = \lambda(g)v ,\quad \forall g \in \mathfrak{g}\}$
+    \end{center}
+\end{definition}
+
+\begin{remark}
+    If $V_{\lambda}^{\mathfrak{g}} \neq 0$ we will say that $\lambda$ is a weight for $\pi$.
+\end{remark}
+
+\begin{lemma}[Lie's theorem]
+    Let $\mathfrak{g}$ be a solvable Lie algebra and let $\pi$ be a representation of $\mathfrak{g}$ on a finite
+    dimensional, non-zero vector space $V$ over an algebraically closed field of characteristic zero. Then there exists
+    a weight  $\lambda \in \mathfrak{g}^*$ for $\pi$.
+\end{lemma}
 \begin{proof}
     See the following \url{https://math.mit.edu/classes/18.745/Notes/Lecture_5_Notes.pdf}
 \end{proof}
+
+\begin{corollary}
+    Let $V$ be a vector space over an algebraically closed field of characteristic $0$. If $\pi : \mathfrak{g} \mapsto \mathfrak{gl}(V)$
+    is a finite dimensional representation of a solvable Lie algebra, then there is a basis of $V$ such that all linear transformations in
+    $\pi(\mathfrak{g})$ are represented by upper triangular matrices.
+\end{corollary}
 
 We now have the required machinary to start our proof.
 
@@ -783,7 +844,6 @@ We now have the required machinary to start our proof.
         $ \varphi_k(g) = log|\lambda_k(g)|$
     \end{center}
     for $k = 1,\dots, m$.
-    \textbf{TODO: Show $\lambda_k$ is a character. Also i think we are exponentiating from Lie algebra to lie group before this?}
 
     This defines a map into $\mathbb{R}^m$ by
     \begin{center}
@@ -801,7 +861,7 @@ We now have the required machinary to start our proof.
         \[\sum^m_{k=1}v_k = a \geq 0\]
         \[\sum^m_{k=1}v_k\varphi_k(g) =0 \text{ for all } g\in G_0\]
     \end{center}
-    If we scake our $v$ by a positive scalar $c>0$ it will satisfy the same properties so that we can arrange that
+    If we scale our $v$ by a positive scalar $c>0$ it will satisfy the same properties so that we can arrange that
     \begin{center}
         $v_k =0$ or $v_k>2r$ for each k with $r$ coming from the lemma.
 
@@ -813,7 +873,7 @@ We now have the required machinary to start our proof.
             \[\psi(x) = \prod_{k=1}^{m}|f_k(x)|^{v_k}\]
         \end{center}
     \end{center}
-    Now $\psi$ is $C^r$ differentiable by our assumptions (\textbf{TODO: Why is this the case??}). Properties
+    Now $\psi$ is $C^r$ differentiable as $|f_k(x)|^{v_k} = (u_k(x)^2 + w_k(x)^2)^m$ with $m>r$. Properties
     $1)$ and $3)$ are satisfied by our construction of $v_k$. We now show that it is $G_0$-invariant.
     \[\psi(g^{-1}x) = \prod_{k=1}^{m}|f_k(g^{-1}x)|^{v_k} \]
     noting this is the contragradient representation and also that $f_k$ is an
@@ -937,5 +997,69 @@ equivalent conditions on the completeness of an affine manifold.
 \end{theorem}
 
 \begin{proof}
-    \textbf{TODO: Write up proof of this statement} \cite{nilpotent-holonomy}
+    We pick a basepoint $x_0$ in $M$. Let $p: \tilde{M} \mapsto M$ be the universal cover of $M$ with $p(\tilde{x_0}) = x_0$.
+    We now choose a developing map $dev: \tilde{M} \mapsto \mathbb{R}^n$ such that $dev(\tilde{x_0}) = 0$. Let $hol$ be the holonomy representation
+    and $hol(\pi_1(M)) = \Gamma$ be the affine holonomy group.
+
+    Now, suppose that the linear affine holonomy group is unipotent. Then by
+    \textbf{TODO: Humphreys Linear algebraic groups} there exists a linear flag
+    \begin{center}
+        $0 = F_0 \subset F_1 \subset \dots \subset F_n = \mathbb{R}^n$
+    \end{center}
+    preserved by the linear affine holonomy group. Furthermore, the induced action on the quotients $F_k/F_{k-1}$ is trivial and so
+    the restriction to $F_k$ preserves a linear functional $l_k : F_k \mapsto \mathbb{R}$ with kernel $F_{k-1}$.
+
+    This determines a family of parallel fields $\mathfrak{F}_k \subset TM$. In
+    affine coordinates, each of these is spanned by a subset of the coordinate
+    vector fields and so it is clear that they are integrable.Furthermore, each
+    linear map $l_i$ determines a parallel 1-form $\omega_i$ defined on
+    $\mathfrak{F}_i$ and vanishing on $\mathfrak{F}_{i-1}$.
+
+    \textbf{Claim}: We can construct vector fields $X_i$ on  M, tangent to $\mathfrak{F}_i$ such that $X_i(l_i)=1$ using
+    partitions of unity. These lift to vector fields $\tilde{X}_i$ on the universal cover.
+
+    We first show surjectivity of the developing map. Let $\gamma_i(t)$ be an
+    integral curve of $\tilde{X}_i$ starting at the point $x_i$. As $dev$ is a
+    local diffeomorphism we have that
+
+    \begin{center}
+        $\frac{d}{dt}dev \circ \gamma_i(t) = dev_* \circ \tilde{X}(\gamma_i(t))$\\
+        $\implies dev \circ \gamma_i(t) = dev_* \circ \tilde{X}_i(\gamma_i(t))t + dev \circ \gamma_i(0)$
+    \end{center}
+
+    applying our linear functional $l_i$ to this we obtained
+    \[l_i(dev \circ \gamma_i(t)) = l_i \circ dev_*(\tilde{X}_i(\gamma_i(t)))t + l_i(dev \circ \gamma_i(0))\]
+    \[= l_i(\tilde{X}_i)t + l_i(dev \circ \gamma_i(0)) = t + l_i(dev \circ \gamma_i(0)) \tag{*} \label{eq:flow}\]
+
+    Now we can start our inductive step. Taking $i=n$ we start at $\tilde{x}_0 \in
+        \tilde{M}$ such that $dev(\tilde{x}_0) = 0$. We flow along $\tilde{X}_n$ for
+    time $t=l_n(v)$ until the point $\tilde{x}_1 \in \tilde{M}$ with
+    $dev(\tilde{x}_1) = v_1$. From \eqref{eq:flow} we obtain
+
+    \[l_n(v_1) = l_n(v) + 0\]
+    \[\implies v- v_1 \in \ker l_n = F_{n-1}\]
+
+    Now, we continue e.g. flow along $\tilde{X}_{n-1}$ for $t=l_{n-1}(v-v_1)$
+    ending at $\tilde{x}_2$ with $dev(\tilde{x}_2) = v_2$. Then
+    \[l_{n-1}(v_2) = l_{n-1}(v-v_1) + l_n(v_1)\]
+    \[\implies l_{n-1}(v-v_2) = 0 \implies v-v_2 \in \ker l_{n-1} = F_{n-2}\]
+
+    We continue this until we reach $F_0 = \{0\}$ showing surjectivity.
+
+    Now for injectivity we consider a path
+    \[\gamma_0 : [a,b] \mapsto \tilde{M}\]
+
+    which develops to a closed loop $\delta: [a,b] \mapsto \mathbb{R}^n$. We can
+    deform $\gamma_0$ to a new path $\gamma_1$ such that it develops entirely
+    inside $F_{n-1}$. We now define a new path $\gamma_t : [a,b] \mapsto \tilde{M}$
+    where $\gamma_t(s)$ is the image of $\gamma_0(s)$ at time $-tl_n(\delta(s))$
+    under the flow of $\tilde{X}_n$. Applying $dev$ gives that
+    \[dev \circ \gamma_t(s) = dev(\gamma_0(s)) -tl_n(\delta(s))dev_*(\tilde{X}(\gamma_0(s)))\]
+    \[\implies l_n(dev \circ \gamma_t(s)) = l_n(dev(\gamma_0(s))) -tl_n(\delta(s))l_n \circ dev_*(\tilde{X}(\gamma_0(s))) \]
+    \[ \implies l_n(dev \circ \gamma_t(s)) = l_n(dev(\gamma_0(s))) - tl_n(\delta(s))\]
+
+    At $t=1$ this yields that $dev \circ \gamma_t(s) \in \ker l_n = F_{n-1}$.
+    Repeating this process we eventeually get a curve that develops entirely in
+    $F_0 = \{0\}$ showing injectivity.
 \end{proof}
+
