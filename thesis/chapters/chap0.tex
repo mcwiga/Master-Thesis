@@ -2,7 +2,38 @@
 \chapter{Preliminaries}
 
 \section{Geometric Structures on Manifolds}
-\textbf{TODO: Basic definitions of (G,X)-structures}
+A lot of the content of this project extends in a nice way to more general
+types of geometries, namely locally homogeneous geometric structures. The idea
+behind these structures is that we can locally describe our "geometry" on a
+manifold $M$ by charts into a space $X$ together with a group $G$ that tells us
+how to transition between charts on the overlaps.
+
+We will require that our group $G$ be a Lie Group acting transitively on $M$.
+
+\begin{definition}
+    Let $U \subset X$ be an open set of our model space $X$. We say that a smooth map $f: U \mapsto X$
+    is \textit{locally}-G if for each component $U_i \subset U$ there is a $g_i \in G$ such that
+    $f|_{U_i} = g_i|_{U_i}$
+\end{definition}
+\begin{remark}
+    Locally-G maps satisfy the following unique extension property. If $U \subset X$ and $f: U \mapsto X$
+    is a locally-G map then there is a unique $g \in G$ restricting to $f$.
+\end{remark}
+
+\begin{definition}
+    A $(G,X)$ atlas is a pair $(\mathcal{U}, \Phi)$  consisting of an open covering for $M$
+    and a collection of charts such that the transition maps are locally-G on their respective overlaps.
+\end{definition}
+
+\begin{definition}
+    A map $f: M \mapsto N$ between two $(G,X)$-manifolds is a (G,X)-map if for each pair of charts
+    $(\phi, \varphi)$ then $\phi \circ f \circ \varphi^{-1}$ is locally-G on the relevant intersection.
+\end{definition}
+
+For (G,X)-manifolds, there is an inherently nice way to "globalize" the charts
+via a (G,X)-map called the developing map. The study of this map will be of
+importance to us throughout this thesis.
+
 \begin{prop}
     Let $M$ be a simply connected $(G,X)$-manifold. Then there exists a $(G,X)$-map
     $$
@@ -273,7 +304,7 @@ the following definitions.
     \end{center}
 
     Conversely, suppose that $\mu(g) = y - \lambda(g)y$. Then $y = \mu(g) +
-        \lambda(g)y = \alpha(g)y$ \label{lemma:ary}
+        \lambda(g)y = \alpha(g)y$ \label{lemma:stationary}
 \end{proof}
 \begin{remark}
     If $\mu$ is a principle crossed homomorphism we will often write $\mu = D_y$
@@ -313,7 +344,7 @@ the following definitions.
     \label{lemma:radiance-obstruction}
 \end{lemma}
 \begin{proof}
-    By Lemma~\ref{lemma:ary}, $y \in E$ is ary if and only if
+    By Lemma~\ref{lemma:stationary}, $y \in E$ is stationary if and only if
     $\mu(g) = D_y$ is a principle crossed homomorphism for $\lambda$ if and only
     if $c_{\alpha} = [\mu] =0$.
 
@@ -341,6 +372,12 @@ the following definitions.
     \end{center}
     as required.
 \end{proof}
+
+\begin{figure}[H]
+    \centering
+    \incfig[0.7]{Translate}
+    \caption{Conjugating a fixed point $y$ under the affine action by a translation to the origin}
+\end{figure}
 
 \begin{remark}
     This lemma will allow us to alter the development map by a translation (which
@@ -438,6 +475,25 @@ of the holonomy representation on volume forms.
     of an affine map extracts the linear part.
 \end{proof}
 
+\begin{definition}[Radiant Manifold]
+    An affine manifold is said to be radiant if its holonomy representation has a fixed point.
+\end{definition}
+
+\begin{remark}
+    By Lemma \ref{lemma:radiance-obstruction} we may conjugate our developing map by a translation to assume that
+    the fixed point is at the origin.
+\end{remark}
+
+When $M$ is radiant the above assumption shows that the radiant vector field $R
+    = \sum_i x_i \frac{\partial}{\partial x_i}$ is fixed by the affine action.
+There is then a unique vector field $\tilde{X}$ on the universal cover
+$\tilde{M}$ that is related to $R$ by the developing map. Since this is
+preserved by deck transformations (by equivariance of developing map and since
+the representation is radiant) it descends to a vector field $X$ on $M$.
+
+\begin{definition}
+    The vector field $X$ on $M$ is called the radiant vector field of $M$.
+\end{definition}
 \begin{marginfigure}
     \centering
     \captionsetup{justification=centering}
@@ -1062,4 +1118,7 @@ equivalent conditions on the completeness of an affine manifold.
     Repeating this process we eventeually get a curve that develops entirely in
     $F_0 = \{0\}$ showing injectivity.
 \end{proof}
+\section{Symplectic Geometry and Integral Affine Manifolds}
 
+In this section we will recall some of the basics of symplectic geometry and
+then formulate some results relating to integral affine manifolds.
