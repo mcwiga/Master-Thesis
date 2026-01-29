@@ -37,12 +37,12 @@ importance to us throughout this thesis.
 \begin{prop}
     Let $M$ be a simply connected $(G,X)$-manifold. Then there exists a $(G,X)$-map
     $$
-        dev: M \mapsto X
+        \text{dev}: M \mapsto X
     $$
 \end{prop}
 
 \begin{proof}
-    We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $dev$ as follows. We pick a curve on $M$ $x(t)$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover the it by finitely many coordinate charts $U_i$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
+    We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $dev$ as follows. We pick a curve $x(t)$ on $M$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover the it by finitely many coordinate charts $U_i$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
     $$a_0<0<a_1<b_0<a_2<b_1<a_3 \dots <a_n<b_{n-1}<1<b_n$$
 
     \begin{figure}[H]
@@ -60,10 +60,11 @@ importance to us throughout this thesis.
     Now we consider where these charts overlap. Since our manifold is equipped with
     a $(G,X)$-structure our transition maps differ by an element of $G$. Let $g_i =
         \varphi_{i-1}\circ\varphi^{-1}_i \in G$ be the transition map from $U_i$ and
-    $U_{i-1}$. We then define $$ dev(x) = g_1g_2\dots g_n \varphi_n(x) $$ We must
-    show that this is a well-defined map. We first show that this map does not
+    $U_{i-1}$. We then define $$ \text{dev}(x) = g_1g_2\dots g_n \varphi_n(x) $$ We
+    must show that this is a well-defined map. We first show that this map does not
     change if we refine the cover. Suppose we insert a chart $(V, \phi)$ between
-    $U_i$ and $U_{i-1}$. Let
+    $U_i$ and $U_{i-1}$. Let $h_i, h_{i-1} \in G$ be the unique group elements such
+    that
     \begin{center}
         $\varphi_{i-1} = h_{i-1}\circ\phi$ on $V \cap U_{i-1}$ and \\
         $\phi = h_i\varphi_{i}$ on $V \cap U_{i-1}$.
@@ -74,14 +75,14 @@ importance to us throughout this thesis.
     obtain that:
 
     \begin{center}
-        $dev(x) = g_1 \dots g_{i-1}h_{i-1}h_{i}g_{i+1}\dots g_n\varphi_n(x) = g_1 \dots g_{i-1}g_ig_{i+1}\dots g_n\varphi_n(x)$
+        $\text{dev}(x) = g_1 \dots g_{i-1}h_{i-1}h_{i}g_{i+1}\dots g_n\varphi_n(x) = g_1 \dots g_{i-1}g_ig_{i+1}\dots g_n\varphi_n(x)$
     \end{center}
 
-    This defines $dev$ along $x(t)$. We now need to show that it does not depend on
-    our choice of curve. As $M$ is simply connected, all curves with the same start
-    point and end point will be homotopic. Indeed, by compactness we can split our
-    homotopy into smaller homotopies such that we can break up our curve into
-    regions
+    This defines $\text{dev}$ along $x(t)$. We now need to show that it does not
+    depend on our choice of curve. As $M$ is simply connected, all curves with the
+    same start point and end point will be homotopic. Indeed, by compactness we can
+    split our homotopy into smaller homotopies such that we can break up our curve
+    into regions
     \begin{center}
         $a_1 =0 < a_2 < \dots < a_n=1$
     \end{center}
@@ -91,45 +92,46 @@ importance to us throughout this thesis.
 
 This shows that we have a well defined development map on any simply connected
 $(G,X)$-manifold. However, this map depended on the choice of base point and
-initial chart. We immediately get the following corrolary from this fact.
+initial chart. We immediately get the following corollary from this fact.
 
 \begin{corollary}
-    Let $M$ be a $(G,X)$-manifold and let $\tilde{M}$ be its universla cover. Then
-    there exists a pair $(dev, hol)$ satisfying
+    Let $M$ be a $(G,X)$-manifold and let $\tilde{M}$ be its universal cover. Then
+    there exists a pair $(\text{dev}, \text{hol})$ satisfying
     \begin{center}
-        $dev : \tilde{M} \mapsto X$\\
-        $hol: \pi_1(M) \mapsto G$
+        $\text{dev}: \tilde{M} \mapsto X$\\
+        $\text{hol}: \pi_1(M) \mapsto G$
     \end{center}
-    where $hol(\gamma)$ is the element $g_1\dots g_n$ of $G$ obtained from
+    where $\text{hol}(\gamma)$ is the element $g_1\dots g_n$ of $G$ obtained from
     developing around a loop $\gamma \in M$.
 \end{corollary}
 
-The developing pair satisfy the following equivariance condition.
+The developing pair satisfy the following equivariance condition. Let $\gamma
+    \in \pi_1(M)$ act by deck transformations on $\tilde{M}$. Then we have the
+following. (TODO: Fix this proof)
 \begin{lemma}
-    Let $\gamma, \alpha \in \pi_1(M)$ be loops in $M$. Then
+    Let $\gamma \in \pi_1(M)$. Then
 
     \begin{center}
-        $dev(\gamma \star \alpha) = hol(\gamma)dev(\alpha)$
+        $\text{dev}(\gamma \cdot x) = \text{hol}(\gamma)\text{dev}(x)$
     \end{center}
+    for $x \in \tilde{M}$.
     \label{lemma:dev-equivariance}
 \end{lemma}
 
 \begin{proof}
-    Let $\{(U_i, \varphi_i)\}$ be a cover for $\alpha$ and $\{(V_i, \phi_i)\}$ be
-    cover for $\gamma$. Denote the transition maps on $U_i \cap U_{i+1}$ by $h_i$
-    and the transition maps on $V_i \cap V_{i+1}$ by $g_i$. Then by definition
+    Let $\{(V_i, \phi_i)\}$ be a cover for $\gamma$ and lift this to a cover of a lift of $\gamma$ which we denote by $\tilde{\gamma}$. Denote the transition maps on $V_i \cap V_{i+1}$ by $g_i$. Then by definition
     \begin{center}
-        $dev(\gamma \star \alpha) = g_1 \dots g_n h_1 \dots h_k \varphi_k(\alpha(1))$\\
-        $= hol(\gamma)dev(\alpha)$
+        $\text{dev}(\gamma \cdot x) = g_1 \dots g_n \varphi_k(\gamma(1))$\\
+        $= \text{hol}(\gamma)\text{dev}(x)$
     \end{center}
 \end{proof}
 
 The role of the development pair is to "globalize" the coordinate chart of $M$.
-Indeed the following proposition makes this statment more clear.
+Indeed the following proposition makes this statement more clear.
 
 \begin{prop}
-    Let $M$ be a $(G,X)$-manifold with development pair $(dev, hol)$. Denote
-    by $\Gamma$, the image of $\pi_1(M)$ under the holonomy map. Then there
+    Let $M$ be a $(G,X)$-manifold with development pair $(dev, \text{hol})$. Denote
+    by $\Gamma$ the image of $\pi_1(M)$ under the holonomy map. Then there
     exists a $(G,X)$-atlas such that the transition maps lie in $\Gamma$
 \end{prop}
 
@@ -143,22 +145,22 @@ Indeed the following proposition makes this statment more clear.
     the covering map $p^{-1}(V)$ which we may assume $dev$ is a diffeomorphism on
     by intersetcting with $\tilde{U}$.
 
-    Now, define coordinate charts on $M$ by $(V_{\alpha}, \psi_{\alpha} = dev \circ
-        p^{-1}_{\alpha})$ at a point $m \in M$ where by $p^{-1}_{\alpha}$ we mean we
-    have fixed a component of the preimage $p^{-1}$ restricted to $V_{\alpha}$. Now
-    suppose that $V_i \cap V_j \neq \emptyset$ and let $\tilde{U}_i =
-        p_i^{-1}(V_i)$ and $\tilde{U}_j = p_j^{-1}(V_j)$. Then the preimage of their
-    intersection will differ by a deck transformation $\gamma \in \pi_1(M)$.
-    Therefore, on the intersection $V_i \cap V_j$
+    (TODO: Make this proof more clear) Now, define coordinate charts on $M$ by $(V_{\alpha}, \psi_{\alpha} =
+        \text{dev}\circ p^{-1}_{\alpha})$ at a point $m \in M$ where by
+    $p^{-1}_{\alpha}$ we mean we have fixed a component of the preimage $p^{-1}$
+    restricted to $V_{\alpha}$. Now suppose that $V_i \cap V_j \neq \emptyset$ and
+    let $\tilde{U}_i = p_i^{-1}(V_i)$ and $\tilde{U}_j = p_j^{-1}(V_j)$. Then the
+    preimage of their intersection will differ by a deck transformation $\gamma \in
+        \pi_1(M)$. Therefore, on the intersection $V_i \cap V_j$
     \begin{center}
-        $dev \circ p_i^{-1} = dev \circ \gamma \circ p_j^{-1}$\\
+        $\text{dev}\circ p_i^{-1} = \text{dev}\circ \gamma \circ p_j^{-1}$\\
         $\implies p^{-1}_i \circ p_j = \gamma$
     \end{center}
 
     Now our by definition of our transition maps
     \begin{center}
-        $\psi_i \circ \psi_j^{-1} = dev \circ p_i{-1} \circ p_j \circ dev^{-1}$\\
-        $= dev \circ \gamma \circ dev^{-1} = hol(\gamma)dev\circ dev^{-1} = hol(\gamma) \in \Gamma$
+        $\psi_i \circ \psi_j^{-1} = \text{dev}\circ p_{i-1} \circ p_j \circ dev^{-1}$\\
+        $= \text{dev}\circ \gamma \circ dev^{-1} = \text{hol}(\gamma)dev\circ dev^{-1} = \text{hol}(\gamma) \in \Gamma$
     \end{center}
 
     and so we have thus given our coordinate charts on $M$ in terms of the
@@ -166,45 +168,45 @@ Indeed the following proposition makes this statment more clear.
 \end{proof}
 
 This shows that once we have fixed a development pair, our $(G,X)$-structure is
-entirely determined by this. Conversely, the following lemma shows us that Once
+entirely determined by this. Conversely, the following lemma shows us that once
 we have fixed our $(G,X)$-structure, the development pair is determined up to
 certain factors/conjugations.
 
 \begin{lemma}
-    Let $M$ be a $(G,X)$-manifold with development pair $(dev, hol)$. Suppose that $(dev', hol')$ is
-    another development pair for $M$. Then $dev' = g\circ dev$ and $hol' = g\circ hol \circ g^{-1}$
+    Let $M$ be a $(G,X)$-manifold with development pair $(\text{dev}, \text{hol})$. Suppose that $(\text{dev}', \text{hol}')$ is
+    another development pair for $M$. Then $\text{dev}' = g\circ \text{dev}$ and $\text{hol}' = g\circ \text{hol}\circ g^{-1}$
     for some $g \in G$. \label{lemma:equivalent-dev-pair}
 \end{lemma}
 \begin{proof}
     Our development pair was determined once we picked a base point and a chart $(U, \phi)$. Suppose that
-    we pick a different base point and chart $(V, \varphi)$. Now we consider how we define $dev(x)$ for $x \in \tilde{M}$.
+    we pick a different base point and chart $(V, \varphi)$. Now we consider how we define $\text{dev}(x)$ for $x \in \tilde{M}$.
     We choose a curve $\gamma$ connecting $x_0$ and $x$ and choose a cover $U_i$ of $\gamma$ and develop around it.
     Now, with respect to our new initial chart, $V \cup \{U_i\}$ is an open cover of $\gamma$. If we develop starting with this new chart,
     we can first glue all the $U_i$ to $U_1$ as before and then glue this chain to $V$ with an element of $G$ by gluing
-    $U_1$ to $V$ on their overlap. Hence the entire development will have o=just changed by that element of $G$.
+    $U_1$ to $V$ on their overlap. Hence the entire development will have just changed by that element of $G$.
 
     If, on the other hand, both the base point and chart have changed, we can pick
     a curve $\gamma'$ starting at our new base point $x_0'$ and ending at our old
     basepoint $x_0$. Developing first along this curve and then along our old curve
     $\gamma$ we pick up some element of $G$ from developing $\gamma'$ whilst
     developing along $\gamma$ gives the same as before. As we already showed this
-    map is homotopy invariant this gives that $dev'(x) = g\circ dev(x)$ for some $g
-        \in G$.
+    map is homotopy invariant this gives that $dev'(x) = g\circ \text{dev}(x)$ for
+    some $g \in G$.
 
-    Now to show that $hol' = g\circ hol \circ g^{-1}$ we consider
+    Now to show that $hol' = g\circ \text{hol}\circ g^{-1}$ we consider
     \begin{center}
-        $dev'(\gamma \star \alpha) = g \circ dev(\gamma \star \alpha)$\\
-        $= g\circ hol(\gamma) \circ dev(\alpha)$\\
-        $= (g\circ hol(\gamma)\circ g^{-1})(g\circ dev(\alpha))$\\
-        $= (g \circ hol(\gamma)\circ g^{-1})dev'(\alpha)$
+        $dev'(\gamma \star \alpha) = g \circ \text{dev}(\gamma \star \alpha)$\\
+        $= g\circ \text{hol}(\gamma) \circ \text{dev}(\alpha)$\\
+        $= (g\circ \text{hol}(\gamma)\circ g^{-1})(g\circ \text{dev}(\alpha))$\\
+        $= (g \circ \text{hol}(\gamma)\circ g^{-1})\text{dev}'(\alpha)$
     \end{center}
     and as the development pair satisfied the equivariance property it follows that
-    $hol' = g\circ hol \circ g^{-1}$.
+    $hol' = g\circ \text{hol}\circ g^{-1}$.
 \end{proof}
 
 This shows that once we have fixed a development pair, any other development
-pair can is related by $(dev', hol') = (g\circ dev, g\circ hol \circ g^{-1})$.
-It is therefore, important to note that if we want to classify
+pair can is related by $(\text{dev}', \text{hol}') = (g\circ \text{dev}, g\circ
+    \text{hol}\circ g^{-1})$. We should therefore note that if we want to classify
 $(G,X)$-structures on a manifold $M$ by classifying the possible development
 pairs, it is important to consider them up to this relation.
 
@@ -216,7 +218,7 @@ An important property the developing map can have is that of
     onto $X$.
 \end{definition}
 In the case that $X$ is simply connected e.g. $X= \mathbb{R}^n$, we have that $M$ is diffeomorphic
-to $X/\Gamma$ where $\Gamma = hol(\pi_1(M))$.
+to $X/\Gamma$ where $\Gamma = \text{hol}(\pi_1(M))$.
 
 In the case that $M$ is a Riemannian manifold, this notion of completeness is
 equivalent to completeness of the Levi-Civita connection of $M$.
@@ -226,35 +228,35 @@ equivalent to completeness of the Levi-Civita connection of $M$.
 \section{Representation Theory and Affine Manifolds}
 We now turn our attention to affine manifolds before specializing to the
 integral affine case. An affine manifold is a $(G,X)$-manifold where $X =
-    \mathbb{R}^n$ and $G = Aff(\mathbb{R}^n)$ An important tool in classifying
-affine structures is the representation theory of groups. Often, by studying
-properties of the holonomy group of an affine manifold $M$, we are able to
-obtain information about the affine structure of $M$. Of fundamental importance
-is the case where the holonomy group is nilpotent which we will shortly see. We
-will use these tools to determine conditions for which the affine structure is
-complete.
+    \mathbb{R}^n$ and $G = \text{Aff}(\mathbb{R}^n)$ An important tool in
+classifying affine structures is the representation theory of groups. Often, by
+studying properties of the holonomy group of an affine manifold $M$, we are
+able to obtain information about the affine structure of $M$. Of fundamental
+importance is the case where the holonomy group is nilpotent which we will
+shortly see. We will use these tools to determine conditions for the affine
+structure to be complete.
 
 \begin{definition}
     An affine transformation of $\mathbb{R}^n$ is a map
     \begin{center}
         $A: \mathbb{R}^n \mapsto \mathbb{R}^n$
     \end{center}
-    such that $A(x) = Gx + B$ where $G \in GL(\mathbb{R}^n)$ and $B \in\mathbb{R}^n$
+    such that $A(x) = Gx + b$ where $G \in GL(\mathbb{R}^n)$ and $b \in\mathbb{R}^n$
 \end{definition}
 
-The group $Aff(\mathbb{R}^n)$ is the group of affine transformations of
-$\mathbb{R}^n$ and is equal to $Aff(\mathbb{R}^n) = \mathbb{R}^n \rtimes
+The group $\text{Aff}(\mathbb{R}^n)$ is the group of affine transformations of
+$\mathbb{R}^n$ and is equal to $\text{Aff}(\mathbb{R}^n) = \mathbb{R}^n \rtimes
     GL(\mathbb{R}^n )$
 
 \begin{definition}
     An affine representation of a group $G$ is a group homomorphism
     \begin{center}
-        $\alpha: G \mapsto Aff(\mathbb{R}^n)$
+        $\alpha: G \mapsto \text{Aff}(\mathbb{R}^n)$
     \end{center}
 \end{definition}
 
 We have that an affine representation splits into a linear part and a
-translation, e.g. $\alpha(g) = \lambda(g) + \mu(g)$. The linear part makes
+translation, e.g. $\alpha(g) = (\lambda(g), \mu(g))$. The linear part makes
 $\mathbb{R}^n$ into a $G$-module with the obvious action which we will denote
 $E$.
 
@@ -394,7 +396,7 @@ the following definitions.
     \end{center}
     such that $\alpha^*g(f)(x) = f(\alpha(g^{-1})x)$ for all $x \in E$ and $f\in E^*$.
 \end{definition}
-
+TODO - Fix a notation for these representations.
 \begin{remark}
     This induces a representation on $\wedge^kE^*$ by \\$(g\cdot \omega)(x_1, \dots , x_n) = \omega(g^{-1}\cdot x_1, \dots, g^{-1}\cdot x_n)$ for $\omega \in \wedge^k E^*$
         and $x_i \in E$.
@@ -407,7 +409,7 @@ between the holonomy representation and parallel volume forms.
     Let $F: V \mapsto V$ be a linear map from a vector space $V$ of dimension $n$ to itself
     and let $\omega \in \wedge^n(V^*)$. Then
     \begin{center}
-        $F^*\omega = det(A)\omega$
+        $F^*\omega = \text{det}(A)\omega$
     \end{center}
     where $A$ is any matrix representing the linear transformation $F$.
     \label{lemma:pullback-form-linearmap}
@@ -424,9 +426,9 @@ between the holonomy representation and parallel volume forms.
     If we let $A = \varphi^{-1} F \varphi$ and $\{e_1, \dots , e_n\}$ the standard basis of $\mathbb{R}^n$
     then
     \begin{center}
-        $A^*det(e_1. \dots , e_n) = \lambda det(e_1, \dots , e_n) = \lambda = det(Ae_1, \dots, Ae_n)$
+        $A^*\det(e_1. \dots , e_n) = \lambda \det(e_1, \dots , e_n) = \lambda = \det(Ae_1, \dots, Ae_n)$
     \end{center}
-    which gives us that $det(A)= \lambda$ as required. \label{lemma:volume}
+    which gives us that $\det(A)= \lambda$ as required. \label{lemma:volume}
 \end{proof}
 
 This leads us to the following elementary but important property of the action
@@ -476,7 +478,7 @@ of the holonomy representation on volume forms.
 \end{proof}
 
 \begin{definition}[Radiant Manifold]
-    An affine manifold is said to be radiant if its holonomy representation has a fixed point.
+    An affine manifold is said to be radiant if its affine holonomy representation has a fixed point.
 \end{definition}
 
 \begin{remark}
@@ -581,10 +583,10 @@ linear holonomy. We will now outline some consequences of unipotence.
     A $G$-module $E$ is called unipotent if $(g-I)^n = 0$ for every $g \in G$
     where $n = dim(E)$.
 \end{definition}
-\begin{remark}
+\begin{definition}
     An affine representation is unipotent if its linear part defines a unipotent
     $G$-module.
-\end{remark}
+\end{definition}
 
 Although $E$ may not be unipotent itself, we can consider the smallest
 submodule (possibly the zero module) of $E$ which is unipotent. We shall denote
@@ -731,10 +733,10 @@ unipotent (\textbf{TODO: should we include this}).
 
 \subsection{Unipotent Representations and Completeness}
 
-The aim of this section is to show that for a compact affine manifold,
-unipotent holonomy group is equivalent to completeness. Of geometrical
-importance to this will be the concept of an \textit{expansion} in the linear
-holonomy.
+The aim of this section is to show that for a compact affine manifold, the
+holonomy group being unipotent is equivalent to completeness of the affine
+structure. Of geometrical importance to this will be the concept of an
+\textit{expansion} in the linear holonomy.
 
 \begin{definition}[Expansion]
     Let $T: V \mapsto V$ be a linear map. Then $T$ is said to be an expansion of $V$ if for every eigenvalue
@@ -793,7 +795,7 @@ passing through the identity denoted by $G^{\circ}$.
     Proposition (2.4?) Borel-Linear-Algebraic-Groups \url{https://www.math.utah.edu/~ptrapa/math-library/borel/%20Borel-Linear-Algebraic-Groups-1991.pdf}
 \end{proof}
 
-This proposition leads to the following corrolary.
+This proposition leads to the following corollary.
 \begin{corollary}\label{corr:closure-nilpotent}
     Let $G$ be an algebraic group and $N$ a normal subgroup that is nilpotent. Then $\overline{N}$ is also nilpotent.
 \end{corollary}
@@ -832,6 +834,33 @@ the matrices of the representation are upper triangular.
     is a finite dimensional representation of a solvable Lie algebra, then there is a basis of $V$ such that all linear transformations in
     $\pi(\mathfrak{g})$ are represented by upper triangular matrices.
 \end{corollary}
+We will need a slightly stronger theorem than Lie's theorem which gives a decomposition of our vector space
+into generalized weight spaces.
+
+\begin{definition}[Generalized Weight Space]
+    Let $\pi$ be a representation of a Lie algebra $\mathfrak{g}$ over a finite dimensional vector space $V$. Then
+    for $\lambda \in \mathfrak{g}^*$, we can associate to $\lambda$
+    \begin{center}
+        $V_{\lambda} = \{v \in V | (\pi(g) - \lambda(g))^nv =0 \text{ for all } g\in \mathfrak{g}\}$
+    \end{center}
+    where $n$ depends on $g \in \mathfrak{g}$ and $v \in V$. If $V_{\lambda} \neq \{0\}$ then we call it
+    the \textit{generalized weight space} associated to $\lambda$.
+\end{definition}
+
+\begin{remark}
+    This tells us that $\pi(g) - \lambda(g)$ is a nilpotent operator so that $\pi(g) = \lambda(g) + N(g)$ with $N(g)$ nilpotent.
+\end{remark}
+
+\begin{lemma}
+    \label{lemma:lie-algebra-decomp}
+    Let $\mathfrak{g}$ be a nilpotent Lie algebra over $\mathbb{C}$. Let $\pi$ be a representation of
+    $\mathfrak{g}$ on a finite dimensional complex vector space $V$. Then there are finitely many generalized
+    weight spaces $ V_{\lambda_k}$, which are invariant under the action of the representation and $V = \oplus_k V_{\lambda_k}$
+\end{lemma}
+
+\begin{proof}
+    See Proposition 3.2 in \url{https://math.uchicago.edu/~may/REU2013/REUPapers/Ward.pdf}
+\end{proof}
 
 We now have the required machinary to start our proof.
 
@@ -859,11 +888,11 @@ We now have the required machinary to start our proof.
     This will now be $G$-invariant as $G_0$ is a normal subgroup multiplication by
     an element of $G$ will permute the cosets.
 
-    As we want to eventually apply Lies theorem, we complexify the dual space $E^*$
-    as $F = \mathbb{C}\oplus E^*$. The contragradient representation of $G$ on
-    $E^*$ extends to a representation on $F$ in the obvious way. We will denote
-    this as $\rho : G \mapsto GL(F)$. Now, $\rho(G)$ is a nilpotent subgroup of
-    $GL(F)$ that passes through the identity.
+    As we want to eventually apply apply some results from complex Lie Theory, we
+    complexify the dual space $E^*$ as $F = \mathbb{C}\oplus E^*$. The
+    contragradient representation of $G$ on $E^*$ extends to a representation on
+    $F$ in the obvious way. We will denote this as $\rho : G \mapsto GL(F)$. Now,
+    $\rho(G)$ is a nilpotent subgroup of $GL(F)$ that passes through the identity.
 
     Let $H$ be the identity component of the algebraic closure of $\rho(G)$. As
     $\rho(G)$ is nilpotent, by Corollary \ref{corr:closure-nilpotent} so is its
@@ -878,11 +907,12 @@ We now have the required machinary to start our proof.
         $di: \mathfrak{h} \mapsto \mathfrak{gl}(F)$
     \end{center}
     where $i$ is the inclusion map. Importantly, by construction on the underlying vector spaces $\rho(G_0) \subseteq di(\mathfrak{h})$. As $H$ is a nilpotent Lie group, its Lie algebra is nilpotent hence solvable so we can
-    apply Lie's Theorem to obtain a decomposition $F = \oplus^m_{k=1} F_k$ which is $di(h)$-invariant and hence $\rho$-invariant by
+    apply Lemma \ref{lemma:lie-algebra-decomp} to obtain a decomposition $F = \oplus^m_{k=1} F_k$ which is $di(h)$-invariant and hence $\rho$-invariant by
     construction when restricted to $G_0$.
 
-    Again, by Lie's theorem there is a basis $B_k$ of each $F_k$ that represents
-    the operators $di(h)|_{F_k}$ as upper triangular complex matrices
+    Again, Lemma \ref{lemma:lie-algebra-decomp} yields that there is a basis $B_k$
+    of each $F_k$ that represents the operators $di(h)|_{F_k}$ as upper triangular
+    complex matrices
     \begin{center}
         $di_k(h) = \lambda_k(h)I + N_k(h)$
     \end{center}
@@ -955,7 +985,7 @@ We now have the required machinary to start our proof.
 
 \begin{proof}
     \label{thm:expansion-in-holonomy}
-    Let $q: E \mapsto E/E_0$ be the canonical projection. Denote by $R$ the radiant vector field on $E/E_0$. If $\{y_1,\dots , y_m\}$ are corrdinates
+    Let $q: E \mapsto E/E_0$ be the canonical projection. Denote by $R$ the radiant vector field on $E/E_0$. If $\{y_1,\dots , y_m\}$ are coordinates
     on $E/E_0$, then this appears as $R = \sum_i y_i \frac{\partial}{\partial y_{i}}$.
     Then in each affine chart there is a vector field $X_i$ that is $\pi$-related to $R$. As $M$ is compact, we can cover it in finitely many
     charts and using a partition of unity subordiante to that covering form the vector field
@@ -976,7 +1006,7 @@ We now have the required machinary to start our proof.
     is invariant under deck transformations. Indeed, let $\gamma \in \pi_1(M)$ then
     for $x \in \tilde{M}$
 
-    \[\Psi\circ \pi \circ dev(\gamma \star x) = \Psi\circ \pi \circ hol(\gamma)\circ dev(x)\]
+    \[\Psi\circ \pi \circ \text{dev}(\gamma \star x) = \Psi\circ \pi \circ \text{hol}(\gamma)\circ \text{dev}(x)\]
 
     and this is invariant as $E_0$ is invariant under the holonomy group.
 
@@ -1054,8 +1084,8 @@ equivalent conditions on the completeness of an affine manifold.
 
 \begin{proof}
     We pick a basepoint $x_0$ in $M$. Let $p: \tilde{M} \mapsto M$ be the universal cover of $M$ with $p(\tilde{x_0}) = x_0$.
-    We now choose a developing map $dev: \tilde{M} \mapsto \mathbb{R}^n$ such that $dev(\tilde{x_0}) = 0$. Let $hol$ be the holonomy representation
-    and $hol(\pi_1(M)) = \Gamma$ be the affine holonomy group.
+    We now choose a developing map $dev: \tilde{M} \mapsto \mathbb{R}^n$ such that $\text{dev}(\tilde{x_0}) = 0$. Let $hol$ be the holonomy representation
+    and $\text{hol}(\pi_1(M)) = \Gamma$ be the affine holonomy group.
 
     Now, suppose that the linear affine holonomy group is unipotent. Then by
     \textbf{TODO: Humphreys Linear algebraic groups} there exists a linear flag
@@ -1071,32 +1101,33 @@ equivalent conditions on the completeness of an affine manifold.
     linear map $l_i$ determines a parallel 1-form $\omega_i$ defined on
     $\mathfrak{F}_i$ and vanishing on $\mathfrak{F}_{i-1}$.
 
-    \textbf{Claim}: We can construct vector fields $X_i$ on  M, tangent to $\mathfrak{F}_i$ such that $X_i(l_i)=1$ using
-    partitions of unity. These lift to vector fields $\tilde{X}_i$ on the universal cover.
+    We can construct vector fields $X_i$ on M, tangent to $\mathfrak{F}_i$ such
+    that $X_i(l_i)=1$ using partitions of unity. These lift to vector fields
+    $\tilde{X}_i$ on the universal cover.
 
     We first show surjectivity of the developing map. Let $\gamma_i(t)$ be an
     integral curve of $\tilde{X}_i$ starting at the point $x_i$. As $dev$ is a
     local diffeomorphism we have that
 
     \begin{center}
-        $\frac{d}{dt}dev \circ \gamma_i(t) = dev_* \circ \tilde{X}(\gamma_i(t))$\\
-        $\implies dev \circ \gamma_i(t) = dev_* \circ \tilde{X}_i(\gamma_i(t))t + dev \circ \gamma_i(0)$
+        $\frac{d}{dt}\text{dev}\circ \gamma_i(t) = dev_* \circ \tilde{X}(\gamma_i(t))$\\
+        $\implies \text{dev}\circ \gamma_i(t) = dev_* \circ \tilde{X}_i(\gamma_i(t))t + \text{dev}\circ \gamma_i(0)$
     \end{center}
 
     applying our linear functional $l_i$ to this we obtained
-    \[l_i(dev \circ \gamma_i(t)) = l_i \circ dev_*(\tilde{X}_i(\gamma_i(t)))t + l_i(dev \circ \gamma_i(0))\]
-    \[= l_i(\tilde{X}_i)t + l_i(dev \circ \gamma_i(0)) = t + l_i(dev \circ \gamma_i(0)) \tag{*} \label{eq:flow}\]
+    \[l_i(\text{dev}\circ \gamma_i(t)) = l_i \circ dev_*(\tilde{X}_i(\gamma_i(t)))t + l_i(\text{dev}\circ \gamma_i(0))\]
+    \[= l_i(\tilde{X}_i)t + l_i(\text{dev}\circ \gamma_i(0)) = t + l_i(\text{dev}\circ \gamma_i(0)) \tag{*} \label{eq:flow}\]
 
     Now we can start our inductive step. Taking $i=n$ we start at $\tilde{x}_0 \in
-        \tilde{M}$ such that $dev(\tilde{x}_0) = 0$. We flow along $\tilde{X}_n$ for
-    time $t=l_n(v)$ until the point $\tilde{x}_1 \in \tilde{M}$ with
-    $dev(\tilde{x}_1) = v_1$. From \eqref{eq:flow} we obtain
+        \tilde{M}$ such that $\text{dev}(\tilde{x}_0) = 0$. We flow along $\tilde{X}_n$
+    for time $t=l_n(v)$ until the point $\tilde{x}_1 \in \tilde{M}$ with
+    $\text{dev}(\tilde{x}_1) = v_1$. From \eqref{eq:flow} we obtain
 
     \[l_n(v_1) = l_n(v) + 0\]
     \[\implies v- v_1 \in \ker l_n = F_{n-1}\]
 
     Now, we continue e.g. flow along $\tilde{X}_{n-1}$ for $t=l_{n-1}(v-v_1)$
-    ending at $\tilde{x}_2$ with $dev(\tilde{x}_2) = v_2$. Then
+    ending at $\tilde{x}_2$ with $\text{dev}(\tilde{x}_2) = v_2$. Then
     \[l_{n-1}(v_2) = l_{n-1}(v-v_1) + l_n(v_1)\]
     \[\implies l_{n-1}(v-v_2) = 0 \implies v-v_2 \in \ker l_{n-1} = F_{n-2}\]
 
@@ -1110,11 +1141,11 @@ equivalent conditions on the completeness of an affine manifold.
     inside $F_{n-1}$. We now define a new path $\gamma_t : [a,b] \mapsto \tilde{M}$
     where $\gamma_t(s)$ is the image of $\gamma_0(s)$ at time $-tl_n(\delta(s))$
     under the flow of $\tilde{X}_n$. Applying $dev$ gives that
-    \[dev \circ \gamma_t(s) = dev(\gamma_0(s)) -tl_n(\delta(s))dev_*(\tilde{X}(\gamma_0(s)))\]
-    \[\implies l_n(dev \circ \gamma_t(s)) = l_n(dev(\gamma_0(s))) -tl_n(\delta(s))l_n \circ dev_*(\tilde{X}(\gamma_0(s))) \]
-    \[ \implies l_n(dev \circ \gamma_t(s)) = l_n(dev(\gamma_0(s))) - tl_n(\delta(s))\]
+    \[\text{dev}\circ \gamma_t(s) = \text{dev}(\gamma_0(s)) -tl_n(\delta(s))dev_*(\tilde{X}(\gamma_0(s)))\]
+    \[\implies l_n(\text{dev}\circ \gamma_t(s)) = l_n(\text{dev}(\gamma_0(s))) -tl_n(\delta(s))l_n \circ dev_*(\tilde{X}(\gamma_0(s))) \]
+    \[ \implies l_n(\text{dev}\circ \gamma_t(s)) = l_n(\text{dev}(\gamma_0(s))) - tl_n(\delta(s))\]
 
-    At $t=1$ this yields that $dev \circ \gamma_t(s) \in \ker l_n = F_{n-1}$.
+    At $t=1$ this yields that $\text{dev}\circ \gamma_t(s) \in \ker l_n = F_{n-1}$.
     Repeating this process we eventeually get a curve that develops entirely in
     $F_0 = \{0\}$ showing injectivity.
 \end{proof}
