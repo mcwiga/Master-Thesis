@@ -1,0 +1,207 @@
+\chapter{Lagrangian Fibrations and Integral Affine Manifolds}
+\section{Symplectic Geometry}
+
+In this section we will recall some of the basics of symplectic geometry and
+Lagrangian submanifolds.
+
+\begin{definition}[Symplectic Manifold]
+    A symplectic manifold $(M, \omega)$ consists of a smooth manifold $M$ and a closed 2-form $\omega$ such that $\omega$ is non-degenerate.
+\end{definition}
+
+Symplectic geometry has its roots in classical mechanics as the phase space of
+a dynamical system naturally has the structure of a symplectic manifold. TODO:
+elaborate more on symplectic geometry - Hamiltons equations, applications to
+topology, Poisson geometry.
+
+Non-degeneracy of the symplectic form gives a canonical way to identify the
+tangent and cotangent bundle of a symplectic manifold. This is done via the map
+$$ \tilde{\omega}|_p : T_pM \to T_p^*M $$ $$ v \mapsto \omega_p(v, \cdot)$$ for
+$v \in T_pM$. This is an isomorphism by non-degeneracy and so, namely, it is
+invertible. This identification leads to the notion of a Hamiltonian vector
+field.
+
+\begin{definition}[Hamiltonian Vector Field]
+    For any $H\in C^{\infty}(M)$ we can associate a unique Hamiltonian vector field by
+    $$\iota_{X_H}\omega := \omega(X_H, \cdot) = dH$$
+\end{definition}
+
+For mathematicians there is generally no distinguished choice of Hamiltonian
+function $H$. However, physicists often pick a Hamiltonian function based on
+physical criteria and are generally interested in studying the flow of this
+Hamiltonian vector field which, for instance, recovers Hamilton's equations.
+
+\subsection{The Cotangent Bundle}
+One of the most important examples of symplectic manifolds is the cotangent
+bundle, which naturally inherits the structure of a symplectic manifold. In
+fact, Darbouxs theorem states that every symplectic manifold looks locally like
+a cotangent bundle. This class of symplectic manifolds will playu a big role
+throughout this thesis and we will see now exactly how the cotangent bundle
+obtains a symplectic structure.
+
+\begin{eg}[Cotangent Bundle]
+    Let $Q$ be any smooth manifold and $M = T^*Q$ its cotangent bundle.
+    We will now illustrate that there is a canonical one form $\theta \in \Omega^1(T^*Q)$
+    and show that the exterior derivative $-d\theta$ defines a symplectic structure on $T^*Q$.
+
+    Let $\pi : T^*Q \to Q$ be the canonical projection map. Then for $X_p \in
+        T_p(T^*Q)$ we define $\langle \theta_p , X_p \rangle := \langle p , d_p\pi(X_p)
+        \rangle$ where $\langle \cdot , \cdot \rangle$ denotes contraction of a vector
+    and covector. This canonical one-form satisfies the following important
+    property.
+    \begin{lemma}
+        $\theta$ is the unique one-form such that for any other one-form $\alpha \in \Omega^1(Q)$
+        $$\alpha = \alpha^* \theta$$
+        where we view $\alpha$ as a section $\alpha: Q \to T^*Q$.
+    \end{lemma}
+    \begin{proof}
+        Let $w \in T_qQ$. Then we have that
+        \begin{align*}
+            \langle (\alpha^*\theta)_q , w \rangle & = \langle \theta_{\alpha_q} , d_q\alpha (w) \rangle \\
+                                                   & = \langle \alpha_q , w \rangle
+        \end{align*}
+        Uniqueness is obtained by noting that every tangent vector $v \in T_p(T^*Q)$ can be written in the form $d_q\alpha(w)$
+        except for those in the kernel of $d_p\pi$. But the vectors not in this kernel form an open, dense set and so by continuity we get uniqueness.
+    \end{proof}
+
+    We can also find an expression for this canonical one-form in coordinates.
+
+    \begin{lemma}
+        In local cotangent coordinates $q_1, \dots , q_n, p_1, \dots , p_n$ on $T^*Q$, the canonical one-form is given by
+        $$\theta|_{T^*U} = \sum_j p_j dq_j$$
+    \end{lemma}
+    \begin{proof}
+        We let $\alpha = \sum_j \alpha_j dq_j$ be a $1$-form on $U$. We have that $\alpha^*p_j = \alpha_j$ and $\alpha^*q_j = q_j$ which gives that
+        \begin{align*}
+            \alpha^*\theta|_{T^*U} & = \alpha^* \sum_j p_j dq_j \\
+                                   & =\sum_j \alpha_j dq_j      \\
+                                   & = \alpha
+        \end{align*}
+    \end{proof}
+
+    Putting this together we obtain a symplectic form on $T^*Q$.
+    \begin{theorem}
+        The $2$-form $-d\theta$ defines a symplectic form on $T^*Q$.
+    \end{theorem}
+    \begin{proof}
+        In local coordinates we have that $\omega = \sum_j dq_j \wedge dp_j$ which is clearly closed and non-degenerate.
+    \end{proof}
+\end{eg}
+
+We will also wish to speak about maps between the symplectic manifolds. The
+correct notion of "isomorphism" in this category is the following.
+
+\begin{definition}
+    Let $(M, \omega)$ and $(N, \alpha)$ be two symplectic manifolds. Then a symplecto-morphism between $M$ and $N$ is a diffeomorphism
+    $$\varphi: M \to N$$
+    such that $\omega = \varphi^* \alpha$.
+\end{definition}
+
+\subsection{Lagrangian Submanifolds}
+The goal of this thesis is to classify Lagrangian fibrations over compact
+surfaces. In this section we will introduce the concept of Lagrangian
+submanifolds and prove some basic results regarding these.
+\begin{definition}[Symplectic Orthogonal]
+    Let $(M, \omega)$ be a symplectic manifold and let $N \subset M$ be a submanifold. The symplectic orthogonal at a point $p \in M$ is
+    $$(T_pN)^{\omega} := \{v \in T_pM \mid \omega(v, w) = 0, \forall w \in N\}$$
+\end{definition}
+
+\begin{itemize}
+    \item If $(T_pN)^{\omega} \subset T_pN$ then $T_pN$ is said to be
+          \emph{co-isotropic}.
+    \item If $T_pN\subset (T_pN)^{\omega} $ then $T_pN$ is said to be \emph{isotropic}.
+    \item If $(T_pN)^{\omega} = T_pN$ then $T_pN$ is said to be \emph{Lagrangian}.
+    \item If $(T_pN)^{\omega} \cap T_pN = \empty$ then $T_pN$ is said to be
+          \emph{symplectic}.
+\end{itemize}
+
+A submanifold $N$ of a symplectic manifold $M$ is said to be co-isotropic
+(isotropic, Lagrangian, symplectic) if its tangent space is a co-isotropic
+(isotropic, Lagrangian, symplectic) subspace of $T_pM$ at every point $p \in
+    M$.
+
+\begin{remark}
+    We note that a submanifold $\iota : N \to M$ is isotropic if $\iota^*\omega =0$ and furthermore, it is Lagrangian if we also have
+    $\text{dim}N = \frac{1}{2}\text{dim}N$.
+\end{remark}
+
+We will make use of the following lemma.
+\begin{lemma}
+    \label{lemma:cotangent-lagrangian-sub}
+    The graph $\Gamma_{\alpha} \subset T^*Q$ of a 1-form $\alpha$ is Lagrangian if and only if $\alpha$ is closed.
+\end{lemma}
+\begin{proof}
+    It is clear that $\text{dim}\Gamma_{\alpha} =\frac{1}{2}\text{dim}T^*Q$.
+    \begin{align*}
+        \alpha^*\omega & = -\alpha^*d\theta   \\
+                       & = - d\alpha^* \theta \\
+                       & = - d\alpha
+    \end{align*}
+    and so $\alpha^* \omega = 0 $ if and only if $\alpha$ is closed completing the proof by the previous remark.
+\end{proof}
+
+The cotangent bundle $T^*Q$ also gives rise to another Lagrangian submanifold.
+
+\begin{eg}
+    Let $\pi : T^*Q \to Q$ and fix $x \in Q$. Then $\pi^{-1}(x) = T_x^*Q$ is a Lagrangian submanifold inside $(T^*Q, \omega)$. It is easy to see that $\text{dim }T_x^*Q = \frac{1}{2}\text{dim }T^*Q $.
+    Letting $i: T_x^*Q \hookrightarrow T^*Q$ be the inclusion and considering local coordinates $(q_1, \dots , q_n, p_1 \dots p_n)$ around $x$ and writing $\omega = \sum_j dq_j \wedge dp_j$ it follows that $\omega|_{T_x^*Q} = 0$ as $i^*(\sum_j dq_j \wedge dp_j) = \sum_j d(i^*q_j) \wedge d(i^*p_j)$ and
+    $d(i^*q_i) = 0$ as $i^*q_i$ is constant.
+\end{eg}
+
+\section{Lagrangian Fibrations}
+
+One of the goals of this thesis is to classify the Lagrangian fibrations over
+closed surfaces. In this section we will give an overview of these objects and
+give some examples and basic results surrounding them. We will then describe
+how the base space of a Lagrangian fibration inherits an integral affine
+structure.
+
+\subsection{Definition of Lagrangian Fibration}
+\begin{definition}
+    A Lagrangian fibration $\pi: (M, \omega) \to B $ is a surjective map whose regular fibres are Lagrangian
+    submanifolds of $(M, \omega)$.
+\end{definition}
+
+\begin{eg}
+    We seen in Lemma \ref{lemma:cotangent-lagrangian-sub} that the fibres of $\pi: (T^*Q, \omega_{can}) \to Q$ are Lagrangian submanifolds
+    and hence this is a Lagrangian fibration.
+\end{eg}
+
+\begin{eg}
+    Let $Q= (\R / \Z)^n = \mathbb{T}^n$ be the n-torus. Then we have that $T^*(\mathbb{T}^n) = \mathbb{T}^n \times \R^n$ and the map
+    $$
+        \pi : T^*(\mathbb{T}^n) \to \R^n
+    $$
+    is a Lagrangian fibration with fibre $\mathbb{T}^n$.
+\end{eg}
+\begin{definition}[Shift by a 1-form.]
+    Let $\pi : (T^*Q, \omega_{can}) \to Q$ and fix $\alpha \in \Omega^1(Q)$. We define the \emph{shift by $\alpha$} to be the map
+    $$ s_{\alpha}: T^*Q \to T^*Q$$
+    $$ \beta_q \mapsto \beta_q + \alpha_q$$
+\end{definition}
+\begin{prop}
+    This defines a symplecto-morphism of $T^*Q$ if and only if $d\alpha = 0$.
+\end{prop}
+\begin{proof}
+    This map is a fibrewise translation and hence is obviously a diffeomorphism. We now check when it preserves
+    the symplectic form. We calculate
+    \begin{align*}
+        s_{\alpha}^*\omega_{can} & = -s_{\alpha}^*d\theta  \\
+                                 & = -ds_{\alpha}^* \theta \\
+    \end{align*}
+    We calculate
+    \begin{align*}
+        s_{\alpha}^* \theta (v)|_{\beta_q} & = \theta_{\beta_q + \alpha_q}(ds_{\alpha}(v))     \\
+                                           & = (\beta_q +\alpha_q)(d(\pi \circ s_{\alpha})(v)) \\
+                                           & = (\beta_q +\alpha_q)(v)                          \\
+                                           & = \theta_{\beta_q}(v) + \alpha_q(v)
+    \end{align*}
+    and so $s_{\alpha}^* \theta = \theta + \alpha$. Now
+    \begin{align*}
+        -ds_{\alpha}^* \theta & = -d\theta - d\alpha     \\
+                              & = \omega_{can} - d\alpha
+    \end{align*}
+    and hence this defines a symplecto-morphism if and only if $d\alpha = 0$.
+\end{proof}
+\subsection{Integral Affine Structure on the Base}
+
+\subsection{Action Angle Coordinates}

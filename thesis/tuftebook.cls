@@ -23,10 +23,10 @@
 \geometry{
 paperwidth=210mm,
 paperheight=297mm,
-left=42pt,
+left=90pt,
 top=72pt,
-textwidth=320pt,
-marginparsep=20pt,
+textwidth=400pt,
+marginparsep=50pt,
 marginparwidth=180pt,
 textheight=650pt,
 footskip=40pt,

@@ -1,0 +1,1141 @@
+\chapter{Classification of Integral Affine Closed Surfaces}
+\section{Some basic results}
+We first discuss our approach to the classification problem.
+
+We make use of the following theorem from Milnor relating to the existence of a
+flat connection on closed orientable surfaces. We can handloe the
+non-orientable case by applying the following classification theorem.
+\begin{theorem}
+    Every compact, connected $2$-manifold is homeomorphic to the sphere, the connected sum of tori or the connected sum of $\mathbb{R}P^2$.
+\end{theorem}
+\begin{proof}
+    Hatcher?
+\end{proof}
+
+\begin{theorem}
+    Let $M^2$ be a closed orientable surface of genus $g$. Then if $g \geq 2$ it does not possess a connection with zero curvature.
+\end{theorem}
+
+\begin{proof}
+    cite "On the existence of a connection with zero curvature" by Milnor.
+\end{proof}
+\begin{corollary}
+    The possible orientable closed surfaces admitting an integral affine structure are the sphere $S^2$ or the torus $\mathbb{T}^2$.
+\end{corollary}
+
+\begin{proof}
+    This follows from the classification of closed 2 surfaces. (TODO: get source - probably hatcher or something)
+\end{proof}
+
+However, the following simple argument shows that the sphere $S^2$ does not
+admit such a structure.
+
+\begin{prop}
+    The sphere $S^2$ does not admit an affine structure.
+\end{prop}
+
+\begin{proof}
+    Suppose there was such an integral affine structure. Then
+    $$\dev : S^2 \to \mathbb{R}^2$$
+    is a local diffeomorphism and hence an open map. However $\dev$ is also continuous, and so $\dev(S^2)$ is a compact subset of $\mathbb{R}^2$ and hence closed.
+    Now, as $\dev(S^2) \neq \emptyset$, by connectivity $\dev(S^2) = \mathbb{R}^2$ but $\mathbb{R}^2$ is not compact.
+\end{proof}
+We have the following immediate corollary.
+\begin{corollary}
+    The only closed, orientable surface admitting an (integral) affine structure is $\mathbb{T}^2$.
+\end{corollary}
+
+We will deal with the non-orientable case by passing to the orientable double
+cover.
+\begin{lemma}
+    Every closed, non-orientable surface has a double cover that is orientable. Furthermore, the genus of the double cover is given by
+    $$g = \bar{g} -1 $$
+    where $\bar{g}$ is the number of connected sums of $\mathbb{R}P^2$.
+\end{lemma}
+
+This lemma leads to the following corollary.
+\begin{corollary}
+    The only closed surfaces admitting an (integral) affine structure are the torus $\mathbb{T}^2$ and the Klein bottle $\mathbb{K}^2$.
+\end{corollary}
+\begin{proof}
+    As any covering space of an integral affine structure inherits an integral affine structure by (TODO: do this in (G,X)-structure section), it follows that the
+    orientable double cover of a non-orientable integral affine surface must be $\mathbb{T}^2$. Furthermore, it must have non-orientable genus (TODO: define this somewhere?) $\bar{g}= 1 \text{ or } 2$. If $\bar{g}=1$ our surface is homeomorphic to $\mathbb{R}P^2$ which is covered by
+    $S^2$ and hence admits no such structure. If $\bar{g} = 2$ we get the Klein bottle which is covered by $\mathbb{T}^2$ and hence can admit such a structure.
+\end{proof}
+
+\section{Classification of Integral Affine structures on the torus}
+\subsection{Completeness and freeness of the action}
+We now look at how we can classify the integral affine structures on the torus.
+The following observation will greatly simplify the classification process.
+
+\begin{lemma}
+    Any integral affine structure on the torus is complete.
+\end{lemma}
+\begin{proof}
+    We have that the fundamental group $\pi_1(\mathbb{T}^2) = \mathbb{Z} \times \mathbb{Z}$ is abelian and hence nilpotent. As the torus is orientable,
+    our linear holonomy group $\Gamma \subseteq \text{SL}(2, \mathbb{Z})$ by (TODO: Reference Corr 0.26). But now by (TODO: finish nilpotent section e.g. combine to theorem).
+\end{proof}
+
+(TODO: This might be a good place for discussion on completeness stuff. Auslander-Markus show that every complete affine manifold is quotient by linear holonomy).
+
+From the above discussion, classifying complete integral affine structures on a
+surface $M$ amounts to classifying injective homomorphisms from the fundamental
+group into the group $\text{Aff}_{\mathbb{Z}}(\mathbb{R}^2)$ which induce a
+free and proper action on $\mathbb{R}^2$.
+
+\begin{lemma}
+    If $g=(A,b) \in \affz(\mathbb{R}^2)$ acts freely on $\mathbb{R}^2$, then
+    $$\text{if } \det(A) =1 \text{ then } \text{Tr}(A) = 2$$ and,
+    $$\text{if } \det(A) =-1 \text{ then } \text{Tr}(A) = -1$$\label{lemma:traces-free-action}
+\end{lemma}
+\begin{proof}
+    Since the action by $g$ is free, this implies
+    $$Ax +b =x$$
+    has no solution. But now,
+    \begin{align*}
+         & (A-I)x = -b
+    \end{align*}
+    $\text{has no solutions for all } x\in \mathbb{R}^2$ and so $\det(A-I) = 0$. Calculating this determinant yields
+    $$1- \text{Tr}(A) + \det(A) = 0$$
+    and substituting in the appropriate values of $\det(A)$ gives the required results.
+
+\end{proof}
+
+(TODO: I think this result is surprisingly useful for example I think proofs of Auslander conjecture in low dimensions rely on something like this. Perhaps discuss more.)
+
+We note also that $1$ is an eigenvalue of such an $A$ as by the above proof
+$\det(A - 1\cdot I) = 0$. Using this result we can find a nice basis to express
+the linear part of our element $g \in \affz(\mathbb{R}^2)$.
+
+\begin{lemma}
+    Let $g= (A,b) \in \affz(\mathbb{R}^2)$ act freely. Then there is an integral basis of $\mathbb{R}^2$ such that
+    $$A = \begin{pmatrix}
+            1 & n     \\
+            0 & \pm 1
+        \end{pmatrix}$$ \label{lemma:torus-matrixform}
+\end{lemma}
+\begin{proof}
+    By our previous lemma, $A$ must have $1$ as an eigenvalue. We can take an eigenvector $e_1$ such that $e_1$ is integral, e.g. its components are integers.
+    Now as $\text{Tr}(A) = 2 \text{ or } 0$, it follows that we can pick our second basis vector such that
+    $$A = \begin{pmatrix}
+            1 & n     \\
+            0 & \pm 1
+        \end{pmatrix}$$
+    since we need $A \in \text{GL}(2, \mathbb{Z})$. Furthermore, by changing orientation if necessary we may assume $n \geq 0$.
+\end{proof}
+
+\begin{lemma}
+    \label{lemma:skew-matrix-form}
+
+    Let $H \subset \affz(\mathbb{R}^2)^+$ be a subset of the elements of
+    determinant one and suppose $H$ acts freely on $\mathbb{R}^2$. Then there is an
+    integral basis such that for all $(A,b)\in H$ we can write $$A = \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}$$
+    for $n \in \mathbb{Z}$
+\end{lemma}
+
+\begin{proof}
+    Let $(A, a),(B,b) \in H$. Now by Lemma \ref{lemma:torus-matrixform}, we can write
+    $$A = \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}, \quad B = \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}$$
+    with $n \neq 0$. Now by Lemma \ref{lemma:traces-free-action}, we have that
+    \begin{align*}
+        \text{Tr}(A^kB) & = a + nck + d        \\
+                        & = \text{Tr}(B) + nck \\
+                        & = 2
+    \end{align*}
+    As $n\neq 0$ and this holds for all $k \in \mathbb{Z}$, it follows that $c=0$.
+
+    But now, $\det B = ad = 1$ and $\text{Tr}(B) = a+d = 2$ and so $a=d=1$ giving
+    the required result as $b \in \mathbb{Z}$.
+\end{proof}
+
+We have the following corollary of this result.
+\begin{corollary}
+    \label{corr:rel-prime}
+    For any two elements $(A,a), (B,b) \in H$, there exists relatively prime $(k,l) \neq (0,0)$ such that $A^kB^l = 1$.
+\end{corollary}
+\begin{proof}
+    We simply take $k = \frac{m}{(m,n)}$ and $l = \frac{-n}{(m,n)}$ and then
+    $$\begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}^k\begin{pmatrix}
+            1 & m \\
+            0 & 1
+        \end{pmatrix}^l = 1$$.
+\end{proof}
+
+\subsection{Finding the possible generators}
+We have now built up the required machinery to begin the classification of the
+integral affine structures on the torus $\mathbb{T}^2$.
+
+\begin{theorem}
+    Any complete integral affine structure on $\mathbb{T}^2$ has its affine holonomy group generated by one of the following subgroups of $\affz(\mathbb{R}^2)$
+    \begin{enumerate}
+        \item $\mathcal{A}_{a,b,c,d}$ - These integral affine structures are the quotient of $\mathbb{R}^2$ by a lattice of pure translations. The generators in $\affz(\mathbb{R}^2)$ are given by
+              $$\left( 1, \begin{pmatrix}
+                          a \\ c
+                      \end{pmatrix} \right) \text{ and } \left( 1, \begin{pmatrix}
+                          b \\ d
+                      \end{pmatrix} \right)$$
+              with $a,b,c,d \in \mathbb{R}$ and $ad-bc \neq 0$.
+        \item $\mathcal{B}_{n,a,b}$ - The generators in $\affz(\mathbb{R}^2)$ are given by
+              $$\left( 1, \begin{pmatrix}
+                          a \\ 0
+                      \end{pmatrix} \right) \text{ and } \left( \begin{pmatrix}
+                          1 & n \\
+                          0 & 1
+                      \end{pmatrix}, \begin{pmatrix}
+                          0 \\ b
+                      \end{pmatrix} \right)$$
+              with $a,b > 0$ and $n \in \mathbb{N}$.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    Let $\pi_1(\mathbb{T}^2) = \langle \tilde{C}, \tilde{D} \rangle$ and denote by $C,D$ the images of these generators under the affine holonomy representation.
+    We wish to show that these generators reduce to the form of either $\mathcal{A}_{a,b,c,d}$ or $\mathcal{B}_{n,a,b}$. We can do this by
+    \begin{enumerate}
+        \item Changing the generators $\tilde{C}, \tilde{D}$ of the $\pi_1(\mathbb{T}^2)$.
+        \item Conjugating the images of these generators by some $g \in \affz^+(\mathbb{R})$
+              - this corresponds to pre-composing the developing map by $g$ which preserves
+              the affine structure.
+    \end{enumerate}
+    If both $C= \left( 1 ,\begin{pmatrix}
+                a \\ c
+            \end{pmatrix}\right)$ and $D =\left(1, \begin{pmatrix}
+                b \\ d
+            \end{pmatrix}\right)$ are pure translations, e.g. the linear component is the identity, injectivity forces that
+    our translational vectors are linearly independent, otherwise $\hol(k\tilde{C} + m\tilde{D}) = 0$ for some $k,m\neq 0 \in \mathbb{R}$. In this
+    case our lattice in $\mathbb{R}^2$ would be one-dimensional. This gives the condition that $ad-bc \neq 0$ and completes the first class of lattices. \\
+
+    Now suppose that $C,D$ are not pure translations. Then by Corollary
+    \ref{corr:rel-prime}, there exists relatively prime $k,l \in \mathbb{Z}$ such
+    that $C^kD^l$ is a translation. We can therefore change generators in
+    $\mathbb{Z}^2$ to $\tilde{A}=\tilde{C}^k\tilde{D}^l$ and $\tilde{B}= \begin{pmatrix}
+            a \\ b
+        \end{pmatrix}$. In the basis $\tilde{C}, \tilde{D}$ we have that the matrix
+    $$M = \begin{pmatrix}
+            k & a \\
+            l & b
+        \end{pmatrix}$$
+    has $\det M = kb - la$ and since $k,l$ are relatively prime by Bezout's theorem we can always pick $a,b \in \mathbb{Z}$ such that
+    this determinant is 1 and hence an automorphism of our lattice.
+
+    We denote the images of our new generators under the affine holonomy
+    representation by $$A' = \left( I, a =\begin{pmatrix}
+                a_1 \\ a_2
+            \end{pmatrix} \right) \text{ and } B' = \left( B, b =\begin{pmatrix}
+                b_1 \\ b_2
+            \end{pmatrix} \right).$$
+    Now by Lemma \ref{lemma:skew-matrix-form}, we can find a basis of $\R^2$ such
+    that $B = \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}$ with $n>0$. Now $\hol(\pi_1(\mathbb{T}^2))$ is abelian so we require that $A'B'= B'A'$ which gives the condition
+    $$
+        Ba = a
+    $$
+    this implies that
+    \begin{align*}
+        \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}\begin{pmatrix}
+                         a_1 \\ a_2
+                     \end{pmatrix} & = \begin{pmatrix}
+                                           a_1 + na_2 \\
+                                           a_2
+                                       \end{pmatrix}   \\
+                                     & = \begin{pmatrix}
+                                             a_1 \\
+                                             a_2
+                                         \end{pmatrix}
+    \end{align*}
+    which gives $a_2=0$ as $n>0$ and so $a = \begin{pmatrix}
+            a_1 \\
+            0
+        \end{pmatrix}$. We note that $a_1 \neq 0$ as otherwise the action is not free. For freeness, we also require that $A^lB^k$ acts freely for all $k,l \in \mathbb{Z}$. We check
+    \begin{align*}
+        \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}^k \begin{pmatrix}
+                            x \\ y
+                        \end{pmatrix} + \begin{pmatrix}
+                                            kb_1 + la_1 \\ kb_2
+                                        \end{pmatrix} & =
+        \begin{pmatrix}
+            x + kny +kb_1 + la_1 \\ y + kb_2
+        \end{pmatrix}                    \\
+                                        & = \begin{pmatrix}
+                                                x \\ y
+                                            \end{pmatrix}
+    \end{align*}
+    If $b_2 = 0$ then there is a fixed point for $y = \dfrac{-kb_1-la_1}{kn} \in \mathbb{R}$ so we must have $b_2 \neq 0$. Conversely, if $b_2 \neq 0$ and the action is not free,
+    this requires $k=0$ and so $x+la_1 = a_1$ for $l \neq 0$ but $a_1 \neq 0$ and hence there are no solutions. Now, to show that this takes the form of $\mathcal{B}_{n,a,b}$, we conjugate by
+    $$T = \left( I, \begin{pmatrix}
+                0 \\ \frac{-b_1}{n}
+            \end{pmatrix}\right)$$
+    this fixes $A'$ and so we compute $$T^{-1}B'T = \left(B, \begin{pmatrix}
+                0 \\ b_2
+            \end{pmatrix} \right)$$
+    and so we may assume $b_1 =0$. We can also make the change $A' \mapsto A'^{-1}$ and $B' \mapsto B'^{-1}$ and assume $a_1,b_2 >0$ which completes the proof.
+\end{proof}
+
+\subsection{When are two structures equivalent?}
+
+This gives the possible integral affine structures on the 2-torus. However we
+still have to tackle the question of when $2$ lattices give the same integral
+affine structure. This occurs when the subgroups of the integral affine group
+determined by the holonomy representation are conjugate to eachother.
+
+We have the following classification result.
+\begin{lemma}
+    Lattices from different series do not induce equivalent integral affine structures.
+\end{lemma}
+\begin{proof}
+    Lattices in series $\mathcal{A}_{a,b,c,d}$ are generated by pure translations and hence cannot be conjugated into lattices of the form $\mathcal{B}_{n,a,b}$.
+
+\end{proof}
+
+\begin{theorem}\label{thm:torus-series-a}
+    Lattices $\mathcal{A}_{a,b,c,d}$ and $\mathcal{A}_{a',b',c',d'}$ induce
+    equivalent integral affine structures if and only if $$X = GX'H$$ where $X = \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}$ and $X' = \begin{pmatrix}
+            a' & b' \\
+            c' & d'
+        \end{pmatrix}$ with $G,H \in GL(2,\mathbb{Z})$
+\end{theorem}
+\begin{proof}
+    Performing lattice automorphisms in $\pi_1(\mathbb{T}^2)$ and conjugating in
+    the image of the generators in $\affz(\R^2)$ preserves the integral affine
+    structure.
+
+    Let $\pi_1(\mathbb{T}^2) = \langle v_1, v_2\rangle$ with $\hol(v_1) = \left(I, \begin{pmatrix}
+                a \\ c
+            \end{pmatrix} \right)$ and $\hol(v_2) = \left(I, \begin{pmatrix}
+                b \\ d
+            \end{pmatrix} \right)$ and set $X= \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix}$. Let $H \in GL(2,
+        \mathbb{Z})$ and $g = (G, w) \in \affz(\mathbb{R}^2)$. We note that conjugating a pure translation $\left(I, v\right)$ by $g$ gives the element $\left(I, Gv\right)$. We compute
+    $$
+        \hol(Hv_1) = \left(I, XH\begin{pmatrix}
+                1 \\ 0
+            \end{pmatrix}\right)
+    $$
+    and
+    $$
+        \hol(Hv_2) = \left(I, XH\begin{pmatrix}
+                0 \\ 1
+            \end{pmatrix}\right)
+    $$
+    This corresponds to an automorphism of our lattice in $\pi_1(\mathbb{T}^2)$. We can also conjugate generators by $g = (G, w) \in \affz(\mathbb{R}^2)$ which gives
+    $$
+        g\circ \hol(Hv_1) \circ g^{-1} = \left(I, GXH\begin{pmatrix}
+                1 \\ 0
+            \end{pmatrix}\right)
+    $$
+    and
+    $$
+        g\circ \hol(Hv_2) \circ g^{-1} = \left(I, GXH\begin{pmatrix}
+                0 \\ 1
+            \end{pmatrix}\right)
+    $$
+    and so it follows that the integral affine structures are equivalent if and only if $X' = GXH$. TODO: finish this proof.
+\end{proof}
+
+\begin{theorem}
+    Lattices in $\mathcal{B}_{n,a,b}$ never induce the same integral affine
+    structure.
+\end{theorem}
+\begin{proof}
+    Suppose that $\mathcal{B}_{n,a,b} =\langle\left( 1, \bar{a} \right),  \left( B, \bar{b} \right) \rangle$ and $\mathcal{B}_{n',a',b'}= \langle\left( 1, \bar{a}' \right),  \left( B', \bar{b}' \right) \rangle$ induce equivalent integral affine structures. We must have that
+    \begin{equation}\label{eq:first-conjugacy}
+        g\tilde{A}g^{-1} = \tilde{A}'^k\tilde{B}'^r
+    \end{equation}
+    \begin{equation}
+        \label{eq:second-conjugacy}
+        g\tilde{B}g^{-1} = \tilde{A}'^l\tilde{B}'^s
+    \end{equation}
+    where $\tilde{A}, \tilde{B}$ and $\tilde{A}', \tilde{B}'$ are the images of the generators of $\pi_1(\mathbb{T}^2)$ of the structures $\mathcal{B}_{n,a,b}$ and $\mathcal{B}_{n',a',b'}$ and $g = (G = [g_{ij}], \bar{h})\in \affz(\R^2)$. The matrix
+    $$M = \begin{pmatrix}
+            k & l \\ r & s
+        \end{pmatrix} \in GL(2, \mathbb{Z})$$
+    corresponds to an automorphism of our lattice. This implies that
+    \begin{align*}
+        GBG^{-1} = \begin{pmatrix}
+                       1 & * \\
+                       0 & 1
+                   \end{pmatrix}
+    \end{align*}
+    where $B = \begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}$. Computing this condition yields
+    $$
+        \begin{pmatrix}
+            *                                       & * \\
+            g_{21}g_{22} - ng_{21}^2 - g_{21}g_{22} & *
+        \end{pmatrix} = \begin{pmatrix}
+            1 & * \\
+            0 & 1
+        \end{pmatrix}
+    $$
+    and so $g_{21}g_{22} - ng_{21}^2 - g_{21}g_{22}$ which gives that $g_{21} = 0$.
+
+    Now, inspecting the linear part of $g\tilde{A}g^{-1}$ as the linear part of
+    $\tilde{A}$ is the identity this must also be a translation e.g. $\tilde{A}'^k
+        \tilde{B}'^r$ is a translation. Again, inspecting the linear components we must
+    have that $r=0$. Our matrix $M$ corresponding to the automorphism of our
+    lattice now looks like $$M = \begin{pmatrix}
+            k & l \\
+            0 & s
+        \end{pmatrix}$$
+    and so $k,s = \pm 1$ as this matrix needs to have determinant $\pm 1$. Now from Equation $\ref{eq:first-conjugacy}$ we obtain
+    \begin{align*}
+        \left(G, \bar{h}\right) \left(I, \begin{pmatrix}
+                                                 a \\ 0
+                                             \end{pmatrix}\right) \left(G^{-1}, -G^{-1}\bar{h}\right) & = \left(I, G\begin{pmatrix}
+                                                                                                                        a \\ 0
+                                                                                                                    \end{pmatrix}\right) \\
+                                                                 & = \left(I, \begin{pmatrix}
+                                                                                      g_{11}a \\ 0
+                                                                                  \end{pmatrix}\right)                                   \\
+                                                                 & = \left(I, \begin{pmatrix}
+                                                                                      ka' \\ 0
+                                                                                  \end{pmatrix}\right)
+    \end{align*}where the last equality comes from the RHS of Equation $\ref{eq:first-conjugacy}$. This now gives that
+    $$g_{11} a = ka' \implies g_{11} a = \pm a'$$
+    as $k = \pm 1$. But $a,a' > 0$ by the classification and so $g_{11} = k$ and $a = a'$.
+
+    Next we inspect Equation $\ref{eq:second-conjugacy}$. The matrix part gives
+    that $$ GBG^{-1} = B'^s $$ Computing this gives
+    \begin{align*}
+        \begin{pmatrix}
+            g_{11} & g_{12} \\
+            0      & g_{22}
+        \end{pmatrix}\begin{pmatrix}
+                         1 & n \\
+                         0 & 1
+                     \end{pmatrix}\begin{pmatrix}
+                                      g_{11} & -g_{12}g_{11}g_{22} \\
+                                      0      & g_{22}
+                                  \end{pmatrix} & = \begin{pmatrix}
+                                                        1 & g_{11}g_{22}n \\
+                                                        0 & 1
+                                                    \end{pmatrix} \\
+                                        & =\begin{pmatrix}
+                                               1 & n's \\
+                                               0 & 1
+                                           \end{pmatrix}
+    \end{align*}
+    Where the last equality comes again from the RHS of Equation $\ref{eq:second-conjugacy}$. Comparing matrix entries yields
+    $g_{11}g_{22}n = n's$. Using that $g_{11} = \pm 1$,  $g_{22} = \pm 1$ and $s = \pm 1$ we have that $n = \pm n'$. But both $n,n' \in \mathbb{N}$ by the classification and so we must have $n = n'$.
+    This now gives that $s = g_{11}g_{22}$. This was the linear part of Equation $\ref{eq:second-conjugacy}$ so we now analyze the translational component.
+
+    Comparing the translational parts yields
+
+    \begin{equation}
+        \label{eq:vector-side}
+        -GBG^{-1}\bar{h} + G\bar{b} + \bar{h} = s\bar{b}' + l\bar{a}'
+    \end{equation}
+    We can factorise te LHS as
+    $$
+        -GBG^{-1}h + G\bar{b} + \bar{h}  = G(I- B)G^{-1}\bar{h} + G\bar{b}
+    $$
+    Now we simplify
+    $$
+        G(I- B)G^{-1}\bar{h} = \begin{pmatrix}
+            x \\ 0
+        \end{pmatrix}
+    $$
+    where $x \in \mathbb{R}$ is arbritrary depending on $\bar{h}$. Now Equation \ref{eq:vector-side} becomes
+    $$
+        \begin{pmatrix}
+            x \\ 0
+        \end{pmatrix} + G \bar{b} = s\bar{b}' + l\bar{a}'
+    $$
+    Expanding this we are left with
+    $$
+        \begin{pmatrix}
+            x + g_{12}b \\
+            g_{22}b
+        \end{pmatrix} = \begin{pmatrix}
+            la' \\
+            sb'
+        \end{pmatrix}
+    $$
+    This gives $g_{22}b = sb'$ and again as $b, b'>0$ and $g_{22}, s = \pm 1$ we have $b = b'$ and now we are finished as we showed $a=a'$, $b=b'$ and $n=n'$.
+
+\end{proof}
+
+This completes the classification of the integral affine structures on the
+torus $\mathbb{T}^2$. We note that lattices in the series
+$\mathcal{A}_{a,b,c,d}$ induce a Euclidean structure on the torus - e.g. their
+holonomy representation is a subgroup of $O(n) \rtimes \mathbb{R}^n$. This
+implies that there is a Riemannian metric preserved by this structure. However,
+the integral affine structures of $\mathcal{B}_{n,a,b}$ never induce a
+Euclidean structure on the torus.
+
+Next, we will look at the classification of integral affine structures over the
+Klein bottle, hence completing the classification of all integral affine
+structures over closed surfaces.
+
+\newpage
+\section{Classification of Integral Affine structures on the Klein Bottle}
+\subsection{Completeness of integral affine structures on $K^2$}
+We now wish to classify the integral affine structures on the Klein bottle. We
+would hope to proceed as before by calculating all of the injective
+homomorphisms form $\Gamma = \pi_1(K^2) \to \affz(\R^2)$ that induce a free and
+proper action on $\mathbb{R}^2$. However, in order to do this we would need to
+know that every integral affine structure on $K^2$ is complete. The following
+lemma takes care of this fact.
+
+\begin{lemma}
+    Let $N$ be an integral affine manifold and suppose that there is a regular covering $M \to N$ by a compact orientable integral affine manifold whose fundamental group is nilpotent. Then any integral affine structure on $N$ is complete.
+\end{lemma}
+\begin{proof}
+    We can pull back the integral affine structure on $N$ to $M$. A regular covering induces an injection of fundamental groups $\iota: \pi_1(M) \mapsto \pi_1(N)$. We can induce the holonomy representation on $M$ by $\hol \circ \iota$ where $\hol$ is the affine holonomy representation induced by the
+    integral affine structure on $N$. As $M$ and $N$ share a common universal cover $X$, the integral affine structure on $N$ induces a developing map $\dev : X \mapsto \R^n$ and this induced holonomy representation will remain equivariant with respect to this developing map as the action of $\pi_1(\mathbb{T}^2)$ on the universal cover is a restriction of the action of $\pi_1(K^2)$.
+
+    From Proposition $\ref{prop:dev-charts}$ this defines an integral affine
+    structure on $M$ which has the same developing map as that of $N$. Therefore,
+    if the integral affine structure on $N$ is incomplete then the integral affine
+    structure on $M$ will also be. However, $M$ is a compact orientable integral
+    affine manifold with nilpotent fundamental group and hence by (TODO: reference
+    theorem) is complete. It follows that any integral affine structure on $N$ must
+    also be complete.
+\end{proof}
+
+Throughout this section we let $\pi_1(K^2) = \Gamma$ have presentation $$\Gamma
+    = \langle a,b \mid aba = b \rangle$$
+
+and we note that $\langle a,b^2 \rangle \subset \Gamma$ is abelian. Indeed, the
+oriented double cover of $K^2$ is the torus $\mathbb{T}^2$ and so there is an
+injection of fundamental groups $\pi_1(\mathbb{T}^2) \hookrightarrow
+    \pi_1(K^2)$. This abelian subgroup can be realised as the aforementioned
+injection. As in the previous proposition, the induced integral affine
+structure on $\mathbb{T}^2$ via pullback will have holonomy representation
+$\hol \circ \iota$ where $\iota$ is the injection of fundamental groups and
+$\hol$ is the holonomy representation of the affine structure on $\mathbb{T}^2$
+- indeed this will be equivariant with respect to the same developing map on
+their shared universal cover. This shows the following proposition
+
+\begin{prop} \label{prop:induced-structure}
+    Let $K^2$ be equipped with an integral affine structure with holonomy representation
+    $$\hol : \Gamma \to \affz(\R^2)$$
+    Then if $\hol(a) = g \in \affz(\R^2)$ and $\hol(b) = h \in \affz(\R^2)$ then the induced holonomy representation on the torus $\mathbb{T}^2$
+    will be given by
+    $$\tilde{\hol} : \pi_1(\mathbb{T})^2 = \langle x,y \rangle \to \affz(\R^2)$$
+    $$ x \mapsto g, \quad y \mapsto h^2$$
+\end{prop}
+
+\begin{remark}
+    Namely, this implies that once we classify the injective homomorphisms from $\Gamma \to \affz(\R^2)$, we can easily check
+    which integral affine structure they induce on the torus.
+\end{remark}
+
+\subsection{Determining the linear holonomy}
+We now start are classification of the injective group morphisms from $\Gamma
+    \to \affz(\R^2)$. We will denote also by $a = (A, \bar{x})$ and $b = (B,
+    \bar{y})$ the images of our generators of $\Gamma$ under the holonomy
+representation where $A,B \in GL(2, \Z)$ and $\bar{x}, \bar{y} \in \mathbb{R}$.
+
+We will make use of the following in our classification
+
+\begin{enumerate}
+    \item We must have that $\det A = 1$ and $\det B^2 = 1$ as these are generators form
+          $\pi_1(\mathbb{T}^2)$.
+    \item Since $b$ reverses orientation we in fact have $\det B = -1$
+    \item The action given by the composition $\pi_1(\mathbb{T}^2) \hookrightarrow \Gamma
+              \to \affz(\R^2) $ must also act freely and properly as this defines the induced
+          integral affine structure on $\mathbb{T}^2$ by Proposition
+          \ref{prop:induced-structure}.
+\end{enumerate}
+
+We will now make use of Lemma \ref{lemma:traces-free-action} to get
+restrictions on the matrix $B$. Namely, this lemma implies that $\text{Tr } B =
+    0$. By Lemma 1 of \cite{torus-bundles}, our matrix $B$ must be conjugate to one
+of $$ B_1 = \begin{pmatrix}
+        1 & 0  \\
+        0 & -1
+    \end{pmatrix} \text{ or }
+    B_2=\begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{pmatrix}
+$$
+
+Now we must find the matrices $A \in GL(2, \Z)$ such that $\det A = 1$,
+$\text{Tr } A = 2$ which also satisfy the group relation $ABA = B$ where $B=
+    B_1,B_2$. We perform this calculation now.
+
+\begin{prop}
+    Let $B = B_1$. Then we have the following choices for our matrix A.
+    \begin{enumerate}
+        \item $A = I$
+        \item $A_1 = \begin{pmatrix}
+                      1 & n \\
+                      0 & 1
+                  \end{pmatrix}$
+        \item $A_2 = \begin{pmatrix}
+                      1 & 0 \\
+                      p & 1
+                  \end{pmatrix}$
+    \end{enumerate}
+\end{prop}
+
+\begin{proof}
+    Let $A = \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} \in GL(2, \Z)$. The trace condition implies that $d = 2-a$. We note that $B^{-1} = B$. Calculating the
+    group condition $ABA = B$ we obtain
+    \begin{align*}
+        ABA & = \begin{pmatrix}
+                    a^2 - bc & ab-bd    \\
+                    ca -cd   & cb - d^2
+                \end{pmatrix} \\
+            & = \begin{pmatrix}
+                    1 & 0  \\
+                    0 & -1
+                \end{pmatrix}
+    \end{align*}
+    Comparing matrix entries we find
+    $$a = d $$
+    since $d = 2-a$ this implies $a=d=1$. Our matrix $A$ now has the form
+    $$
+        A = \begin{pmatrix}
+            1 & b \\
+            c & 1
+        \end{pmatrix}
+    $$
+    From $\det A = 1$ we find that either $b=0$ or $c = 0$ which completes the proof.
+\end{proof}
+
+Now we perform the same calculation for $B = B_2$.
+\begin{prop}
+    Let $B = B_2$. Then we have the following choices for our matrix A.
+    \begin{enumerate}
+        \item $A = I$
+        \item $A_3 = \begin{pmatrix}
+                      1+n & n   \\
+                      -n  & 1-n
+                  \end{pmatrix}$
+        \item $A_4 = \begin{pmatrix}
+                      1-n & n   \\
+                      -n  & 1+n
+                  \end{pmatrix}$
+    \end{enumerate}
+\end{prop}
+\begin{proof}
+    Let $A= \begin{pmatrix}
+            a & b \\
+            c & d
+        \end{pmatrix} \in GL(2, \Z) $. Again we m ust have that $d = 2-a$ by the trace condition. Calculating the group law $ABA =B$ yields
+    \begin{align*}
+        ABA & = \begin{pmatrix}
+                    ab + ac  & b^2 + ad \\
+                    ad + c^2 & bd + cd
+                \end{pmatrix} \\
+            & = \begin{pmatrix}
+                    0 & 1 \\
+                    1 & 0
+                \end{pmatrix}
+    \end{align*}
+    Comparing entries yields that $a(b+c) = 0$ and $d(b+c) = 0$. Hoiwever, the trace condition implies that $a$ and $d$ can't both be zero and so $b = -c$.
+    Our matrix $A$ now has the form
+    $$
+        A = \begin{pmatrix}
+            a  & b \\
+            -b & d
+        \end{pmatrix}
+    $$
+    Calculating the determinant condition and using $d = 2-a$ yields
+    \begin{align*}
+        b^2 & = 1-ad    \\
+            & = (a-1)^2 \\
+    \end{align*}
+    and so
+    $$ b = a-1$$
+    \begin{center}
+        or
+    \end{center}
+    $$b = 1-a$$
+    The first case yields
+    $$
+        A= \begin{pmatrix}
+            n+1 & n   \\
+            -n  & 1-n
+        \end{pmatrix}
+    $$
+    where $n = a-1$ and the second case yields
+    $$
+        A= \begin{pmatrix}
+            1-n & n   \\
+            -n  & 1+n
+        \end{pmatrix}
+    $$
+    where $n = 1-a$. The case where $n=0$ corresponds to the identity and this completes our proof.
+\end{proof}
+
+This gives the possible choices of $A$ and $B$ that satisfy the group law and
+Lemma \ref{lemma:traces-free-action} we must now deduce the translational
+component in each case and check that the induced action is free and proper.
+
+\subsection{Translational component and freeness of the action}
+To find the translational components we impose the group law $aba = b$. When
+checking freeness, we can often use Proposition \ref{prop:induced-structure} to
+take shortcuts as we know that $a,b^2$ must generate one of the integral affine
+structures on the torus and hence act freely.
+
+We will now compute the translational components and check whether the action
+is free.
+
+\begin{lemma}
+    Let $B = B_1$. Then the possible choices of $A$ that induce an integral affine structure on $K^2$ are
+    $A=I, A_1$
+\end{lemma}
+\begin{proof}
+    \begin{case}[$A=I$, $B=B_1$]
+        Let $a=(I, \bar{x})$ and $b = (B_1, \bar{b})$ with $\bar{x} = \begin{pmatrix}
+                x_1 \\ x_2
+            \end{pmatrix}$ and $\bar{b} = \begin{pmatrix}
+                b_1 \\ b_2
+            \end{pmatrix}$ be our generators in $\affz(\R^2)$. They must satisfy the relation $aba = b$. Calculating this we find
+        \begin{align*}
+            (B, B\bar{x} +\bar{x} + \bar{b}) = (B, \bar{b})
+        \end{align*}
+        The translational component gives $B\bar{x} = - \bar{x}$ and so $\bar{x}$ lives in the $-1$-eigenspace. This implies that $x_1=0$. We are free to conjugate both our generators as this preserves the integral affine structure
+        and so we will do so by $g= \left(I, \begin{pmatrix}
+                    0 \\ \frac{y_2}{2}
+                \end{pmatrix}\right)$ Conjugating $a$ leaves it unchanged so we calculate
+
+        $$
+            g^{-1}\circ b \circ g = \left(B, \begin{pmatrix}
+                    y_1 \\ 0
+                \end{pmatrix}\right)
+        $$
+        and so we may assume that $y_2 =0$ by performing this conjugation. Our generators now look like
+        $$a = \left(I, \begin{pmatrix}
+                    0 \\ x_2
+                \end{pmatrix}\right), \quad b = \left(B, \begin{pmatrix}
+                    y_1 \\ 0
+                \end{pmatrix}\right)$$
+        Since $B$ alone clearly does not act freely we can't have that $y_1 =0$ and if $x_2=0$ then our lattice is one-dimensional and hence the holonomy representation is not injective.
+        Therefore, $x_2, y_1 \neq 0$. Furthermore, by changing generators $a \mapsto a^{-1}$ and $b \mapsto b^{-1}$ we can assume $x_2, y_1 >0$. It remains to check that this action is free.
+        We must check that $a^qb^n$ acts freely for all $q,n \in \Z$ not both zero. However, we now note that as $B^{2k} = I$ for $k\in \Z$, by the torus classification of Theorem \ref{thm:torus-series-a},
+        we have already shown that $a^qb^{2k}$ acts freely. We therefore must check the case of $a^qb^{2k+1}$. We compute that
+        $$
+            a^q = \left(I, \begin{pmatrix}
+                    0 \\ qx_2
+                \end{pmatrix} \right)
+            , \quad b^{2k+1} = \left(B, \begin{pmatrix}
+                    (2k+1)y_1 \\ 0
+                \end{pmatrix} \right)$$
+        For the action to be free we need $a^qb^{2k+1}\circ z = z$ to have no solutions for all $z \in \R^2$. We compute this action
+        \begin{align*}
+            a^qb^{2k+1}\circ z & = B \begin{pmatrix}
+                                         z_1 \\ z_2
+                                     \end{pmatrix} + \begin{pmatrix}
+                                                         (2k+1)y_1 \\ x_2
+                                                     \end{pmatrix} \\
+                               & = \begin{pmatrix}
+                                       (2k+1)y_1 + z_1 \\ x_2 - z_2
+                                   \end{pmatrix}
+        \end{align*}
+        and so, for there to be a fixed point we need
+        $$(2k+1)y_1 + z_1 = z_1$$
+        which gives $(2k+1)y_1 = 0$. But now $y_1>0$ and $2k+1 = 0 \implies k = -\frac{1}{2} \notin \Z$ and so this action can have no fixed points. The induced integral affine structure on the torus is given by
+        $$
+            a = \left(1, \begin{pmatrix}
+                    0 \\ x_2
+                \end{pmatrix} \right), \quad b^2 = \left(1, \begin{pmatrix}
+                    2y_1 \\ 0
+                \end{pmatrix} \right)
+        $$
+    \end{case}
+    \begin{case}[$A=A_1$, $B=B_1$]
+        Let $a = \left( A_1, \begin{pmatrix}
+                    x_1 \\ x_2
+                \end{pmatrix} \right)$ and $b = \left( B, \begin{pmatrix}
+                    y_1 \\ y_2
+                \end{pmatrix} \right)$
+        As $A_1^2 \neq I$ and $B^2 = I$, by the torus classification we again obtain that $x_1 = 0$. We calculate the group law $aba = b$.
+        This gives us
+        \begin{align*}
+            aba & = \left(B, \begin{pmatrix}
+                                 y_1 + n(y_2-x_2) \\
+                                 y_2
+                             \end{pmatrix}\right)   \\
+                & = \left( B, \begin{pmatrix}
+                                  y_1 \\ y_2
+                              \end{pmatrix} \right)
+        \end{align*}
+        which imposes the restriction $n(y_2 - x_2) = 0$ and since $n \neq 0$ this implies $y_2 = x_2$. We can also assume that $x_2>0$ by conjugating the generators by $(_I, \bar{0})$ and that $y_1>0$ by changing generators $b \mapsto b^{-1}$ if necessary.
+        Now we check freeness of the action.
+
+        We calculate that $$ a^q = \left( \begin{pmatrix}
+                    1 & qn \\ 0 & 1
+                \end{pmatrix}, \begin{pmatrix}
+                    \frac{nx_2 q(q-1)}{2} \\ qx_2
+                \end{pmatrix} \right)
+        $$
+        and
+        $$b^k = \begin{cases*}
+                \left( B, \begin{pmatrix}
+                                  ky_1 \\ x_2
+                              \end{pmatrix} \right) \text{, k odd } \\
+                \left( I, \begin{pmatrix}
+                                  ky_1 \\ 0
+                              \end{pmatrix} \right)\text{, k even }
+            \end{cases*}$$
+        Since the case of $k$ being even is covered by the torus classification we must only check freeness for $k$ being odd.
+
+        For $k$ odd we compute
+        \begin{align*}
+            a^qb^k = \left( \begin{pmatrix}
+                                1 & -qn \\
+                                0 & -1
+                            \end{pmatrix}, \begin{pmatrix}
+                                               \dfrac{nx_2q(q-1)}{2} + qnx_2 + ky_1 \\
+                                               (q+1)x_2
+                                           \end{pmatrix} \right)
+        \end{align*}
+        calculating this action on $z = \begin{pmatrix}
+                z_1 \\ z_2
+            \end{pmatrix}$ yields
+
+        $$
+            (a^qb^k) \circ z = \begin{pmatrix}
+                \dfrac{nx_2q(q-1)}{2} + qnx_2 + ky_1 + z_1 - qnz_2 \\
+                (q+1)x_2 - z_2
+            \end{pmatrix}
+        $$
+        Solving the fixed point equation, the bottom entry of the vector yields
+        \begin{equation}
+            \label{eq:fixed-point-case-two}
+            z_2 = \dfrac{q+1}{2}x_2
+        \end{equation}
+        Solving the fixed point equation in the top component yields
+        $$
+            z_2 = \dfrac{x_2(q-1)}{2}x_2 + \dfrac{ky_1}{qn}
+        $$
+        Substituting Equation \ref{eq:fixed-point-case-two} for $z_2$ yields $ky_1 = 0$ which implies $k=0$ as $y_1>0$.
+        This now implies that $a^q$ would need to have a fixed point but one checks
+
+        $$a^q \circ z = \begin{pmatrix}
+                * \\
+                z_2 + qx_2
+            \end{pmatrix}$$
+        and so we require that $qx_2 =0$ but $x_2>0$ and hence the only element with a fixed point occurs when $k=q=0$ which is the identity and hence the action is free.
+
+        The induced integral affine structure on $\mathbb{T}^2$ is given by
+
+        $$
+            a = \left(A_1, \begin{pmatrix}
+                    0 \\ x_2
+                \end{pmatrix} \right), \quad b^2 = \left(I, \begin{pmatrix}
+                    2y_1 \\ 0
+                \end{pmatrix} \right)
+        $$
+        with $x_2, y_1 >0$
+    \end{case}
+    \begin{case}[$A=A_2$, $B=B_1$]
+        Let $a = \left( A_1, \begin{pmatrix}
+                    x_1 \\ x_2
+                \end{pmatrix} \right)$ and $b = \left( B, \begin{pmatrix}
+                    y_1 \\ y_2
+                \end{pmatrix} \right)$.
+        In this case the action will fail to be free. Again, by considering the induced structure on the torus it follows that $x_1=0$. We calculate $aba$ again which yields
+        \begin{align*}
+            aba & = \left(B, \begin{pmatrix}
+                                 y_1 \\ py_1 + y_2
+                             \end{pmatrix}\right) \\
+                & = \left(B, \begin{pmatrix}
+                                 y_1 \\ y_2
+                             \end{pmatrix}\right)
+        \end{align*}
+
+        and so we must have $py_1 = 0$ and since $p>0$ we have $y_1=0$. But now we
+        calculate $b^2$ as $$ b^2 = \left(I, \begin{pmatrix}
+                    2y_1 \\ 0
+                \end{pmatrix}\right)
+        $$
+        but since $y_1=0$ this cannot induce an integral affine structure on the torus hence the action is not free.
+    \end{case}
+\end{proof}
+This completes the case where $B = B_1$. Next, we tackle the case of $B = B_2$.
+\begin{lemma}
+    Let $B = B_2$. Then the possible choices of $A$ that induce an integral affine structure on $K^2$ are
+    $A=I, A_4$.
+\end{lemma}
+\begin{proof}
+    \begin{case}[$A=I$, $B=B_2$]
+        We calculate the group law $aba = b$ which yields
+        \begin{align*}
+            aba & = \left(B, \begin{pmatrix}
+                                 x_1 +x_2 +y_1 \\ x_2 + y_2 + x_1
+                             \end{pmatrix}\right) \\
+                & = \left(B, \begin{pmatrix}
+                                 y_1 \\ y_2
+                             \end{pmatrix}\right)
+        \end{align*}
+        This implies that $x_1 = -x_2$. We conjugate $a,b$ by
+        $$
+            c = \left(-I, \begin{pmatrix}
+                    -\frac{y_2}{2} \\
+                    -\frac{y_2}{2}
+                \end{pmatrix} \right)
+        $$
+        which gives use the new generators
+        $$
+            a = \left(I , \begin{pmatrix}
+                    -x_1 \\ x_1
+                \end{pmatrix}\right), \quad b =\left(B , \begin{pmatrix}
+                    -y_2 -y_1 \\ 0
+                \end{pmatrix}\right)
+        $$
+        and by switching generators $a \mapsto a^{-1}$ if necessary we may assume that $x_1<0$ so that we will switch the signs on the translational component of $a$.
+        We will do the same for the translational component of $b$ and assume $y_2 = 0$ and $y_1>0$ after relabelling $-y_2 -y_1 \to y_1$. This finishes our generating set which we write as
+        $$
+            a = \left(I , \begin{pmatrix}
+                    x_1 \\ -x_1
+                \end{pmatrix}\right), \quad b =\left(B , \begin{pmatrix}
+                    y_1 \\ 0
+                \end{pmatrix}\right)
+        $$
+        with $x_1, y_1>0$. We now check freeness of the action. Again since $B^{2k}= I$, the even case is covered by the torus classification and so
+        we will check freeness of words $a^qb^k$ with $k$ being odd. We calculate that
+        \begin{align*}
+             & a^q = \left(I, \begin{pmatrix}
+                                      qx_1 \\ - qx_1
+                                  \end{pmatrix}\right)                                  \\
+             & b^k = \left(B, \begin{pmatrix}
+                                      \frac{k+1}{2}y_1 \\ \frac{k-1}{2}y_1
+                                  \end{pmatrix}\right) \text{, for k odd}               \\
+             & a^qb^k = \left(B, \begin{pmatrix}
+                                         \frac{k+1}{2}y_1  + qx_1 \\ \frac{k-1}{2}y_1 - qx_1
+                                     \end{pmatrix}\right) \text{, for k odd.}
+        \end{align*}
+        Now let $z = \begin{pmatrix}
+                z_1 \\ z_2
+            \end{pmatrix} \in \R^2$ and consider the fixed point equation $(a^qb^k)\circ z = z$. This gives
+
+        $$
+            \begin{pmatrix}
+                \frac{k+1}{2}y_1  + qx_1 + z_2 \\
+                \frac{k-1}{2}y_1  - qx_1 + z_1
+            \end{pmatrix} = \begin{pmatrix}
+                z_1 \\ z_2
+            \end{pmatrix}
+        $$
+        Solving this gives $\frac{k+1}{2}y_1 + \frac{k-1}{2}y_1 = 0 \implies ky_1 = 0$. But since $y_1>0$ we must have $k=0$. So if the action is not free we must have that $a^q$ acts non-freely for some $q\neq 0$
+        but this action is by translations and hence is free and so $A=I, B=B_2$ does induce an integral affine structure. The induced structure on the torus is given by
+        $$
+            a = \left(I , \begin{pmatrix}
+                    x_1 \\ -x_1
+                \end{pmatrix}\right), \quad b^2 =\left(I , \begin{pmatrix}
+                    y_1 \\ y_1
+                \end{pmatrix}\right)
+        $$
+        $x_1, y_1 > 0$.
+    \end{case}
+    \begin{case}[$A=A_3$, $B=B_2$]
+        We show that this cannot induce an integral affine structure on the torus. We conjugate $A$ and $B$ by
+        $$
+            G = \begin{pmatrix}
+                1 & 0 \\
+                1 & 1
+            \end{pmatrix}
+        $$
+        which puts them in the form
+        $$
+            A = \begin{pmatrix}
+                1 & n \\
+                0 & 1
+            \end{pmatrix}, \quad B = \begin{pmatrix}
+                -1 & 1 \\
+                0  & 1
+            \end{pmatrix}
+        $$
+        and so we have $B^2 = I$. Hence, the integral affine structure on $\mathbb{T}^2$ should belong to the second family. However calculating
+        $$
+            b^2 = \left(I, \begin{pmatrix}
+                    y_2 \\ 2y_2
+                \end{pmatrix}\right)
+        $$
+        we require that $2y_2 = 0 \implies y_2 = 0$ but then $b^2$ does not act freely and hence does not induce an integral affine structure on the torus. Therefore, this case cannot induce
+        an integral affine structure on $K^2$.
+    \end{case}
+    \begin{case}[$A=A_4$, $B=B_2$]
+        Again, we conjugate $A,B$ by the matrix
+        $$
+            G = \begin{pmatrix}
+                1  & 0 \\
+                -1 & 1
+            \end{pmatrix}
+        $$
+        and assume that
+        $$
+            a = \left(A = \begin{pmatrix}
+                    1 & n \\
+                    0 & 1
+                \end{pmatrix} , \begin{pmatrix}
+                    x_1 \\ x_2
+                \end{pmatrix}\right), \quad b =\left(B = \begin{pmatrix}
+                    1 & 1  \\
+                    0 & -1
+                \end{pmatrix} , \begin{pmatrix}
+                    y_1 \\ y_2
+                \end{pmatrix}\right)
+        $$
+        Using that $B^2 = I$ and $a,b^2$ must induce an integral affine structure on the torus it follows that $x_1 = 0$ since the induced structure belongs to the second family.
+        Now, calculating the group law $aba = b$ yields
+        $$
+            \left(\begin{pmatrix}
+                    1 & 1  \\
+                    0 & -1
+                \end{pmatrix} , \begin{pmatrix}
+                    y_1 + ny_2 + x_2(1-n) \\ y_2
+                \end{pmatrix}\right) = \left(B , \begin{pmatrix}
+                    y_1 \\ y_2
+                \end{pmatrix}\right)
+        $$
+        and so $ny_2 + (1-n)x_2 = 0 \implies y_2 = \frac{n-1}{n}x_2$. Our generators are therefore
+        $$
+            a = \left(\begin{pmatrix}
+                    1 & n \\
+                    0 & 1
+                \end{pmatrix} , \begin{pmatrix}
+                    0 \\ x_2
+                \end{pmatrix}\right), \quad b =\left(\begin{pmatrix}
+                    1 & 1  \\
+                    0 & -1
+                \end{pmatrix} , \begin{pmatrix}
+                    y_1 \\ \frac{n-1}{n}x_2
+                \end{pmatrix}\right)
+        $$
+        and the induced structure on the torus is
+        $$
+            a = \left(\begin{pmatrix}
+                    1 & n \\
+                    0 & 1
+                \end{pmatrix} , \begin{pmatrix}
+                    0 \\ x_2
+                \end{pmatrix}\right), \quad b^2 =\left(\begin{pmatrix}
+                    1 & 0 \\
+                    0 & 1
+                \end{pmatrix} , \begin{pmatrix}
+                    2y_1 + \frac{n-1}{n}x_2 \\ 0
+                \end{pmatrix}\right)
+        $$
+        with $y_1> 0$ and so a necessary condition is $2y_1 \neq -\frac{n-1}{n}x_2$. In fact, we shall now show that this is sufficient. We calculate that
+        $$
+            a^k = \left(\begin{pmatrix}
+                    1 & kn \\
+                    0 & 1
+                \end{pmatrix} , \begin{pmatrix}
+                    \frac{nk(k-1)}{2}x_2 \\ kx_2
+                \end{pmatrix}\right), \quad b^q =\left(B , \begin{pmatrix}
+                    qy_1 + \frac{q-1}{2}y_2 \\ y_2
+                \end{pmatrix}\right) \text{, for q odd}
+        $$
+        and
+        $$
+            a^kb^q = \left(\begin{pmatrix}
+                    1 & 1-kn \\
+                    0 & -1
+                \end{pmatrix} , \begin{pmatrix}
+                    qy_1 + \frac{q-1}{2}y_2 + kny_2 + \frac{nk(k-1)}{2}x_2 \\ y_2 + kx_2
+                \end{pmatrix}\right)
+        $$
+        Letting $v_1 := qy_1 + \frac{q-1}{2}y_2 + kny_2 + \frac{nk(k-1)}{2}x_2$ and $v_2 := y_2 + kx_2$ and $z = \begin{pmatrix}
+                z_1 \\ z_2
+            \end{pmatrix} \in \R^2$, the fixed point equation yields
+        $$
+            \begin{pmatrix}
+                (1-kn)z_2 \\
+                -2z_2
+            \end{pmatrix} = - \begin{pmatrix}
+                v_1 \\
+                v_2
+            \end{pmatrix}
+        $$
+        This yields the equation $(1-kn)v_2 + 2v_1 = 0$. Solving this equation and using that $y_2 = \frac{n-1}{n}x_2$  we obtain
+        $$
+            q(2y_1 +y_2) =0
+        $$
+        It is quick to check that $a^k$ acts freely so if the action is not free then $q \neq 0$, and this gives the requirement
+        $$
+            2y_1 \neq -\frac{n-1}{n}x_2
+        $$
+        and so this condition is sufficient and necessary.
+    \end{case}
+\end{proof}
+This completes the classification of the integral affine structures on the torus. We summarize the results of the previous two lemmas into the following theorem.
+\begin{theorem}
+    The possible integral integral affine structures on the Klein bottle are
+    \begin{enumerate}
+        \item $a = \left(I, \begin{pmatrix}
+                      0 \\ x_2
+                  \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                      1 & 0  \\
+                      0 & -1
+                  \end{pmatrix}, \begin{pmatrix}
+                      y_1 \\ 0
+                  \end{pmatrix}\right)$, with $x_2, y_1>0$.
+        \item $a = \left(\begin{pmatrix}
+                      1 & n \\
+                      0 & 1
+                  \end{pmatrix}, \begin{pmatrix}
+                      0 \\ x_2
+                  \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                      1 & 0  \\
+                      0 & -1
+                  \end{pmatrix}, \begin{pmatrix}
+                      y_1 \\ x_2
+                  \end{pmatrix}\right)$, with $x_2, y_1>0$.
+        \item $a = \left(I, \begin{pmatrix}
+                      x_1 \\ -x_1
+                  \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                      0 & 1 \\
+                      1 & 0
+                  \end{pmatrix}, \begin{pmatrix}
+                      y_1 \\ 0
+                  \end{pmatrix}\right)$, with $x_1, y_1>0$.
+        \item $a = \left(\begin{pmatrix}
+                          1 & n \\
+                          0 & 1
+                      \end{pmatrix} , \begin{pmatrix}
+                          0 \\ x_2
+                      \end{pmatrix}\right), \quad b =\left(\begin{pmatrix}
+                          1 & 1  \\
+                          0 & -1
+                      \end{pmatrix} , \begin{pmatrix}
+                          y_1 \\ \frac{n-1}{n}x_2
+                      \end{pmatrix}\right)$, with $y_1> 0$ and \\
+              $2y_1 \neq -\frac{n-1}{n}x_2$.
+    \end{enumerate}
+\end{theorem}
+
+We note that families 1) and 3) induce a Euclidean structure on the Klein
+bottle, e.g. the preserves some Riemannian metric as we have that they group
+they generate is a subset of $O(n) \rtimes \R^2$.
+
+We now wish to classify the corresponding Lagrangian fibrations for each of the
+integral affine structures on the two torus and the Klein bottle. Below are
+some pictures of some of the different families of integral affine structures
+on both the torus and the Klein bottle. (TODO: generate the lattices )
