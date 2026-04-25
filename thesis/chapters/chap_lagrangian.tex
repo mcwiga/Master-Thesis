@@ -91,7 +91,7 @@ We will also wish to speak about maps between the symplectic manifolds. The
 correct notion of "isomorphism" in this category is the following.
 
 \begin{definition}
-    Let $(M, \omega)$ and $(N, \alpha)$ be two symplectic manifolds. Then a symplecto-morphism between $M$ and $N$ is a diffeomorphism
+    Let $(M, \omega)$ and $(N, \alpha)$ be two symplectic manifolds. Then a symplectomorphism between $M$ and $N$ is a diffeomorphism
     $$\varphi: M \to N$$
     such that $\omega = \varphi^* \alpha$.
 \end{definition}
@@ -178,8 +178,8 @@ structure.
     $$ s_{\alpha}: T^*Q \to T^*Q$$
     $$ \beta_q \mapsto \beta_q + \alpha_q$$
 \end{definition}
-\begin{prop}
-    This defines a symplecto-morphism of $T^*Q$ if and only if $d\alpha = 0$.
+\begin{prop} \label{prop:shift-by-closed}
+    This defines a symplectomorphism of $T^*Q$ if and only if $d\alpha = 0$.
 \end{prop}
 \begin{proof}
     This map is a fibrewise translation and hence is obviously a diffeomorphism. We now check when it preserves
@@ -202,6 +202,389 @@ structure.
     \end{align*}
     and hence this defines a symplecto-morphism if and only if $d\alpha = 0$.
 \end{proof}
-\subsection{Integral Affine Structure on the Base}
+
+\begin{remark}
+    We now note that given any Lagrangian section of $T^*Q$, e.g. a section determined by a closed 1-form, we can shift this section to the zero section
+    since shifts by closed 1-forms are symplectomorphisms. This implies that if we consider $T^*Q$ as an abstract Lagrangian bundle it has no marked zero section and
+    so the fibres do not have a canonical vector space structure, only the structure of an affine space.
+\end{remark}
+TODO : (Discuss more/ understand better the affine structure on the fibres (Not the same as on the base!))
+
+We now give the notion of equivalence of Lagrangian bundles.
+
+\begin{definition}
+    Let $M \to B$ and $N \to B$ be two Lagrangian fibrations over $B$. Then a \emph{Lagrangian equivalence} between
+    $M \to B$ and $N \to B$ is given by
+    \begin{center}
+        \begin{tikzcd}
+            M \arrow[r,"\Phi"] \arrow[dr] & N \arrow[d] \\
+            & B
+        \end{tikzcd}
+    \end{center}
+    where $\Phi$ is a fibrewise symplectomorphism.
+\end{definition}
+\begin{remark}
+    There is no loss in generality in assuming that $\Phi$ covers the identity on $B$.  Indeed if $f: B \to B$
+    is a diffeomorphsim then there exists a fibrewise symplectomorphism $M$ and $N$ covering $f$ if and only if
+    the exists a fibrewise symplectomorphsim between $M$ and the pullback bundle $f^*N$ covering the identity on $B$. (TODO: Maybe I should write this proof.)
+\end{remark}
+
+\section{Integral Affine Structure on the Base}
+We now discuss how the base space of a Lagrangian fibration inherits an
+integral affine structure. This structure will be an invariant of the
+fibration.
+
+\subsection{Torus Bundles}
+Throughout this section let $Q$ be a manifold and let $G$ be a Lie group.
+\begin{definition}
+    Suppose that $\dim Q = \dim G$. We say that $Q$ is a \emph{principal
+        homogeneous G-space} if there is a free, transitive action of $G$ on $Q$.
+\end{definition}
+\begin{remark}
+    For any $q \in Q$ we have that $Q = G\cdot q \cong G$ as the action is and transitive. For any $q' \in Q$ there exists a $g \in Q$
+    such that $g \cdot q = q'$. Therefore, any two such identifications differ by an element of $G$.
+\end{remark}
+\begin{definition}
+    If $G \cong (\R / \Z)^n$ and $Q$ is a principal
+    homogeneous $G$-space, we call $Q$ an \emph{affine torus}. If $G$ is a vector space we call $Q$ an \emph{affine vector space}.
+\end{definition}
+
+Now we consider the case that $G:=V$ is a vector space. Suppose now that the
+action is free but \emph{not necessarily transitive}. We define $$V_q := \{v
+    \in V \mid v \cdot q = q\}$$.
+\begin{prop}
+    $V_q$ is a discrete subgroup of $V$ independent of $q \in Q$.
+\end{prop}
+\begin{proof}
+    As a topological space, $Q = V/V_q$. Consider the map
+    $$
+        \phi_q : V \to Q
+    $$
+    $$ v \mapsto v \cdot q$$
+    Taking the differential $(d\phi_q)_0 : T_0 V \to T_0Q$ and applying the rank-nullity theorem
+    we find that $\dim V_q = 0$ and hence it is a discrete subgroup. We now show it is independent of $q$.
+
+    For any $q' \in Q$, by transitivity of the action, the exists $w \in V$ such
+    that $w \cdot q = q'$ and so for $v \in V_q$, $w \in V_{q'}$
+    \begin{align*}
+        (w^{-1}vw)\cdot q           & = q        \\
+        \implies (w^{-1}v) \cdot q' & = q        \\
+        \implies   v \cdot q'       & = w\cdot q \\
+        \implies v \cdot q'         & = q
+    \end{align*}
+    and hence $V_q = V_{q'}$
+\end{proof}
+\begin{remark}\label{rem:torus-structure}
+    This implies that $V_q$ is a lattice, e.g. $V_q \cong \Z^n$. We therefore have that $V/V_q \cong \R^n / \Z^k \cong \R^{n-k} \times \mathbb{T}^k$.
+\end{remark}
+
+\begin{remark}
+    It follows from our previous definitions that $Q$ is a product  of an affine torus and an affine vector space.
+\end{remark}
+
+\begin{definition}[Group Bundle]
+    A group bundle $\pi : \mathcal{G} \to B$ is a fibre bundle such that each fibre is equipped with a group structure and there are charts
+    $\pi^{-1}(U) \cong U \times G$ that are fibrewise isomorphisms with a fixed group $G$.
+\end{definition}
+We can define the notion of an action of a group bundle on any fibre bundle over the same base.
+
+\begin{definition}
+    Let $\mathcal{G} \to B$ be a group bundle and $M \to B$ be a fibre bundle. An action of $\mathcal{G} \to B$ on $M \to B$ is a smooth map
+    $$\varphi : \mathcal{G} \times_B M \to M$$
+    that is a fibrewise group action.
+\end{definition}
+
+\begin{eg}
+    Let $\mathcal{T} \to B$ be a torus bundle. Then an affine torus bundle $M \to B$ is a fiber bundle
+    with a free, transitive action of $\mathcal{T} \to B$. We therefore have by Remark \ref{rem:torus-structure}, that if $M \to B$ is a fiber bundle with compact
+    fibres and $E \to B$ is a vector bundle with a transitive action on $M \to B$ such that $\dim M = \dim E$, then $M$ inherits the structure of an affine torus
+    bundle.
+\end{eg}
+
+Suppose that we have an action as in the above example. Then if we let \[\Lambda
+    = \bigsqcup_p \Lambda_p\]
+be the bundle of stabilisers of the action of $E \to B$ on $M \to B$, e.g.
+$\Lambda_p\subset E_p$ is the isotropy group at $p \in B$, then we can form a
+torus bundle $$ \mathcal{T} := E/\Lambda \to B $$ and in this way $M \to B$
+becomes an affine torus bundle.
+
+Suppose now that we have a global section $\sigma: B \to M$. Then $M \to B$
+becomes a torus bundle as we can use the global section to pick out an
+identity. (TODO: elaborate on this)
+
+\begin{theorem} \label{thm:cotangent-action}
+    Let $(M, \omega)$ be a symplectic manifold and let $\pi: M \to B$ be a Lagrangian fibration with compact connected fibres.
+    Then, there is a canonical, fibrewise transitive action of the vector bundle $T^*B \to B$ on $M \to B$. Therefore, $M \to B$ can be canonically equipped with
+    the structure of an affine torus bundle.
+\end{theorem}
+
+\begin{proof}
+    Let $VM \subset TM$ be the vertical bundle e.g. $V_pM = \ker d_p\pi$. Since $\pi: M \to B$ is a Lagrangian fibration it follows that $VM \subset TM$ is a Lagrangian subbundle As
+    it is tangent to the fibres of the fibration. Let $\alpha \in \Omega^1(B)$ be any $1$-form and let $X_{\alpha} \in \mathfrak{X}$ be the vector field defined by
+    $$
+        \iota_{X_{\alpha}}\omega = -\pi^*\alpha.
+    $$
+    Let $Y \in \mathfrak{X}(M)$ be a vertical vector field e.g. $d\pi(Y(p)) = 0$ for all $p \in M$. Then we have
+    \begin{align*}
+        \omega(X_{\alpha}, Y) & = \iota_Y \iota_{X_{\alpha}} \omega \\
+                              & = -\iota_Y\pi^*\alpha               \\
+                              & = 0
+    \end{align*}
+    as $Y$ is vertical. Now as $VM^{\omega} = VM$, this implies that $X_{\alpha}$ is vertical. We note that this implies
+    that $X_{\alpha}$ is constant along the fibres and so its value at $m \in M$ depends only on the value of $\alpha_{\pi(m)}$. We have thus assigned to each
+    $\alpha_{\pi(m)}$ with $m \in M$, a vector in the vertical bundle $VM$ by $X_{\alpha} (m)$ depending only on the value of $\pi(m)$. Moreover, this is  as
+    \begin{align*}
+        \iota_{X_{a\alpha + b\beta}}\omega & = -\pi^* (a\alpha + b\beta)       \\
+                                           & = -a\pi^* (\alpha) -b\pi^*(\beta)
+    \end{align*}
+    for $a,b \in \R$ and $\alpha, \beta \in \Omega^1(B)$. We thus have a  isomorphism
+    $$
+        V_m M \cong T^*_{\pi(m)}B
+    $$
+    and putting together all these isomorphisms yields a bundle isomorphism
+    $$
+        VM \cong \pi^*T^*B
+    $$
+    covering the identity. Now, we let $F^t_{\alpha}$ denote the flow of $X_{alpha}$ and we will write
+    $F_{\alpha} := F_{\alpha}^1: M \to M$ be the flow at time one. This gives a fibrewise action on $M \to B$ as
+    the $X_{\alpha}$ are vertical. We get a bundle map
+    $$
+        T^*B \times_B M \to M,
+    $$
+    $$(\alpha_b, m) \mapsto F_{\alpha}(m)$$
+    and we claim that this is a vector bundle action. Transitivity is clear as $F_{\alpha}$ is a fibrewise diffeomorphism. It remains to show that
+    the action is commutative e.g. that the flows of the $X_{\alpha}$ commute. We let $\alpha, \beta \in \Omega^1(B)$ be two one-forms with corresponding
+    vector fields $X_{\alpha}, X_{\beta}$.  Then, using the formula from Cartan calculus,
+    \begin{align*}
+        \iota_{[X_{\alpha}, X_{\beta}]}\omega & = (L_{X_{\alpha}}\iota_{X_{\beta}} - \iota_{X_{\beta}}L_{X_{\alpha}})\omega                             \\
+                                              & = -L_{X_{\alpha}}\pi^*\beta - \iota_{X_{\beta}}d\iota_{X_{\alpha}}\omega                                \\
+                                              & = -L_{X_{\alpha}}\pi^* {\beta} + \iota_{X_{\beta}}\pi^*d\alpha                                          \\
+                                              & = -(d\iota_{X_{\alpha}}\pi^* {\beta} + \iota_{X_{\alpha}}\pi^*d{\beta}) + \iota_{X_{\beta}}\pi^*d\alpha \\
+                                              & = 0
+    \end{align*}
+    since $d\pi (X_{\alpha}) = d\pi(X_{\beta}) = 0$. Now, by non-degeneracy of $\omega$, it follows that $[X_{\alpha}, X_{\beta}] = 0$ for all $\alpha, \beta \in \Omega^1(B)$ and hence the flows commute and
+    so we have a vector bundle action of $T^*B \to B$ on $M \to B$ and hence $M \to B$ has the structure of an affine torus bundle.
+\end{proof}
+
+It is through this action that the base space of a Lagrangian fibration
+inherits an integral affine structure. Indeed the bundle of stabilisers for
+this action, $\Lambda \subset T^*B$ is a discrete sub-bundle of the cotangent
+space and it will turn out that this will locally be spanned by closed one
+forms. Since by Lemma (TODO: did I show equiv of int affine with closed yet?)
+this is equivalent to the base space being an integral affine manifold, this
+will be exactly how $B$ inherits an integral affine structure. We will now
+illustrate these properties.
+
+We in fact wish to show that $\Lambda$ is a Lagrangian submanifold of $T^*B$.
+We will first need the following lemma.
+
+\begin{lemma}\label{lemma:flow-closed-form}
+    Let $\alpha \in \Omega^1(B)$ be a one form and let $X_{\alpha}$ be its corresponding vector field on $M$ and denote by $F_{\alpha}^t$ its flow.
+    Then
+    $$
+        (F_{\alpha}^t)^*\omega = \omega - t\pi^*d\alpha
+    $$
+    and so $F_{\alpha}^1$ is a symplectomorphism if and only if $d\alpha=0$.
+\end{lemma}
+\begin{proof}
+    We start by integrating
+    \begin{align*}
+        \int_{0}^{t}\frac{\partial}{\partial t}(F_{\alpha}^t)^*\omega = (F_{\alpha}^t)^*\omega - \omega
+    \end{align*}
+    On the otherhand, calculating this derivative yields
+    \begin{align*}
+        \frac{\partial}{\partial t}(F_{\alpha}^t)^*\omega & =  (F_{\alpha}^t)^*L_{X_{\alpha}}\omega     \\
+                                                          & = (F_{\alpha}^t)^*d\iota_{X_{\alpha}}\omega \\
+                                                          & = -(F_{\alpha}^t)^*\pi^* d\alpha            \\
+                                                          & = - (\pi \circ F_{\alpha}^t)^*d\alpha       \\
+                                                          & = -\pi^*d\alpha
+    \end{align*}
+    Now $\int_{0}^{t}-\pi^*d\alpha = -t\pi^*d\alpha$ and so
+    \begin{align*}
+        (F_{\alpha}^t)^*\omega - \omega & = -t\pi^*d\alpha
+    \end{align*}
+    as required.
+\end{proof}
+
+We can now show the following proposition regarding the bundle of stabilisers
+$\Lambda$.
+
+\begin{prop} \label{prop:stabiliser-lagr}
+    $\Lambda \subset T^*B$ is a Lagrangian submanifold.
+\end{prop}
+\begin{proof}
+    Since by assumption our fibres are compact, by Remark \ref{rem:torus-structure} we must have that $\Lambda_p \cong \Z^n$. Now let $U \subseteq B$ be an open set on the base such that
+    $\Lambda|_{U} \cong U \times \Z^n$. Now, the image of any section of $\Lambda|_{U}$ is given by the graph of a one form $\alpha: B \to T^*B$ such that
+    its corresponding time one flow $F_{\alpha}$ is the identity on $\pi^{-1}(U)$. But by Lemma \ref{lemma:flow-closed-form}, this implies that $\alpha$ is closed and by
+    Lemma \ref{lemma:cotangent-lagrangian-sub} the image of each section is a Lagrangian submanifold of $T^*B$.
+\end{proof}
+
+We are now able to see how the base space of a Lagrangian fibration inherits an
+integral affine structure.
+
+\begin{corollary} \label{corr:Lag-Fibr-IAS}
+    The base space of any Lagrangian fibration $M \to B$ inherits an integral affine structure.
+\end{corollary}
+\begin{proof}
+    By Proposition \ref{prop:stabiliser-lagr}, $\Lambda \subset T^*B$ is a discrete lattice in $T^*B$ locally spanned by closed one forms. By (TODO: lattice<-> IAS) this is equivalent to an
+    integral affine structure on $B$
+\end{proof}
+
+\begin{theorem}
+    The symplectic form on $T^*B$ descends to $T^*B/\Lambda$ and the projection map $\tau : T^*B/\Lambda \to B$ is a
+    Lagrangian fibration.
+\end{theorem}
+\begin{proof}
+    The local sections of $\Lambda$ are given by closed one-forms. By Proposition \ref{prop:shift-by-closed}, the shift by a closed form is a
+    symplectomorphism and hence preserves the symplectic form. (TODO: maybe need to explain better why $\Lambda$ acts by fibrewise affine shifts of closed 1-fomrs)
+\end{proof}
+
+\begin{remark}
+    We have thus constructed a torus bundle $\tau : T^*B/\Lambda \to B$ which acts fibrewise on our original Lagrangian fibration $M \to B$. Indeed, this torus bundle is itself a Lagrangian fibration
+    and inherits a symplectic form from $T^*B$. The torus bundle,
+    $\tau : T^*B/\Lambda \to B$ always has a global section, namely the projection of the zero section. However, our original Lagrangian fibration
+    $M to B$ has only the structure of an \emph{affine torus bundle}. It becomes a torus bundle itself only if it admits a global section $\sigma: B \to M$ in which case
+    it identifies with the torus bundle $T^*B/\Lambda \to B$. There are in general, obstructions to the existence of such a global section.
+\end{remark}
+
+If we assume that the obstructions to the existence of a global section exist,
+then $M \to B$ itself becomes a torus bundle and moreover, we can identify it
+with $T^*B/\Lambda \to B$ in a way that respects the group structure.
+
+\begin{lemma}
+    Let $\sigma: B \to M$ be a global section of $M \to B$. Then this determines a unique, fibre bundle isomorphism
+    $A: T^*B/\Lambda \to M$ that is $T^*B/\Lambda$-equivariant e.g. the following diagram commutes
+    \[
+        \begin{tikzcd}
+            T^*B/\Lambda \arrow[r,"A"] \arrow[d,"\hat{F_{\alpha}}"'] & M \arrow[d,"F_{\alpha}"] \\
+            T^*B/\Lambda \arrow[r,"A"'] & M
+        \end{tikzcd}
+    \]
+    where $\hat{F}_{\alpha}$ is the dtermined by the action of $T^*B/\Lambda$ on
+    itself (it is namely a Lagrangian fibration over $B$).
+\end{lemma}
+\begin{proof}
+    We define $A: T^*B/\Lambda \to M$ by
+    \begin{align*}
+        A_b: T_b^*B/\Lambda_b \to M_b \\
+        [\alpha_b] \mapsto F_{\alpha}(\sigma(b))
+    \end{align*}
+    This map is injective as we have quotiented out the fixed point set of this action and hence a bijection by dimension arguments. We seen this action is  in the
+    proof of Theorem \ref{thm:cotangent-action} and so this defines a bundle isomorphism. We now show equivariance. This follows from the following calculation.
+    \begin{align*}
+        A \circ \hat{F}_{\alpha}([\beta]) & = A([\alpha] + [\beta])                \\
+                                          & =F_{\alpha + \beta}(\sigma(b))         \\
+                                          & = F_{\alpha}\circ F_{\beta}(\sigma(b)) \\
+                                          & = F_{\alpha}\circ A ([\beta])
+    \end{align*}
+    for $b \in B$ and $\alpha, \beta \in \Omega^1(B)$. (TODO: I need to check this proof again I think).
+\end{proof}
+
+We note that this gives only a fibrewise, equivariant bundle isomorphism
+between $\tau : T^*B/\lambda$ and $M \to B$. However, we have not yet discussed
+when the symplectic structure is preserved. We discuss this now.
+
+\begin{prop}
+    The cohomology class $[\sigma^*\omega] \in H^2(B)$ does not depend on the choice of $\sigma$.
+\end{prop}
+\begin{proof}
+    Since the action of $T^*B$ on $M$ is transitive, any other section $\hat{\sigma}$ differs by an action of $T^*B$ e.g. $\hat{\sigma} = F_{\alpha} \circ \sigma$. It follows that
+    \begin{align*}
+        \hat{\sigma}^*\omega & = (F_{\alpha} \circ \sigma)^*\omega \\
+                             & = \sigma^*(F_{\alpha}^* \omega)     \\
+                             & = \sigma^*(\omega - \pi^*d\alpha)   \\
+                             & = \sigma^*\omega - d\alpha
+    \end{align*}
+\end{proof}
+
+\begin{lemma}
+    Suppose that $\sigma: B \to M$ is a section with $[\sigma^*\omega] = 0 \in H^2(B)$. Then $A: T^*B/\Lambda \to M$ is a symplectomorphism.
+\end{lemma}
+\begin{proof}
+    We can assume WLOG that $\sigma^*\omega = 0$ as otherwise we can shift it to the zero section by a closed form which is a symplectomorphism. It is enough to show that the map $\hat{A}: T^*B \to M$ covering $A$ is a local symplectomorphism since the symplectic form descends to the quotient.
+    The map $\hat{A}$ is determined by the condition
+    $$
+        \hat{A}\circ \alpha = F_{\alpha} \circ \sigma
+    $$
+    for every $\alpha \in \Omega^1(B)$. We show that the symplectic form is preserved.
+    \begin{align*}
+        \alpha^*\hat{A}^*\omega & = (F_{\alpha} \circ \sigma)^*\omega \\
+                                & = \sigma^*F_{\alpha}^* \omega       \\
+                                & = \sigma^*(\omega - d\pi^*\alpha)   \\
+                                & = -d\sigma^*\pi^*\alpha             \\
+                                & = -d\alpha                          \\
+                                & = \alpha^*(-d\theta)                \\
+                                & = \alpha^* \omega
+    \end{align*}
+    since this holds for any $\alpha \in \Omega^1(B)$ it follows that $\hat{A}^*\omega = \omega$.
+\end{proof}
 
 \subsection{Action Angle Coordinates}
+In this section, we will assume that there exists a global Lagrangian section
+$\sigma: B \to M$ and that the cohomology class $[\sigma^*\omega] =0 \in
+    H^2(B)$ so that $M\to B$ and $T^*B/\Lambda \to B$ are fibrewise
+symplectomorphic. If we assume also that the base space $B$ is simply connected
+then we have that the linear holonomy representation of $B$ is trivial and so
+the group bundle $\Lambda \to B$ is trivial. Fixing a basepoint $b\in B$ we
+pick some isomorphism $\Lambda_b \cong \Z^n$ and then for any other $b'\in B$,
+we identify $\Lambda_b \cong \Lambda_{b'}$ by picking a path between them.
+Since by Corollary \ref{corr:Lag-Fibr-IAS}, $B$ is itself an integral affine
+manifold, it hence possess a flat, torsion free connection and so we use this
+connection to parallel transport a basis of $\Lambda_b $ to a basis of
+$\Lambda_{b'}$.
+
+Since $B$ is assumed to be simply connected, this gives an isomorphism $$
+    \Lambda \cong B \times \Z^n $$ that depends on our choice of base point. Any
+two such isomorphisms will differ by an element of $GL(n, \Z)$. Let $\beta_1,
+    \dots, \beta_n$ be a global frame for $B \times \Z^n$. We note that the
+$\beta_i$ will be closed since sections of $\Lambda \subset T^*B$ are given by
+closed one forms. Since $\Lambda$ is a full rank lattice, this also defines a
+global frame for $T^*B$ and hence we have trivializations
+
+$$
+    T^*B \cong B \times \R^n
+$$
+and
+$$
+    M \cong T^*B/\Lambda \cong B \times (\R/\Z)^n
+$$
+
+\begin{definition}
+    We define \emph{angle coordinates} on $M \cong B \times (\R/\Z)^n$ by
+    $$
+        s : M \cong B \times (\R/\Z)^n \to (\R/\Z)^n
+    $$
+    where $s$ is the projection map.
+\end{definition}
+
+Recall that we can asociate vector fields on $M$ to the $\beta_i \in
+    \Omega^1(B)$ by $\iota_{X_{\beta_i}} \omega = -\pi^* \beta_i$ and a quick
+calculation using cartans formula shows that these vector fields are symplectic
+e.g. $L_{X_{\beta_i}}\omega = 0$ since both $\beta_i$ and $\omega$ are closed.
+Denoting their corresponding flow by $F_i^t$, in terms of the angle coordinates
+we have that
+
+$$
+    s_j(F_i^t(p)) =\begin{cases*}
+        s_j(p), \quad i \neq j, \\
+        s_j(p) + t, \quad i = j
+    \end{cases*}
+$$
+for $p \in M$. (TODO: prove this probably.)
+
+Moreover, since $B$ is simply connected the $\beta_i$ are in fact exact e.g.
+$\beta_i = dI_i$. Since the $\beta_i$ form a global frame, $dI_p = (dI_1, \dots
+    , dI_n)_p$ is full rank at each $p \in M$ and hence we can use them to define
+coordinates on the base.
+
+\begin{definition}
+    We define \emph{action coordinates} on $M$ by $\pi^*I_1, \dots , \pi^* I_n$.
+\end{definition}
+
+(TODO: prove this) In these action-angle coordinates we can write the symplectic form as
+$$
+    \omega = \sum_i dI_i \wedge ds_i
+$$
+
+TODO: There is some good stuff in the Duistermaat paper that can also go here
+and maybe some of the explanations are better.

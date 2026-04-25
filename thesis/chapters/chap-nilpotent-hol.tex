@@ -144,19 +144,20 @@ completeness.
     \end{center}
     and we define a crossed homomorphism for $\gamma$ by $\mu(g) = g\circ S \circ \beta(g)^{-1} - S$. This
     defines a crossed homomorphism  as
-    \begin{center}
-        $\mu(gh) = g \circ h\circ S \circ \beta(h)^{-1}\circ \beta(g)^{-1} -S$\\
-        $ = \gamma(g)\circ h\circ S \circ \beta(h)^{-1} - S$\\
-        $ = \gamma(g)\circ (\mu(h) + S) - S$\\
-        $ = \gamma(g)\circ \mu(h) + g\circ S\circ \beta(g)^{-1} -S$\\
-        $ = \gamma(g)\mu(h) + \mu(g)$
-    \end{center}
+    \begin{align*}
+        \mu(gh) & = g \circ h\circ S \circ \beta(h)^{-1}\circ \beta(g)^{-1} -S \\
+                & = \gamma(g)\circ h\circ S \circ \beta(h)^{-1} - S            \\
+                & = \gamma(g)\circ (\mu(h) + S) - S                            \\
+                & = \gamma(g)\circ \mu(h) + g\circ S\circ \beta(g)^{-1} -S     \\
+                & = \gamma(g)\mu(h) + \mu(g)
+    \end{align*}
     As $P$ is equivariant and $P \circ S = 1_{E/E_U}$ we get
-    \begin{center}
-        $P \circ \mu(g) =  P \circ g \circ S \circ \beta(g)^{-1} - P \circ S$, so by equivariance\\
-        $ =  \beta(g) \circ P  \circ S \circ \beta(g)^{-1} - 1$\\
-        $ \beta(g) \circ \beta(g)^{-1} - 1 = 0$
-    \end{center}
+    \begin{align*}
+        P \circ \mu(g) & =  P \circ g \circ S \circ \beta(g)^{-1} - P \circ S, \text{so by equivariance} \\
+                       & =  \beta(g) \circ P  \circ S \circ \beta(g)^{-1} - 1                            \\
+                       & = \beta(g) \circ \beta(g)^{-1} - 1                                              \\
+                       & = 0
+    \end{align*}
     Now we can we write (\ref{eq:fixed-point}) as
     \begin{center}
         $R = \gamma(g)\circ R + \mu(g)$
@@ -173,13 +174,12 @@ completeness.
         $(I-g_1)\circ \dots \circ (I-g_d)|{E_U} = 0$
     \end{center}
     as they act unipotently on $E_U$. It now follows by equivariance that
-    \begin{center}
-        $(I-g_1)\circ \dots \circ (I-g_d) \circ R$\\
-        $= (I-g_1)\circ \dots \circ (R-g_d \circ R)$\\
-        $= (I-g_1)\circ \dots \circ (R-R \circ \beta(g_d))$\\
-        $= (I-g_1)\circ \dots \circ R \circ(1- \beta(g_d))$\\
-        $\implies R \circ (1 - \beta(g_1))\circ \dots \circ (1- \beta(g_d)) = 0$
-    \end{center}
+    \begin{align*}
+        (I-g_1)\circ \dots \circ (I-g_d) \circ R & = (I-g_1)\circ \dots \circ (R-g_d \circ R)                             \\
+                                                 & = (I-g_1)\circ \dots \circ (R-R \circ \beta(g_d))                      \\
+                                                 & = (I-g_1)\circ \dots \circ R \circ(1- \beta(g_d))                      \\
+                                                 & \implies R \circ (1 - \beta(g_1))\circ \dots \circ (1- \beta(g_d)) = 0
+    \end{align*}
     so that $R$ vanishes on vectors of the form
     \begin{center}
         $(1 - \beta(g_1))\circ \dots \circ (1- \beta(g_d))x$
@@ -449,8 +449,11 @@ We now have the required machinary to start our proof.
     \[\psi(g^{-1}x) = \prod_{k=1}^{m}|f_k(g^{-1}x)|^{v_k} \]
     noting this is the contragradient representation and also that $f_k$ is an
     eigenvector
-    \[\psi(g^{-1}x)  = \prod_{k=1}^{m}|g\circ f_k(x)|^{v_k} = \prod_{k=1}^{m}|\lambda(g)f_k(x)|^{v_k}\]
-    \[= \prod_{k=1}^{m}|\lambda_k(g)|^{v_k}\prod_{k=1}^{m}|f_k(x)|^{v_k}\]
+    \begin{align*}
+        \psi(g^{-1}x) & = \prod_{k=1}^{m}|g\circ f_k(x)|^{v_k}                             \\
+                      & = \prod_{k=1}^{m}|\lambda(g)f_k(x)|^{v_k}                          \\
+                      & = \prod_{k=1}^{m}|\lambda_k(g)|^{v_k}\prod_{k=1}^{m}|f_k(x)|^{v_k}
+    \end{align*}
 
     Now, recalling that $ \varphi_k(g) = log|\lambda_k(g)| \implies
         e^{\varphi_k(g)}= |\lambda_k(g)|$ so we obtained
@@ -502,8 +505,12 @@ of affine manifolds.
     development pair, in affine coordiantates we have that $f = \Psi \circ \pi$.
     Now
 
-    \[df_y X(y) = d(\Psi \circ \pi)_y X(y) = \frac{d}{dt}\Psi \circ \pi (\gamma(t))|_{t=0}\]
-    \[= \frac{d}{dt}\Psi(e^{t}\tilde{y})|_{t=0} = a\Psi(\tilde{y})\]
+    \begin{align*}
+        df_y X(y) & = d(\Psi \circ \pi)_y X(y)                      \\
+                  & = \frac{d}{dt}\Psi \circ \pi (\gamma(t))|_{t=0} \\
+                  & = \frac{d}{dt}\Psi(e^{t}\tilde{y})|_{t=0}       \\
+                  & = a\Psi(\tilde{y})
+    \end{align*}
 
     where $\tilde{y} = \pi(y)$ and $\gamma(t)$ is an integral curve of $X$ starting
     at $y$. This gives that
@@ -512,8 +519,13 @@ of affine manifolds.
 
     It follows that if $\alpha: I \mapsto M$ is an integral curve of $X$ starting
     at $p \in M$ then
-    \[f(\alpha(t)) = \Psi\circ \pi (\alpha(t)) = \Psi(\overline{\alpha(t)}) = \Psi(e^t \tilde{p}) = e^{ta}\Psi(\tilde{p})\]
-    \[= e^{ta}f(\alpha(c))\]
+    \begin{align*}
+        f(\alpha(t)) & = \Psi\circ \pi (\alpha(t))  \\
+                     & = \Psi(\overline{\alpha(t)}) \\
+                     & = \Psi(e^t \tilde{p})        \\
+                     & = e^{ta}\Psi(\tilde{p})      \\
+                     & = e^{ta}f(\alpha(c))
+    \end{align*}
 
     Now as $\Psi > 0$ almost everywhere, there exists $x_0 \in M$ with $f(x_0)>0$
     and the integral curve $\alpha_0$ through $x_0$ is defined for all $t$ as M is
