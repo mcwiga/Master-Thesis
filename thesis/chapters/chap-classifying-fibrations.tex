@@ -1,1 +1,110 @@
 \chapter{Classification of Lagrangian Fibrations over Closed Surfaces}
+
+Now that we have classified the integral affine structures on closed surfaces,
+we can look to classify the Lagrangian fibrations $E \to B$ over these
+surfaces. The integral affine structure on the base $B$ is one invariant of a
+Lagrangian fibration however it is not the only one. We have seen that there is
+a correspondence between integral affine structures on $B$ and full rank
+lattices in $T^*B$ locally spanned by closed one forms. This lattice $\Lambda
+    \subset T^*B$ gives rise to a Lagrangian fibration $\pi : T^*B/\Lambda \to B$
+which is a canonical Lagrangian fibration we can associate to $B$ once we have
+fixed the integral affine structure on $B$. There are in general, other
+Lagrangian fibrations over $B$ which are in some sense \emph{twistings} of this
+canonical fibration.
+
+We wish to classify these fibrations up to fibrewise symplectomorphism,
+covering the identity. We shall see that there are obstructions both to a
+Lagrangian bundle over $B$ being topologically equivalent to this canonical
+Lagrangian fibration $\pi : T^*B/\Lambda \to B$ as well as obstructions to a
+Lagrangian bundle over $B$ being symplectically equivalent to the canonical
+Lagrangian bundle. Since the problem of classifying these bundles will be an
+issue of stitching together locally defined Lagrangian fibrations into a global
+one, it will be helpful to do this in the language of sheafs. (TODO: this is
+written a bit badly).
+
+\subsection{Introducing some sheafs}
+We shall make use of the following sheafs on $B$.
+\begin{definition}
+    Let $B$ be a closed integral affine surface with period lattice $\Lambda \subset T^*B$.
+    \begin{enumerate}
+        \item $\mathcal{P}$ is the sheaf of sections of the period lattice $\Lambda \subset T^*B$.
+        \item $\Lambda \mathcal{T}^*B$ is the sheaf of Lagrangian sections of $T^*B$ and $\mathcal{T}^*B$ is the sheaf of all sections of $T^*B$.
+        \item $\Lambda \mathcal{T}^*B/\mathcal{P}$ is the sheaf of Lagrangian sections of $T^*B/\Lambda$ and $\mathcal{T}^*B/\mathcal{P}$ is the sheaf of all
+              sections of $T^*B/\Lambda$.
+        \item $\Lambda^2 B$ is the sheaf of closed $2$-forms on $B$.
+    \end{enumerate}
+\end{definition}
+
+\begin{remark} \label{rem:differential-descends}
+    Let $\Omega^1(B)$ denote the sheaf of differential forms on $B$. Then the differential
+    $$
+        d :\Omega^1(B) \to \Lambda^2(B)
+    $$
+    descends to a well-defined differential
+    $$
+        d_{\mathcal{P}}: \mathcal{T}^*B/\mathcal{P} \to \Lambda^2(B)
+    $$
+    on the sections of $T^*B/\Lambda$ as sections of $\Lambda$ are closed and hence vanish under this differential.
+\end{remark}
+
+\begin{lemma}
+    The following diagram of sheaves is exact in all rows and columns.
+    \[
+        \begin{tikzcd}
+            & & 0 \arrow[d] & 0 \arrow[d] & \\
+            0 \arrow[r] & \mathcal{P} \arrow[r, "i"] \arrow[d, equal]
+            & \Lambda \mathcal{T}^*B \arrow[r, "\mathrm{pr}"] \arrow[d]
+            & \Lambda \mathcal{T}^*B / \mathcal{P} \arrow[r] \arrow[d, "j"]
+            & 0 \\
+            0 \arrow[r] & \mathcal{P} \arrow[r]
+            & \mathcal{T}^*B \arrow[r, "\mathrm{pr}"] \arrow[d, "d"]
+            & \mathcal{T}^*B / \mathcal{P} \arrow[r] \arrow[d, "d"]
+            & 0 \\
+            & & \Lambda^2 B \arrow[r, equal] \arrow[d]
+            & \Lambda^2 B \arrow[d] \\
+            & & 0 & 0
+        \end{tikzcd}
+    \]
+\end{lemma}
+
+\begin{proof}
+    It is clear the the two horizontal sequences given by the inclusion and projection maps are exact. We show that
+    $$
+        0 \to \Lambda \mathcal{T}^*B \to \mathcal{T}^*B \to \Lambda^2 B \to 0
+    $$
+    is exact. The map $\mathcal{T}^*B \to \mathcal{T}^*B$ is the inclusion map and so is injective. It is also clear that the differential
+    map $d$ is surjective onto the space of closed $2$-forms by definition. The kernel of the differential $d$ is the closed $1$-forms on $T^*B$ but these are
+    given by Lagrangian sections. The other vertical sequence follows by the same argument and Remark \ref{rem:differential-descends}.
+\end{proof}
+
+\begin{lemma}
+    \begin{itemize}
+        \item $\mathcal{T}^*B$ is a fine sheaf so that $H^i(\mathcal{T}^*B) = 0$ for $i>0$.
+        \item $H^i(\Lambda \mathcal{T}^*B) \cong H^{i+1}(B, \R)$ for $i>0$
+    \end{itemize}
+
+\end{lemma}
+\begin{proof}
+    (TODO: prove 2? Add source for 1). Denoting by $C^{\infty}(B)$ the sheaf of smooth functions on $B$ this is a fine sheaf. We have a short exact
+    sequence
+    $$
+        0 \to \R \to C^{\infty}(B) \to \Lambda \mathcal{T}^*B \to 0
+    $$
+    where $\R \to C^{\infty}(B)$ is the inclusion and $C^{\infty}(B) \to \Lambda \mathcal{T}^*B$ is the given by the differential. Since $df = 0$ if and only if $f$ is
+    a constant function, this sequence is exact. Taking the associate long exact sequence in sheaf cohomology we obtain
+    $$
+        \dots \to H^i(B, \R) \to H^i(C^{\infty}(B)) \to  H^i(\Lambda\mathcal{T}^*B) \to H^{i+1}(B, \R) \to \dots
+    $$
+    Now since $C^{\infty}(B)$ is a fine sheaf, for $i>0$ we obtain $0\to  H^i(\Lambda\mathcal{T}^*B) \to H^{i+1}(B, \R) \to 0$ giving the required isomorphism.
+\end{proof}
+
+The strategy in classifying the Lagrangian bundles over $B$ will be to start
+with the topological reference bundle $T^*B/\mathcal{P}$ and using this,
+produce new bundles by gluing these reference bundles together. We will then
+show that we can essentially obtain any Lagrangian bunlde over $B$ in this way.
+The following lemma
+
+\begin{theorem}
+    Fix an integral affine structure on $B$ and denote by $\mathcal{P}$ the sheaf of sections of its period lattice. Then the group $H^1(\Lambda\mathcal{T}^*B/\mathcal{P})$ classify twistings of
+    the lattice up to Lagrangian equivalence.
+\end{theorem}
