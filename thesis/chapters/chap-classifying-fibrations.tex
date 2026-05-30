@@ -1,16 +1,17 @@
-\chapter{Classification of Lagrangian Fibrations over Closed Surfaces}
+\chapter{Classification of Lagrangian Fibrations over Closed Surfaces}\label{ch:classify-fibr}
+\section{The Classification Problem}
 
 Now that we have classified the integral affine structures on closed surfaces,
 we can look to classify the Lagrangian fibrations $E \to B$ over these
 surfaces. The integral affine structure on the base $B$ is one invariant of a
 Lagrangian fibration however it is not the only one. We have seen that there is
 a correspondence between integral affine structures on $B$ and full rank
-lattices in $T^*B$ locally spanned by closed one forms. This lattice $\Lambda
+lattices in $T^*B$ locally spanned by closed one-forms. This lattice $\Lambda
     \subset T^*B$ gives rise to a Lagrangian fibration $\pi : T^*B/\Lambda \to B$
 which is a canonical Lagrangian fibration we can associate to $B$ once we have
-fixed the integral affine structure on $B$. There are in general, other
-Lagrangian fibrations over $B$ which are in some sense \emph{twistings} of this
-canonical fibration.
+fixed the integral affine structure. There are in general, other Lagrangian
+fibrations over $B$ which are in some sense \emph{twistings} of this canonical
+fibration.
 
 We wish to classify these fibrations up to fibrewise symplectomorphism,
 covering the identity. We shall see that there are obstructions both to a
@@ -19,17 +20,16 @@ Lagrangian fibration $\pi : T^*B/\Lambda \to B$ as well as obstructions to a
 Lagrangian bundle over $B$ being symplectically equivalent to the canonical
 Lagrangian bundle. Since the problem of classifying these bundles will be an
 issue of stitching together locally defined Lagrangian fibrations into a global
-one, it will be helpful to do this in the language of sheafs. (TODO: this is
+one, it will be helpful to do this in the language of sheaves. (TODO: this is
 written a bit badly).
 
-\subsection{Introducing some sheafs}
-We shall make use of the following sheafs on $B$.
+We shall make use of the following sheaves on $B$.
 \begin{definition}
     Let $B$ be a closed integral affine surface with period lattice $\Lambda \subset T^*B$.
     \begin{enumerate}
-        \item $\mathcal{P}$ is the sheaf of sections of the period lattice $\Lambda \subset T^*B$.
+        \item $\Lambda$ is the sheaf of sections of the period lattice $\Lambda \subset T^*B$.
         \item $\Lambda \mathcal{T}^*B$ is the sheaf of Lagrangian sections of $T^*B$ and $\mathcal{T}^*B$ is the sheaf of all sections of $T^*B$.
-        \item $\Lambda \mathcal{T}^*B/\mathcal{P}$ is the sheaf of Lagrangian sections of $T^*B/\Lambda$ and $\mathcal{T}^*B/\mathcal{P}$ is the sheaf of all
+        \item $\mathcal{Z}(T^*B/\Lambda)$ is the sheaf of Lagrangian sections of $T^*B/\Lambda$ and $T^*B/\Lambda$ is the sheaf of all
               sections of $T^*B/\Lambda$.
         \item $\Lambda^2 B$ is the sheaf of closed $2$-forms on $B$.
     \end{enumerate}
@@ -42,23 +42,380 @@ We shall make use of the following sheafs on $B$.
     $$
     descends to a well-defined differential
     $$
-        d_{\mathcal{P}}: \mathcal{T}^*B/\mathcal{P} \to \Lambda^2(B)
+        d_{\Lambda}: \mathcal{T}^*B/\Lambda \to \Lambda^2(B)
     $$
-    on the sections of $T^*B/\Lambda$ as sections of $\Lambda$ are closed and hence vanish under this differential.
+    on the sections of $T^*B/\Lambda$ as sections of $\Lambda$ are given by closed one forms and hence vanish under this differential. This leads to the following notion of latticed forms.
 \end{remark}
 
+\begin{definition}[Latticed one form]
+    Fix a period lattice $\Lambda \subset T^*B$. A \emph{latticed one form} is a section of $T^*B/\Lambda$. A lattice one form
+    will be called closed if it determines a Lagrangian submnaifold of the symplectic manifold $(T^*B/\Lambda, \tilde{\omega}_{can})$
+\end{definition}
+Since the differential descends to $T^*B/\Lambda$, it makes sense to consider elements in $H^2(B, \R)$ which arise from this differential.
+\begin{definition}\label{def:coho-inv-}
+    Let $s$ be a latticed one form on $B$. Then the cohomology class $[ds]\in H^2(B, \R)$ will be called a \emph{cohomology invariant of the } $s$
+\end{definition}
+
+We now work towards showing when adding closed two forms to $(T^*B/\Lambda,
+    \tilde{\omega}_{can})$ produces equivalent Lagrangian bundles. This will turn
+out to depend on these cohomology invariant of s.
+
+\begin{prop}
+    A fibrewise affine  of $T^*B/\Lambda$ is determined by a latticed one form and any latticed one form determines a . Moreover, this  is a Lagrangian equivalence if the latticed one form is closed.
+\end{prop}
+
+\begin{proof}
+    Let $F: T^*B/\Lambda \to T^*B/\Lambda$ be a fibrewise affine . On each fibre, this takes the form $F_b(x) = x+c$ for some
+    $c \in T^*_bB/\Lambda_b$ and hence is determined by a smooth section of $T^*B/\Lambda$.
+
+    Conversely, given a section $\alpha: B \to T^*B/\Lambda$ we define an affine by
+    $$ F_{\alpha} : T^*B/\Lambda \to T^*B/\Lambda $$ $$ x_b \mapsto x_b + \alpha_b
+    $$. Proposition \ref{prop:shift-by-closed} yields that this is a Lagrangian
+    equivalence if and only if $\alpha$ is closed.
+\end{proof}
+\begin{remark}
+    The contents of Theorem \ref{thm:cotangent-action} show that if $E \to B$ is a Lagrangian fibration with period lattice $\Lambda$, then a latticed one-form also
+    determines a fibrewise  of $E$. Indeed, since over contaractible open sets, $E \to B$ identifies with $T^*B/\Lambda \to B$, the converse can also be shown to be true.
+\end{remark}
+
+\begin{prop}
+    Let $\rho: (E, \omega) \to B$ be a Lagrangian fibration with period lattice $\Lambda$. Adding the pullback of closed two-forms $\alpha, \beta \in \Omega^2(B)$ to $E$ is a Lagrangian equivalence if and only if
+    $$[\alpha] - [\beta] = [d\eta] \in H^2(B)$$ where $[d\eta]$ is a cohomological invarian of a  $s$.
+\end{prop}
+\begin{proof}
+    We again make use of Proposition \ref{prop:shift-by-closed}.  Let $\eta$ be a one-form and consider the  $s_{\eta} : T^*B \to T^*B$. Then
+    $$
+        s^*_{\eta}(\omega_{can} + \pi^*\alpha) = \omega_{can} + \pi^*(\alpha - d\eta)
+    $$
+    and so $\pi^*(\alpha + d\eta) = \pi^*\beta$ if $\pi^*(\alpha -\beta - d\eta) = 0$ and so this gives $\alpha -\beta = d\eta$. Descending to the quotient $T^*B/\Lambda$, as sections of $\Lambda$ are given by
+    closed forms it follows that we can alter $d\eta$ by a closed form. (TODO: This proof is a bit loose. We are implicitly using the fact that $E \to B$ locally looks like $T^*B/\Lambda \to B$. Can make this more explicit ).
+
+    Conversely, suppose we have a Lagrangian equivalence between $(T^*B, \omega +
+        \pi^* \alpha)$ and $(T^*B, \omega + \pi^* \beta)$, then Proposition 1 of
+    \cite{MISHACHEV1996301} shows that this is determined by the of some one-form
+    $\alpha$ on the base and the result follows by the descension to the quotient.
+    (TODO: I will need to add this proof, it should have uses elsewhere too)
+\end{proof}
+
+\section{Luttinger Surgery}
+Luttinger surgery was first introduced in \cite{LuttingerSurgery} and provides
+a way to modify a symplectic four-manifold $(M, \omega)$ along an embedded
+Lagrangian tori $L \subset M$ such that the symplectic structure is preserved
+and the geometry is altered only in a neighborhood of the torus. Topologically
+it is equivalent to Dehn surgery with the framing chosen to be the Weinstein
+framing. A framing is, roughly speaking (TODO: roughly? I think it is up to
+some invariance condition), a paramaterization of the tubular neighborhood of
+the torus $L \subset M$. For a Lagrangian submanifold there is a canonical
+choice of such a framing given by the Weinstein-Lagrangian tubular neighborhood
+theorem.
+
+\begin{theorem}[\cite{WEINSTEIN1971329}]
+    Let $ (M, \omega)$ be a symplectic manifold and $L \subset M$ be a Lagrangian submanifold. Then there
+    exist tubular neighborhoods $U \subset M$ and $V \subset T^*L$ of $L$ together with a symplectomorphism:
+    $$f : (U, \omega|_U ) \to (V, \omega_{\text{can}}|_V )$$
+    with $f|_L = Id_L$.
+\end{theorem}
+The surgery construction works for general Lagrangian tori in a symplectic four-manifold but we will focus on the case
+where our Lagrangian torus is given by a fibre of a Lagrangian fibration.
+
+Let $B$ be the base space of such a Lagrangian fibration and let $T^*B/\Lambda
+    \to B$ be the symplectic reference bundle. We view $B$ as the quotient
+$\R^2/\langle A, B \rangle$ where $A,B$ are the generators of the affine
+holonomy group. Let $p \in \R^2$ be in the interior of a fundamental domain for
+the quotient and pick a small disc $D$ of radius $2\epsilon$ centered at this
+point and a neighborhood $U$ of $D$. Over this neighborhood, our fibration
+looks like $\pi : U \times T^2 \to U$. In the case of the torus, the symplectic
+form on $U \times T^2 $ is inherited from $U \times T^2 \subset (T^*T^2,
+    \omega_{can})$ (TODO: what about Klein bottle??).
+
+Now, if we take $\partial \pi^{-1}(D) = \partial (T^2 \times D)$ this is a
+three torus $T^2 \times S^1$. If we remove the interior of this region from the
+total space of the fibration, we are left with a manifold with boundary $T^3$.
+The surgery now amounts to specifying an attaching map which glues together the
+boundary of the removed $T^2 \times D$ back into the boundary created in the
+total space of the fibration. This attaching map is given by a diffeomorphism
+$F: T^3 \to T^3$. Of course, so far this attaching map has not taken into
+account the symplectic structure of the total space of the fibration. Indeed,
+the three torus has odd dimension and hence it does not make sense to ask that
+the attaching map $F$ itself be a symplectomorphism. However, we can ask that
+$F$ is the restriction of a symplectomorphism of the bundle $\pi^{-1}(N)$ where
+$N$ is a small annulus around the boundary of the disc $\partial D^2$.
+
+Of course, one way to define such a map is to pick a Lagrangian section of
+$\pi^{-1}(N)$ which is given by a closed one-form $\alpha$, and perform a shift
+by this one-form. Then, by Proposition \ref{prop:shift-by-closed} this will be
+a symplectomorphism and since the preserves the fibres, its restriction to
+$\partial D^2$ will induce a map $F_{\alpha}: T^3 \to T^3$. A section of our
+bundle over the boundary of the disc is a map $f: S^1 \to T^2$ and is
+determined up to homotopy by an element of $\pi_1(T^2) = \Z^2$ as such a map is
+a loop in $T^2$. The pair of integers $(m,n)$ represent the winding number of
+such a map. Let $(x,y) = (r\cos \varphi, r \sin \varphi)$ be coordinates on $N$
+centered at $p$. Then we can define a representative section for any $(m,n)$ to
+be $$ s = \frac{1}{2\pi} (m\varphi dx + n \varphi dy).$$
+
+One checks that after winding once around the circle i.e. $\varphi \mapsto
+    \varphi + 2 \pi$ we have that our section changes by $mdx + ndy$ and hence
+corresponds to the winding number given by $(m,n)$. This indeed defines a
+section of the torus bundle since it is locally given by the symplectic
+reference bundle and hence over $U$ looks like $T^*U/\langle dx, dy
+    \rangle_{\Z}$.
+
+In principle, one could perform the surgery by performing a shift using this
+section. The issue is, this section is not Lagrangian. Indeed one calculates $$
+    ds = \frac{1}{2 \pi}(m d \varphi \wedge dx + n d \varphi \wedge dy). $$ In
+order to make this closed, one can add the correction term $$ \beta =
+    \frac{1}{2\pi}(mx+ny)d\varphi $$ to $s$. It is easily checked that this does
+not alter the homotopy class of the section $s$ as incrementing $\varphi$ by
+$2\pi$ does not alter $\beta$. Hence, the section $F_{m,n} = s + \beta$
+determines a symplectomorphism on a neighborhood of the bundle over $\partial
+    D^2$ given by performing a shift by the closed one-form $F_{m,n}$ as in
+Definition \ref{def:shift-by-form}. This completes the surgery construction.
+\subsection{Calculating Cohomological Invariant of s}
+We now wish to calculate the cohomological invariants of s for the integral
+affine structure of Theorem $\ref{thm:classification-torus}$. Since a class
+$[d\eta] \in H^2(\mathbb{T}^2, \R)$ is determined by the value
+$\int_{\mathbb{T}^2}d\eta$ we are left to calculate the value of this integral.
+
+\begin{theorem}
+    We have that
+    \begin{enumerate}
+        \item For the lattice $\mathcal{A}_{a,b,c,d}$, the cohomological invariant of s are
+              determined by integer covectors $\tilde{m} = kdx + rdy$ and $\tilde{n} = ldx +
+                  sdy$ subject to no restrictions. Two invariants of s are equaivalent if the
+              quantity $ka+lb+rc+sd$ is the same in both cases.
+        \item  For the lattice $\mathcal{B}_{n,a,b}$, the cohomological invariant of s are
+              determined by integer covectors $\tilde{m} = kdx + rdy$ and $\tilde{n} = sdy$.
+              Two invariants of s are equaivalent if the quantity $ka+sb$ is the same in both
+              cases.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \begin{case}[$\mathcal{A}_{a,b,c,d}$]
+        Recall that in this case the fundamental domain for the torus is generated by
+        $$g = \left( 1, \begin{pmatrix}
+                    a \\ c
+                \end{pmatrix} \right) \text{ and } h=\left( 1, \begin{pmatrix}
+                    b \\ d
+                \end{pmatrix} \right)$$
+        where the translational components are linearly independent. To construct a latticed one-form,
+        we need the value of the one-form to agree with the identifications induced by the translational
+        actions up to taking the quotient by the lattice $\Lambda \subset T^*B$. Namely, given the value
+        of a latticed one form $\alpha \in \Gamma(T^*B/\Lambda)$, if we fix a chart $U\subset \mathbb{T}^2$
+        around $p$ and let $\alpha_p = \alpha_1dx + \alpha_2 dy \in T_p^*\mathbb{T}^2$, translating by one
+        of our generators $g$ or $h$ we should get back $\alpha_p + kdx + rdy$ for some integers $k,r \in \Z$
+        as in affine coordinates $(x,y)$, the lattice $\Lambda$ is spanned by $dx$ and $dy$ over $\Z$.
+
+        The invariant we wish to calculate is $\int_{\mathbb{T}^2} d\alpha$ where
+        $\alpha$ is a latticed one-form. By Stokes theorem, letting $U$ denote a
+        fundamental domain for $\mathbb{T}^2$,
+        \begin{align*}
+            \int_{U} d\alpha & = \int_{\partial U} \alpha                                           \\
+                             & = \int_A \alpha - \int_{A'}\alpha + \int_B \alpha - \int_{B'} \alpha
+        \end{align*}
+        where $A,A',B,B'$ are the boundaries of the fundamental domain depicted in figure (TODO: image of fundamental domain.)
+
+        For example, translating $\alpha$ along $A$ by $g$ should return $\alpha$ up to
+        some integer covector. Denoting by $\tilde{m} = (k,r)$ and $\tilde{n} = (l,s)$,
+        the integer covectors obtained from transporting along $A$ and $B$
+        respectively, we can then translate $g^*\alpha + \hat{n}$ by $h$ along $B'$.
+        This should return the same one-form as first translating along $B$ and then
+        translating along $A'$. or our first lattice, we see that this always holds
+        true and so there is no restrictions on the covectors $\bar{m}$ and $\bar{n}$.
+
+        Now we calculate the required integral. We note that on $A$ and $A'$, the one
+        form $\alpha$ differs by $\bar{m}$ and so
+        \begin{align*}
+            \int_A \alpha - \int_{A'} \alpha & = \int_A \alpha  - \int_A \alpha  + \bar{m} \\
+                                             & = - \int_A \bar{m}
+        \end{align*}
+        Similarly, we have $\int_B \alpha - \int_{B'} = -\int_B \bar{n}$. Putting this together yields
+        \begin{align*}
+            \int_{U} d\alpha & = \int_A \alpha - \int_{A'} \alpha + \int_B \alpha - \int_{B'}        \\
+                             & = -(\int_A \bar{m} + \int_B \bar{n})                                  \\
+                             & = - (\int_{(0,0)}^{(a,c)} kdx + rdy + \int_{(0,0)}^{(b,d)} ldx + sdy) \\
+                             & = -(ka + rc + lb + sd)
+        \end{align*}
+        with $k,l,r,s \in \Z$ which gives the required invariants.
+    \end{case}
+
+    \begin{case}[$\mathcal{B}_{n,a,b}$]
+        Recall that for this family our fundamental domain is generated by
+        $$g=\left( 1, \begin{pmatrix}
+                    a \\ 0
+                \end{pmatrix} \right) \text{ and } h=\left( \begin{pmatrix}
+                    1 & n \\
+                    0 & 1
+                \end{pmatrix}, \begin{pmatrix}
+                    0 \\ b
+                \end{pmatrix} \right)$$
+        In this case, our integer covectors $\tilde{m}$ and $\tilde{n}$ are not arbritrary. We must have that
+        \begin{align*}
+            h^*(g^*\alpha + \tilde{n}) + \tilde{m} = g^*(h^*+\bar{m})+ \tilde{n}
+        \end{align*}
+        this implies that $h^*n = n$ or more algebraically
+        \begin{align*}
+            \begin{pmatrix}
+                1 & n \\
+                0 & 1
+            \end{pmatrix}^T\begin{pmatrix}
+                               l \\
+                               s
+                           \end{pmatrix} = \begin{pmatrix}
+                                               l \\
+                                               s
+                                           \end{pmatrix}
+        \end{align*}
+        This implies that $\tilde{n} = \begin{pmatrix}
+                0 \\ s
+            \end{pmatrix}$ and this is the only restriction on our integer co-vectors $\tilde{m}$ and $\tilde{n}$. We now calculate the integral over
+        our fundamental domain. We let $\alpha = \alpha_1(x,y) dx + \alpha_2(x,y)dy$. Again, applying Stokes theorem, we have that
+        \begin{align*}
+            \int_{\partial U} \alpha & = \int_A \alpha - \int_{A'} \alpha + \int_B \alpha - \int_{B'}\alpha                          \\
+                                     & = \int_A \alpha - \int_A h^*\alpha + \tilde{m} + \int_B \alpha - \int_B g^*\alpha + \tilde{n} \\
+                                     & = \int_A \alpha - h^*\alpha - \tilde{m} - \int_B\tilde{n}
+        \end{align*}
+        Now, recalling that $h^* = \begin{pmatrix}
+                1 & 0 \\
+                n & 1
+            \end{pmatrix}$ we have that
+        \begin{align*}
+            \alpha - h^*\alpha & = (\alpha_1(x,y) - \alpha_1(x,y))dx + n\alpha_1(x,y)dy \\
+                               & = n\alpha_1(x,y)dy
+        \end{align*}
+        Now, we have that
+        \begin{align*}
+            \int_A n\alpha_1(x,y)dy & = \int_{(0,0)}^{(a,0)} n\alpha_1(x,y)dy \\
+                                    & =0
+        \end{align*}
+        as there is no $dx$ contribution. Hence, our invariant becomes
+        \begin{align*}
+            \int_{\partial U} \alpha & = -(\int_A \tilde{m} + \int_B \tilde{n})                            \\
+                                     & =-(\int_{(0,0)}^{(a,0)} \tilde{m} + \int_{(0,0)}^{(0,b)} \tilde{n}) \\
+                                     & = -(ka + sb)
+        \end{align*}
+        where $k, s \in \Z$ and this completes the calculation of the cohomological invariants of .
+    \end{case}
+\end{proof}
+
+\section{Chern Class and Lagrangian Class}
+The strategy in classifying the Lagrangian bundles over $B$ will be to start
+with the topological reference bundle $T^*B/\Lambda$ and using this, produce
+new bundles by gluing these reference bundles together. We will then show that
+we can essentially obtain any Lagrangian bunlde over $B$ in this way. In
+\cite{ActionAngle}, Duistermaat defined the \emph{Chern class} of a Lagrangian
+fibration. It measures the obstruction for a Lagrangian fibration to be
+topologically equivalent to $T^*B/\Lambda$. We now illustrate how this class is
+defined.
+
+We have seen previously that given a regular Lagrangian fibration with compact,
+connected fibres, there is a canonical period lattice $\Lambda \subset T^*B$
+and a fibrewise transitive action of $T^*B/\Lambda \to B$ on $E \to B$. This
+endowed $E \to B$ with the structure of an \emph{affine} torus bundle, however
+we could not yet identify it with the torus bundle $T^*B/\Lambda$. The
+obstruction to topologically identifying these two fibrations is the
+obstruction to $E \to B$ admitting a global section. We can attempt to answer
+when this is the case.
+
+If we cover the base space $B$ with open sets $\{U_i\}$ such that each $U_i$ is
+contractible, then, restricting the fibration to some $U_i$, all the
+obstructions to this fibration admitting global action angle coordinates vanish
+or in other words, locally this can be identified with $T^*B/\Lambda$. Hence,
+if we pick our $U_i$ small enough we can choose sections $s_i: U_i \to E$.
+Since the action of $T^*B/\Lambda$ on $E \to B$ is transitive, on the
+intersections $U_i \cap U_j$, we know that $s_i = \mu_{ij} + s_j$ whereby
+$\mu_{ij}$ is a section of $T^*B/\Lambda$ and $\mu_{ij} + s_j$ denotes the
+abelian vector space action of this section on $s_j$. We now make the following
+claim.
+
+\begin{prop}
+    The sections $\mu_{ij}$ satisfy the cocycle condition and hence define a cohomology class
+    $[\mu] \in H^1(\mathcal{T}^*B/\Lambda)$. Moreover, the cohomology class does not depend on the choice of sections $s_i$.
+\end{prop}
+\begin{proof}
+    We show that $\mu_{jk}+\mu_{ij} = \mu_{ik} $. We have that
+    \begin{align*}
+        \mu_{jk} + \mu_{ij} & =s_j-s_k + s_i-s_j \\
+                            & = s_i -s_k
+    \end{align*}
+    and so the condition is immediate. Suppose we choose different sections $s_i',s_j'$. Since the $T^*B/\Lambda$ action is
+    transitive we have
+    $$s_i' = s_i + \sigma_i$$
+    We now compute
+    \begin{align*}
+        \mu_{ij}' - \mu_{ij} & = s_i' - s_j' -s_i +s_j                      \\
+                             & = s_i+ \sigma_i - s_j - \sigma_j - s_i + s_j \\
+                             & = \sigma_i - \sigma_j
+    \end{align*}
+    and hence the difference is a Cech co-boundary and so is zero in cohomology as required.
+\end{proof}
+
+It is clear that if $\mu$ itself equals to zero, then we have a global section
+of $M \to B$. Indeed if this is the case, then our sections are literally equal
+on the overlaps and hence there is no problem gluing them together to obtain a
+global section. However, this condition turns out to be in some sense too
+strong. Indeed, if we loosen the condition to $[\mu] = 0 \in
+    H^1(\mathcal{T}^*B/\Lambda)$, it turns out that we will be able to
+\emph{redefine} our sections so that they equal on the overlap and hence glue
+together. The following Lemma proves this.
+
 \begin{lemma}
+    Suppose that $[\mu]=0 \in H^1(\mathcal{T}^*B/\Lambda)$. Then there exists a global section of $M \to B$.
+\end{lemma}
+
+\begin{proof}
+    If $[\mu]=0$, then it follows that $[\mu]$ is a coboundary and so $\mu_{ij} = \sigma_i - \sigma_j$ where $\sigma_i : U_i \to T^*B/\Lambda$.
+    We redefine our sections as
+    $$
+        s_i' = s_i - \sigma_i
+    $$
+    Now, on intersections we have that
+    \begin{align*}
+        s_i' - s_j' & =  s_i - \sigma_i - s_j + \sigma_j    \\
+                    & = s_i -  s_j - ( \sigma_i - \sigma_j) \\
+                    & = s_i -  s_j - \mu_{ij}               \\
+                    & = 0
+    \end{align*}
+    and hence we have no problem gluing our new local sections into a global section of $M \to B$.
+\end{proof}
+
+Hence, the obstruction the the existence of a global section of $M \to B$ lies
+in the sheaf cohomology group $H^1(\mathcal{T}^*B/\Lambda)$. In practice, this
+group may not be so easy to calculate. We would hence like to relate this sheaf
+cohomology group to a nicer cohomology group. Namely, we will be able to show
+that there is an isomorphism $H^1(\mathcal{T}^*B/\Lambda) \cong H^2(\Lambda)$.
+The sheaf of sections of the period lattice $\Lambda$ is a locally constant
+sheaf as there are local trivialisations of the period lattice such that it
+looks like $U \times \Z^n$. Locally constant sheaves are equivalent to objects
+called \emph{local systems}.
+
+Calculating the cohomology of these local systems turns out to be much nicer
+than calculating sheaf cohomology more generally. For example, it is possible
+to compute this cohomology using cellular methods. Moreover, in the case that
+the base manifold in question is an Eilenberg-MacLane $K(G, 1)$-space, we can
+if fact use group cohomology to calculate this cohomology group which we shall
+later see. For now, we shall look at how we can obtain this isomorphism.
+
+\subsection{The Sheaf Theory Approach}
+From our discussion in the previous section, the obstruction to $E \to B$
+topologically identifying with $T^*B/\Lambda$ lived in
+$H^1(\mathcal{T}^*B/\Lambda)$. However, we noted that this may not be easy to
+calculate in general and so we wished to relate it to a nicer cohomology group.
+We will see now how we can make use of some standard sheaf theory to do this. A
+reference for some of the standard sheaf cohomology results used here is
+\cite{bredon1997sheaf}.
+\begin{lemma}\label{lemma:exact-seq-sheaf}
     The following diagram of sheaves is exact in all rows and columns.
     \[
         \begin{tikzcd}
             & & 0 \arrow[d] & 0 \arrow[d] & \\
-            0 \arrow[r] & \mathcal{P} \arrow[r, "i"] \arrow[d, equal]
+            0 \arrow[r] & \Lambda \arrow[r, "i"] \arrow[d, equal]
             & \Lambda \mathcal{T}^*B \arrow[r, "\mathrm{pr}"] \arrow[d]
-            & \Lambda \mathcal{T}^*B / \mathcal{P} \arrow[r] \arrow[d, "j"]
+            & \Lambda \mathcal{T}^*B / \Lambda \arrow[r] \arrow[d, "j"]
             & 0 \\
-            0 \arrow[r] & \mathcal{P} \arrow[r]
+            0 \arrow[r] & \Lambda \arrow[r]
             & \mathcal{T}^*B \arrow[r, "\mathrm{pr}"] \arrow[d, "d"]
-            & \mathcal{T}^*B / \mathcal{P} \arrow[r] \arrow[d, "d"]
+            & \mathcal{T}^*B / \Lambda \arrow[r] \arrow[d, "d"]
             & 0 \\
             & & \Lambda^2 B \arrow[r, equal] \arrow[d]
             & \Lambda^2 B \arrow[d] \\
@@ -78,14 +435,15 @@ We shall make use of the following sheafs on $B$.
 \end{proof}
 
 \begin{lemma}
-    \begin{itemize}
+    The following two sheaf cohomological facts hold;
+    \begin{enumerate}
         \item $\mathcal{T}^*B$ is a fine sheaf so that $H^i(\mathcal{T}^*B) = 0$ for $i>0$.
         \item $H^i(\Lambda \mathcal{T}^*B) \cong H^{i+1}(B, \R)$ for $i>0$
-    \end{itemize}
+    \end{enumerate}
 
 \end{lemma}
 \begin{proof}
-    (TODO: prove 2? Add source for 1). Denoting by $C^{\infty}(B)$ the sheaf of smooth functions on $B$ this is a fine sheaf. We have a short exact
+    (TODO: source for fine sheaf or else proof). Denoting by $C^{\infty}(B)$ the sheaf of smooth functions on $B$ this is a fine sheaf. We have a short exact
     sequence
     $$
         0 \to \R \to C^{\infty}(B) \to \Lambda \mathcal{T}^*B \to 0
@@ -98,13 +456,1002 @@ We shall make use of the following sheafs on $B$.
     Now since $C^{\infty}(B)$ is a fine sheaf, for $i>0$ we obtain $0\to  H^i(\Lambda\mathcal{T}^*B) \to H^{i+1}(B, \R) \to 0$ giving the required isomorphism.
 \end{proof}
 
-The strategy in classifying the Lagrangian bundles over $B$ will be to start
-with the topological reference bundle $T^*B/\mathcal{P}$ and using this,
-produce new bundles by gluing these reference bundles together. We will then
-show that we can essentially obtain any Lagrangian bunlde over $B$ in this way.
-The following lemma
+\subsection{The Chern Class}
+We can now show the isomorphism $H^1(T^*B/\Lambda) \cong H^2(\Lambda)$ which
+will lead to the definition of the Chern class.
 
 \begin{theorem}
-    Fix an integral affine structure on $B$ and denote by $\mathcal{P}$ the sheaf of sections of its period lattice. Then the group $H^1(\Lambda\mathcal{T}^*B/\mathcal{P})$ classify twistings of
-    the lattice up to Lagrangian equivalence.
+    There is an isomorphism $\delta: H^1(T^*B/\Lambda) \to H^2(\Lambda)$.
 \end{theorem}
+
+\begin{proof}
+    We had the short exact sequence
+    $$
+        0 \to \Lambda \to T^*B \to T^*B / \Lambda \to 0
+    $$
+    from Lemma \ref{lemma:exact-seq-sheaf}. Taking the associated long exact sequence in cohomology yields
+    $$
+        \dots \to H^i(\Lambda) \to H^i(T^*B) \to H^i(T^*B/\Lambda) \to H^{i+1}(\Lambda) \to \dots
+    $$
+    Again, by Lemma \ref{lemma:exact-seq-sheaf}, we have that $H^i(T^*B) = 0$ for $i>0$ which gives an isomorphism $H^i(T^*B/\Lambda) \cong H^{i+1}(\Lambda)$ for $i>0$.
+\end{proof}
+
+\begin{definition}[Chern Class]
+    The image of $[\mu] \in H^1(T^*B/\Lambda)$ in $H^2(\Lambda)$ under $\delta$ is called the \emph{Chern class} and we shall denote it by $[\mu_C]$.
+\end{definition}
+
+The Chern class was defined by Duistermaat in \cite{ActionAngle}. The vanishing
+of this class implies that the Lagrangian fibration $E \to B$ is topologically
+equivalent to $T^*B/\Lambda \to B$. We note that this already depends on the
+integral affine structure on $B$ as this determines our period lattice
+$\Lambda$. It is a feature of the regularity of these Lagrangian torus
+fibrations that such a structure exists. Indeed, if we allow our fibration to
+have singular fibres, there is no longer a canonical symplectic reference
+bundle to compare our fibration $E \to B$ with. Indeed, in this case one must
+fix a so called \emph{reference system} for which to compare our Lagrangian
+fibration to and then in a similar way one may define the Chern class of such a
+singular fibration. More details on the singular case can be found in
+\cite{zung2001symplectictopologyintegrablehamiltonian}.
+
+The above discussion shows that given a regular Lagrangian torus fibration, we
+can associate to it the invariant $[\mu_{C}] \in H^2(\Lambda)$. However, we
+have not yet answered whether the converse of this statement holds true - that
+is given a class $[\eta] \in H^2(\Lambda)$ can this be realised as the Chern
+class of some Lagrangian torus fibration?
+
+To answer this question, we consider the short exact sequence $$ 0 \to \Lambda
+    \to \mathcal{Z} (T^*B) \to \mathcal{Z}(T^*B/\Lambda) \to 0 $$ and take the long
+exact sequence in sheaf cohomology. This leads to the exact sequence $$ \dots
+    \to H^1(\mathcal{Z}(T^*B/\Lambda)) \xrightarrow{\Delta} H^2(\Lambda)
+    \xrightarrow{\mathcal{D}_{(B, \mathcal{A})}} H^2(\mathcal{Z} (T^*B)) \cong
+    H^3(B, \R) \to \dots $$ The map $\mathcal{D}_{(B, \mathcal{A})}$ was considered
+in \cite{dazord}.
+
+They showed that a class $[\eta] \in H^2(\Lambda)$ is realisable as the Chern
+class of a Lagrangian torus fibration if and only if $\mathcal{D}_{(B,
+    \mathcal{A})}(\eta) = 0$. They proved this using methods from Poisson geometry.
+One can show that Lagrangian torus fibrations are the same thing as complete
+symplectic realisations of the Poisson zero structure on the base space of a
+manifold. In their paper, they considered more generally symplectic
+realisations of regular Poisson structures of which the zero Poisson structure
+is a special case. Indeed there is a cohomology class determined by the
+characteristic foliation $\mathcal{F}_{\pi}$ and they showed that under the map
+$\mathcal{D}_{(B, \mathcal{A})}$, the Chern class must map to this cohomology
+class. In the case of the Poisson zero structure, the characteristic foliation
+of $(B, \pi\equiv 0)$ consists of just the points of $B$ and this cohomology
+class will vanish. For more information on Poisson geometry see the following
+sources \cite{CrainicFernandesMarcut2021}.
+
+\subsection{The Lagrangian Class}
+This answers the question of which $[\eta] \in H^2(\Lambda)$ can arise as the
+Chern class of some Lagrangian fibration. However, this invariant is only
+topologically sharp. Once we have fixed an integral affine manifold $B$ and a
+Chern class $[\mu_{C}] \in H^2(\Lambda)$, we can have Lagrangian fibrations
+over $B$ with the same Chern class $[\mu_C]$ but which are not Lagrangian
+equivalent to each other. If we recall how the Chern class was constructed this
+fact should not be surprising. Indeed, we did not take into account the
+symplectic structure of our Lagrangian fibration in the construction of our
+Chern class since we allowed the sections of $T^*B/\Lambda$ to be arbritrary so
+it would be too much to hope for that we would achieve a symplectic
+classification. We can fix this problem by choosing our sections to be sections
+of $\mathcal{Z}(T^*B/\Lambda)$ as we shall now see.
+
+\begin{definition}
+    Let $M \to B$ be a Lagrangian fibration with period lattice $\Lambda$. Let $\{U_i\}_{i \in \mathbb{N}}$ be a trivializing cover and let
+    $s_i: U_i \to \mathcal{Z}(T^*B/\Lambda)$. Then $\mu_{ij} = s_i -s_j$ defines a one-cocycle independent of the choice of section and hence a
+    cohomology class $[\mu] \in H^1(\mathcal{Z}(T^*B/\Lambda))$. The class $[\mu]$ is called the \emph{Lagrangian class} of $M \to B$. \cite{zung2001symplectictopologyintegrablehamiltonian}
+\end{definition}
+
+If the class $[\mu] = 0$ the we can obtain a global \emph{Lagrangian} section
+of $M \to B$ and hence we obtain that $M \to B$ is Lagrangian equivalent to
+$T^*B/\Lambda \to B$. In fact, the following proposition shows that every
+element of this cohomology group will be the Lagrangian class of some
+Lagrangian torus fibration.
+
+\begin{prop}\label{prop:every:lagrangian-class}
+    Every class $[\mu] \in H^1(\mathcal{Z}(T^*B/\Lambda))$ can be realised as the Lagrangian class of some Lagrangian torus fibration.
+\end{prop}
+
+\begin{proof}
+    Suppose we are given some $[\mu] \in \mathcal{Z}(T^*B/\Lambda)$. Then picking a good cover $\{U_i\}_{i \in \mathbb{N}}$ of $B$ we may assume $[\mu]$
+    can be represented by a one-cocycle $\alpha_{ij} : U_i \cap U_j \to \mathcal{Z}(T^*B/\Lambda)$. Now, each $\alpha_{ij}$ determines a fibrewise affine
+    $$
+        s_{\alpha_{ij}}: T^*(U_i \cap U_j)/\Lambda\to T^*(U_i \cap U_j)/\Lambda
+    $$
+    $$
+        (b, m) \mapsto (b, m + \alpha_{ij}(b))
+    $$
+    where the additive action of $\alpha_{ij}$ comes from the action of $T^*B$ on $M \to B$. On triples $U_i \cap U_j \cap U_j$ we require that
+    transitionaiing a point in the fibre by $s_{\alpha_{ij}} \circ s_{\alpha_{jk}} = s_{\alpha_{ik}}$ but this holds precisely because $\alpha_{ij}$ satisfies the cocyle condition.
+    By Proposition \ref{prop:shift-by-closed}, the  $s_{\alpha_{ij}}$ is a symplectomorphism
+    of the Lagrangian fibration $T^*(U_i \cap U_j)/\Lambda$ as $\alpha$ is closed. Hence, the transition maps are symplectomorphisms and so our local forms glue together
+    to form a global symplectic form on $M=\bigsqcup_i T^*U_i /\Lambda$ and this becomes a Lagrangian fibration as locally in each chart $U_i$ it is by construction a Lagrangian fibration.
+\end{proof}
+
+\begin{remark}
+    In fact,
+    taking the long exact sequence in cohomology of the first row of Lemma
+    \ref{lemma:exact-seq-sheaf}, we obtain exactness at
+    $H^1(\mathcal{Z}(T^*B/\Lambda)) \xrightarrow{\Delta} H^2(\Lambda)$ and hence
+    every class $\Delta([\mu]) \in H^2(\Lambda)$ lies in the kernel of
+    $\mathcal{D}_{(B, \mathcal{A})}$ the Dazord-Delzant homomorphism and hence can
+    be realised as a Lagrangian torus fibration. However, this alone tells us only that $\Delta([\mu])$ arises
+    as the Chern class of a Lagrangian torus fibration.
+\end{remark}
+
+We seen earlier that an element $[\mu]\in H^2(\Lambda)$ is the Chern class of a
+Lagrangian torus fibration if and only if it vanished under the Delzant-Dazord
+homomorphism. In fact, If we consider the case of surfaces we have the
+following result.
+
+\begin{prop}\label{prop:every-lag-class}
+    Let $M$ be an integral affine surface. Then every class $[\mu] \in H^2(\Lambda)$ can be realised as the Chern class of a Lagrangian torus fibration.
+\end{prop}
+\begin{proof}
+    From the short exact sequence
+
+    $$0 \to \Lambda \to \mathcal{Z}(T^*B) \to \mathcal{Z}(T^*B/\Lambda) \to 0 $$
+    we obtain the long exact sequence in cohomology
+    \begin{align*}
+        H^1(\Lambda) \to H^1(\mathcal{Z}(T^*B)) \cong H^2(M, \R) & \xrightarrow{d} H^1(\mathcal{Z}(T^*B/\Lambda)) \xrightarrow{\Delta} H^2(\Lambda) \\
+                                                                 & \to H^1(\mathcal{Z}(T^*B)) \cong H^3(M, \R)=0
+    \end{align*}
+    where the isomorphisms $H^i(\mathcal{Z}(T^*B)) \cong H^{i+1}(M, \R)$ are from Lemma \ref{lemma:exact-seq-sheaf}. By exactness this yields that
+    $H^2(\Lambda) \cong \dfrac{H^1(\mathcal{Z}(T^*B/\Lambda))}{\ker \Delta}$. By Proposition \ref{prop:every:lagrangian-class}, every element of $\dfrac{H^1(\mathcal{Z}(T^*B/\Lambda))}{\ker \Delta}$ arises
+    as the Lagrangian class of a Lagrangian torus fibration and hence as this group is isomorphic to $H^2(\Lambda)$ the result follows.
+\end{proof}
+
+\begin{prop}\label{prop:classifying-group}
+    The group $\ker \Delta = \dfrac{H^2(B, R)}{\text{Im } H^1(\Lambda)}$.
+\end{prop}
+\begin{proof}
+    By exactness $\ker \Delta = \text{Im }d$. We have that $d(H^2(M, \R)) \cong \dfrac{H^2(M, \R)}{\ker d}$.
+    There is a map $j: H^1(\Lambda) \to H^2(B, \R)$ as in the l.e.s. of Proposition \ref{prop:every:lagrangian-class} and by exactness $\ker d = j(H^1(\Lambda))$
+    and this gives the required result.
+\end{proof}
+
+\begin{remark}
+    Once we have fixed a Chern class we can ask which Lagrangian classes map to this Chern class? The group $\ker \Delta = \dfrac{H^2(B, R)}{\text{Im } H^1(\Lambda)}$ paramaterizes the Lagrangian class $[\mu]$ which map to a fixed Chern class
+    $[\mu_C]$.
+\end{remark}
+
+\begin{prop}
+    The group $\text{Im } H^1(\Lambda) \subset H^2(B, \R)$ is generated by the cohomological invariants of  of Definition \ref{def:coho-inv-}.
+\end{prop}
+\begin{proof}
+    Applying the long exact
+    sequence in cohomology to the second row of Lemma \ref{lemma:exact-seq-sheaf}, we obtain that
+    $$
+        H^0(T^*B/\Lambda) \xrightarrow{\delta} H^1(\Lambda) \to H^1(T^*B) =0
+    $$
+    and so $\delta$ is surjective. We therefore have that $\text{Im } H^1(\Lambda) \subset H^2(B,R)$ is the same
+    as $\text{Im }H^0(T^*B/\Lambda) \subset H^2(\Lambda)$ under the image of $\delta$ composed with the map
+    $j: H^1(\Lambda) \to H^2(B, \R)$ from Proposition \ref{prop:classifying-group}.
+
+    It remains to show that $j \circ \delta$ coincides with the differential $d:
+        H^0(T^*B/\Lambda) \to H^2(B, \R)$ since by definition
+    $H^0(\mathcal{Z}(T^*B/\Lambda))$ is the space of latticed one-forms. This
+    follows from another version of $H^1(\mathcal{Z}(T^*B/\Lambda)) \cong H^2(B,
+        \R)$. Again, applying the long exact sequence in cohomology to the short exact
+    sequence $$ 0 \to \mathcal{Z} (T^*B) \to T^*B \to \Lambda^2 B \to 0 $$ yields
+    the long exact sequence $$ 0 \to H^0(\mathcal{Z} (T^*B)) \to H^0(T^*B)
+        \xrightarrow{d} H^0(\Lambda^2 B) \to H^1(\mathcal{Z} (T^*B)) \to 0 $$ since
+    $T^*B$ is a fine sheaf. This gives that $$ H^1(\mathcal{Z} (T^*B)) \cong
+        \dfrac{H^0(\Lambda^2 B)}{dH^0(T^*B)} $$ and this is the de Rham cohomology
+    group $H^2(B, \R)$ by definition.
+
+    Now, we have the following short exact sequences
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & \mathcal{Z}(T^*B/\Lambda) \arrow[r]
+            & T^*B / \Lambda  \arrow[r, "d"]
+            & \Lambda^2 B \arrow[r]
+            & 0
+        \end{tikzcd}
+    \]
+    from the long exact sequence in cohomology, there is a map $d:
+        H^0(T^*B/\Lambda) \to H^0(\Lambda^2 B)$. The required result now follows from
+    commutativity of the following square.
+    \[
+        \begin{tikzcd}
+            H^0(T^*B/\Lambda) \arrow[r, "d"] \arrow[d, "\delta"] & H^0(\Lambda^2 B) \arrow[d, "\pi"] \\
+            H^1(\Lambda) \arrow[r, "j"] & H^2(B, R)
+        \end{tikzcd}
+    \]
+    where $\pi \circ d$ is the required differential. (TODO: This proof is a bit of
+    a mess.)
+\end{proof}
+The following theorem summarizes the main results of this section.
+
+\begin{theorem}
+    Let $B$ be a smooth manifold. The the Lagrangian fibrations over $B$ are determined by
+    \begin{enumerate}
+        \item The integral affine structure on $B$. This determines a symplectic reference
+              bundle $T^*B/\Lambda$.
+        \item Fixing the integral affine structure on $B$, the Lagrangian fibrations over $B$
+              are topologically determined by a Chern class $[\mu_{C}] \in H^2(\Lambda)$. The
+              Chern class determines the topological type of the Lagrangian torus fibration
+              and its vanishing implies the fibration is topologically equibvalent to
+              $T^*B/\Lambda$. An element $[\mu_{C}] \in H^2(\Lambda)$ is the Chern class of a
+              Lagrangian torus fibration if and only if $\mathcal{D}_{(B,
+                  \mathcal{A})}([\mu_C]) = 0$ where $\mathcal{D}_{(B, \mathcal{A})}$ is the
+              Delzant-Dazord homomorphism.
+        \item The obstruction to our bundle being symplectically equivalent to $T^*B/\Lambda$
+              is given by the Lagrangian class $[\mu] \in H^1(\mathcal{Z}(T^*B/\Lambda))$.
+              Every Lagrangian class arises as the Lagrangian class of some Lagrangian torus
+              fibration
+    \end{enumerate}
+\end{theorem}
+
+\section{Computing the Chern Class}
+After the discussion in the previous section, our strategy will be to compute
+all of the possible Chern classes for our integral affine closed surfaces. Once
+we have fixed a Chern class, we can then look at the possible Lagrangian
+classes that map to it. A lot of the complexity in this process will be in the
+calculation of the sheaf cohomology groups. Fortunately, since the sheaf of
+sections of the period lattice $\Lambda$ is a locally constant sheaf, its sheaf
+cohomology will be equal to the cohomology of the so called \emph{local system}
+it determines.
+
+We shall now recall some basic facts and results around the theory of local
+systems
+
+\subsection{Local Systems}
+Recall that a constant sheaf $\mathcal{F}$ over a topological space $X$, is a
+sheaf such that for each open set $U \subset X$ we have that $\mathcal{F}(U) =
+    R$ for some fixed group/ring/module $R$.
+
+\begin{definition}[Local system]
+    A local system on a topological space $X$, is a locally constant sheaf $\mathcal{F}$ - e.g. for each $x \in X$, there is a neighborhood $U \subset X$ such that
+    for all $V \subseteq U$ we have that $\mathcal{F}|_V$ is a constant sheaf for some fixed group/ring/module $R$.
+\end{definition}
+
+A key feature of these local systems is that if our topological space is nice
+enough, for example a manifold $M$, then the local systems over $M$ are in
+bijection with representations of the fundamental group. In fact, an even
+stronger condition than this holds. It turns out that this bijection can be
+upgraded to an equivalence of categories and hence the study of local systems
+over these topological spaces is equivalent to studying the representations of
+its fundamental group.
+
+Indeed, given a local system $\mathcal{F}$ over $M$ with fixed module a finite
+dimensional vector space $V$, one can associate an "algebraic" monodromy to it.
+Namely, given $[\gamma] \in \pi_1(M,x)$ we can associate an automorphism of the
+stalk $\mathcal{F}_x \cong V$. In this way we obtain a monodromy map $$ \rho :
+    \pi_1(M, x) \to \text{Aut}(\mathcal{F}_x) $$ and this is how we associate a
+representation of the fundamental group to the local system.
+
+Conversely, given a representation $\rho : \pi_1(M, x) \to \text{Aut}(V)$ we
+can associate to it a locally constant sheaf as follows. Let $\pi: \tilde{M}
+    \to M$ be the universal cover of $M$ and denote by $V_{\tilde{M}}$ the constant
+sheaf on $\tilde{M}$. Then we define the sections $\mathcal{F}(U)$ to be
+sections of $V_{\tilde{M}}$ over $\pi^{-1}(U)$ that are equivariant with
+respect to the action of the fundamental group $\pi_1(M,x)$ which acts on
+$\tilde{M}$ by deck transformations. This determines a locally constant sheaf
+as if we pick a small enough neighborhood $U \subset M$ that is evenly covered,
+then the sheaf is constant on $U$ as $\pi|_{U_{\gamma}}$ is a homeomorphism and
+$\pi \circ \gamma = \pi$ where $\gamma$ is a deck transformation. For more
+details see \cite{ElZeinSnoussi2009}.
+
+\subsection{Cohomology of Local Sytems}
+We could calculate the cohomology of a local system by calculating its sheaf
+cohomology directly. However, there turns out to be a nicer way to calculate
+the cohomology in this case which is amenable to cellular methods.
+
+In fact, the equivalence between local systems and representations of the
+fundamental group leads to two different ways of calculating the cohomology of
+the local system. We now briefly illustrate how to calculate through the two
+different perspectives.
+
+\subsubsection{The singular cohomology approach}
+The first approach we take is the singular cohomology approach. Given a
+representation $\rho: \pi_1(M) \to \text{Aut}(V)$ our construction of a local
+system in fact give a vector bundle $E$ with fibre $V$ by $$ E:= (\tilde{M}
+    \times V)/\pi_1(M) $$ where $\gamma \cdot (\tilde{m}, v) = (\gamma \cdot
+    \tilde{x}, \rho(\gamma)v)$ see \cite{Davis2001LectureNI}. Let $\sigma: \Delta^n
+    \to X$ be a singular $k$-simplex in $X$ and denote by $e_0 = (1, 0, \dots , 0)$
+the base point of $\sigma$ and $E_{\sigma(e_0)}$ the fibre above $\sigma(e_0)
+    \in X$. We let $S^k(M; E)$ the set of formal sums of functions $f$ that assign
+to each singular simplex $\sigma: \Delta^k \to X$, an element $f(\sigma) \in
+    E_{\sigma(e_0)}$. Then $S^k(M; E)$ is an abelian group and we can associate a
+coboundary operator to it by $$ \delta : S^k(X;E) \to S^{k+1}(X;E) $$ given by
+$$\delta(f)(\sigma) = (-1)^k \left(\gamma_{\sigma}^{-1}(f(\partial_0 \sigma)) +
+    \sum_{i=1}^{k+1}(-1)^ic(\partial_i \sigma)\right)$$ where the $\partial_i$ are
+the usual boundary maps for singular simplices and $$ \gamma_{\sigma}:
+    E_{\sigma(0,1,0,\dots , 0)} \to E_{\sigma(1,0,0,\dots , 0)} $$ is an
+isomorphism induced by the path $$\tilde{\gamma}_{\sigma}: [0,1] \to X$$ $$ t
+    \mapsto \sigma(t, 1-t, 0 \dots , 0)$$ via path lifting as $\rho: E \to X$ is a
+covering space.
+
+A computation shows that $\delta^2=0$ and we will denote the corresponding
+cohomology by $H_{\text{sing}}^*(M, V)$ where it is understood that $V$ is
+viewed as a $\pi_1(M)$-module through the action of the representation.
+
+\begin{definition}\label{def:singular-coho-localsystem}
+    Let $\rho:\pi_1(M) \to \text{Aut}(V)$ determine a local system. The \emph{singular cohomology of the local system} is the cohomology of the complex $(S^K(X;E), \delta)$
+\end{definition}
+
+\subsubsection{The equivariant or Borel cohomology approach}
+Equivariant or Borel cohomology was introduced by Borel in \cite{Borel} and
+encodes information about group actions on a topological space $X$. It has
+connections to Lie groupoid cohomology and has found applications throughout
+algebraic geometry and differential geometry (TODO: probably need to refer to
+some references here). The description that we now give of the cohomology of a
+local system is a special case of this equivariant cohomology.
+
+We have that there is a right action of the fundamental group by deck
+transformations on the universal cover $\tilde{M}$ of our manifold $M$.
+Denoting by $C^*(\tilde{M})$ the free abelian group of simplices $\sigma:
+    \Delta^n \to \tilde{M}$, this action turns $C^*(\tilde{M})$ into a right
+$\pi_1(M)$-module. Namely, given a simplex and $\gamma \in \pi_1(M)$ we can
+define this right action as $\sigma \cdot \gamma = \gamma \star \sigma $ where
+$\gamma \star \sigma $ is the action of $\gamma$ by deck transformations and
+extend to the group ring by linearity. Now, we have that the fixed vector space
+of our local system $V$ is a right $\pi_1(M)$-module via the representation
+$\rho: \pi_1(M) \to \text{Aut}(V)$. We would like to apply
+$\text{Hom}_{\Z[\pi_1(M)]}(-,V)$ to our chain complex of right
+$\Z[\pi_1(M)]$-modules $C^*(\tilde{M})$ but we cannot do so as
+$\text{Hom}_{\Z[\pi_1(M)]}(-,-)$ must take in either two right modules or two
+left modules. However, we can solve this problem by turning $C^*(\tilde{M})$
+into a left $\Z[\pi_1(M)]$-module by defining the action of $g \in
+    \Z[\pi_1(M)]$ to be $g \cdot z = z \cdot g^{-1}$. Applying
+$\text{Hom}_{\Z[\pi_1(M)]}(-,V)$ yields a co-complex.
+
+\begin{definition}\label{def:equivariant-coho}
+    The cohomology of this complex is called the \emph{cohomology of M with twisted coefficients} and is
+    the same as the equivariant cohomology of the universal cover $\tilde{M}$. Fixing a representation $\rho: \pi_1(M) \to \text{Aut}(V)$ we shall
+    denote this cohomology as $H^i(M, V_{\rho})$.
+\end{definition}
+
+The two approaches described can be seen to be equivalent. We shall not give
+the proof of this but it can be found in Theorem 3.5 of
+\cite{whitehead1978elements}.
+
+\subsection{Relation to group cohomology}
+There is yet another approach to be taken in this case that our manifold is a
+"nice" space by which we mean it is an Eilenber Mac-Lane space of type $K(G,1)$
+as of Definition \ref{def:eilenberg-mac}.
+
+A local system is determined by a representation of the fundamental group on an
+abelian group $V$ and hence, one might speculate that the group cohomology of
+$H^i(\pi_1(M) ,V)$ where we view $V$ as a $\pi_1(M)$-module is the same as the
+cohomology of the local system determined by it. However, this is not the case
+in general although there are relationships between the two. The following
+lemma is a special case of when the two coincide.
+
+\begin{lemma}\label{lemma:equiv_localsystem-group}
+    Let $M$ be an Eilenberg-MacLane space of type $K(G,1)$ and let $\pi_1(M) \to \text{Aut}(V)$ be a representation. Then the
+    group cohomology $H^i(\pi_1(M), V)$ and the cohomology of the local system coincide.
+\end{lemma}
+
+\begin{proof}
+    I will give the proof in the case of $M$ being a CW-complex although this is not strictly needed \cite{whitehead1978elements}. For $n\geq 2$ we have that $S^n$ is simply connected and so given a map $f: S^n \to M$ there is a unique lift to the universal cover.
+    \[
+        \begin{tikzcd}
+            & \widetilde{M} \arrow[d, "\pi"] \\
+            S^n \arrow[ru, dashed, "\widetilde{f}"] \arrow[r, "f"] & M
+        \end{tikzcd}
+    \]
+    and hence we get a map $$ \varphi : \pi_n(M) \to \pi_n(\tilde{M}) $$ $$ [f]
+        \mapsto [\widetilde{f}] $$ The covering map also gives a map in the other
+    direction and these maps are easily seen to be inverses of one another. This
+    leads to an isomorphism $\pi_n(M) \cong \pi_n(\tilde{M})$ for $n \geq 2$.
+
+    Hence, if $M$ is an Eilenberg-MacLane space of type $K(G,1)$ then its universal
+    cover has $\pi_n(\tilde{M})=0$ for all $n \in \mathbb{N}$. Now if we consider
+    the chain complex
+
+    $$
+        \dots \to C^2(\tilde{M}) \to C^1(\tilde{M}) \to C^0(\tilde{M}) \xrightarrow{\epsilon} \Z \to 0
+    $$
+
+    where $\epsilon$ is the augmentation map. By Whiteheads lemma (Corollary 7.34
+    \cite{Davis2001LectureNI}), $\tilde{M}$ is homotopy equivalent to a point and
+    so $H^i(C^*(M)) = 0$ for $i>0$ and $H^0(C^*(M)) = 0$. Hence the above sequence
+    is exact and provides a free resolution of $\Z$ by $\pi_1(M)$-modules hence
+    computing the group cohomology after applying the $\text{Hom}_{\Z[\pi_1(M)]}(-,
+        V)$ functor.
+\end{proof}
+
+\begin{remark}
+    If $M$ is a $K(G,1)$ space and path connected, then $M$ is often called \emph{aspherical}.
+\end{remark}
+
+We now make the following observation which we shall use when computing the
+Chern class of a Lagrangian torus fibration over a complete integral affine
+manifold.
+
+\begin{lemma}
+    Let $M$ be a complete affine manifold. Then $M$ is aspherical and hence the cohomology of the local system dtermined by
+    its linear holonomy representation, is equal to the group cohomology of $\pi_1(M)$ with respect to the linear holonomy representation.
+\end{lemma}
+
+\begin{proof}
+    Since $M$ is complete, the developing map $\dev: \tilde{M} \to \R^n$ is a diffeomorphism. Since $\R^n$ is contractible it follows that $\tilde{M}$ is also and hence by
+    Lemma \ref{lemma:equiv_localsystem-group}, the group cohomology and the cohomology of the local system coincide.
+\end{proof}
+
+In the case of the Chern class, this lived in $H^2(\Lambda)$ where $\Lambda$ is
+the locally constant sheaf of sections of the period lattice. Our previous
+discussion shows that in the case of a complete integral affine manifold with
+linear holonomy representation $Lin \circ hol: pi_1(M) \to \text{Aut}(\Z^n) $,
+the sheaf cohomology of $\Lambda$ coincides with the group cohomology of
+$\pi_1(M)$ with respect to this linear holonomy representation once one
+verifies that these local systems do indeed coincide. In group cohomology, the
+group $H^2$ classifies objects called \emph{group extensions}. We quickly recap
+these now.
+
+\begin{definition}
+    A \emph{group extension} is a short exact sequence of groups
+    $$
+        0 \to A \to E \xrightarrow{\pi} G \to 1
+    $$
+    where $A$ is abelian.
+\end{definition}
+
+There is a notion of equivalence for group extensions.
+\begin{definition}
+    An equivalence of extensions is a group
+    isomorphism $\varphi : E \to E'$ such that the following diagram commutes:
+    \[
+        \begin{tikzcd}
+            0 \arrow[r] & A \arrow[r] \arrow[d, equal] & E \arrow[r, "\pi"] \arrow[d, "\varphi"] & G \arrow[r] \arrow[d, equal] & 1 \\
+            0 \arrow[r] & A\arrow[r] & E' \arrow[r, "\pi'"] & G \arrow[r] & 1
+        \end{tikzcd}
+    \]
+\end{definition}
+
+Given a group extension of $G$ by $A$ then there is a unique $G$-module
+structure induced on $A$. Equivalent group extensions induce the same
+$G$-module structure on $A$. Fixing a $G$-module $A$, there may be multiple
+extensions that induce the given $G$-module structure. We have the following
+classification result.
+
+\begin{theorem}[TODO: Cite GT notes]
+    Fix a $G$-module $A$. Let $\epsilon(G, A)$ denote the set of extensions which induce the given
+    $G$-module structure on $A$. Then we have that there is a bijection
+    $$
+        H^2(G, A) \iff \epsilon(G, A)
+    $$
+\end{theorem}
+
+This establishes the following perspective on the Chern classes of a Lagrangian
+fibration over a closed integral affine surface.
+
+\begin{prop}
+    Let $M$ be a closed integral affine surface. Then there is a one-to-one correspondence between
+    Lagrangian fibrations over $M$ with a given Chern class and isomorphism classes of group extensions
+    $$
+        0 \to \Z^n \to E \to \pi_1(M) \to 1
+    $$
+\end{prop}
+\begin{proof}
+    This follows from the fact that every Chern class of an integral affine closed surface is realisable as the Chern class of a Lagrangian fibration and the bijection established in the previous theorem.
+\end{proof}
+
+\begin{remark}
+    Under this correspondence, the symplectic reference fibration correspondes to the group extension class of
+    $$0 \to \Z^n \to \Z^n \rtimes \pi_1(M) \to \pi_1(M) \to 1$$
+\end{remark}
+
+What remains to show in this section, is that calculating the cohomology of the
+local system in the sense of the two different definitions given, is equivalent
+to calculating the sheaf cohomology of the locally constant sheaf. We will not
+give the proof but we will outline where one can find the required
+equivalences.
+
+\begin{theorem}
+    Let $M$ a manifold and let $\mathcal{F}$ be a local system over $M$ with fixed abelian group $V$. Then the following group cohomologies are isomorphic.
+    \begin{enumerate}
+        \item The sheaf cohomology of the locally constant sheaf $\mathcal{F}$ over $M$.
+        \item The singular cohomology of the local system as in Definition
+              \ref{def:singular-coho-localsystem}.
+        \item The cohomology of $M$ with twisted coefficients as in Definition
+              \ref{def:equivariant-coho}.
+        \item The Cech cohomology of the locally constant sheaf $\mathcal{F}$
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    For $1) \iff 2)$ see Theorem 1.1 in Chapter 3 of \cite{bredon1997sheaf}. For $2) \iff 3)$ see Theorem $3.4$ of \cite{whitehead1978elements}.
+    For $4) \iff 1)$ see Theorem $4.13$ of \cite{bredon1997sheaf}.
+\end{proof}
+
+We also note the following important fact about the homotopy invariance of the
+cohomology of locally constant sheaves.
+
+\begin{theorem}[Theorem 21.5. \cite{dahlhausen2020algebraTopologyII}]
+    Let $f: M \to N$ be a homotopy equivalence. Then for every locally constant sheaf $\mathcal{F}$ on $Y$, we have that
+    $$
+        H^*(Y, \mathcal{F}) \cong H^*(X, f^{-1}\mathcal{F})
+    $$
+\end{theorem}
+
+\subsection{Classifying Lagrangian fibrations over $S^1$}
+Before we give the classification of regular Lagrangian torus fibrations over
+compact surfaces, we can first write sown the classification over $S^1$.
+\begin{lemma}
+    The Lagrangian fibrations over $S^1$ are determined by a positive number $y>0$.
+\end{lemma}
+\begin{proof}
+    Since $S^1$ has dimension one $H^2(\Lambda) = 0$ for any period lattice $\Lambda \subset T^*S^1$. One way to see this is by noting
+    that $\pi_1(S^1) = \Z$ and the group cohomology of $\Z$ vanishes for $i>1$. Hence, every Lagrangian fibration
+    admits a global section, and since the de Rham cohomology $H^2(S^1)=0$ there are no other considerations. Hence, the Lagrangian fibrations
+    over $S^1$ are all topologically trivial, admit a global section and are of the form $T^*S^1/\Lambda_y \to S^1$ where $\Lambda_y$ is the lattice determined by $y>0$. They are classified by the integral affine structure on $S^1$ and by Lemma \ref{lemma:classification-integral-affine-circles} are therefore determined by
+    a number $y>0$.
+\end{proof}
+\begin{remark}
+    An integral affine structure on $S^1$ is equivalent to a full rank lattice in $T^*S^1 =  S^1 \times \R$ which is just determined by multiples of some number $y \in \R$. This
+    determines the symplectic volume of the space $T^*B/\Lambda_y$. Different choices of $y$ change the symplectic volume of $T^*B/\Lambda_y$ and hence these bundles cannot be symplectomorphic for different choices of $y$.
+\end{remark}
+\subsection{Computing $H^2(\Lambda)$ for the torus}
+We now use the group cohomology approach in order to calculate $H^2(\Lambda)$
+for our compact integral affine surfaces. For $\mathbb{T}^2$, we have that
+$\pi_1(\mathbb{T}^2) = \Z \oplus \Z$. The group ring for $G = \Z \oplus \Z$ is
+given by $\Z[G] = \Z[x,x^{-1}, y, y^{-1}]$ where $x$ and $y$ are the generators
+for $\Z \oplus \Z$.
+
+We will make use of the Koszul resolution which provides us with a nice free
+resolution of $\Z$ in this case.
+
+\begin{definition}
+    Let \(R^n\) be a free \(R\)-module with basis \(e_1,\dots,e_n\). The
+    \(k\)-th exterior power \(\Lambda^k(R^n)\) is the free \(R\)-module generated by
+    \[
+        e_{i_1}\wedge \cdots \wedge e_{i_k},
+        \qquad
+        1 \le i_1 < \cdots < i_k \le n,
+    \]
+    where the wedge product is alternating:
+    \[
+        e_i \wedge e_j = -\, e_j \wedge e_i
+    \]
+\end{definition}
+
+\begin{lemma}[Koszul resolution \cite{Weibel_1994}]
+    If \textbf{x}$= (x_1, \dots , x_n)$ is a regular sequence in \(R\), then the following sequence is exact:
+    \[
+        0 \longrightarrow \Lambda^n(R^n)
+        \longrightarrow \cdots
+        \longrightarrow \Lambda^2(R^n)
+        \longrightarrow R^n
+        \xrightarrow{x}
+        R
+        \longrightarrow R/I
+        \longrightarrow 0.
+    \]
+\end{lemma}
+
+We have that $(x-1, y-1)$ is a regular sequence in $\Z[G]$ as $x-1$ is a
+non-zero divisor in $\Z[G]$ and $y-1$ is a non-zero divisor in $\Z[G]/(x-1) =
+    \Z[y, y^{-1}]$. Since $Z[x,x^{-1}, y, y^{-1}]/\langle x-1, y-1 \rangle \cong
+    \Z$, the Koszul complex yields the following exact sequence
+
+$$
+    0 \mapsto \Lambda^2(\Z[G]^2) \xrightarrow{d_2} \Z[G]^2 \xrightarrow{d_1} \Z[G] \to \Z \to 0
+$$
+where $\Lambda^2(\Z[G]^2) = \Z[G]$ and
+\begin{align*}
+    d_1(a,b) & = (x-1)a + (y-1)b,   \\
+    d_2(c)   & = ((y-1)c , -(x-1)c)
+\end{align*}
+
+We apply $Hom_{\Z[G]}(-, \Z^2)$ to the deleted resolution which yields
+
+$$
+    0 \mapsto \Z^2 \xrightarrow{\tilde{d_1}} \Z^2 \oplus \Z^2 \xrightarrow{\tilde{d_2}} \Z^2 \to 0
+$$
+
+This immediately yields the following.
+
+\begin{lemma}
+    Let $G = \Z^2 = \langle x, y \rangle$ and let $\Z^2$ be a $G$-module. then the second group cohomology group is
+    $$
+        H^2(G, \Z^2) \cong \dfrac{\Z^2}{(x-1)\Z^2 +(y-1)\Z^2}
+    $$
+\end{lemma}
+\begin{proof}
+    This follows from the above resolution.
+    $$
+        im(\tilde{d_2}) = -(x-1)\Z^2 +(y-1)\Z^2
+    $$
+    and the kernel of $\Z^2 \to 0$ is all of $\Z^2$.
+\end{proof}
+
+For the first family $\mathcal{A}_{a,b,c,d}$, the linear holonomy induces the
+trivial representation of $G$ on $\Z^2$. We therefore have the following.
+
+\begin{lemma}
+    For $\mathcal{A}_{a,b,c,d}$, the cohomology group $H^2(G, \Z^2) = \Z^2$.
+\end{lemma}
+\begin{proof}
+    Both $(x-1)\Z=0$ and $(y-1)\Z=0$ as x and y act trivially. Therefore,
+    \begin{align*}
+        H^2(G, \Z^2) & = \dfrac{\Z^2}{(x-1)\Z^2 +(y-1)\Z^2} \\
+                     & = \Z^2
+    \end{align*}
+\end{proof}
+
+\begin{lemma}
+    For $\mathcal{B}_{n,a,b}$, the cohomology group $H^2(G, \Z^2) = \dfrac{\Z}{n \Z} \oplus \Z$.
+\end{lemma}
+\begin{proof}
+    This amounts to computing the action of $(x-1)$ and $(y-1)$ on $\Z^2$ induced by the linear holonomy representation.
+    From our classification in Theorem \ref{thm:classification-torus} we have that $x$ acts trivially and $y$ acts by
+    $\begin{pmatrix}
+            1 & n \\
+            0 & 1
+        \end{pmatrix}$. We calculate
+    $$y\cdot (l,m) - (l,m) = (nl, 0)$$
+    and so $(y-1)\Z^2 = n\Z \oplus 0$. This gives
+    \begin{align*}
+        H^2(G, \Z^2) & =\dfrac{\Z^2}{n\Z \oplus 0}  \\
+                     & = \dfrac{\Z}{n \Z} \oplus \Z
+    \end{align*}
+\end{proof}
+
+Since $H^3(\mathbb{T}^2, \R) = 0$, it follows from Proposition
+\ref{prop:every-lag-class} that every element in $H^2(\Lambda)$ is the Chern
+class of some Lagrangian fibration.
+
+\section{Computing $H^2(\Lambda)$ for the Klein bottle}
+\subsection{Spectral Sequences}
+The fundamental group of the Klein bottle is $\pi_1(K^2) = \Z \rtimes \Z$. In
+this case, there is a nice spectral sequence that reduces computation of this
+semi-direct product, to the computation of group cohomologies of $\Z$ with
+respect to a representation on a certain first cohomology group. We will give a
+quick outline of spectral sequences with a focus on how to use them to
+calculate this group cohomology. We will closely follow \cite{McCleary2001}.
+
+Consider generally, a cohomolgy theory and set $H^* = \bigoplus_i H^i$. The
+goal of a spectral sequence is to approximate the graded object $H^*$ or in
+some nice cases, to directly compute this. We make the assumption that $H^*$
+has a filtration
+
+$$
+    H^*=F^0H^* \supseteq \dots \supseteq F^nH^* \supseteq F^{n+1}H^* \supseteq \dots \supseteq \{0\}
+$$
+and for now we will assume that $H^*$ is a graded vector space for simplicity. Given a filtration $F^*$ of $H^*$ it
+can be collapsed into another graded vector space called \emph{the associated graded vector spcae} defined by
+$$
+    E_0^p(H^*) = F^pH^*/F^{p+1}H^*
+$$
+
+In the case that $H^*$ is a vector space we can recover $H^*$ up to isomorphism
+by $$ H^* \cong \bigoplus_{p=0}^{\infty} E_0^p(H^*) = \bigoplus_{p=0}^{\infty}
+    F^pH^*/F^{p+1}H^* $$ However if $H^*$ is not a graded vector space there can be
+extension problems. For example, although we may know the graded pieces making
+up $H^*$ we may not know how they piece together to give $H^*$ a module
+structure. That this holds for vector spaces is due to the fact that every
+short exact sequence of vector spaces splits wehereas this is not true for
+modules. For example, if we know only the graded pieces $E_0^p(H^*) =
+    F^pH^*/F^{p+1}H^*$ and say we know $F^{p+1}H^*$ and want to determine
+$F^{p+1}H^*$, then there is a s.e.s $$ 0 \to F^{p+1}H^* \to F^{p}H^* \to
+    E_0^p(H^*) = F^pH^*/F^{p+1}H^* \to 0 $$ and so, in general, $F^{p}H^*$ can be
+any extension of $E_0^p(H^*)$ by $F^{p+1}H^*$. These are all split in the
+vector space case but more generally this is not true and so to determine
+$F^0H^* = H^*$ we must solve all of these extension problems. I will not
+discuss this extension problem in much more detail as in our computations we
+will have only one graded piece to consider and hence there is no extension
+problem.
+
+Now, the idea is that $H^*$ may not be easily computed but we can try to
+approximate it by the associated graded vector space to some filtration $F^*$
+of $H^*$. We now observe that $E_0^*(H^*)$ is bigraded in the following sense.
+If we define $F^pH^r = F^pH^* \cap H^r$ then we have that $$ E^{p,q}_0 =
+    \dfrac{F^pH^{p+q}}{F^{p+1}H^{p+q}} $$ The index $q$ is called \emph{the
+    complementary degree} and the index $p$ is called the \emph{filtration degree}.
+
+We note that in the case of vector spaces we can recover $H^r$ as the direct
+sum of the pieces of $E^{p,q}_0$ of total degree $r$ e.g. where $p+q=r$. We can
+now give the definition of a spectral sequence.
+
+\begin{definition}
+    A first quadrant spectral sequence is a sequence of differential bigraded vector spaces. For every $r \in \mathbb{N}$ and $p,q>0$ we have
+    a vector space $E^{p,q}_r$ equipped with a linear map
+    $$
+        d_r : E^{p,q}_r \to E^{p+r, q-r+1}
+    $$
+    with $d_r^2=0$ a differential of bidegree $(r, 1-r)$. Furthermore, for all $r geq 1$ we have that
+    $E_{r+1}^{*,*} = H(E_{r}^{*,*}, d_r)$ where $H(E_{r}^{*,*}, d_r)$ denotes taking the cohomology at
+    the $E_{r}^{*,*}$ spot.
+\end{definition}
+
+\begin{remark}
+    We call $E_r^{*,*}$ the $E_r$-page. Turning a page e.g. going from the $E_r$-page to the $E_{r+1}$-page corresponds to taking cohomology. The pages $E_r$ may
+    be pictured as a lattice with each point a vector space and arrows between vector spaces corresponding to the differential $d_r$.
+\end{remark}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/SpectralSequence.png}
+    \caption{A page $E_r$ in a spectral sequence. Arrows mapping of the page correspond to zero mappings. \cite{McCleary2001}}
+\end{figure}
+
+We can now say what it means for a spectral sequence to converge to a graded
+vector space.
+
+\begin{definition}
+    A spectral sequence $\{E_r^{*,*}, d_r\}$ of vector spaces is said to converge to a graded vector space $H^*$ if $H^*$ has a filtration
+    $F^*$ and
+    $$
+        E_{\infty}^{p,q} \cong F^pH^{p+q}/F^{p+1}H^{p_q} = E_0^{p,q}(H^*)
+    $$
+\end{definition}
+
+There are still some issues around uniqueness of the convergence that we shall
+not discuss. We also formulated our definitions in terms of graded vector
+spaces as oppose to more generally graded $R$-modules. The theory extends to
+these in a very similar fashen except there are now more issues with
+reconstructing our graded module $H^*$ as for example there may be multiple
+extensions of a $R$-module $A$ by another $R$-module e.g. these are not all
+split as in the vector space case.
+
+We now give the spectral sequence that we shall use in order to comput the
+group cohomology of $\pi_1(K) = \Z \rtimes \Z$.
+
+\begin{lemma}[Hochschild-Lydon-Serre Spectral Sequence \cite{Hochschild1953CohomologyOG}]
+    Let $G$ be a group and $N \subseteq G$ a normal subgroup and let $A$ be a $G$-module. Then there is a spectral sequence
+    $$
+        E_2^{p,q} = H^p(G/N, H^q(N, A)) \implies H^{p+q}(G, A)
+    $$
+\end{lemma}
+
+For the fundamental group of the Klein bottle, we have the short exact sequence
+$$ 0 \to \Z \to \Z \rtimes \Z \to \Z \to 0 $$
+
+and so $\Z$ sits inside $\Z \rtimes \Z$ and $\dfrac{\Z \rtimes \Z}{\Z \times 0}
+    \cong \Z$. The differential on the $E_2$ page is $$ d: E_2^{p,q} \to E_2^{p+2,
+    q-1} $$ Using the fact that for any $\Z$-module $G$, the group cohomology
+groups $H^i(\Z, G)=0$ for $i>1$ it follows that the only entry of the spectral
+sequence we need to calculate is $H^1(\Z, H^1(\Z, A))$ where $A= \Z^2$ viewed
+as a $\Z$-module.
+
+\subsection{Calculating $H^1(\Z, H^1(\Z, A))$ }
+
+Let $G=\Z\langle a \rangle$ and let $A=\Z^2$ be a $G$-module. A free resolution
+of $\Z[G]$ is given by $$ 0 \to \Z[G] \xrightarrow{a-1} \Z[G]
+    \xrightarrow{\epsilon} \Z \to 0 $$ where $\epsilon$ is the augmentation map.
+Applying $\text{Hom}_{\Z[G]}(-, A)$ to the deleted resolution yields
+
+$$
+    0 \to A \to A \to 0
+$$
+
+and so the cohomology group is given by
+
+$$
+    H^1(G, A) = \dfrac{A}{(a-1)A}
+$$
+
+Now in order to calculate the full cohomology group $H^1(\Z, H^1(\Z, A))$,
+there is the question of what the $\Z$-module structure on $H^1(\Z, A)$ should
+be.
+
+\begin{lemma}
+    The action of $Z\langle b \rangle$ on $H^1(G, A)$ is given by
+    $$
+        ( b \cdot c)(a) = -(ba^{-1})c(a)
+    $$
+    where $c \in \text{Der}(G, A)$ and $G = \langle a \rangle$.
+\end{lemma}
+\begin{proof}
+    We have that $H^1(G, A) = \dfrac{\text{Der}(G, A)}{\text{PDer}(G, A)}$. Let $c \in \text{Der}(G, A)$. Then
+    $$
+        (b\cdot c)(a_1) = b\cdot c(b^{-1}a_1 b)
+    $$
+    where this action is as in \cite{Hochschild1953CohomologyOG}. Now, using that $c$ is a derivation
+    \begin{align*}
+        c(a^{-1}a) & = c(1)                   \\
+                   & = 0                      \\
+                   & = c(a^{-1}) + a^{-1}c(a)
+    \end{align*}
+    and so  $c(a^{-1}) = -a^{-1}c(a)$. This gives us that
+    \begin{align*}
+        b\cdot c(b^{-1}a b) & = b \cdot c(a^{-1})    \\
+                            & = (-ba^{-1})\cdot c(a)
+    \end{align*}
+    as required.
+\end{proof}
+
+This gives the following expression for the relevant cohomology group keeping
+in mind the respective actions of $\Z\langle a \rangle$ and $\Z\langle b
+    \rangle$.
+\begin{corollary}
+    The cohomology group $H^1(\Z\langle b \rangle, H^1(\Z\langle a \rangle, A))$ can be expressed as
+    $$
+        \dfrac{\dfrac{A}{(a-1)A}}{(b-1) \dfrac{A}{(a-1)A}}
+    $$
+\end{corollary}
+
+Now it remains to calculate this group for the holonomy representations of the
+integral affine structures on the Klein bottle. Firstly, recall that the
+integral affine structures on the Klein bottle are given by the following.
+
+The possible integral integral affine structures on the Klein bottle are
+\begin{enumerate}
+    \item $a = \left(I, \begin{pmatrix}
+                  0 \\ x_2
+              \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                  1 & 0  \\
+                  0 & -1
+              \end{pmatrix}, \begin{pmatrix}
+                  y_1 \\ 0
+              \end{pmatrix}\right)$, with $x_2, y_1>0$.
+    \item $a = \left(\begin{pmatrix}
+                  1 & n \\
+                  0 & 1
+              \end{pmatrix}, \begin{pmatrix}
+                  0 \\ x_2
+              \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                  1 & 0  \\
+                  0 & -1
+              \end{pmatrix}, \begin{pmatrix}
+                  y_1 \\ x_2
+              \end{pmatrix}\right)$, with $x_2, y_1>0$.
+    \item $a = \left(I, \begin{pmatrix}
+                  x_1 \\ -x_1
+              \end{pmatrix}\right), \quad b = \left(\begin{pmatrix}
+                  0 & 1 \\
+                  1 & 0
+              \end{pmatrix}, \begin{pmatrix}
+                  y_1 \\ 0
+              \end{pmatrix}\right)$, with $x_1, y_1>0$.
+    \item $a = \left(\begin{pmatrix}
+                      1 & n \\
+                      0 & 1
+                  \end{pmatrix} , \begin{pmatrix}
+                      0 \\ x_2
+                  \end{pmatrix}\right), \quad b =\left(\begin{pmatrix}
+                      1 & 1  \\
+                      0 & -1
+                  \end{pmatrix} , \begin{pmatrix}
+                      y_1 \\ \frac{n-1}{n}x_2
+                  \end{pmatrix}\right)$, with $y_1> 0$ and \\
+          $2y_1 \neq -\frac{n-1}{n}x_2$.
+\end{enumerate}
+
+\begin{theorem}
+    The group cohomology $H^1(\Z, H^1(\Z, A))$ is given by
+    $$H^1(\Z, H^1(\Z, A)) = \begin{cases}
+            \Z/ 2\Z \oplus \Z, \quad \text{for 1)}                                  \\
+            \Z/ 2\Z \oplus \Z, \quad \text{for 2) with } n \equiv 0 \text{ mod }  2 \\
+            \Z, \quad \text{ otherwise}
+        \end{cases}$$
+\end{theorem}
+
+\begin{proof}
+    \begin{case}[Family 1]
+        In this case the action of $\Z\langle a \rangle$ on $A = \Z^2$ is trivial and hence $(a-1)A = 0$. The action of
+        $b$ on $\dfrac{A}{(a-1)A}$ is given by the matrix action of $-(ba^{-1})$. Since $a$ acts as the identity the action is given by
+
+        \begin{align*}
+            b \cdot \begin{pmatrix}
+                        x_1 \\
+                        y_1
+                    \end{pmatrix} & = \begin{pmatrix}
+                                          -1 & 0 \\
+                                          0  & 1
+                                      \end{pmatrix}\begin{pmatrix}
+                                                       x_1 \\
+                                                       y_1
+                                                   \end{pmatrix} \\
+                                    & =   \begin{pmatrix}
+                                              -x_1 \\
+                                              y_1
+                                          \end{pmatrix}
+        \end{align*}
+        and hence the action by $(b-1)$ is
+        \begin{align*}
+            (b-1) \cdot \begin{pmatrix}
+                            x_1 \\
+                            y_1
+                        \end{pmatrix} = \begin{pmatrix}
+                                            -2x_1 \\
+                                            0
+                                        \end{pmatrix}
+        \end{align*}
+        This gives us that $(b-1)\cdot \dfrac{A}{(a-1)A} = 2\Z \oplus 0$. Taking the quotient of $A = \Z^2$ by this gives the required result.
+    \end{case}
+
+    \begin{case}[Family 2]
+        In this case, $a$ acts non-trivially. The action of $(a-1)$ is given by
+        $$
+            (a-1)\begin{pmatrix}
+                x \\
+                y
+            \end{pmatrix} = \begin{pmatrix}
+                ny \\
+                0
+            \end{pmatrix}
+        $$
+        It follows that
+        $$
+            \dfrac{A}{(a-1)A} = \dfrac{\Z}{n\Z} \oplus \Z
+        $$
+        We calculate $-ba^{-1}$ to be $\begin{pmatrix}
+                -1 & n \\
+                0  & 1
+            \end{pmatrix}$.
+    \end{case}
+    and so
+    \begin{align*}
+        \begin{pmatrix}
+            -1 & n \\
+            0  & 1
+        \end{pmatrix} \begin{pmatrix}
+                          x_1 \\
+                          y_1
+                      \end{pmatrix} & = \begin{pmatrix}
+                                            ny_1 - x_1 \\
+                                            y_1
+                                        \end{pmatrix}  \\
+                                      & =\begin{pmatrix}
+                                             - x_1 \\
+                                             y_1
+                                         \end{pmatrix}
+    \end{align*}
+    where in the last equality we are reducing modulo n in the first component. Therfore the action of $(b-1)$ on
+    $\begin{pmatrix}
+            x_1 \\
+            y_1
+        \end{pmatrix} \in \dfrac{A}{(a-1)A}$ is given by
+    $$
+        (b-1)\cdot \begin{pmatrix}
+            x_1 \\
+            y_1
+        \end{pmatrix} = \begin{pmatrix}
+            -2x_1 \\
+            0
+        \end{pmatrix}
+    $$
+    and so
+
+    \begin{align*}
+        H^2(\Lambda) = H^1(\Z, H^1(\Z, A)) & = \dfrac{\dfrac{\Z}{n\Z} \oplus \Z}{\langle \tilde{2} \rangle \oplus 0} \\
+                                           & = \dfrac{\Z}{\text{gcd}(2,n) \Z}\oplus \Z
+    \end{align*}
+    giving the required result for the second family.
+
+    \begin{case}[Family 3]
+        In this case, $a$ again acts trivially and so it remains to calculate the action of $b$. We compute
+        \begin{align*}
+            -ba^{-1} = \begin{pmatrix}
+                           0  & -1 \\
+                           -1 & 0
+                       \end{pmatrix}
+        \end{align*}
+        and so $(b-1)\cdot \begin{pmatrix}
+                x \\ y
+            \end{pmatrix} = \begin{pmatrix}
+                -y-x \\ -y-x
+            \end{pmatrix}$
+        and so it follows that
+        \begin{align*}
+            H^1(\Z, H^1(\Z, A)) & = \dfrac{\Z \oplus \Z}{\langle (1,1) \rangle} \\
+                                & = \Z
+        \end{align*}
+    \end{case}
+
+    \begin{case}[Family 4]
+        In this case, the $\Z\langle a\rangle$ action on $\Z$ is the same as in Family 2. It remains to calculate the action of $b$. We calculate
+        $$
+            -(ba^{-1}) = \begin{pmatrix}
+                -1 & n-1 \\
+                0  & 1
+            \end{pmatrix}
+        $$
+        and so $(b-1)\cdot \begin{pmatrix}
+                x \\
+                y
+            \end{pmatrix} = \begin{pmatrix}
+                -2x +ny - y \\
+                0
+            \end{pmatrix}$. Since this action is on $\dfrac{\Z}{n \Z} \oplus \Z$ we reduce mod $n$ in the first component. This now gives that
+
+        \begin{align*}
+            H^1(\Z, H^1(\Z, A)) & = \dfrac{\dfrac{\Z}{n\Z} \oplus \Z}{\dfrac{\Z}{n\Z} \oplus 0} \\
+                                & = \Z
+        \end{align*}
+        and this completes the calculations.
+    \end{case}
+\end{proof}

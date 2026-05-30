@@ -103,6 +103,63 @@
       \verb https://doi.org/10.3836/tjm/1270213873
       \endverb
     \endentry
+    \entry{Hatcher}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0a94eadf86d8b878d4c37bc5640e53e3}{%
+           family={Hatcher},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{fullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{bibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorbibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authornamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorfullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \field{labelalpha}{Hat02}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0-521-79160-X; 0-521-79540-0}
+      \field{title}{Algebraic topology}
+      \field{year}{2002}
+      \field{pages}{xii+544}
+      \range{pages}{-1}
+    \endentry
+    \entry{Weibel_1994}{book}{}
+      \name{author}{1}{}{%
+        {{hash=748c93da38984ed20cedc796d519b7ad}{%
+           family={Weibel},
+           familyi={W\bibinitperiod},
+           given={Charles\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{fullhash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{bibnamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authorbibnamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authornamehash}{748c93da38984ed20cedc796d519b7ad}
+      \strng{authorfullhash}{748c93da38984ed20cedc796d519b7ad}
+      \field{labelalpha}{Wei94}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{title}{An Introduction to Homological Algebra}
+      \field{year}{1994}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

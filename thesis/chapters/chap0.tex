@@ -1,4 +1,4 @@
-\setcounter{chapter}{-1}
+\setcounter{chapter}{0}
 \chapter{Preliminaries}
 
 \section{Geometric Structures on Manifolds}
@@ -9,12 +9,12 @@ behind these structures is that we can locally describe our "geometry" on a
 manifold $M$ by charts into a space $X$ together with a group $G$ that tells us
 how to transition between charts on the overlaps.
 
-We will require that our group $G$ be a Lie Group acting transitively on $M$.
+We will require that our group $G$ be a Lie group acting transitively on $M$.
 
-\begin{definition}
+\begin{definition}\label{def:locally-g}
     Let $U \subset X$ be an open set of our model space $X$. We say that a smooth map $f: U \mapsto X$
     is \textit{locally}-G if for each component $U_i \subset U$ there is a $g_i \in G$ such that
-    $f|_{U_i} = g_i|_{U_i}$
+    $f|_{U_i} = g_i|_{U_i}$.
 \end{definition}
 \begin{remark}
     Locally-G maps satisfy the following unique extension property. If $U \subset X$ and $f: U \mapsto X$
@@ -22,12 +22,12 @@ We will require that our group $G$ be a Lie Group acting transitively on $M$.
 \end{remark}
 
 \begin{definition}
-    A $(G,X)$ atlas is a pair $(\mathcal{U}, \Phi)$  consisting of an open covering for $M$
+    A $(G,X)$-atlas is a pair $(\mathcal{U}, \Phi)$  consisting of an open covering for $M$
     and a collection of charts such that the transition maps are locally-G on their respective overlaps.
 \end{definition}
 
 \begin{definition}
-    A map $f: M \mapsto N$ between two $(G,X)$-manifolds is a (G,X)-map if for each pair of charts
+    A map $f: M \mapsto N$ between two $(G,X)$-manifolds is a $(G,X)$-map if for each pair of charts
     $(\phi, \varphi)$ then $\phi \circ f \circ \varphi^{-1}$ is locally-G on the relevant intersection.
 \end{definition}
 
@@ -35,19 +35,19 @@ TODO: Add some examples (euclidean/projective/hyperbolic) TODO: At some point
 include classification of 1-dim integral affine (This is easy in - textbook)
 
 \subsection{The developing map and holonomy representation}
-For (G,X)-manifolds, there is an inherently nice way to "globalize" the charts
-via a (G,X)-map called the developing map. The study of this map will be of
-importance to us throughout this thesis.
+For $(G,X)$-manifolds, there is an inherently nice way to "globalize" the
+charts via a $(G,X)$-map called the developing map. The study of this map will
+be of importance to us throughout this thesis.
 
 \begin{prop}
     Let $M$ be a simply connected $(G,X)$-manifold. Then there exists a $(G,X)$-map
     $$
-        \text{dev}: M \mapsto X
+        \text{dev}: M \to X.
     $$
 \end{prop}
 
 \begin{proof}
-    We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $dev$ as follows. We pick a curve $x(t)$ on $M$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover the it by finitely many coordinate charts $U_i$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
+    We pick a base point $x_0 \in M$ and a chart $(U_0, \varphi_0)$ around $x_0$. Now for any $x \in M$ we define the map $\dev$ as follows. We pick a curve $x(t)$ on $M$ satisfying $x(0)=x_0$ and $x(1)=x$. As the image of our curve is compact, we can cover it by finitely many coordinate charts $(U_i, \varphi_i)$ with $i\in \{0, \dots,n\}$ such that $x(t) \in U_i$ for $t\in(a_i, b_i)$ with
     $$a_0<0<a_1<b_0<a_2<b_1<a_3 \dots <a_n<b_{n-1}<1<b_n$$
 
     \begin{figure}[H]
@@ -64,12 +64,12 @@ importance to us throughout this thesis.
 
     Now we consider where these charts overlap. Since our manifold is equipped with
     a $(G,X)$-structure our transition maps differ by an element of $G$. Let $g_i =
-        \varphi_{i-1}\circ\varphi^{-1}_i \in G$ be the transition map from $U_i$ and
-    $U_{i-1}$. We then define $$ \text{dev}(x) = g_1g_2\dots g_n \varphi_n(x) $$ We
-    must show that this is a well-defined map. We first show that this map does not
-    change if we refine the cover. Suppose we insert a chart $(V, \phi)$ between
-    $U_i$ and $U_{i-1}$. Let $h_i, h_{i-1} \in G$ be the unique group elements such
-    that
+        \varphi_{i-1}\circ\varphi^{-1}_i \in G$ be the transition map between $U_i$ and
+    $U_{i-1}$. We then define $$ \text{dev}(x) = g_1g_2\dots g_n \varphi_n(x) .$$
+    We must show that this is a well-defined map. We first show that this map does
+    not change if we refine the cover. Suppose we insert a chart $(V, \phi)$
+    between $U_i$ and $U_{i-1}$. Let $h_i, h_{i-1} \in G$ be the unique group
+    elements such that
     \begin{center}
         $\varphi_{i-1} = h_{i-1}\circ\phi$ on $V \cap U_{i-1}$ and \\
         $\phi = h_i\varphi_{i}$ on $V \cap U_{i-1}$.
@@ -85,17 +85,17 @@ importance to us throughout this thesis.
 
     This defines $\text{dev}$ along $x(t)$. We now need to show that it does not
     depend on our choice of curve. As $M$ is simply connected, all curves with the
-    same start point and end point will be homotopic. Indeed, by compactness we can
-    split our homotopy into smaller homotopies such that we can break up our curve
-    into regions
+    same start point and end point will be homotopic. By compactness we can split
+    our homotopy into smaller homotopies such that we can break up our curve into
+    regions
     \begin{center}
         $a_1 =0 < a_2 < \dots < a_n=1$
     \end{center}
-    such that during each small homotopy the segment $x((a_i, a_{i+1}))$ lies entirely inside a coordinate patch. It then follows that $dev$ is independent of our choice of paths completing the proof.
+    such that during each small homotopy the segment $x((a_i, a_{i+1}))$ lies entirely inside a coordinate patch. It then follows that $\dev$ is independent of our choice of paths completing the proof.
 
 \end{proof}
 
-This shows that we have a well defined development map on any simply connected
+This shows that we have a well defined developing map on any simply connected
 $(G,X)$-manifold. However, this map depended on the choice of base point and
 initial chart. We immediately get the following corollary from this fact.
 
@@ -103,14 +103,14 @@ initial chart. We immediately get the following corollary from this fact.
     Let $M$ be a $(G,X)$-manifold and let $\tilde{M}$ be its universal cover. Then
     there exists a pair $(\text{dev}, \text{hol})$ satisfying
     \begin{center}
-        $\text{dev}: \tilde{M} \mapsto X$\\
-        $\text{hol}: \pi_1(M) \mapsto G$
+        $\text{dev}: \tilde{M} \to X$\\
+        $\text{hol}: \pi_1(M) \to G$
     \end{center}
     where $\text{hol}(\gamma)$ is the element $g_1\dots g_n$ of $G$ obtained from
     developing around a loop $\gamma \in M$.
 \end{corollary}
 
-The developing pair satisfy the following equivariance condition. Let $\gamma
+The development pair satisfy the following equivariance condition. Let $\gamma
     \in \pi_1(M)$ act by deck transformations on $\tilde{M}$. Then we have the
 following. (TODO: Fix this proof)
 \begin{lemma}
@@ -135,20 +135,20 @@ The role of the development pair is to "globalize" the coordinate chart of $M$.
 Indeed the following proposition makes this statement more clear.
 
 \begin{prop}
-    Let $M$ be a $(G,X)$-manifold with development pair $(dev, \text{hol})$. Denote
+    Let $M$ be a $(G,X)$-manifold with development pair $(\dev, \text{hol})$. Denote
     by $\Gamma$ the image of $\pi_1(M)$ under the holonomy map. Then there
     exists a $(G,X)$-atlas such that the transition maps lie in $\Gamma$. \label{prop:dev-charts}
 \end{prop}
 
 \begin{proof}
 
-    We pick $m\in M$ and fix a lift $\tilde{m}\in \tilde{M}$ of $m$. Then, as $dev$
-    is a local diffeomorphism, there is an open set $\tilde{U}$ of $\tilde{m}$ such
-    that $dev$ is a local diffeomorphism onto $X$.
+    We pick $m\in M$ and fix a lift $\tilde{m}\in \tilde{M}$ of $m$. Then, as
+    $\dev$ is a local diffeomorphism, there is an open set $\tilde{U}$ of
+    $\tilde{m}$ such that $dev$ is a local diffeomorphism onto $X$.
 
     We pick $V \subset M$ an open neighborhood of $m$ and take its inverse under
-    the covering map $p^{-1}(V)$ which we may assume $dev$ is a diffeomorphism on
-    by intersetcting with $\tilde{U}$.
+    the covering map $p^{-1}(V)$ which we may assume $\dev$ is a diffeomorphism on
+    by intersecting with $\tilde{U}$.
 
     (TODO: Make this proof more clear) Now, define coordinate charts on $M$ by $(V_{\alpha}, \psi_{\alpha} =
         \text{dev}\circ p^{-1}_{\alpha})$ at a point $m \in M$ where by
@@ -187,37 +187,29 @@ certain factors/conjugations.
 \begin{proof}
     Our development pair was determined once we picked a base point and a chart $(U, \phi)$. Suppose that
     we pick a different base point and chart $(V, \varphi)$. Now we consider how we define $\text{dev}(x)$ for $x \in \tilde{M}$.
-    We choose a curve $\gamma$ connecting $x_0$ and $x$ and choose a cover $U_i$ of $\gamma$ and develop around it.
-    Now, with respect to our new initial chart, $V \cup \{U_i\}$ is an open cover of $\gamma$. If we develop starting with this new chart,
+    We choose a curve $\gamma$ connecting $x_0$ and $x$ and choose a cover ${U_i}_{i \in I}$ of $\gamma$ and develop around it.
+    Now, with respect to our new initial chart, $V \cup \{U_i\}_{i\in I}$ is an open cover of $\gamma$. If we develop starting with this new chart,
     we can first glue all the $U_i$ to $U_1$ as before and then glue this chain to $V$ with an element of $G$ by gluing
     $U_1$ to $V$ on their overlap. Hence the entire development will have just changed by that element of $G$.
 
-    If, on the other hand, both the base point and chart have changed, we can pick
-    a curve $\gamma'$ starting at our new base point $x_0'$ and ending at our old
-    basepoint $x_0$. Developing first along this curve and then along our old curve
-    $\gamma$ we pick up some element of $G$ from developing $\gamma'$ whilst
-    developing along $\gamma$ gives the same as before. As we already showed this
-    map is homotopy invariant this gives that $dev'(x) = g\circ \text{dev}(x)$ for
-    some $g \in G$.
-
-    Now to show that $hol' = g\circ \text{hol}\circ g^{-1}$ we consider
+    Now to show that $\hol' = g\circ \text{hol}\circ g^{-1}$ we consider
     \begin{align*}
-        dev'(\gamma \star \alpha) & = g \circ \text{dev}(\gamma \star \alpha)                            \\
-                                  & = g\circ \text{hol}(\gamma) \circ \text{dev}(\alpha)                 \\
-                                  & = (g\circ \text{hol}(\gamma)\circ g^{-1})(g\circ \text{dev}(\alpha)) \\
-                                  & = (g \circ \text{hol}(\gamma)\circ g^{-1})\text{dev}'(\alpha)
+        \dev'(\gamma \star \alpha) & = g \circ \text{dev}(\gamma \star \alpha)                            \\
+                                   & = g\circ \text{hol}(\gamma) \circ \text{dev}(\alpha)                 \\
+                                   & = (g\circ \text{hol}(\gamma)\circ g^{-1})(g\circ \text{dev}(\alpha)) \\
+                                   & = (g \circ \text{hol}(\gamma)\circ g^{-1})\text{dev}'(\alpha)
     \end{align*}
     and as the development pair satisfied the equivariance property it follows that
-    $hol' = g\circ \text{hol}\circ g^{-1}$.
+    $\hol' = g\circ \text{hol}\circ g^{-1}$.
 \end{proof}
 
 This shows that once we have fixed a development pair, any other development
-pair can is related by $(\text{dev}', \text{hol}') = (g\circ \text{dev}, g\circ
+pair is related by $(\text{dev}', \text{hol}') = (g\circ \text{dev}, g\circ
     \text{hol}\circ g^{-1})$. We should therefore note that if we want to classify
 $(G,X)$-structures on a manifold $M$ by classifying the possible development
 pairs, it is important to consider them up to this relation.
 
-\section{Completeness of (G,X)-structures}
+\section{Completeness of $(G,X)$-structures}
 An important property the developing map can have is that of
 \emph{completeness}.
 \begin{definition}
@@ -240,14 +232,14 @@ structure is easily seen to be a complete integral affine manifold. Indeed, the
 action is an action by the integral affine group and is both free and proper.
 Covering space theory tells us that $\pi : \mathbb{R}^n \to
     \mathbb{R}^n/\mathbb{Z}^n$ is a covering space with the group of deck
-transformations via our $\mathbb{Z}^n$ action. A theorem of Auslander and
+transformations via our $\mathbb{Z}^n$-action. A theorem of Auslander and
 Markus (L. Auslander and L. Markus, Holonomy of flat affinely connected
 manifolds) tells us that affine structures obtained in this manner are
 complete. However, even for the 2-torus, not all affine structures are
 complete. We now give an example of an incomplete structure on $\mathbb{T}^2$.
 
-\begin{eg}
-    Let $\lambda >1$ be a real number and consider the action of $\lambda$ on $\mathbb{R}^2- \{0\}$ given by multiplication. This action is a free and proper action by the affine group and so the quotient
+\begin{eg}\label{eg:hopf-manifold}
+    Let $\lambda >1$ be a real number and consider the action of $\Z$ generated by multiplication by $\lambda$ on $\mathbb{R}^2- \{0\}$. This action is a free and proper action by the affine group and so the quotient
     $M = \mathbb{R}^2- \{0\} / \langle\lambda\rangle$ is an affine manifold.
 
     \begin{figure}[H]
@@ -262,60 +254,58 @@ complete. We now give an example of an incomplete structure on $\mathbb{T}^2$.
     $\gamma_1$ is the projection of the line segment joining the point $(1,0)
         \mapsto (\lambda, 0)$ and $\gamma_2$ is the loop going around the unit circle
     once. These lift to curves $\bar{\gamma}_1$ and $\bar{\gamma}_2$ in the
-    universal cover satisfying $$\bar{\gamma}_1(0) = (0,ln(1)) = (0,0), \quad
-        \bar{\gamma}_1(1) = (0,ln(\lambda)) ,$$ $$\bar{\gamma}_2(0) = (0, 0) , \quad
+    universal cover satisfying $$\bar{\gamma}_1(0) = (0,\ln(1)) = (0,0), \quad
+        \bar{\gamma}_1(1) = (0,\ln(\lambda)) ,$$ $$\bar{\gamma}_2(0) = (0, 0) , \quad
         \bar{\gamma}_2(1) = (0, 2\pi),$$ from this we see that $\gamma_1$ and
-    $\gamma_2$ act on $(x,y)$ by $$\gamma_1 \cdot (x,y) = (ln(\gamma) + x, y)$$
+    $\gamma_2$ act on $(x,y)$ by $$\gamma_1 \cdot (x,y) = (\ln(\gamma) + x, y)$$
     $$\gamma_2(x,y) = (x, y + 2\pi)$$
 
     Now, we define our developing pair by $$\dev(x,y) = \rho(x,y),$$
     $$\hol(\gamma_1)\cdot (x,y) = (\lambda x, \lambda y),$$ $$\hol(\gamma_2) =
-        id_{\mathbb{R}^2}$$
+        \text{id}_{\mathbb{R}^2}$$
 
     We check that these satisfy the equivariant property.
     \begin{align*}
-        \dev(\gamma_1\cdot(x,y)) & = \dev((\ln(\lambda) + x,y))         \\
-                                 & = e^{ln(\lambda)}e^x(\cos y, \sin y) \\
-                                 & = \lambda dev((x,y))                 \\
-                                 & = hol(\gamma_1) dev((x,y))
+        \dev(\gamma_1\cdot(x,y)) & = \dev((\ln(\lambda) + x,y))          \\
+                                 & = e^{\ln(\lambda)}e^x(\cos y, \sin y) \\
+                                 & = \lambda \dev((x,y))                 \\
+                                 & = \hol(\gamma_1) \dev((x,y))
     \end{align*}
     \begin{align*}
         \dev(\gamma_2\cdot(x,y)) & = \dev((x,y + 2\pi))                  \\
                                  & = e^x(\cos (y+ 2\pi), \sin (y+ 2\pi)) \\
                                  & = e^x(\cos y, \sin y)                 \\
-                                 & = hol(\gamma_2) dev((x,y))
+                                 & = \hol(\gamma_2) \dev((x,y))
     \end{align*}
-    It is now clear that this structure is incomplete as $0 \notin im(\dev(\mathbb{R}^2))$. Indeed, it is typical that the fixed point of a radiant structure is not in the developing image as shown in (TODO: Theorem 6.5.2 Geometric Structures)
+    It is now clear that this structure is incomplete as $0 \notin \dev(\mathbb{R}^2)$. Indeed, it is typical that the fixed point of a radiant structure is not in the developing image as shown in Theorem 6.5.2 \cite{goldman2022geometric}.
 \end{eg}
 \section{Representation Theory and Affine Manifolds}
 
 \subsection{Affine representations}
 We now turn our attention to affine manifolds before specializing to the
 integral affine case. An affine manifold is a $(G,X)$-manifold where $X =
-    \mathbb{R}^n$ and $G = \text{Aff}(\mathbb{R}^n)$ An important tool in
+    \mathbb{R}^n$ and $G = \text{Aff}(\mathbb{R}^n)$. An important tool in
 classifying affine structures is the representation theory of groups. Often, by
 studying properties of the holonomy group of an affine manifold $M$, we are
 able to obtain information about the affine structure of $M$. Of fundamental
-importance is the case where the holonomy group is nilpotent which we will
-shortly see. We will use these tools to determine conditions for the affine
-structure to be complete.
+importance is the case where the holonomy group is nilpotent which we shall see
+in Chapter \ref{ch:nilpotent-hol}. We will use these tools to determine
+conditions for the affine structure to be complete.
 
 \begin{definition}
     An affine transformation of $\mathbb{R}^n$ is a map
     \begin{center}
-        $A: \mathbb{R}^n \mapsto \mathbb{R}^n$
+        $A: \mathbb{R}^n \to \mathbb{R}^n$
     \end{center}
-    such that $A(x) = Gx + b$ where $G \in GL(\mathbb{R}^n)$ and $b \in\mathbb{R}^n$
+    such that $A(x) = Gx + b$ where $G \in GL(\mathbb{R}^n)$ and $b \in\mathbb{R}^n$.
 \end{definition}
-
 The group $\text{Aff}(\mathbb{R}^n)$ is the group of affine transformations of
-$\mathbb{R}^n$ and is equal to $\text{Aff}(\mathbb{R}^n) = \mathbb{R}^n \rtimes
-    GL(\mathbb{R}^n )$
-
+$\mathbb{R}^n$ and is equal to $\text{Aff}(\mathbb{R}^n) =
+    \text{Gl}(\mathbb{R}^n )\rtimes \mathbb{R}^n $.
 \begin{definition}
     An affine representation of a group $G$ is a group homomorphism
     \begin{center}
-        $\alpha: G \mapsto \text{Aff}(\mathbb{R}^n)$
+        $\alpha: G \to \text{Aff}(\mathbb{R}^n)$.
     \end{center}
 \end{definition}
 
@@ -323,26 +313,76 @@ $\mathbb{R}^n$ and is equal to $\text{Aff}(\mathbb{R}^n) = \mathbb{R}^n \rtimes
     Let $M$ be a $(G,X)$-manifold with $G = \text{Aff}(\mathbb{R}^n)$ and $X =- \R^n$. Then the holonomy representation
     is an affine representation of $\pi_1(M)$.
 \end{eg}
+\begin{definition}
+    Let $G$ be any group and let $A$ be an abelian group. We will call $A$ a $G$-module if there is a group homomorphism
+    $$\rho: G \to \text{Aut}(A).$$
+\end{definition}
+\begin{remark}
+    A $G$-module $A$ is a module in the usual sense over the group ring $\Z[G]$ which consists of formal integer sums of elements of $G$.
+\end{remark}
+\begin{remark}
+    An affine representation $\alpha$ splits into a linear component and a
+    translation component, i.e. $\alpha(g) = (\lambda(g), \mu(g))$ where $\lambda:
+        G \to \text{Gl}(\R^n)$ and $\mu : G \to \R^n$. The linear component makes
+    $\mathbb{R}^n$ into a $G$-module. We will denote this $G$-module by $E$ when we want to emphasize that we are viewing $\R^n$ as a $G$-module.
+\end{remark}
+Analogous to irreducible representations in the usual sense, there is a notion of irreducibility for affine representations.
+\begin{definition}
+    An affine representation $\alpha: G \to \aff(E)$ is said to be \emph{irreducible} if $\alpha$ leaves a proper affine subspace
+    $F \subset E$ invariant.
+\end{definition}
+\begin{remark}
+    Note that unlike standard representations, for affine representations we do not allow an origin to be fixed in the notion of irreducibility as
+    there is no concept of an origin for affine spaces.
+\end{remark}
 
-We have that an affine representation splits into a linear part and a
-translation, e.g. $\alpha(g) = (\lambda(g), \mu(g))$. The linear part makes
-$\mathbb{R}^n$ into a $G$-module with the obvious action which we will denote
-$E$.
+We now wish to illustrate that completeness of the affine structure has
+implications on the group theoretic properties of the affine holonomy group. We
+will use freely some of the properties of Eilenberg Mac-Lane spaces which can
+be found in \cite{Hatcher} although we will recall the definition.
+\begin{definition}\label{def:eilenberg-mac}
+    Let $G$ be a group and let $n \geq 1$ be an integer. A path-connected topological space $X$ is called an \emph{Eilenberg--MacLane space} of type $K(G,n)$ if
+    \[
+        \pi_i(X) \cong
+        \begin{cases}
+            G & \text{if } i = n,    \\
+            0 & \text{if } i \neq n.
+        \end{cases}
+    \]
+    Equivalently, $X$ has a single nontrivial homotopy group, which occurs in
+    degree $n$ and is isomorphic to $G$.
+\end{definition}
 
-We will be interested in some results from group cohomology. This leads us to
-the following definitions.
+\begin{theorem}\label{thm:complete-implies-irreducible}
+    Let $M$ be a compact complete affine manifold. Then the affine holonomy representation is irreducible.
+\end{theorem}
+\begin{proof}
+    Since $M$ is complete we have that $M = \R^n/\Gamma$ where $\Gamma$ is the affine holonomy group. Now, if $\Gamma$ is not
+    irreducible, then there is an invariant affine subspace $V \subset \R^n$. Since $V$ is invariant under $\Gamma$ and $\Gamma$
+    acts freely and properly on $\R^n$ it follows that $V/\Gamma$ is an affine manifold with universal cover $V$. Since both $\R^n$ and
+    $V$ are contractible, it follows by Whiteheads theorem that $V/\Gamma$ and $M$ are Eilenberg Mac-Lane $K(\Gamma, 1)$ spaces.
+
+    Let $i: V \to \R^n$ be the inclusion. The induced map $$ i_* : \pi_1(V/\Gamma)
+        \to \pi_1(M) $$ is an isomorphism of fundamental groups and hence since both
+    spaces are $K(\Gamma, 1)$ this is a homotopy equivalence. Since $R^n\Gamma$ and
+    $V/\Gamma$ are both compact, it follows that $\dim V/ \Gamma = \dim
+        \R^n/\Gamma$ and hence $V = \R^n$.
+\end{proof}
+
+We will need some more machinary from the theory of group cohomology. This
+leads us to the following definitions.
 
 \begin{definition}[Crossed Homomorphism]
-    A crossed homomorphism for $\lambda$, is a group homomorphism
+    Let $G$ be a group and $E$ a $G$-module. A crossed homomorphism for $\lambda : G \to \text{Aut}(E)$ is a group homomorphism
     \begin{center}
-        $\mu: G \mapsto E$
+        $\mu: G \to E$
     \end{center}
-    that satisfies $\mu(gh) = \mu(g) + \lambda(g)\mu(h)$
+    that satisfies $\mu(gh) = \mu(g) + \lambda(g)\mu(h)$.
 \end{definition}
 
 \begin{prop}
-    Let $\alpha(g) = (\lambda(g), \mu)$ be an affine representation on $E$ of a group G. Then
-    $\mu$ is a crossed homomorphism for $\lambda$
+    Let $\alpha(g) = (\lambda(g), \mu(g))$ be an affine representation on $E$ of a group $G$. Then
+    $\mu$ is a crossed homomorphism for $\lambda$.
 \end{prop}
 \begin{proof}
     Let $g,h \in G$ and $\alpha = (\mu, \lambda)$ be an affine representation. Then
@@ -356,10 +396,26 @@ the following definitions.
     and so $\mu$ is a crossed homomorphism for $\lambda$.
 \end{proof}
 
-\begin{definition}[Principle Crossed Homomorphism]
-    A \textit{principle crossed homomorphism} for $\lambda$ is a crossed homomorphism
+\begin{definition}[Principal Crossed Homomorphism]
+    A \textit{principal crossed homomorphism} for $\lambda$ is a crossed homomorphism
     of the form $\mu(g) = y- \lambda(g)y$ for some $y \in E$.
 \end{definition}
+\begin{remark}
+    If $\mu$ is a principal crossed homomorphism for $\lambda$ determined by some $y\in E$, we will often write $\mu = D_y$. This comes from the fact that
+    principal crossed homomorphisms are sometimes also called \emph{principal derivations}.
+\end{remark}
+
+\begin{lemma}
+    The group cohomology $H^1(G, E)$ is isomorphic to
+    \begin{center}
+        $H^1(G,E) \cong \dfrac{\{\text{crossed homomorphisms for } \lambda\}}{\{\text{principal crossed homomorphisms for } \lambda\}}$
+    \end{center}
+    \label{lemma:crossed-coho}
+\end{lemma}
+
+\begin{proof}
+    This is a standard result in group cohomology. See for example \cite{tomczak2023groupcohomology}.
+\end{proof}
 
 \subsection{Radiant affine manifolds}
 Of importance to completeness of the affine structure is the case that our
@@ -369,13 +425,13 @@ always be incomplete.
     An affine representation with a fixed point is called \textit{radiant}.
 \end{definition}
 \begin{prop}
-    Let $y\in E$. Then y is a \textit{stationary point} of the action of $\alpha$ if
+    Let $y\in E$. Then $y$ is a \textit{stationary point} of the action of $\alpha$ if
     and only if $\mu(g) = y - \lambda(g)y$ for all $g \in G$.
-    \label{prop:ary-point}\label{lemma:stationary} TODO(why 2 labels?)
+    \label{prop:ary-point}\label{lemma:stationary}
 \end{prop}
 
 \begin{proof}
-    Suppose $y \in E$ is a ary point of $\alpha$. Then $\alpha(g)y = y$ for every $g \in G$.
+    Suppose $y \in E$ is a stationary point of $\alpha$. Then $\alpha(g)y = y$ for every $g \in G$.
     This gives that
     \begin{align*}
         (\lambda(g) + \mu(g))y & = \lambda(g)y + \mu(g) \\
@@ -386,58 +442,41 @@ always be incomplete.
     Conversely, suppose that $\mu(g) = y - \lambda(g)y$. Then $y = \mu(g) +
         \lambda(g)y = \alpha(g)y$
 \end{proof}
-\begin{remark}
-    If $\mu$ is a principle crossed homomorphism we will often write $\mu = D_y$
-\end{remark}
-
-\textbf{TODO: Develop some of the basics of group cohomology}
-
-\begin{lemma}
-    The cohomology group $H^1(G, E)$ is isomorphic to
-    \begin{center}
-        $H^1(G,E) \cong \dfrac{\{\text{crossed homomorphisms for } \lambda\}}{\{\text{principle crossed homomorphisms for } \lambda\}}$
-    \end{center}
-    \label{lemma:crossed-coho}
-\end{lemma}
-
-\begin{proof}
-    \textbf{TODO : Add proof e.g. construct resolution or take this as given?}
-\end{proof}
 
 \begin{definition}[Radiance Obstruction]
     Let $\alpha$ be an affine representation. The radiance obstruction of $\alpha$ is the cohomology
     class
-    \begin{center}
-        $c_{\alpha} = [\mu] \in H^1(G, E)$
-    \end{center}
+    $$
+        c_{\alpha} = [\mu] \in H^1(G, E)
+    $$
     where $\mu$ is the translational part of $\alpha$.
 \end{definition}
 
-\begin{lemma}
+\begin{lemma} \label{lemma:radiance-obstruction}
     The radiance obstruction vanishes, e.g. $c_{\alpha} = 0$ if and only if
     $\alpha$ is conjugate to its linear part by a translation, if and only if $\alpha$
     has a stationary point.
-    \label{lemma:radiance-obstruction}
 \end{lemma}
+
 \begin{proof}
     By Lemma~\ref{lemma:stationary}, $y \in E$ is stationary if and only if
-    $\mu(g) = D_y$ is a principle crossed homomorphism for $\lambda$ if and only
+    $\mu(g) = D_y$ is a principal crossed homomorphism for $\lambda$ if and only
     if $c_{\alpha} = [\mu] =0$.
 
-    Now suppose that $\mu =D_y$ for some $y \in E$. so that $\mu(g) = y -
+    Now suppose that $\mu =D_y$ for some $y \in E$ so that $\mu(g) = y -
         \lambda(g)y$. We define the translation
     \begin{center}
-        $T_y : E \mapsto E$\\
-        $ x \mapsto x-y$
+        $T_y : E \to E$\\
+        $ x \mapsto x-y.$
     \end{center}
     Now, conjugating $\alpha$ by this translation yields
     \begin{align*}
-        T_y \circ \alpha(g) \circ T_y^{-1} & = T_y\circ \alpha(g)(x+y)                                \\
-                                           & = T_y\circ(\lambda(g)x  + \lambda(g)y + \mu(g))          \\
-                                           & = T_y \circ (\lambda(g)x + \lambda(g)y +y - \lambda(g)y) \\
-                                           & = T_y \circ (\lambda(g)x +y )                            \\
-                                           & = \lambda(g)x +y-y                                       \\
-                                           & = \lambda(g)x
+        T_y \circ \alpha(g) \circ T_y^{-1}(x) & = T_y\circ \alpha(g)(x+y)                                \\
+                                              & = T_y\circ(\lambda(g)x  + \lambda(g)y + \mu(g))          \\
+                                              & = T_y \circ (\lambda(g)x + \lambda(g)y +y - \lambda(g)y) \\
+                                              & = T_y \circ (\lambda(g)x +y )                            \\
+                                              & = \lambda(g)x +y-y                                       \\
+                                              & = \lambda(g)x.
     \end{align*}
 
     Conversely, suppose that $T_y \circ \alpha(g) \circ T_y^{-1} = \lambda(g)$ for
@@ -469,15 +508,18 @@ always be incomplete.
 \end{remark}
 
 \begin{definition}[Contragradient Representation]
-    Let $E$ be a $G$-module and $\alpha$ a representation on $E$. We define
+    Let $E$ be a $G$-module by $\lambda: G \to \text{Aut}(V)$. We define
     the contragradient representation on $E^*$ by
     \begin{center}
-        $\alpha^*: G \mapsto GL(E^*)$\\
-        $g \mapsto \alpha^* g$
+        $\lambda^*: G \to GL(E^*)$\\
+        $g \mapsto \lambda^* g$
     \end{center}
-    such that $\alpha^*g(f)(x) = f(\alpha(g^{-1})x)$ for all $x \in E$ and $f\in E^*$.
+    such that $\lambda^*g(f)(x) = f(\lambda(g^{-1})x)$ for all $x \in E$ and $f\in E^*$.
 \end{definition}
-TODO - Fix a notation for these representations.
+\begin{remark}
+    Once a representation $\lambda: G \to \text{Aut}(E)$ has been fixed, we will often write the action of $g$ on an element $x$ of $E$ or $E^*$ as
+    $g \cdot x$. It is clear from whether $x$ is an element of $E$ or $E^*$ whether this action should be taken as the action of $\lambda(g)$ or $\lambda^*g$.
+\end{remark}
 \begin{remark}
     This induces a representation on $\wedge^kE^*$ by \\$(g\cdot \omega)(x_1, \dots , x_n) = \omega(g^{-1}\cdot x_1, \dots, g^{-1}\cdot x_n)$ for $\omega \in \wedge^k E^*$
         and $x_i \in E$.
@@ -496,13 +538,13 @@ between the holonomy representation and parallel volume forms.
     \label{lemma:pullback-form-linearmap}
 \end{lemma}
 \begin{proof}
-    As $dim(\wedge^n(V^*)) = 1$ and $F$ is a linear map, it follows that our map corresponds to multiplication
-    by some scalar $\lambda \in \mathbb{R}$. Let $\varphi: V \mapsto \mathbb{R}^n$ be an isomorphism identifying
+    As $\text{dim}(\wedge^n(V^*)) = 1$ and $F$ is a linear map, it follows that our map corresponds to multiplication
+    by some scalar $\lambda \in \mathbb{R}$. Let $\varphi: V \to \mathbb{R}^n$ be an isomorphism identifying
     our vector space $V$ with $\mathbb{R}$. Then we have
     \begin{align*}
         F^*\varphi^*\det                           & = \lambda\varphi^* \det \\
         \implies (\varphi^{-1})^* F^*\varphi^*\det & = \lambda \det          \\
-        \implies (\varphi^{-1} F \varphi)^*\det    & = \lambda \det
+        \implies (\varphi^{-1} F \varphi)^*\det    & = \lambda \det.
     \end{align*}
     If we let $A = \varphi^{-1} F \varphi$ and $\{e_1, \dots , e_n\}$ the standard basis of $\mathbb{R}^n$
     then
@@ -513,10 +555,10 @@ between the holonomy representation and parallel volume forms.
 \end{proof}
 
 This leads us to the following elementary but important property of the action
-of the holonomy representation on volume forms.
-
+of the holonomy representation on volume forms. (TODO: define the affine
+connection!!!!!)
 \begin{corollary}
-    Let $M$ be an affine manifold and $\lambda \in GL(\mathbb{R}^n)$ be the linear part of the holonomy
+    Let $M$ be an affine manifold and $\lambda: G \to  GL(\mathbb{R}^n)$ be the linear part of the holonomy
     representation. Then $M$ has a parallel volume form with respect to the affine connection if
     and only if $\det(\lambda(g)) = 1$ for all $g \in G$.\label{lemma:volume}
 \end{corollary}
@@ -602,4 +644,118 @@ the representation is radiant) it descends to a vector field $X$ on $M$.
     \caption{Radiant Vector Field on $\R^2$}
 \end{figure}
 
-\section{Affine Manifolds and Integral Affine Manifolds}
+\section{Integral Affine Manifolds}
+One of the main objects of interest in this thesis is integral affine
+manifolds. These are $(G,X)$-structures whereby $G=\affz(\R^n)$ and $X= \R^n$.
+They show up in symplectic geometry as the base space of a regular Lagrangian
+torus fibration inherits such a structure as we explain in Chapter
+\ref{LagrangianFibrations}. They are also important objects in the study of the
+SYZ conjecture in physics which relates a Calabi-Yau manifold $X$ to its
+"mirror" $\tilde{X}$ by a Lagrangian fibration over a common base space $B$
+\cite{SYZ}. In this chapter we give some basic properties of these manifolds as
+well as some examples.
+
+\begin{prop}\label{prop:integral-affine-equiv-lattice}
+    Let $M$ be a smooth manifold. An integral affine structure on $M$ is equivalent to a full-rank lattice
+    $\Lambda \subset T^*M$ that is locally spanned by closed one-forms.
+\end{prop}
+\begin{proof}
+    Given an integral affine structure on $M$, we can define a lattice in $T^*M$ as follows. Let $(U, x_1, \dots ,x_n)$ be a chart on $M$. We define
+    $\Lambda|_U = \text{span}_{\Z}(dx_1, \dots, dx_n)$. Carrying out this construction in each affine chart defines a full-rank lattice in $T^*M$. On overlaps, these lattices
+    will differ by the differential of an integral affine map $x \mapsto Ax + b$ with $A \in \text{Gl}(\Z^n)$ and $b \in \R^n$. But the differential of such a map is given by the linear part $A$ and hence is an automorphism of the lattice.
+
+    Conversely, given a full-rank lattice $\Lambda \subset T^*M$ that is locally
+    spanned by closed one-forms, by shrinking charts if necessary we can assume
+    that our lattice is spanned by exact one-forms $(dx_1, \dots , dx_n)$ in an
+    open neighborhood $U$. Since the $dx_i|_p$ span a full-rank lattice in
+    $T_p^*U$, they are linearly independent and hence if we define coordinates by
+    $(U, x_1 ,\dots , x_n)$ by the inverse function theorem the map $\bar{x} =
+        (x_1, \dots ,x_n)$ is a local diffeomorphism. On the overlap of two charts $U_i
+        \cap U_j$, we know that the pullback of the lattice in $U_i$ to $U_j$ must be
+    an automorphism of the lattice. But these maps are given exactly by elements of
+    the integral affine group $\affz(\R^n)$.
+\end{proof}
+
+We now give some examples of integral affine manifolds.
+\begin{eg}
+    Let $\Z^n$ act on $\R^n$ by translations. Then the quotient $(\R/\Z)^n$ inherits an integral affine structure and is the standard integral affine torus. We note that
+    this integral affine structure can not be equivalent to any of the structures obtained from Example \ref{eg:hopf-manifold} as these are incomplete. In fact, it is also true that
+    a closed integral affine manifold cannot be radiant as we shall see in (TODO: corollary).
+\end{eg}
+
+\begin{eg}
+    Let $B$ be an integral affine manifold and let $f: M \to B$ be a local diffeomorphism where $M$ is any smooth manifold. Then there is a unique integral affine structure on $M$ such that $f$ is
+    an integral affine map as defined in Definition \ref{def:locally-g}. The developing map is an example of such a map and in this sense the integral affine structure on any integral affine manifold
+    can be realised as the pullback of the standard integral affine structure on $\R^n$.
+\end{eg}
+
+\begin{eg}
+    Let $M$ be an integral affine manifold and let $\Gamma$ be a discrete group acting freely and properly on $M$ by integral affine diffeomorphisms. Then the quotient
+    $M/\Gamma$ inherits an integral affine structure and the projection map $\pi: M \to M/\Gamma$ is an integral affine map.
+\end{eg}
+
+We can of course define an integral affine structure by specifying a full-rank
+lattice in $T^*M$ that is locally spanned by closed one-forms. Importantly, the
+cotangent bundle of any manifold $M$ inherits a symplectic structure which
+gives rise to a volume form $\omega$ on $T^*M$. If $\Lambda, \Lambda' \subset
+    T^*M$ are two lattices in $T^*M$ such that they give $M$ an integral affine
+structure, then the volume form descends to the quotient and the induced volume
+of $T^*M/\Lambda$ and $T^*M/\Lambda'$ must be the same if $\Lambda$ and
+$\Lambda'$ determine equivalent integral affine structures. This will be
+discussed more in Chapter \ref{LagrangianFibrations}.
+
+\begin{eg}[Radiant integral affine manifold]
+    If we drop the compactness assumption, it is possible to equip a manifold $M$ with an integral affine radiant structure.
+    Let $M= \R^2 - \{0\}$ and
+    $$
+        i :  M \hookrightarrow \R^2
+    $$
+    be the inclusion. Then this is a local diffeomorphism and hence, equipping $\R^2$ with the standard integral affine structure, this induces an integral affine structure on $M$.
+    There is a covering map
+    $$
+        \pi: (0, \infty) \times \R = \tilde{M},
+    $$
+    $$ (r, \theta) \mapsto (r \cos \theta, r \sin \theta)$$
+    and the composition $\widetilde{\dev} = i \circ \pi : \tilde{M}  \to \R^2$ is the developing map for the integral affine structure induced on $M$. This developing map fails to be injective and surjective,
+    hence this affine structure is not complete and is therefore not affinely diffeomorphic to the standard integral affine structure on $\R^2$. By considering $\theta \mapsto \theta + 2\pi$ one
+    notes that $\widetilde{dev}(r, \theta + 2\pi) = \text{id}_{\R^2} \widetilde{\dev}(r, \theta)$
+    and so the holonomy representation is the trivial one in this case.
+
+    We can modify the affine structure so that it becomes radiant as follows. For
+    any $A\in \text{Gl}(\Z^n)$, there is a free action of $A$ on $M$ by integral
+    affine diffeomorphisms. This lifts to the universal cover $\tilde{M}$ so that
+    $\pi \circ \tilde{A} = A \circ \pi$ where $\tilde{A}$ is the lift to the cover
+    which is unique after fixing a base point by covering space theory. If we take
+    a "branch cut" $V$, i.e. remove a ray where $\theta$ is constant, then the
+    sheets above $V$ are $U_n = \{(r, \theta) \mid 2\pi n <\theta < 2\pi(n+1)\}$.
+    The developing map is a diffeomorphism when restricted to a single sheet and so
+    the action of $A$ on one of these sheets is given by $A \cdot U_n =
+        \widetilde{\dev}^{-1}(A\cdot \widetilde{\dev}(U_n))$ where we view $A$ as
+    acting on $\R^2$ via the inclusion $i$. We can define a new development pair on
+    $M$ by the condition $$\dev = A \cdot \widetilde{\dev} $$ $$ \hol(\gamma^k) =
+        (A^k, 0) $$ where $\gamma \in \pi_1(M)$ is a generator of $\pi_1(M)$. On a
+    sheet $U_n$ we have
+    \begin{align*}
+        \dev( A \cdot (r, \theta)) & = A \cdot \widetilde{\dev}(A \cdot (r,\theta))            \\
+                                   & = \hol(\gamma) \cdot \widetilde{\dev}(A \cdot (r,\theta)) \\
+                                   & =\hol(\gamma)\cdot A\cdot \widetilde{\dev}(r,\theta)      \\
+                                   & = \hol(\gamma)\cdot \dev (r, \theta)
+    \end{align*}
+    and so the equivariance property is satisfied since the union of the $U_n$ form an open, dense set. It follows that $(\dev, \hol)$ defines
+    a radiant integral affine structure on $M$.
+\end{eg}
+
+\begin{eg}[Mapping tori]
+    Let $M$ be an integral affine manifold and let $f: M \to M$ be an integral affine diffeomorphism. Then, equipping $\R$ with its
+    standard integral affine structure, we can form the quotient manifold
+    $$
+        M_f = \dfrac{M \times \R}{\sim}
+    $$
+    where $(m,t) \sim (m', t')$ if $(m,t) = (f^{-n}(m'), t' + n)$ for some $n \in \Z$ where $f^n$ denotes composition of $f$ or $f^{-1}$ depending on if $n$ is positive. We note that even if $f$ is not free,
+    the $\Z$-action defining the quotient is free as it is a translation in the second component. The resulting manifold is called the \emph{mapping torus} of $f$. We note that this is a fiber bundle over $S^1$ through projection
+    onto the second component.
+\end{eg}
+\begin{remark}
+    If $\Sigma$ is compact and admits a $\R P^n$-structure and $f$ is a projective automorphism, then the mapping torus of $f$ admits a radiant affine structure \cite{goldman2022geometric}.
+\end{remark}
+(TODO: probably some of our affine structures can be realised as mapping toris of $S^1 = \R/\Z$. I think definitely the upper triangular guys)
