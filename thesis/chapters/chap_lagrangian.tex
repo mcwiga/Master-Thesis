@@ -4,14 +4,25 @@
 In this section we will recall some of the basics of symplectic geometry and
 Lagrangian submanifolds.
 
+Symplectic geometry has its roots in classical mechanics as the phase space of
+a dynamical system naturally has the structure of a symplectic manifold. In
+symplectic geometry it is often global properties that are of interest. In
+fact, it turns out that all symplectic manifolds are locally equivalent in
+contrast to Riemannian geometry where curvature plays the role of a local
+invariant. In this chapter we will give an extremely brief introduction to
+symplectic geometry. We will then describe the relationship between integral
+affine structures and symplectic geometry. Indeed, in Chapter \ref{ch:prelim}
+we have seen that an integral affine structure is equivalent to a lattice in
+the cotangent bundle. It will turn out that the cotangent bundle of any
+manifold inherits the structure of a symplectic manifold and this will serve as
+the starting point for out discussion.
+
+We start with some of the basic definitions and properties of symplectic
+manifolds.
+
 \begin{definition}[Symplectic Manifold]
     A symplectic manifold $(M, \omega)$ consists of a smooth manifold $M$ and a closed 2-form $\omega$ such that $\omega$ is non-degenerate meaning the bi-linear form $\omega_p$ is non-degenerate on $T_pM$ for all $p \in M$.
 \end{definition}
-
-Symplectic geometry has its roots in classical mechanics as the phase space of
-a dynamical system naturally has the structure of a symplectic manifold. TODO:
-elaborate more on symplectic geometry - Hamiltons equations, applications to
-topology, Poisson geometry.
 
 Non-degeneracy of the symplectic form gives a canonical way to identify the
 tangent and cotangent bundle of a symplectic manifold. This is done via the map
@@ -33,7 +44,7 @@ Hamiltonian vector field which, for instance, recovers Hamilton's equations.
 One of the most important examples of symplectic manifolds is the cotangent
 bundle, which naturally inherits the structure of a symplectic manifold. In
 fact, Darboux's theorem states that every symplectic manifold looks locally
-like a cotangent bundle. This class of symplectic manifolds will play a big
+like a cotangent bundle. This class of symplectic manifolds will play a crucial
 role throughout this thesis and we will see now exactly how the cotangent
 bundle obtains a symplectic structure.
 
@@ -64,8 +75,23 @@ bundle obtains a symplectic structure.
 
     We can also find an expression for this canonical one-form in coordinates.
 
+    Let $(U, q_1, \dots, q_n)$ be a coordinate chart on $Q$. We denote the vector
+    fields corresponding to these coordinates by
+    \begin{align*}
+        \dfrac{\partial}{\partial q_1}, \dots ,  \dfrac{\partial}{\partial q_n} \in \mathfrak{X}(U).
+    \end{align*}
+    These vector fields define functions on each fibre of $T^*Q|_U$ by
+    \begin{align*}
+        p_i : T^*_xQ|_u \to \R \\
+        \eta \mapsto \langle \eta, \dfrac{\partial}{\partial q_i}|_x \rangle
+    \end{align*}
+    where $\langle \cdot , \cdot \rangle$ is the canonical pairing between vectors and covectors. The  set of functions
+    \begin{align*}
+        \pi^*q_1, \dots \pi^* q_n, p_1, \dots , p_n \in C^{\infty}(T^*Q|_U)
+    \end{align*}
+    is a set of coordinates on $T^*Q|_U$. We will often abuse notation and write the $\pi^* q_i$ as simply $q_i$.
     \begin{lemma}
-        In local cotangent coordinates $q_1, \dots , q_n, p_1, \dots , p_n$ (TODO: define these) on $T^*Q$, the canonical one-form is given by
+        In local cotangent coordinates $q_1, \dots , q_n, p_1, \dots , p_n$ on $T^*Q$, the canonical one-form is given by
         $$\theta|_{T^*U} = \sum_j p_j dq_j.$$
     \end{lemma}
     \begin{proof}
@@ -158,9 +184,20 @@ structure.
     A Lagrangian fibration $\pi: (M, \omega) \to B $ is a surjective map whose regular fibres are Lagrangian
     submanifolds of $(M, \omega)$.
 \end{definition}
+\begin{definition}
+    A Lagrangian fibration is called \emph{regular} if every fibre is regular. This means that for every point $q \in \pi^{-1}(p)$, the map $d\pi_q$ is surjective where $p \in B$.
+\end{definition}
+\begin{remark}
+
+    For most of this thesis we will assume that $\pi$ is a surjective submersion
+    and a proper map so that by a theorem of Ehresmann in \cite{Ehresmann1951}, the
+    fibration $\pi : (M, \omega) \to B$ is a fiber bundle and the fibres are
+    compact. We will sometimes refer to these as \emph{Lagrangian torus fibrations}
+    as in this case the fibres turn out to be tori as we shall soon see.
+\end{remark}
 
 \begin{eg}
-    We seen in Lemma \ref{lemma:cotangent-lagrangian-sub} that the fibres of $\pi: (T^*Q, \omega_{can}) \to Q$ are Lagrangian submanifolds
+    We saw in Lemma \ref{lemma:cotangent-lagrangian-sub} that the fibres of $\pi: (T^*Q, \omega_{can}) \to Q$ are Lagrangian submanifolds
     and hence this is a Lagrangian fibration.
 \end{eg}
 
@@ -186,7 +223,7 @@ structure.
         s_{\alpha}^*\omega_{can} & = -s_{\alpha}^*d\theta   \\
                                  & = -ds_{\alpha}^* \theta. \\
     \end{align*}
-    We calculate
+    Thus it remains to see how $s_{\alpha}$ acts on the canonical one-form. We compute
     \begin{align*}
         s_{\alpha}^* \theta (v)|_{\beta_q} & = \theta_{\beta_q + \alpha_q}(ds_{\alpha}(v))     \\
                                            & = (\beta_q +\alpha_q)(d(\pi \circ s_{\alpha})(v)) \\
@@ -223,9 +260,8 @@ We now give the notion of equivalence of Lagrangian bundles.
 \begin{remark}
     There is no loss in generality in assuming that $\Phi$ covers the identity on $B$.  Indeed if $f: B \to B$
     is a diffeomorphism then there exists a fibrewise symplectomorphism $M$ and $N$ covering $f$ if and only if
-    the exists a fibrewise symplectomorphsim between $M$ and the pullback bundle $f^*N$ covering the identity on $B$.
+    there exists a fibrewise symplectomorphsim between $M$ and the pullback bundle $f^*N$ covering the identity on $B$.
 \end{remark}
-
 \section{Integral Affine Structure on the Base}
 We now discuss how the base space of a Lagrangian fibration inherits an
 integral affine structure. This structure will be an invariant of the
@@ -261,7 +297,7 @@ action is transitive but \emph{not necessarily free}. We define $$V_q := \{v
     Taking the differential $(d\phi_q)_0 : T_0 V \to T_0Q$ and applying the rank-nullity theorem
     we find that $\dim V_q = 0$ and hence it is a discrete subgroup. We now show it is independent of $q$.
 
-    For any $q' \in Q$, by transitivity of the action, the exists $w \in V$ such
+    For any $q' \in Q$, by transitivity of the action, there exists $w \in V$ such
     that $w \cdot q = q'$ and so for $v \in V_q$, $w \in V_{q'}$
     \begin{align*}
         (w^{-1}vw)\cdot q           & = q        \\
@@ -272,11 +308,11 @@ action is transitive but \emph{not necessarily free}. We define $$V_q := \{v
     and hence $V_q = V_{q'}$
 \end{proof}
 \begin{remark}\label{rem:torus-structure}
-    This implies that $V_q$ is a lattice, e.g. $V_q \cong \Z^n$. We therefore have that $V/V_q \cong \R^n / \Z^k \cong \R^{n-k} \times \mathbb{T}^k$.
+    This implies that $V_q$ is a lattice, i.e. $V_q \cong \Z^n$. We therefore have that $V/V_q \cong \R^n / \Z^k \cong \R^{n-k} \times \mathbb{T}^k$.
 \end{remark}
 
 \begin{remark}
-    It follows from our previous definitions that $Q$ is a product  of an affine torus and an affine vector space.
+    It follows from our previous definitions that $Q$ is the product of an affine torus and an affine vector space.
 \end{remark}
 
 \begin{definition}[Group Bundle]
@@ -300,15 +336,15 @@ We can define the notion of an action of a group bundle on any fibre bundle over
 
 Suppose that we have an action as in the above example. Then if we let \[\Lambda
     = \bigsqcup_p \Lambda_p\]
-be the bundle of stabilisers of the action of $E \to B$ on $M \to B$, e.g.
+be the bundle of stabilisers of the action of $E \to B$ on $M \to B$, i.e.
 $\Lambda_p\subset E_p$ is the isotropy group at $p \in B$, then we can form a
-torus bundle $$ \mathcal{T} := E/\Lambda \to B $$ and in this way $M \to B$
+torus bundle $$ \mathcal{T} := E/\Lambda \to B. $$ In this way $M \to B$
 becomes an affine torus bundle since $\mathcal{T}$ now acts freely on $M$ as we
 have quotiented out the fixed points.
 
 Suppose now that we have a global section $\sigma: B \to M$. Then $M \to B$
-becomes a torus bundle as we can use the global section to pick out an
-identity. (TODO: elaborate on this)
+becomes a torus bundle as we can use the global section to pick out an identity
+- see Lemma \ref{lemma:identification-of-bundle}.
 
 \begin{theorem} \label{thm:cotangent-action}
     Let $(M, \omega)$ be a symplectic manifold and let $\pi: M \to B$ be a Lagrangian fibration with compact connected fibres.
@@ -328,9 +364,8 @@ identity. (TODO: elaborate on this)
                               & = -\iota_Y\pi^*\alpha               \\
                               & = 0
     \end{align*}
-    as $Y$ is vertical. Now as $VM^{\omega} = VM$, this implies that $X_{\alpha}$ is vertical. We note that this implies
-    that $X_{\alpha}$ is constant along the fibres and so its value at $m \in M$ depends only on the value of $\alpha_{\pi(m)}$. We have thus assigned to each
-    $\alpha_{\pi(m)}$ with $m \in M$, a vector in the vertical bundle $VM$ by $X_{\alpha} (m)$ depending only on the value of $\pi(m)$. Moreover, this is assignment is linear since
+    as $Y$ is vertical. Now as $VM^{\omega} = VM$, this implies that $X_{\alpha}$ is vertical. We note that the value of $X_{\alpha}$ at $m \in M$ depends only on the value of $\alpha_{\pi(m)}$ as it is defined through pulling back $\alpha$.
+    We have thus assigned to each $\alpha_{\pi(m)}$ with $m \in M$, a vector in the vertical bundle $VM$ by $X_{\alpha} (m)$ depending only on the value of $\alpha_{\pi(m)}$. Moreover, this is assignment is linear since
     \begin{align*}
         \iota_{X_{a\alpha + b\beta}}\omega & = -\pi^* (a\alpha + b\beta)       \\
                                            & = -a\pi^* (\alpha) -b\pi^*(\beta)
@@ -385,7 +420,7 @@ We will first need the following lemma.
 \begin{proof}
     We start by integrating
     \begin{align*}
-        \int_{0}^{t}\frac{\partial}{\partial t}(F_{\alpha}^t)^*\omega = (F_{\alpha}^t)^*\omega - \omega
+        \int_{0}^{t}\frac{\partial}{\partial t}(F_{\alpha}^t)^*\omega = (F_{\alpha}^t)^*\omega - \omega.
     \end{align*}
     On the otherhand, calculating this derivative yields
     \begin{align*}
@@ -393,7 +428,7 @@ We will first need the following lemma.
                                                           & = (F_{\alpha}^t)^*d\iota_{X_{\alpha}}\omega \\
                                                           & = -(F_{\alpha}^t)^*\pi^* d\alpha            \\
                                                           & = - (\pi \circ F_{\alpha}^t)^*d\alpha       \\
-                                                          & = -\pi^*d\alpha
+                                                          & = -\pi^*d\alpha.
     \end{align*}
     Now $\int_{0}^{t}-\pi^*d\alpha = -t\pi^*d\alpha$ and so
     \begin{align*}
@@ -436,8 +471,17 @@ The lattice $\Lambda$ will be an important object of study throughout the remain
     Lagrangian fibration.
 \end{theorem}
 \begin{proof}
-    The local sections of $\Lambda$ are given by closed one-forms. By Proposition \ref{prop:shift-by-closed}, the shift by a closed form is a
-    symplectomorphism and hence preserves the symplectic form. (TODO: maybe need to explain better why $\Lambda$ acts by fibrewise affine shifts of closed one-forms)
+    The local sections of $\Lambda$ are by definition, given by closed one-forms. Locally, a section of $\Lambda$ looks like $$\alpha = \sum_i m_i dx_i$$
+    where $m_i \in \Z$. Two points $x,y \in T_p^*B$ are identified if $x = y + \alpha(p)$ for some local section $\alpha$.
+
+    But this is just a shift by a closed one form on $B$. By Proposition
+    \ref{prop:shift-by-closed}, the shift by a closed one-form is a
+    symplectomorphism and hence preserves the symplectic form. It follows that the
+    symplectic form descends to the quotient. This means that there is a unique
+    symplectic form $\tilde{\omega}$ on $T^*B/\Lambda$ such that $$\pi^*
+        \tilde{\omega} = \omega$$ where $\pi: T^*B \to T^*B/\Lambda$ is the projection
+    map. Since the fibres of $T^*B \to B$ are Lagrangian it follows that the fibres
+    of $T^*B/\Lambda \to B$ are too.
 \end{proof}
 
 \begin{remark}
@@ -452,7 +496,7 @@ If we assume that the obstructions to the existence of a global section vanish,
 then $M \to B$ itself becomes a torus bundle and moreover, we can identify it
 with $T^*B/\Lambda \to B$ in a way that respects the group structure.
 
-\begin{lemma}
+\begin{lemma}\label{lemma:identification-of-bundle}
     Let $\sigma: B \to M$ be a global section of $M \to B$ and $\alpha \in \Omega^1(B)$ be a one-form. Then this determines a unique, fibre bundle isomorphism
     $A: T^*B/\Lambda \to M$ that is $T^*B/\Lambda$-equivariant such that the following diagram commutes.
     \[
@@ -489,7 +533,7 @@ when the symplectic structure is preserved. We discuss this now.
     The cohomology class $[\sigma^*\omega] \in H^2(B)$ does not depend on the choice of $\sigma$.
 \end{prop}
 \begin{proof}
-    Since the action of $T^*B$ on $M$ is transitive, any other section $\hat{\sigma}$ differs by an action of $T^*B$ e.g. $\hat{\sigma} = F_{\alpha} \circ \sigma$. It follows that
+    Since the action of $T^*B$ on $M$ is transitive, any other section $\hat{\sigma}$ differs by an action of $T^*B$ i.e. $\hat{\sigma} = F_{\alpha} \circ \sigma$. It follows that
     \begin{align*}
         \hat{\sigma}^*\omega & = (F_{\alpha} \circ \sigma)^*\omega  \\
                              & = \sigma^*(F_{\alpha}^* \omega)      \\
@@ -520,19 +564,53 @@ when the symplectic structure is preserved. We discuss this now.
     Since this holds for any $\alpha \in \Omega^1(B)$ it follows that $\hat{A}^*\omega = \omega$.
 \end{proof}
 
-\subsection{Action Angle Coordinates}
+\begin{remark}
+    We note that the compactness assumption is used so that the flows $F_{\alpha}$ are defined for all time. If we drop the assumption that our fibres are compact and instead
+    assume only that the vector fields $X_{\alpha}$ defined in Theorem \ref{thm:cotangent-action} are complete, then most of the above discussion holds with some slight modifications. This
+    allows us to obtain the following classification result for regular Lagrangian fibrations with fibre $\R^n$.
+\end{remark}
+\begin{prop}
+    Let $\rho: (E, \omega) \to B$ be a regular Lagrangian fibration with fibre $\R^n$ and suppose that the vector fields $X_{\alpha}$ are complete for all $\alpha \in \Omega^1(B)$. Then $\rho : E \to B$ is
+    Lagrangian equivalent to $\pi: (T^*B , \omega_{can} + \rho^*\beta) \to B$ where $\beta$ is a closed two-form on $B$.
+    The cohomology class $[\beta] \in H^2(B, \R)$ determines up to Lagrangian equivalence the fibration.
+\end{prop}
+\begin{proof}
+    Since the fibres are contractible, obstruction theory tells us that there is a section $s: B \to E$, for example see \cite{Davis2001LectureNI}. Now, let $\omega$ be the symplectic form
+    on $E$ and let $\beta = s^* \omega$. Proposition \ref{prop:shift-by-closed} tells us that $(E, \omega - \rho^*\beta)$ is a Lagrangian bundle. But now
+    \begin{align*}
+        s^*(\omega - \rho^*\beta) & = s^*\omega - s^*\rho^*s^*\omega^*            \\
+                                  & = s^*\omega - (s \circ \rho \circ s)^* \omega \\
+                                  & = s^*\omega - s^*\omega                       \\
+                                  & = 0
+    \end{align*}
+    and hence $s$ is a Lagrangian section of $(E, \omega - \rho^*\beta)$. Therefore this section gives a symplectomorphism
+    $(T^*B, \omega_{can}) \cong (E, \omega - \rho^*\beta)$ by the same arguments as Lemma \ref{lemma:identification-of-bundle}. Adding the closed two-form $\beta$ to both bundles gives the required result.
+    Since $(T^*B, \omega_{can})$ is symplectomorphic to $(T^*B, \omega_{can} + \pi^* \beta)$ if and only if $\beta$ is exact it follows that $[\beta] \in H^2(B, \R)$ determines
+    the Lagrangian fibration.
+\end{proof}
+
+\subsection{(Global) Action-Angle Coordinates}
+In \cite{ActionAngle}, Duistermaat studied when a Lagrangian torus fibration
+can globally admit a type of coordinate system called \emph{action-angle
+    coordinates}. He was motivated by a class of dynamical systems called
+\emph{completely integrable Hamiltonian systems}. Roughly speaking, these are
+dynamical systems in which there is sufficient symmetry such that the equations
+of motion can be exactly solved. The techniques developed in this paper have
+been widely used and expanded upon in the theory of integrable systems. We will
+now give an outline of some of the key details.
+
 In this section, we will assume that there exists a global Lagrangian section
 $\sigma: B \to M$ and that the cohomology class $[\sigma^*\omega] =0 \in
     H^2(B)$ so that $M\to B$ and $T^*B/\Lambda \to B$ are fibrewise
-symplectomorphic. If we assume also that the base space $B$ is simply connected
-then we have that the linear holonomy representation of $B$ is trivial and so
-the group bundle $\Lambda \to B$ is trivial. Fixing a basepoint $b\in B$ we
-pick some isomorphism $\Lambda_b \cong \Z^n$ and then for any other $b'\in B$,
-we identify $\Lambda_b \cong \Lambda_{b'}$ by picking a path between them.
-Since by Corollary \ref{corr:Lag-Fibr-IAS}, $B$ is itself an integral affine
-manifold, it hence possesses a flat, torsion free connection and so we use this
-connection to parallel transport a basis of $\Lambda_b $ to a basis of
-$\Lambda_{b'}$.
+symplectomorphic unless stated otherwise. If we assume also that the base space
+$B$ is simply connected then we have that the linear holonomy representation of
+$B$ is trivial and so the group bundle $\Lambda \to B$ is trivial. Fixing a
+basepoint $b\in B$ we pick some isomorphism $\Lambda_b \cong \Z^n$ and then for
+any other $b'\in B$, we identify $\Lambda_b \cong \Lambda_{b'}$ by picking a
+path between them. Since by Corollary \ref{corr:Lag-Fibr-IAS}, $B$ is itself an
+integral affine manifold, it hence possesses a flat, torsion free connection
+and so we use this connection to parallel transport a basis of $\Lambda_b $ to
+a basis of $\Lambda_{b'}$.
 
 Since $B$ is assumed to be simply connected, this gives an isomorphism $$
     \Lambda \cong B \times \Z^n $$ that depends on our choice of base point. Any
@@ -560,32 +638,92 @@ $$
 
 Recall that we can associate vector fields on $M$ to the $\beta_i \in
     \Omega^1(B)$ by $\iota_{X_{\beta_i}} \omega = -\pi^* \beta_i$ and a quick
-calculation using Cartans formula shows that these vector fields are symplectic
-e.g. $L_{X_{\beta_i}}\omega = 0$ since both $\beta_i$ and $\omega$ are closed.
-Denoting their corresponding flow by $F_i^t$, in terms of the angle coordinates
-we have that
+calculation using Cartan's formula shows that these vector fields are
+symplectic i.e. $L_{X_{\beta_i}}\omega = 0$ since both $\beta_i$ and $\omega$
+are closed. Denoting their corresponding flow by $F_i^t$, in terms of the angle
+coordinates we have that
 
 $$
-    s_j(F_i^t(p)) =\begin{cases*}
-        s_j(p), \quad i \neq j, \\
-        s_j(p) + t, \quad i = j
+    s_j(F_i^t(x)) =\begin{cases*}
+        s_j(x), \quad i \neq j, \\
+        s_j(x) + t, \quad i = j
     \end{cases*}
 $$
-for $p \in M$. (TODO: prove this probably.)
+for $x \in M$. Indeed, a point $x \in M$ identifies with
+$$
+    x = (p, a_1 \beta_1(p), \dots , a_n \beta_n(p))
+$$
+under $M \cong B \times \R^n$ where $p \in B$ and $a_i \in \R$. The flows of $X_{\beta_i}$ preserve the fibres and are linear maps. Hence, the flow of $\beta_i$
+acts on $x$ by
+$$
+    F_i^t(x) = (p, a_1 \beta_1 ,  \dots a_i \beta_i(p) + t \beta_i(p), \dots , a_n \beta_n(p))
+$$
+and since $s_i$ is projection onto the $i^{th}$ component, the result follows.
 
-Moreover, since $B$ is simply connected the $\beta_i$ are in fact exact e.g.
+Moreover, since $B$ is simply connected the $\beta_i$ are in fact exact i.e.
 $\beta_i = dI_i$. Since the $\beta_i$ form a global frame, $dI_p = (dI_1, \dots
     , dI_n)_p$ is full rank at each $p \in M$ and hence we can use them to define
 coordinates on the base.
 
 \begin{definition}
-    We define \emph{action coordinates} on $M$ by $\pi^*I_1, \dots , \pi^* I_n$.
+    We define \emph{action-angle coordinates} on $M$ by $(\pi^*I_1, \dots , \pi^* I_n, s_1, \dots , s_n)$.
 \end{definition}
+\begin{remark}
+    It is clear from the above discussion that the action coordinates $I_i$ define an integral affine structure in $B$. Indeed, the differentials
+    of these span a full-rank lattice in $T^*B$ and hence by Proposition \ref{prop:integral-affine-equiv-lattice} they equip $B$ with an integral affine structure.
+\end{remark}
+\begin{remark}
+    In these action-angle coordinates we can write the symplectic form as $ \omega
+        = \sum_i dI_i \wedge ds_i. $
+\end{remark}
+\begin{remark}
+    For a regular Lagrangian torus fibration $M \to B$, even if there does not exist global action-angle coordinates, we can cover $B$ in
+    charts such that in each chart the fibration does admit global action-angle coordinates.
+\end{remark}
 
-(TODO: prove this) In these action-angle coordinates we can write the symplectic form as
-$$
-    \omega = \sum_i dI_i \wedge ds_i
-$$
+\subsection{Completely integrable Hamiltonian systems}
+We will give a very brief introduction to completely integrable Hamiltonian
+systems as historically, they were important in the development of much of this
+theory and they also provide us with many examples of Lagrangian torus
+fibrations.
 
-TODO: There is some good stuff in the Duistermaat paper that can also go here
-and maybe some of the explanations are better.
+\begin{definition}
+    Let  $(M^{2n}, \omega)$ be a symplectic manifold. A \emph{completely integrable Hamiltonian
+        system} $(M, \omega, F)$, is a map
+    $$
+        F=(f_1, \dots , f_n) : M \to \R^n
+    $$
+    such that the components satisfy
+    \begin{enumerate}
+        \item $\{f_i, f_j\} = 0$ for all $i,j$.
+        \item $df_1 \wedge \dots \wedge df_n \neq 0$ on an open, dense set of $M$.
+    \end{enumerate}
+
+\end{definition}
+\begin{remark}
+    The bracket $\{\cdot , \cdot\}$ is the \emph{Poisson} bracket on $M$. It is defined as
+    $$
+        \{f,g\} = \omega(X_f, X_g)
+    $$
+    with $f,g \in C^{\infty}(M)$.
+\end{remark}
+\begin{remark}
+    The condition $\{f_i, f_j\} \neq 0$ ensures that the fibres of the map $F$ are Langrangian submanifolds of $M$. The second condition
+    is a regularity condition on the fibres of $F$.
+\end{remark}
+
+The following theorem shows the relationship between completely integrable
+Hamiltonian systems and Lagrangian fibrations.
+
+\begin{theorem}[Liouville-Arnold]
+    Let $(M, \omega, F)$ be a completely integrable Hamiltonian system. Suppose that $x \in \R^n$ is a regular value of $F$ and that
+    $F^{-1}(x)$ is compact and connected. Then there exists an open neighborhood $U \subset \R^n$ of $x$ such that
+    $$
+        F|_{F^{-1}(U)} : M \to U
+    $$
+    is a regular Lagrangian torus fibration.
+\end{theorem}
+\begin{remark}
+    This allows us to associate a Lagrangian fibration to an open neighborhood of a regular fibre of the completely integrable Hamiltonian system. Conversely, given
+    a Lagrangian fibration admitting global action-angle coordinates, the action coordinates determine a completely integrable Hamiltonian system.
+\end{remark}

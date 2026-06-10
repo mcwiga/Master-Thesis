@@ -1,4 +1,169 @@
 \chapter*{Conclusion}
 \label{ch:conclusion}
 \addcontentsline{toc}{chapter}{\nameref{ch:conclusion}}
-TODO: Add Conclusion
+\section*{Conclusion}
+\chaptermark{Conclusion}
+
+In this thesis we classified the regular Lagrangian torus fibrations over
+compact surfaces up to Lagrangian equivalence. In order to do this, we showed
+that there are certain invariants that we can associate to such a fibration,
+and that these invariants completely determine the nature of the fibration.
+
+The first of these invariants is an integral affine structure on the base space
+$B$ of the fibration. This completely determines the local nature of any
+Lagrangian fibration through the symplectic reference fibration. In Chapter
+\ref{ch:nilpotent-hol} we develop the tools required to classify the integral
+affine structures on compact surfaces. This turns out to depend on group
+theoretic properties of the fundamental group of the surface. The main result
+of this chapter is that completeness of an affine manifold is equivalent to
+parallel volume if the fundamental group is nilpotent.
+
+This result reduces the problem of determining the integral affine structures
+on a compact surface to a problem in simple group theory and linear algebra. In
+Chapter \ref{ch:class-IAS}, we explicitly compute all of the integral affine
+structures on the two torus and the Klein bottle. The integral affine
+structures on the two torus are classified in Theorem
+\ref{thm:classification-torus}. These were found to be the following.
+
+\classificationtorus*
+
+Two integral affine structures from distinct families are never equivalent.
+Integral affine structures in the family $\mathcal{A}_{a,b,c,d}$ are sometimes
+equivalent as illustrated in Theorem \ref{thm:torus-series-a}.
+
+\torusA*
+This completes the full classification of the integral affine structures on the two torus.
+
+We also classify the integral affine structures on the Klein bottle. This is
+the result of Theorem \ref{thm:IAS-Klein}. We find that there are four distinct
+families and that integral affine structures from distinct families are never
+equivalent.
+
+\IASKlein*
+
+The integral affine structure on the base is one invariant of the Lagrangian
+fibration. However, it is not the only one. The contents of Chapter
+\ref{LagrangianFibrations} and Chapter \ref{ch:classify-fibr} show that there
+are two more invariants one can associate to such a fibration. These are the
+\emph{Chern class} and the \emph{Lagrangian class}. The Chern class determines
+the topological nature of the fibration while the Lagrangian class is a
+refinement of this and also controls the symplectic structure. The Lagrangian
+class always maps onto the Chern class in the long exact sequence in cohomology
+associated to the following short exact sequence in sheaf cohomology;
+\begin{align*}
+    0 \to \Lambda \to \mathcal{Z}(T^*B) \to \mathcal{Z}(T^*B/\Lambda) \to 0
+\end{align*}
+
+where $\Lambda$ is the sheaf of sections of the lattice in $T^*B$ inducing the
+integral affine structure and $\mathcal{Z}(\cdot)$ denotes the Lagrangian or
+closed sections of the corresponding bundles.
+
+Once we have fixed a Chern class we can ask which Lagrangian classes map onto
+it. This corresponds to fixing a topological type for the fibration and asking
+which fibrations are topologically equivalent but not necessarily
+symplectically. The space of Lagrangian classes which map onto a fix Chern
+class turns out to be a quotient of the second de Rham cohomology group. For
+the Klein bottle, the second cohomology class vanishes and hence for a fixed
+Chern class, all of the Lagrangian fibrations over the Klein bottle which
+induce this Chern class are symplectically equivalent. For the torus this is
+not the case; there are Lagrangian fibrations which are topologically
+equivalent but not symplectically. In both cases we compute the possible Chern
+classes in Chapter \ref{ch:classify-fibr}. For the torus this is the content of
+Lemma \ref{lemma:chern-class-A} and Lemma \ref{lemma:chern-class-B} which we
+summarize below.
+
+\chernTorus*
+
+Lagrangian fibrations over the torus can be topologically equivalent as bundles
+but not symplectically equivalent. This is governed by cohomological invariants
+of shifts which are the differentials of latticed one-forms. These form a
+subgroup of the second De Rham cohomology group and this subgroup parametrizes
+Lagrangian classes which map to a fixed Chern class. The calculation of which
+classes in $H^2(T^2, \R)$ correspond to cohomological invariants of shifts is
+the content of Theorem \ref{thm:invar-calculation}.
+
+For the Klein bottle, every Lagrangian torus fibration which is topologically
+equivalent is also symplectically equivalent. The possible Chern classes for
+the Klein bottle are found in Theorem \ref{thm:Klein-chern}.
+
+\kleinChern*
+
+In order to explicitly construct a Lagrangian fibration with a fixed Chern
+class, we can perform Luttinger surgery as described in Section \ref{sec:Lutt}.
+For the Klein bottle, this completes the construction. For the torus we must
+add a two form to the base considered up to a cohomological invariant of a
+shift. This is described in Section \ref{sec:construct}.
+
+\section*{Whats next?}
+
+There are many directions one can go from here. We will now outline some
+possible extensions of the work done in this thesis
+
+\subsection*{Integral affine $3$-manifolds}
+In \cite{kozlov2018integralaffine3manifolds}, a classification of complete
+integral affine manifolds on compact three-dimensional manifolds up to a
+finite-sheeted covering is given. One could attempt to use the methods
+developed in this thesis in order to compute the possible Chern and Lagrangian
+classes for Lagrangian fibrations over these manifolds. In this paper they find
+that there are essentially three different families of such manifold. Up to
+finite index, the first families has abelian fundamental group, the second
+family has nilpotent fundamental group and the third class has solvable
+fundamental group.
+
+For example, the third family which has the most complicated fundamental group,
+are mapping tori of the torus by some diffeomrophism $A: T^2 \to T^2$, at least
+up to a finite covering. The fundamental group of a mapping torus sits into a
+short exact sequence $$ 1 \to \Z^2 \to \Z^2 \rtimes_{A} \Z \to \Z \to 1 $$ and
+so in principal, one could try to apply the spectral sequence methods we
+developed inSection \ref{sec:spectral-seq} to compute the possible Chern
+classes for such manifolds.
+
+\subsection*{Integral-integral affine manifolds}
+One could further try to refine the classification of integral affine manifolds
+to the classification of integral-integral affine manifolds over compact
+surfaces. An integral-integral affine manifold is an integral affine manifold
+whereby the translational components of the transition maps are restricted to
+also be integers. These structures are also interesting in their own right, for
+example they have applications to physics \cite{HAMILTON2026105745}. One could
+attempt to classify Lagrangian fibrations up to Lagrangian equivalence which
+induce a given integral-integral affine structure on the base.
+
+\subsection*{Investigate further the role of unipotence for integral affine manifolds}
+A far reaching goal is to show the Markus conjecture holds for the case of
+integral affine manifolds. As we have seen throughout this thesis, integral
+affine manifolds have some special geometric features which may be possible to
+exploit to achieve this. In Chapter \ref{ch:nilpotent-hol} we required a lot of
+technical machinery in order to show that for affine manifolds with nilpotent
+holonomy, unipotence of the linear holonomy representation is equivalent to
+completeness of the affine structure.
+
+However, with just the assumption of nilpotency, one can quickly see that at
+least up to topological type, the Lagrangian fibrations over a fixed integral
+affine structure depend only on the unipotent part of the representation. Let
+$E_U$ denote the Fitting submodule, i.e. the unipotent part of the
+representation. Fix an integral affine manifold $B$ and let $\Lambda$ denote
+its corresponding period lattice. From the following short exact sequence of
+$\pi_1(B)$-modules
+
+$$
+    0 \to E_U \to E \to E/E_U \to 0
+$$
+
+after taking the long exact sequence in cohomology and using that
+$H^i(\pi_1(M), E/E_U) = 0$ by Lemma \ref{lemma:fitting-submodule} and Lemma
+\ref{lemma:nilpotent-group-coho} as $\pi_1(M)$ is nilpotent, we get that
+$H^2(\pi_1(M), E_U) \cong H^2(\pi_1(M), E)$. Hence if $M$ has nilpotent
+holonomy the group corresponding to the Chern classes depends only on the
+unipotent part of the representation, even without the assumptions of
+compactness, completeness or parallel volume.
+
+One might wonder if, for compact integral affine manifolds, this can be shown
+to always hold. This is of course true if the Markus conjecture holds, but this
+statement in itself is slightly weaker as we are not requiring the holonomy
+representation itself to be unipotent which would imply completeness. Moreover,
+inside the group $H^2(\pi_1(M), E)$ there is the subgroup of realisable Chern
+classes. From the long exact sequence in cohomology of the above short exact
+sequence, we see that $H^2(\pi_1(M), E_U) \subseteq H^2(\pi_1(M), E)$. It would
+be interesting to determine whether the group of realisable Chern classes
+always sits inside this group, which could hold even without the isomorphism
+$H^2(\pi_1(M), E_U) \cong H^2(\pi_1(M), E)$.

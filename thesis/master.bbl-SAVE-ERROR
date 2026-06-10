@@ -19,6 +19,588 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{MarkusAuslander}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3b317c015c14dbece954df8456238229}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=55b61733b1fb0d7be1dac792a58ef323}{%
+           family={Markus},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]}%
+      }
+      \strng{namehash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \strng{fullhash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \strng{bibnamehash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \strng{authorbibnamehash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \strng{authornamehash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \strng{authorfullhash}{3697ce8cd6e4f1ff6bdd61efa910eb77}
+      \field{labelalpha}{AM55}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003486X, 19398980}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{number}{1}
+      \field{title}{Holonomy of Flat Affinely Connected Manifolds}
+      \field{urlday}{5}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{62}
+      \field{year}{1955}
+      \field{urldateera}{ce}
+      \field{pages}{139\bibrangedash 151}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2007104
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2007104
+      \endverb
+    \endentry
+    \entry{AUSLANDER1964131}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d379ccddcb220d545c3f7ec0ed9852fa}{%
+           family={Auslander},
+           familyi={A\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \strng{fullhash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \strng{bibnamehash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \strng{authorbibnamehash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \strng{authornamehash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \strng{authorfullhash}{d379ccddcb220d545c3f7ec0ed9852fa}
+      \field{labelalpha}{Aus64}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-9383}
+      \field{journaltitle}{Topology}
+      \field{title}{The structure of complete locally affine manifolds}
+      \field{volume}{3}
+      \field{year}{1964}
+      \field{pages}{131\bibrangedash 139}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0040-9383(64)90012-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0040938364900126
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0040938364900126
+      \endverb
+    \endentry
+    \entry{Bates2007}{article}{}
+      \name{author}{2}{}{%
+        {{hash=113bff40e2e465c435395e67bbfe2edd}{%
+           family={Bates},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=30db7938ac13094467ff6c77ad717182}{%
+           family={Fassò},
+           familyi={F\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a55ac4a28dea1a1de3818257793013}
+      \strng{fullhash}{b6a55ac4a28dea1a1de3818257793013}
+      \strng{bibnamehash}{b6a55ac4a28dea1a1de3818257793013}
+      \strng{authorbibnamehash}{b6a55ac4a28dea1a1de3818257793013}
+      \strng{authornamehash}{b6a55ac4a28dea1a1de3818257793013}
+      \strng{authorfullhash}{b6a55ac4a28dea1a1de3818257793013}
+      \field{labelalpha}{BF07}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1468-4845}
+      \field{journaltitle}{Regular and Chaotic Dynamics}
+      \field{number}{6}
+      \field{title}{An affine model for the actions in an integrable system with monodromy}
+      \field{volume}{12}
+      \field{year}{2007}
+      \field{pages}{675\bibrangedash 679}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1134/S1560354707060093
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1134/S1560354707060093
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1134/S1560354707060093
+      \endverb
+    \endentry
+    \entry{Bieberbach1910}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eb786b4e7469f3e0ca1e3c6434d7bd88}{%
+           family={Bieberbach},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \strng{fullhash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \strng{bibnamehash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \strng{authorbibnamehash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \strng{authornamehash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \strng{authorfullhash}{eb786b4e7469f3e0ca1e3c6434d7bd88}
+      \field{extraname}{1}
+      \field{labelalpha}{Bie10}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse}
+      \field{title}{Ueber die Bewegungsgruppen des n dimensionalen euclidischen Raumes mit einem endlichen Fundamentalbereich}
+      \field{volume}{1910}
+      \field{year}{1910}
+      \field{pages}{75\bibrangedash 84}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb http://eudml.org/doc/58754
+      \endverb
+      \verb{url}
+      \verb http://eudml.org/doc/58754
+      \endverb
+    \endentry
+    \entry{Bieberbach1912}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0245aae25c73d2e79cfd86a73c1abac0}{%
+           family={Bieberbach},
+           familyi={B\bibinitperiod},
+           given={Ludwig},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \strng{fullhash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \strng{bibnamehash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \strng{authorbibnamehash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \strng{authornamehash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \strng{authorfullhash}{0245aae25c73d2e79cfd86a73c1abac0}
+      \field{extraname}{2}
+      \field{labelalpha}{Bie12}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1432-1807}
+      \field{journaltitle}{Mathematische Annalen}
+      \field{number}{3}
+      \field{title}{Über die Bewegungsgruppen der Euklidischen Räume (Zweite Abhandlung.) Die Gruppen mit einem endlichen Fundamentalbereich}
+      \field{volume}{72}
+      \field{year}{1912}
+      \field{pages}{400\bibrangedash 412}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/BF01456724
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01456724
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01456724
+      \endverb
+    \endentry
+    \entry{borel1991linear}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0ee895917eb0a33121189b88eecae67e}{%
+           family={Borel},
+           familyi={B\bibinitperiod},
+           given={Armand},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{fullhash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{bibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorbibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authornamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorfullhash}{0ee895917eb0a33121189b88eecae67e}
+      \field{extraname}{1}
+      \field{labelalpha}{Bor91}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Linear Algebraic Groups}
+      \field{volume}{126}
+      \field{year}{1991}
+    \endentry
+    \entry{Borel}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0ee895917eb0a33121189b88eecae67e}{%
+           family={Borel},
+           familyi={B\bibinitperiod},
+           given={Armand.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Princeton, N.J}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{fullhash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{bibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorbibnamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authornamehash}{0ee895917eb0a33121189b88eecae67e}
+      \strng{authorfullhash}{0ee895917eb0a33121189b88eecae67e}
+      \field{extraname}{2}
+      \field{labelalpha}{Bor60}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Seminar on transformation groups}
+      \field{isbn}{0691090947}
+      \field{series}{Annals of mathematics studies ; no. 46}
+      \field{title}{Seminar on transformation groups / by Armand Borel ; with contributions by G. Bredon [and others].}
+      \field{year}{1960}
+      \keyw{Algèbre topologique ; Transformations (Mathématiques) ; Groupes de transformations ; MATHEMATICS -- Group Theory ; Transformations (Mathematics) ; Grupos Topologicos ; Algebraic topology ; Transformation groups ; Transformations Groupes de ; Topologie algébrique ; transformation groups}
+    \endentry
+    \entry{bredon1997sheaf}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0517885cc24307e63cd0548e37779ae5}{%
+           family={Bredon},
+           familyi={B\bibinitperiod},
+           given={G.E.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{0517885cc24307e63cd0548e37779ae5}
+      \strng{fullhash}{0517885cc24307e63cd0548e37779ae5}
+      \strng{bibnamehash}{0517885cc24307e63cd0548e37779ae5}
+      \strng{authorbibnamehash}{0517885cc24307e63cd0548e37779ae5}
+      \strng{authornamehash}{0517885cc24307e63cd0548e37779ae5}
+      \strng{authorfullhash}{0517885cc24307e63cd0548e37779ae5}
+      \field{labelalpha}{Bre97}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780387949055}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Sheaf Theory}
+      \field{year}{1997}
+      \verb{urlraw}
+      \verb https://books.google.be/books?id=zGdqWepiT1QC
+      \endverb
+      \verb{url}
+      \verb https://books.google.be/books?id=zGdqWepiT1QC
+      \endverb
+    \endentry
+    \entry{brown2012cohomology}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9e936a5036cd25c01282182ea522e030}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={K.S.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{9e936a5036cd25c01282182ea522e030}
+      \strng{fullhash}{9e936a5036cd25c01282182ea522e030}
+      \strng{bibnamehash}{9e936a5036cd25c01282182ea522e030}
+      \strng{authorbibnamehash}{9e936a5036cd25c01282182ea522e030}
+      \strng{authornamehash}{9e936a5036cd25c01282182ea522e030}
+      \strng{authorfullhash}{9e936a5036cd25c01282182ea522e030}
+      \field{labelalpha}{Bro12}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781468493276}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Cohomology of Groups}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://books.google.be/books?id=2fzlBwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.be/books?id=2fzlBwAAQBAJ
+      \endverb
+    \endentry
+    \entry{Carriere1989}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f7c59064510eeef9627edc4b8963aeea}{%
+           family={Carrière},
+           familyi={C\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7c59064510eeef9627edc4b8963aeea}
+      \strng{fullhash}{f7c59064510eeef9627edc4b8963aeea}
+      \strng{bibnamehash}{f7c59064510eeef9627edc4b8963aeea}
+      \strng{authorbibnamehash}{f7c59064510eeef9627edc4b8963aeea}
+      \strng{authornamehash}{f7c59064510eeef9627edc4b8963aeea}
+      \strng{authorfullhash}{f7c59064510eeef9627edc4b8963aeea}
+      \field{labelalpha}{Car89}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1432-1297}
+      \field{journaltitle}{Inventiones Mathematicae}
+      \field{number}{3}
+      \field{title}{Autour de la conjecture de L. Markus sur les variétés affines}
+      \field{volume}{95}
+      \field{year}{1989}
+      \field{pages}{615\bibrangedash 628}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/BF01393894
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01393894
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01393894
+      \endverb
+    \endentry
+    \entry{CrainicFernandesMarcut2021}{book}{}
+      \name{author}{3}{}{%
+        {{hash=a26b6ed2fedac6413c6d7e2750e3359a}{%
+           family={Crainic},
+           familyi={C\bibinitperiod},
+           given={Marius},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e77f04b8b585d171eec0ca083036343e}{%
+           family={Fernandes},
+           familyi={F\bibinitperiod},
+           given={Rui\bibnamedelima Loja},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=6c7e04f3283d8308b43b0bad0ade3481}{%
+           family={Mărcuţ},
+           familyi={M\bibinitperiod},
+           given={Ioan},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{8bc99437bbc750a076f377a07e64c5ad}
+      \strng{fullhash}{8bc99437bbc750a076f377a07e64c5ad}
+      \strng{bibnamehash}{8bc99437bbc750a076f377a07e64c5ad}
+      \strng{authorbibnamehash}{8bc99437bbc750a076f377a07e64c5ad}
+      \strng{authornamehash}{8bc99437bbc750a076f377a07e64c5ad}
+      \strng{authorfullhash}{8bc99437bbc750a076f377a07e64c5ad}
+      \field{labelalpha}{CFM21}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781470466671}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Lectures on Poisson Geometry}
+      \field{volume}{217}
+      \field{year}{2021}
+    \endentry
+    \entry{dahlhausen2020algebraTopologyII}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2453a9209739433600762d03cad47d50}{%
+           family={Dahlhausen},
+           familyi={D\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2453a9209739433600762d03cad47d50}
+      \strng{fullhash}{2453a9209739433600762d03cad47d50}
+      \strng{bibnamehash}{2453a9209739433600762d03cad47d50}
+      \strng{authorbibnamehash}{2453a9209739433600762d03cad47d50}
+      \strng{authornamehash}{2453a9209739433600762d03cad47d50}
+      \strng{authorfullhash}{2453a9209739433600762d03cad47d50}
+      \field{labelalpha}{Dah20}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://cdahlhausen.eu/alg-and-top-notes.pdf}}
+      \field{note}{Lecture notes, University of Zurich (with Lorenzo Mantovani and Emil Jacobsen), version 28 May 2020}
+      \field{title}{Algebra and Topology, Part II}
+      \field{year}{2020}
+    \endentry
+    \entry{Davis2001LectureNI}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d06f6d00bb651628f5f2cf05f31c1faa}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={James\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=55a1575c8a9e3ad425fddd44977a39d3}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \strng{fullhash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \strng{bibnamehash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \strng{authorbibnamehash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \strng{authornamehash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \strng{authorfullhash}{c6004aa8f16d7bfd4c3cfc09081d242c}
+      \field{labelalpha}{DK01}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Lecture notes in Algebraic Topology}
+      \field{volume}{35}
+      \field{year}{2001}
+      \verb{urlraw}
+      \verb https://webhomes.maths.ed.ac.uk/~v1ranick/papers/davkir.pdf
+      \endverb
+      \verb{url}
+      \verb https://webhomes.maths.ed.ac.uk/~v1ranick/papers/davkir.pdf
+      \endverb
+    \endentry
+    \entry{dazord}{article}{}
+      \name{author}{2}{}{%
+        {{hash=308d8500616a1105a194065c37dea78b}{%
+           family={Dazord},
+           familyi={D\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=24c89cf93e8e69c14d8ad9ff1fe33b42}{%
+           family={Delzant},
+           familyi={D\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Lehigh University}%
+      }
+      \strng{namehash}{11fdd427a436df4370d768d2ac554e90}
+      \strng{fullhash}{11fdd427a436df4370d768d2ac554e90}
+      \strng{bibnamehash}{11fdd427a436df4370d768d2ac554e90}
+      \strng{authorbibnamehash}{11fdd427a436df4370d768d2ac554e90}
+      \strng{authornamehash}{11fdd427a436df4370d768d2ac554e90}
+      \strng{authorfullhash}{11fdd427a436df4370d768d2ac554e90}
+      \field{labelalpha}{DD87}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Differential Geometry}
+      \field{number}{2}
+      \field{title}{{Le Probleme General des Variables Actions-Angles}}
+      \field{volume}{26}
+      \field{year}{1987}
+      \field{pages}{223\bibrangedash 251}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.4310/jdg/1214441368
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/jdg/1214441368
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/jdg/1214441368
+      \endverb
+    \endentry
+    \entry{ActionAngle}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b296af2b2a11b7a7d0559aa62ed54c50}{%
+           family={Duistermaat},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \strng{fullhash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \strng{bibnamehash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \strng{authorbibnamehash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \strng{authornamehash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \strng{authorfullhash}{b296af2b2a11b7a7d0559aa62ed54c50}
+      \field{labelalpha}{Dui80}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications on Pure and Applied Mathematics}
+      \field{number}{6}
+      \field{title}{On global action-angle coordinates}
+      \field{volume}{33}
+      \field{year}{1980}
+      \field{pages}{687\bibrangedash 706}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1002/cpa.3160330602
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpa.3160330602
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160330602
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160330602
+      \endverb
+    \endentry
+    \entry{ElZeinSnoussi2009}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=c5b7bd29c89018c791c7b4e8dde5151c}{%
+           family={El\bibnamedelima Zein},
+           familyi={E\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           given={Fouad},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2ee768e05faf5d8341466c0db2a8b82c}{%
+           family={Snoussi},
+           familyi={S\bibinitperiod},
+           given={Jawad},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser}%
+      }
+      \strng{namehash}{3413b490c9b3d1c880c02d3e07c25803}
+      \strng{fullhash}{3413b490c9b3d1c880c02d3e07c25803}
+      \strng{bibnamehash}{3413b490c9b3d1c880c02d3e07c25803}
+      \strng{authorbibnamehash}{3413b490c9b3d1c880c02d3e07c25803}
+      \strng{authornamehash}{3413b490c9b3d1c880c02d3e07c25803}
+      \strng{authorfullhash}{3413b490c9b3d1c880c02d3e07c25803}
+      \field{labelalpha}{ES09}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Arrangements, Local Systems and Singularities}
+      \field{note}{CIMPA Summer School, Istanbul 2007; available at https://webusers.imj-prg.fr/~fouad.elzein/elzein-snoussif.pdf}
+      \field{series}{Progress in Mathematics}
+      \field{title}{Local Systems and Constructible Sheaves}
+      \field{volume}{283}
+      \field{year}{2009}
+      \field{pages}{111\bibrangedash 153}
+      \range{pages}{43}
+    \endentry
     \entry{nilpotent-holonomy}{article}{}
       \name{author}{3}{}{%
         {{hash=a26d43bf36035012bf336faea9d36948}{%
@@ -103,6 +685,70 @@
       \verb https://doi.org/10.3836/tjm/1270213873
       \endverb
     \endentry
+    \entry{goldman2022geometric}{book}{}
+      \name{author}{1}{}{%
+        {{hash=73b9c774b1a3910bc5e7cc8a5b681349}{%
+           family={Goldman},
+           familyi={G\bibinitperiod},
+           given={William\bibnamedelima M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Providence, Rhode Island}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \strng{fullhash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \strng{bibnamehash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \strng{authorbibnamehash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \strng{authornamehash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \strng{authorfullhash}{73b9c774b1a3910bc5e7cc8a5b681349}
+      \field{labelalpha}{Gol22}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4704-7198-9}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Geometric Structures on Manifolds}
+      \field{volume}{227}
+      \field{year}{2022}
+    \endentry
+    \entry{SYZ}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=45abbb64074b83b990106166e9f274fa}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{45abbb64074b83b990106166e9f274fa}
+      \strng{fullhash}{45abbb64074b83b990106166e9f274fa}
+      \strng{bibnamehash}{45abbb64074b83b990106166e9f274fa}
+      \strng{authorbibnamehash}{45abbb64074b83b990106166e9f274fa}
+      \strng{authornamehash}{45abbb64074b83b990106166e9f274fa}
+      \strng{authorfullhash}{45abbb64074b83b990106166e9f274fa}
+      \field{labelalpha}{Gro08}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Strominger-Yau-Zaslow conjecture: From torus fibrations to degenerations}
+      \field{year}{2008}
+      \verb{eprint}
+      \verb 0802.3407
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/0802.3407
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/0802.3407
+      \endverb
+    \endentry
     \entry{Hatcher}{book}{}
       \name{author}{1}{}{%
         {{hash=0a94eadf86d8b878d4c37bc5640e53e3}{%
@@ -134,6 +780,532 @@
       \field{pages}{xii+544}
       \range{pages}{-1}
     \endentry
+    \entry{Hirsch1978}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=697b9e10d72a5f4aec2034a99cf01a9b}{%
+           family={Hirsch},
+           familyi={H\bibinitperiod},
+           given={Morris\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=c2df0cbf9abd6a7e5c28b3e643613e41}{%
+           family={Millett},
+           familyi={M\bibinitperiod},
+           given={Kenneth\bibnamedelima C.},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{fullhash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{bibnamehash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{authorbibnamehash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{authornamehash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{authorfullhash}{697b9e10d72a5f4aec2034a99cf01a9b}
+      \strng{editorbibnamehash}{c2df0cbf9abd6a7e5c28b3e643613e41}
+      \strng{editornamehash}{c2df0cbf9abd6a7e5c28b3e643613e41}
+      \strng{editorfullhash}{c2df0cbf9abd6a7e5c28b3e643613e41}
+      \field{labelalpha}{Hir78}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Algebraic and Geometric Topology: Proceedings of a Symposium held at Santa Barbara in honor of Raymond L. Wilder, July 25--29, 1977}
+      \field{isbn}{978-3-540-35758-2}
+      \field{title}{Flat manifolds and the cohomology of groups}
+      \field{year}{1978}
+      \field{pages}{94\bibrangedash 103}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/BFb0061694
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BFb0061694
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BFb0061694
+      \endverb
+    \endentry
+    \entry{Hochschild1953CohomologyOG}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ff76f3f8256bd28b7b1e972e53041e89}{%
+           family={Hochschild},
+           familyi={H\bibinitperiod},
+           given={Gerhard\bibnamedelima P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=523a41970d92b80420ca6d5307619da7}{%
+           family={Serre},
+           familyi={S\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \strng{fullhash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \strng{bibnamehash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \strng{authorbibnamehash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \strng{authornamehash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \strng{authorfullhash}{0e12aba2748e82ee0c059a7d517d3ca0}
+      \field{labelalpha}{HS53}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions of the American Mathematical Society}
+      \field{title}{Cohomology of group extensions}
+      \field{volume}{74}
+      \field{year}{1953}
+      \field{pages}{110\bibrangedash 134}
+      \range{pages}{25}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:121709037
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:121709037
+      \endverb
+    \endentry
+    \entry{humphreys2012linear}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}{%
+           family={Humphreys},
+           familyi={H\bibinitperiod},
+           given={J.E.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \strng{fullhash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \strng{bibnamehash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \strng{authorbibnamehash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \strng{authornamehash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \strng{authorfullhash}{3f6c38fcc5a6ccf3ec0a1c8de63aeb5a}
+      \field{extraname}{1}
+      \field{labelalpha}{Hum12}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781468494433}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Linear Algebraic Groups}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://books.google.be/books?id=7hTTBwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.be/books?id=7hTTBwAAQBAJ
+      \endverb
+    \endentry
+    \entry{humphreys1975linear}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fffcf3523abd2080d6ffc75ac22de7f8}{%
+           family={Humphreys},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{fullhash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{bibnamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authorbibnamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authornamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authorfullhash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \field{extraname}{2}
+      \field{labelalpha}{Hum75}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Linear Algebraic Groups}
+      \field{volume}{21}
+      \field{year}{1975}
+    \endentry
+    \entry{kac2010lietheorem}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=726c50e65af8b4be88cbc25e23ff2de1}{%
+           family={Kac},
+           familyi={K\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Massachusetts Institute of Technology}%
+      }
+      \strng{namehash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \strng{fullhash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \strng{bibnamehash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \strng{authorbibnamehash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \strng{authornamehash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \strng{authorfullhash}{726c50e65af8b4be88cbc25e23ff2de1}
+      \field{labelalpha}{Kac10}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{MIT 18.745 Introduction to Lie Algebras lecture notes}
+      \field{month}{9}
+      \field{note}{September 23, 2010}
+      \field{title}{Lecture 5 --- Lie's Theorem}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://math.mit.edu/classes/18.745/Notes/Lecture_5_Notes.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.mit.edu/classes/18.745/Notes/Lecture_5_Notes.pdf
+      \endverb
+    \endentry
+    \entry{lee2003introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ca861e05628527cf05a2870e8fc0ecef}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ca861e05628527cf05a2870e8fc0ecef}
+      \strng{fullhash}{ca861e05628527cf05a2870e8fc0ecef}
+      \strng{bibnamehash}{ca861e05628527cf05a2870e8fc0ecef}
+      \strng{authorbibnamehash}{ca861e05628527cf05a2870e8fc0ecef}
+      \strng{authornamehash}{ca861e05628527cf05a2870e8fc0ecef}
+      \strng{authorfullhash}{ca861e05628527cf05a2870e8fc0ecef}
+      \field{labelalpha}{Lee03}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780387954486}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Introduction to Smooth Manifolds}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://books.google.be/books?id=eqfgZtjQceYC
+      \endverb
+      \verb{url}
+      \verb https://books.google.be/books?id=eqfgZtjQceYC
+      \endverb
+    \endentry
+    \entry{LuttingerSurgery}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ed0fadfbe8267d80e266d66270d28534}{%
+           family={Luttinger},
+           familyi={L\bibinitperiod},
+           given={Karl\bibnamedelima Murad},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Lehigh University}%
+      }
+      \strng{namehash}{ed0fadfbe8267d80e266d66270d28534}
+      \strng{fullhash}{ed0fadfbe8267d80e266d66270d28534}
+      \strng{bibnamehash}{ed0fadfbe8267d80e266d66270d28534}
+      \strng{authorbibnamehash}{ed0fadfbe8267d80e266d66270d28534}
+      \strng{authornamehash}{ed0fadfbe8267d80e266d66270d28534}
+      \strng{authorfullhash}{ed0fadfbe8267d80e266d66270d28534}
+      \field{labelalpha}{Lut95}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Differential Geometry}
+      \field{number}{2}
+      \field{title}{{Lagrangian tori in $\mathbf{R}^4$}}
+      \field{volume}{42}
+      \field{year}{1995}
+      \field{pages}{220\bibrangedash 228}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.4310/jdg/1214457232
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/jdg/1214457232
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/jdg/1214457232
+      \endverb
+    \endentry
+    \entry{Margulis1983}{article}{}
+      \name{author}{1}{}{%
+        {{hash=750985b6e28b5689f2c068889c141e43}{%
+           family={Margulis},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{750985b6e28b5689f2c068889c141e43}
+      \strng{fullhash}{750985b6e28b5689f2c068889c141e43}
+      \strng{bibnamehash}{750985b6e28b5689f2c068889c141e43}
+      \strng{authorbibnamehash}{750985b6e28b5689f2c068889c141e43}
+      \strng{authornamehash}{750985b6e28b5689f2c068889c141e43}
+      \strng{authorfullhash}{750985b6e28b5689f2c068889c141e43}
+      \field{labelalpha}{Mar83}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Doklady Akademii Nauk SSSR}
+      \field{number}{4}
+      \field{title}{Free completely discontinuous groups of affine transformations}
+      \field{volume}{272}
+      \field{year}{1983}
+      \field{pages}{785\bibrangedash 788}
+      \range{pages}{4}
+      \verb{urlraw}
+      \verb http://mi.mathnet.ru/dan9932
+      \endverb
+      \verb{url}
+      \verb http://mi.mathnet.ru/dan9932
+      \endverb
+    \endentry
+    \entry{markus1963cosmological}{book}{}
+      \name{author}{1}{}{%
+        {{hash=55b61733b1fb0d7be1dac792a58ef323}{%
+           family={Markus},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Minnesota Institute of Technology, Department of Mathematics}%
+      }
+      \strng{namehash}{55b61733b1fb0d7be1dac792a58ef323}
+      \strng{fullhash}{55b61733b1fb0d7be1dac792a58ef323}
+      \strng{bibnamehash}{55b61733b1fb0d7be1dac792a58ef323}
+      \strng{authorbibnamehash}{55b61733b1fb0d7be1dac792a58ef323}
+      \strng{authornamehash}{55b61733b1fb0d7be1dac792a58ef323}
+      \strng{authorfullhash}{55b61733b1fb0d7be1dac792a58ef323}
+      \field{labelalpha}{Mar63}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cosmological Models in Differential Geometry}
+      \field{year}{1963}
+      \verb{urlraw}
+      \verb https://books.google.be/books?id=tlDvAAAAMAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.be/books?id=tlDvAAAAMAAJ
+      \endverb
+    \endentry
+    \entry{McCleary2001}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fac96cf6f394049fb9bd524743a265ad}{%
+           family={McCleary},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{fac96cf6f394049fb9bd524743a265ad}
+      \strng{fullhash}{fac96cf6f394049fb9bd524743a265ad}
+      \strng{bibnamehash}{fac96cf6f394049fb9bd524743a265ad}
+      \strng{authorbibnamehash}{fac96cf6f394049fb9bd524743a265ad}
+      \strng{authornamehash}{fac96cf6f394049fb9bd524743a265ad}
+      \strng{authorfullhash}{fac96cf6f394049fb9bd524743a265ad}
+      \field{labelalpha}{McC01}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{9780521567596}
+      \field{series}{Cambridge Studies in Advanced Mathematics}
+      \field{title}{A User's Guide to Spectral Sequences}
+      \field{volume}{58}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.1017/CBO9780511626289
+      \endverb
+    \endentry
+    \entry{Milnor1957/58}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6ed546ba346b01635423d8131e45906b}{%
+           family={Milnor},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{fullhash}{6ed546ba346b01635423d8131e45906b}
+      \strng{bibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorbibnamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authornamehash}{6ed546ba346b01635423d8131e45906b}
+      \strng{authorfullhash}{6ed546ba346b01635423d8131e45906b}
+      \field{labelalpha}{Mil58}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commentarii mathematici Helvetici}
+      \field{title}{On the existence of a connection with curvature zero.}
+      \field{volume}{32}
+      \field{year}{1957/58}
+      \field{pages}{215\bibrangedash 223}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb http://eudml.org/doc/139154
+      \endverb
+      \verb{url}
+      \verb http://eudml.org/doc/139154
+      \endverb
+      \keyw{differential geometry}
+    \endentry
+    \entry{MISHACHEV1996301}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cbb70aba0496aa648f8b124d1a0852a9}{%
+           family={Mishachev},
+           familyi={M\bibinitperiod},
+           given={K.N.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \strng{fullhash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \strng{bibnamehash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \strng{authorbibnamehash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \strng{authornamehash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \strng{authorfullhash}{cbb70aba0496aa648f8b124d1a0852a9}
+      \field{labelalpha}{Mis96}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The goal of the paper is to classify lagrangian bundles over surfaces up to fiberwise symplectomorphism. Main results are Theorems A, B, C that give us complete classification of lagrangian bundles with compact fiber over orientable closed surfaces.}
+      \field{issn}{0926-2245}
+      \field{journaltitle}{Differential Geometry and its Applications}
+      \field{number}{4}
+      \field{title}{The classification of lagrangian bundles over surfaces}
+      \field{volume}{6}
+      \field{year}{1996}
+      \field{pages}{301\bibrangedash 320}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0926-2245(96)00024-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0926224596000241
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0926224596000241
+      \endverb
+      \keyw{Liouville-Arnold theorem,global action-angle coordinates}
+    \endentry
+    \entry{Sepe2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5194b3eff7ebdb3df8c65567f2d5384c}{%
+           family={Sepe},
+           familyi={S\bibinitperiod},
+           given={Daniele},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \strng{fullhash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \strng{bibnamehash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \strng{authorbibnamehash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \strng{authornamehash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \strng{authorfullhash}{5194b3eff7ebdb3df8c65567f2d5384c}
+      \field{labelalpha}{Sep10}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1572-9168}
+      \field{journaltitle}{Geometriae Dedicata}
+      \field{number}{1}
+      \field{title}{Classification of Lagrangian fibrations over a Klein bottle}
+      \field{volume}{149}
+      \field{year}{2010}
+      \field{pages}{347\bibrangedash 362}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/s10711-010-9485-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10711-010-9485-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10711-010-9485-8
+      \endverb
+    \endentry
+    \entry{tomczak2023groupcohomology}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c5674848eb1456d6baee1ee42031e79d}{%
+           family={Tomczak},
+           familyi={T\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Cambridge}%
+      }
+      \strng{namehash}{c5674848eb1456d6baee1ee42031e79d}
+      \strng{fullhash}{c5674848eb1456d6baee1ee42031e79d}
+      \strng{bibnamehash}{c5674848eb1456d6baee1ee42031e79d}
+      \strng{authorbibnamehash}{c5674848eb1456d6baee1ee42031e79d}
+      \strng{authornamehash}{c5674848eb1456d6baee1ee42031e79d}
+      \strng{authorfullhash}{c5674848eb1456d6baee1ee42031e79d}
+      \field{labelalpha}{Tom23}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Notes from the Cambridge Part III course taught by Christopher Brookes, Lent 2023}
+      \field{title}{Group Cohomology}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://math.berkeley.edu/~ltomczak/notes/Lent2023/GrpCohom_Notes.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.berkeley.edu/~ltomczak/notes/Lent2023/GrpCohom_Notes.pdf
+      \endverb
+    \endentry
+    \entry{ward2013semisimple}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ff7036cd123c5fd2df2efa01b12baceb}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Abigail},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \strng{fullhash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \strng{bibnamehash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \strng{authorbibnamehash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \strng{authornamehash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \strng{authorfullhash}{ff7036cd123c5fd2df2efa01b12baceb}
+      \field{labelalpha}{War13}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{REU paper, University of Chicago}
+      \field{note}{Accessed online}
+      \field{title}{Semi-Simple Lie Algebras and Their Representations}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://math.uchicago.edu/~may/REU2013/REUPapers/Ward.pdf
+      \endverb
+      \verb{url}
+      \verb https://math.uchicago.edu/~may/REU2013/REUPapers/Ward.pdf
+      \endverb
+    \endentry
     \entry{Weibel_1994}{book}{}
       \name{author}{1}{}{%
         {{hash=748c93da38984ed20cedc796d519b7ad}{%
@@ -159,6 +1331,106 @@
       \field{series}{Cambridge Studies in Advanced Mathematics}
       \field{title}{An Introduction to Homological Algebra}
       \field{year}{1994}
+    \endentry
+    \entry{WEINSTEIN1971329}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c12d1dd316b89453935b3431c93f79ef}{%
+           family={Weinstein},
+           familyi={W\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c12d1dd316b89453935b3431c93f79ef}
+      \strng{fullhash}{c12d1dd316b89453935b3431c93f79ef}
+      \strng{bibnamehash}{c12d1dd316b89453935b3431c93f79ef}
+      \strng{authorbibnamehash}{c12d1dd316b89453935b3431c93f79ef}
+      \strng{authornamehash}{c12d1dd316b89453935b3431c93f79ef}
+      \strng{authorfullhash}{c12d1dd316b89453935b3431c93f79ef}
+      \field{labelalpha}{Wei71}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{number}{3}
+      \field{title}{Symplectic manifolds and their lagrangian submanifolds}
+      \field{volume}{6}
+      \field{year}{1971}
+      \field{pages}{329\bibrangedash 346}
+      \range{pages}{18}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0001-8708(71)90020-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/000187087190020X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/000187087190020X
+      \endverb
+    \endentry
+    \entry{whitehead1978elements}{book}{}
+      \name{author}{1}{}{%
+        {{hash=22fc52ce77144c9d6a8af2f08199437f}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={George\bibnamedelima W.},
+           giveni={G\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{22fc52ce77144c9d6a8af2f08199437f}
+      \strng{fullhash}{22fc52ce77144c9d6a8af2f08199437f}
+      \strng{bibnamehash}{22fc52ce77144c9d6a8af2f08199437f}
+      \strng{authorbibnamehash}{22fc52ce77144c9d6a8af2f08199437f}
+      \strng{authornamehash}{22fc52ce77144c9d6a8af2f08199437f}
+      \strng{authorfullhash}{22fc52ce77144c9d6a8af2f08199437f}
+      \field{labelalpha}{Whi78}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Elements of Homotopy Theory}
+      \field{volume}{61}
+      \field{year}{1978}
+    \endentry
+    \entry{zung2001symplectictopologyintegrablehamiltonian}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a5ab66b374f843a401c8748e075aed1b}{%
+           family={Zung},
+           familyi={Z\bibinitperiod},
+           given={Nguyen\bibnamedelima Tien},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5ab66b374f843a401c8748e075aed1b}
+      \strng{fullhash}{a5ab66b374f843a401c8748e075aed1b}
+      \strng{bibnamehash}{a5ab66b374f843a401c8748e075aed1b}
+      \strng{authorbibnamehash}{a5ab66b374f843a401c8748e075aed1b}
+      \strng{authornamehash}{a5ab66b374f843a401c8748e075aed1b}
+      \strng{authorfullhash}{a5ab66b374f843a401c8748e075aed1b}
+      \field{labelalpha}{Zun01}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.DG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Symplectic Topology of Integrable Hamiltonian Systems, II: Topological Classification}
+      \field{year}{2001}
+      \verb{eprint}
+      \verb math/0010181
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0010181
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0010181
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

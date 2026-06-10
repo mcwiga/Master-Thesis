@@ -1,4 +1,183 @@
 \chapter*{Introduction}
 \label{ch:introduction}
 \addcontentsline{toc}{chapter}{\nameref{ch:introduction}}
-TODO: Add introduction
+\chaptermark{Introduction}
+\section*{Affine manifolds}
+If one forgets to bring their ruler to Euclidean space, they may stumble
+upon the notion of an \emph{affine geometry}. Although a ruler has been lost,
+an affine geometry still maintains the notion of straight lines and constant
+speed. An \emph{affine manifold} is a manifold that is locally modelled on an
+affine geometry, by which we mean the charts take values in $\R^n$ viewed as
+an affine space and the transition maps are automorphisms of this affine space. The
+fundamental object on such manifolds turns out to be a flat, torsion free
+connection $\nabla$. This connection allows one to make sense of
+differentiation on an affine manifold and hence make sense of the notion of a
+parameterized curve having zero acceleration. Curves on an affine manifold
+satisfying this property will be called \emph{geodesics}. Equivalently, a curve
+on an affine manifold is a geodesic if it is a straight line in every affine
+chart.
+
+Of fundamental importance in the theory of affine manifolds is the case when
+every geodesic can be continued indefinitely. Affine manifolds satisfying this
+property are said to be \emph{complete}. In \cite{MarkusAuslander} Auslander
+and Markus showed that completeness of an affine manifold $M$ is equivalent to
+$M$ being the quotient of a discrete group of affine transformations acting
+freely and properly on $\R^n$. There are many open questions surrounding
+completeness of affine manifolds. For example, it was conjectured by Auslander
+in \cite{AUSLANDER1964131} that the fundamental group of such an affine
+manifold cannot be too "big" - namely that it should be solvable up to finite
+index. If this conjecture holds, then it implies that a free group should not
+be able to act on $\R^n$ by affine transformations such that the quotient is a
+smooth, compact affine manifold.
+
+The motivation behind this conjecture comes from the fact that affine geometry
+shares many of the same properties as the more familiar Euclidean geometry. A
+group which acts isometrically on $\R^n$ such that the quotient is a smooth,
+compact manifold was shown to be abelian up to finite index by Bieberbach. He
+classified these groups called \emph{Euclidean crystallographic groups} in
+\cite{Bieberbach1910} and \cite{Bieberbach1912}. Unexpectedly, Margulis showed
+in \cite{Margulis1983} that a free group could act freely and properly on
+$\R^n$ by affine transformations, however, the quotient was not a
+\emph{compact} manifold. Even though these affine manifolds failed to be
+compact, they still garnered a lot of interest and were dubbed \emph{Margulis
+    spacetimes}, owing to the fact that they inherit a unique parallel Lorentzian
+metric.
+
+Another open conjecture in affine geometry is the \emph{Markus conjecture}
+which was posed by Markus in \cite{markus1963cosmological}. It states that if a
+compact affine manifold possesses a volume form which is \emph{parallel} with
+respect to the affine connection, then the affine manifold is complete. In
+Chapter \ref{ch:nilpotent-hol}, we give the positive answer to this conjecture
+in the case the fundamental group is nilpotent which was first proven in
+\cite{nilpotent-holonomy}. This conjecture is open in full generality, however
+it has been solved in some other special cases. For example, in
+\cite{Carriere1989} they showed the conjecture holds in the case that the
+affine manifold is a compact, flat Lorentzian manifold.
+
+\section*{Integral affine manifolds and Lagrangian fibrations}
+
+If an affine manifold (or its orientable double cover) admits a parallel volume
+form, then the linear component of all its transition maps must live in the
+group of invertible matrices of determinant $\pm 1$. An interesting subgroup of
+this is the group $\mathrm{GL}(\Z^n)$, consisting of invertible \emph{integer}
+valued matrices whose inverse is integer valued. Affine manifolds where the
+linear component of their transition maps lie in this group are called
+\emph{integral affine manifolds}. As well as having a characterization in terms
+of admitting a flat, torsion-free connection whose holonomy lies in
+$\mathrm{GL}(\Z^n)$, an integral affine structure on a manifold $M$ can also be
+shown to be equivalent to a full-rank lattice in the cotangent bundle of $M$
+that is locally spanned by closed one-forms. It is well known that the
+cotangent bundle of any manifold admits a \emph{symplectic structure} and this
+observation connects the study of integral affine manifolds to symplectic
+geometry.
+
+A \emph{symplectic manifold} is a manifold that admits a closed, non-degenerate
+two-form called the symplectic form. By necessity, such a manifold is always
+even dimensional. There is an important class of submanifolds of symplectic
+manifolds called \emph{Lagrangian submanifolds}. These are submanifolds which
+are half the dimension of the ambient manifold and such that the symplectic
+form restricts to zero along them. If $B$ is any manifold, then its cotangent
+bundle $T^*B$ is symplectic and the fibres of the projection map $\pi: T^*B \to
+    B$ are Lagrangian submanifolds of the cotangent bundle. This leads into the
+more general notion of a \emph{Lagrangian fibration}. If $M$ is a symplectic
+manifold then a Lagrangian fibration is a surjection $\pi: M \to B$ where $B$
+is any smooth manifold, such that the fibres of the projection are Lagrangian
+submanifolds.
+
+Of particular interest is when $\pi$ is a surjective submersion and the fibres
+are compact and connected. In this case, the fibres are tori and the base space
+$B$ inherits the structure of an integral affine manifold. The integral affine
+structure on the base turns out to be an invariant of the Lagrangian fibration.
+Moreover, the lattice in the cotangent bundle of $B$ which induces this
+integral affine structure gives rise to a canonical Lagrangian torus fibration
+over $B$. This fibration is a local model for all Lagrangian torus fibrations
+over $B$ which induce the given integral affine structure. The obstruction to a
+generic Lagrangian torus fibration being globally equivalent to this local
+model was studied in detail by Duistermaat in \cite{ActionAngle}. He defined a
+characteristic class called the \emph{Chern class} and its vanishing gives rise
+to a global section of the Lagrangian fibration which can be used to identify
+it with the local model.
+
+This identification is only topological in the sense that the symplectic
+structure of the fibration is not preserved. However, if the global section
+determines a Lagrangian submanifold of the total space of the fibration then
+the fibration identifies both topologically and symplectically with the local
+model as shown also in \cite{ActionAngle}. This was expanded upon further by
+Zung in \cite{zung2001symplectictopologyintegrablehamiltonian}. He defined
+another characteristic class called the \emph{Lagrangian class} which maps onto
+the Chern class through a certain group homomorphism. If this characteristic
+class vanishes then the Lagrangian fibration will be both topologically and
+symplectically equivalent to the local model. \newpage
+
+\section*{Outline}
+
+In this section we will briefly present the main structure of the thesis which
+can hopefully be used as a guide to the reader. The primary goal of this thesis
+is to classify the Lagrangian fibrations over closed surfaces. Our path to
+achieving this classification will require us to use tools from many different
+fields of mathematics such as symplectic geometry, algebraic topology and group
+theory.
+
+In Chapter \ref{ch:prelim} we develop some results from the general theory of
+(integral) affine manifolds, the representation theory of groups and group
+cohomology. We describe what is meant by \emph{completeness} of an affine
+manifold and give two equivalent perspectives on this property. The first view
+point introduces the notion of the \emph{developing map} which is a local
+diffeomorphism from the universal cover of the affine manifold into $\R^n$. An
+affine manifold is then called complete if this developing map is a global
+diifeomorphism. The other equivalent definition of completeness is obtained by
+noting that an affine manifold inherits a canonical flat, torsion-free
+connection. Geodesic completeness of this connection is then equivalent to
+completeness of the affine structure. We also introduce integral affine
+manifolds which can be realised as a full-rank lattice in the cotangent bundle
+of the manifold that is locally spanned by closed one-forms. These will become
+key objects in the classification of Lagrangian fibrations as the base space
+always inherits such a structure.
+
+In Chapter \ref{LagrangianFibrations} we explore these objects in more detail.
+It is well known that the cotangent bundle of any smooth manifold inherits the
+structure of a \emph{symplectic manifold}. A symplectic manifold is a manifold
+equipped with a closed, non-degenerate two form. The fact that an integral
+affine structure is induced from a lattice in this cotangent bundle provides an
+important link between integral affine geometry and symplectic geometry. The
+main result of this section is that any Lagrangian fibration over a fixed base
+$B$ gives $B$ the structure of an integral affine manifold. There is an action
+of the cotangent bundle of $B$ on any Lagrangian fibration over $B$ and the
+fixed-point set of this action corresponds to a lattice which induces the
+integral affine structure.
+
+In Chapter \ref{ch:nilpotent-hol} we start developing the tools required to
+classify the integral affine structures on closed surfaces. The main result of
+this section is that if the fundamental group of a compact affine manifold is
+nilpotent, completeness of the affine structure is equivalent to the existence
+of a volume form which is parallel with respect to the canonical affine
+connection. This is a partial resolution to a conjecture of Markus in
+\cite{markus1963cosmological} which states that this should hold true even when
+the fundamental group is not nilpotent.
+
+Chapter \ref{ch:class-IAS} contains the classification of the integral affine
+structures over closed surfaces. This is one of the main invariants of a
+Lagrangian fibration over these surfaces. Using the tools built up in Chapter
+\ref{ch:prelim} and Chapter \ref{ch:nilpotent-hol} we are able to reduce the
+problem of classifying these structures to a relatively simple computation
+involving linear algebra and group theory. We also make use of a powerful
+theorem proved by Milnor in \cite{Milnor1957/58} which states that a closed,
+orientable affine surface must have genus less than $2$.
+
+In the last chapter, we complete the classification of the Lagrangian
+fibrations over the Klein bottle and the torus. In order to do this, we find
+two more invariants of the fibration. These are the \emph{Chern class} and the
+\emph{Lagrangian class}. The Chern class determines the topological nature
+while the Lagrangian class is a refinement of this and determines the
+symplectic structure of the fibration. These invariants are defined in terms of
+sheaf cohomology which can make explicit calculation of them difficult in
+practice. However, we show that these cohomology group can be computed using
+group cohomology which we developed in Chapter \ref{ch:prelim}. We calculate
+these explicitly for both the torus and the Klein bottle.
+
+Finally, we show how to explicitly construct a Lagrangian fibration over the
+torus or Klein bottle from their invariants. This is done using a symplectic
+version of Dehn surgery called Luttinger surgery and first described in
+\cite{LuttingerSurgery}. This completes the main content of this thesis and
+gives an explicit way to construct any given Lagrangian torus fibration over a
+closed surface.

@@ -1,6 +1,6 @@
 %% Creator: Inkscape 1.4.2 (f4327f4, 2025-05-13), www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'DevPartTwo.pdf' (pdf, eps, ps)
+%% Accompanies image file 'KleinTilingsProper.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{349.93448639bp}%
+    \setlength{\unitlength}{532.60338971bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,9 +50,9 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.78999411)%
+  \begin{picture}(1,0.98916588)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{DevPartTwo.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{KleinTilingsProper.pdf}}%
   \end{picture}%
 \endgroup%
